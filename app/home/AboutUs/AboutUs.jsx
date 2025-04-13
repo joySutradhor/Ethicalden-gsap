@@ -1,7 +1,8 @@
 import React from 'react'
+import "./aboutUs.css"
 
 function AboutUs () {
-  return <div className='test'>This is about us</div>
+  return <div className='dummy'>This is about us</div>
 }
 
 export default AboutUs
