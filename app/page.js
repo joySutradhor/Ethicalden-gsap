@@ -6,6 +6,7 @@ import CTA from "./home/CTA/CTA";
 import Gallery from "./home/Gallery/Gallery";
 import LattestProjects from "./home/LattestProjects/LattestProjects";
 import "./globals.css";
+import NewLattestProjects from "./home/NewLattestProjects/NewLattestProjects";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
     <ClientsCollaboration/>
     <Gallery/>
     <LattestProjects/>
+    <NewLattestProjects></NewLattestProjects>
     <CTA/>
   </section>
   );

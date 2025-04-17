@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .edn__p__wrapper{
+        @apply px-[12vw] bg-[#06171D] py-[20vh] text-white
+    }
+
+    .edn__p__parent{
+        @apply grid grid-cols-2 gap-x-[7vw]
+    }
+
+    .edn__p__fr__img__parent{
+        @apply mt-[25vh] w-[80%]
+    }
+    .edn__p__fr__video__parent{
+        @apply h-[60vh]
+    }
+
+    .edn__p__sr__img__parent{
+        @apply mt-[35vh]
+    }
+
+    .edn__p__sr__video__wrapper{
+        @apply grid lg:grid-cols-2 gap-[2vw] 
+    }
+
+    .edn__p__sr__video__height{
+        @apply h-[30vh]
+    }
+
+    .edn__p__tr__topSpace{
+        @apply mt-[50vh]
+    }
+
+    .edn__p__tr__video__parent{
+        @apply h-[40vh] w-[80%]
+    }
+    .edn__fouth__row__img__topSpace{
+        @apply mt-[50vh]
+    }
+    .edn__fouth__row__video__topSpace{
+        @apply mt-[20vh]
+    }
+    .edn__fourth__row__video__parent{
+        @apply grid grid-cols-2 gap-[2vw]
+    }
+
+    .edn__fourth__row__common__height{
+        @apply h-[35vh]
+    }
+
+    .edn__p__title {
+        @apply text-3xl font-bold py-3
+    }
+
+    .edn__p__breadcumb {
+        @apply text-base font-semibold text-white/70
+    }
+}
