@@ -4,20 +4,20 @@ import Banner from "./home/Banner/Banner";
 import ClientsCollaboration from "./home/ClientsCollaboration/ClientsCollaboration";
 import CTA from "./home/CTA/CTA";
 import Gallery from "./home/Gallery/Gallery";
-import LattestProjects from "./home/LattestProjects/LattestProjects";
 import "./globals.css";
 import NewLattestProjects from "./home/NewLattestProjects/NewLattestProjects";
+import HeaderBanner from "./home/HeaderBanner/HeaderBanner";
 
 
 export default function Home() {
   return (
   <section>
+    <HeaderBanner />
     <AboutUs/>
     <AllStories/>
     <Banner/>
     <ClientsCollaboration/>
     <Gallery/>
-    <LattestProjects/>
     <NewLattestProjects></NewLattestProjects>
     <CTA/>
   </section>

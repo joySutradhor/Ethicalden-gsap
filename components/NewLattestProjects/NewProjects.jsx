@@ -1,11 +1,65 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './NewProjects.css'
-function NewProjects () {
+
+function NewProjects() {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger)
+
+  useEffect(() => {
+    // Initialize animations after component mounts
+    const setupAnimations = () => {
+      // Select all project items (both images and videos)
+      const projectItems = document.querySelectorAll(
+        '.edn__p__fr__img__parent, .edn__p__fr__video__parent, .edn__p__sr__img__parent > div, .edn__p__sr__video__height, .edn__p__tr__video__parent > div, .edn__p__tr__video__parent, .edn__fouth__row__img__topSpace > div, .edn__fourth__row__common__height'
+      )
+
+      // Set perspective for all project items
+      gsap.set(projectItems, {
+        perspective: 600,
+      })
+
+      // Animate each project item
+      projectItems.forEach((item) => {
+        const media = item.querySelector('img, video') || item
+        
+        gsap.fromTo(
+          media,
+          {
+            rotationX: 2.8,
+            scaleX: 1,
+            z: "0vh",
+          },
+          {
+            rotationX: -1.5,
+            scaleX: 1,
+            z: "-2vh",
+            scrollTrigger: {
+              trigger: item,
+              start: "top+=150px bottom",
+              end: "bottom top",
+              immediateRender: false,
+              scrub: 0.1,
+            },
+          }
+        )
+      })
+    }
+
+    setupAnimations()
+
+    // Clean up ScrollTrigger instances on unmount
+    return () => {
+      ScrollTrigger.getAll().forEach(instance => instance.kill())
+    }
+  }, [])
+
   return (
     <section className='edn__p__wrapper'>
       <div className='edn__p__parent'>
-
         {/* first row start */}
         <div className=''>
           <h2 className='text-5xl font-bold text-white '>
@@ -17,7 +71,8 @@ function NewProjects () {
               height={1000}
               width={1000}
               className='object-cover w-full h-full'
-            ></Image>
+              alt='Project 1'
+            />
             <h3 className='edn__p__title'>
               Blog image HNS: Creating the Worlds Most Recognizable Sports
               Identity
@@ -48,6 +103,7 @@ function NewProjects () {
               width={1000}
               height={1000}
               className='object-cover h-full w-full'
+              alt='NetTV'
             />
             <h3 className='edn__p__title'>
               Blog image Stream live TV plus thousands of shows with NetTVPlus
@@ -87,10 +143,7 @@ function NewProjects () {
           </div>
         </div>
 
-        {/* second row end */}
-
-
-        {/* third row start end */}
+        {/* third row start */}
         <div className='edn__p__tr__topSpace'>
           <div className='edn__p__tr__video__parent'>
             <div>
@@ -120,9 +173,8 @@ function NewProjects () {
             <p className='edn__p__breadcumb'>site /Branding</p>
           </div>
         </div>
-        {/* third row start end */}
 
-        {/* fourth raw start */}
+        {/* fourth row start */}
         <div className='edn__fouth__row__img__topSpace'>
           <div>
             <Image
@@ -130,6 +182,7 @@ function NewProjects () {
               height={1000}
               width={1000}
               className='object-cover h-full w-full'
+              alt='AZ Pension Fund'
             />
             <h3 className='edn__p__title'>
               Blog image Stream live TV plus thousands of shows with NetTVPlus
@@ -139,14 +192,15 @@ function NewProjects () {
           </div>
         </div>
         <div className='edn__fouth__row__video__topSpace'>
-          <div className='edn__fourth__row__video__parent  '>
-            <div className=' edn__fourth__row__common__height'>
+          <div className='edn__fourth__row__video__parent'>
+            <div className='edn__fourth__row__common__height'>
               <Image
                 height={1000}
                 width={1000}
                 src='https://mater.agency/wp-content/uploads/2024/03/rba.jpg'
                 className='h-full w-full object-cover'
-              ></Image>
+                alt='RBA'
+              />
               <h3 className='edn__p__title'>
                 Nordeus Unleashed: Designing a Vibrant Journey for Press Play
                 2022
@@ -167,7 +221,7 @@ function NewProjects () {
           </div>
         </div>
 
-        {/* fifth line  */}
+        {/* fifth row */}
         <div></div>
         <div>
           <div>
