@@ -15,10 +15,10 @@ export default function Home() {
     <AboutUs/>
     <AllStories/>
     <Banner/>
-    <ClientsCollaboration/>
     <Gallery/>
     <LattestProjects/>
     <NewLattestProjects></NewLattestProjects>
+    <ClientsCollaboration/>
     <CTA/>
   </section>
   );

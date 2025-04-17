@@ -1,7 +1,10 @@
+import ClientCollaboration from '@/components/ClientCollaboration/ClientCollaboration'
 import React from 'react'
 
 function ClientsCollaboration () {
-  return <div>ClientsCollaboration</div>
+  return <section>
+    <ClientCollaboration/>
+  </section>
 }
 
 export default ClientsCollaboration
