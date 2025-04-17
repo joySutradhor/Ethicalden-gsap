@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer utilities {
+
+    .edn__f__container{
+        @apply mt-[20vh] px-[5vw]
+    }
+    .edn__f__wrapper{
+        @apply grid grid-cols-[30%_70%]
+    }
+
+    .edn__f__menu__parent{
+        @apply grid grid-cols-3 gap-x-[5vw]
+    }
+    
+    .edn__f__title{
+        @apply text-3xl font-bold mb-4
+    }
+    .edn__f___socail___icons {
+        @apply text-3xl rounded-full border p-3
+    }
+
+}

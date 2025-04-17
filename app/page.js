@@ -16,9 +16,9 @@ export default function Home() {
     <AboutUs/>
     <AllStories/>
     <Banner/>
-    <ClientsCollaboration/>
     <Gallery/>
     <NewLattestProjects></NewLattestProjects>
+    <ClientsCollaboration/>
     <CTA/>
   </section>
   );
