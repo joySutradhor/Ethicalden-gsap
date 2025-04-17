@@ -1,7 +1,8 @@
+import GalleryMain from '@/components/Gallery/gallery'
 import React from 'react'
 
 function Gallery () {
-  return <div>Gallery</div>
+  return <GalleryMain />
 }
 
 export default Gallery
