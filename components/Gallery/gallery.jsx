@@ -75,7 +75,7 @@ const GalleryMain = () => {
 
     return (
         <>
-            <section ref={sectionRef} className="min-h-screen bg-[#f1f2ee] flex justify-center items-center py-10 px-4 mb-[1000px] relative">
+            <section ref={sectionRef} className="min-h-screen bg-white flex justify-center items-center mt-[20vh] py-10 px-4 mb-[1000px] relative">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full relative">
                     {/* First Column */}
                     <div className="space-y-6">

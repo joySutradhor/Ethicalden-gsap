@@ -101,7 +101,7 @@ const AboutUsMain = () => {
     const titleText = "We create impactful\ndigital experiences\nand redefine brand\nidentities.";
 
     return (
-        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[20vh]">
             <div className="max-w-6xl mx-auto">
                 {/* Title with line breaks and character animation */}
                 <h2 ref={titleRef} className="text-6xl font-bold mb-8">
