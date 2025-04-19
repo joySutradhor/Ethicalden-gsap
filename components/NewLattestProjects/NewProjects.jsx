@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './NewProjects.css'
 
-function NewProjects() {
+function NewProjects () {
   // Register ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger)
 
@@ -19,31 +19,31 @@ function NewProjects() {
 
       // Set perspective for all project items
       gsap.set(projectItems, {
-        perspective: 600,
+        perspective: 600
       })
 
       // Animate each project item
-      projectItems.forEach((item) => {
+      projectItems.forEach(item => {
         const media = item.querySelector('img, video') || item
-        
+
         gsap.fromTo(
           media,
           {
             rotationX: 2.8,
             scaleX: 1,
-            z: "0vh",
+            z: '0vh'
           },
           {
             rotationX: -1.5,
             scaleX: 1,
-            z: "-2vh",
+            z: '-2vh',
             scrollTrigger: {
               trigger: item,
-              start: "top+=150px bottom",
-              end: "bottom top",
+              start: 'top+=150px bottom',
+              end: 'bottom top',
               immediateRender: false,
-              scrub: 0.1,
-            },
+              scrub: 0.1
+            }
           }
         )
       })
@@ -62,7 +62,7 @@ function NewProjects() {
       <div className='edn__p__parent'>
         {/* first row start */}
         <div className=''>
-          <h2 className='text-8xl font-bold gradient  '>
+          <h2 className='v3__title gradient  '>
             Our latest <br /> projects
           </h2>
           <div className='edn__p__fr__img__parent'>
@@ -106,8 +106,7 @@ function NewProjects() {
               alt='NetTV'
             />
             <h3 className='edn__p__title'>
-              Blog image Stream live TV plus thousands of shows with NetTVPlus
-              Web
+              Stream live TV plus thousands of shows with NetTVPlus
             </h3>
             <p className='edn__p__breadcumb'>site /Mobile app /Web shop</p>
           </div>
@@ -129,6 +128,7 @@ function NewProjects() {
               </h3>
               <p className='edn__p__breadcumb'> Branding</p>
             </div>
+            
             <div className='edn__p__sr__video__height'>
               <video
                 src='https://mater.agency/wp-content/uploads/2024/02/green_tree.mp4'
@@ -137,7 +137,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='edn__p__title'>Green Tree Villas Web</h3>
+              <h3 className='edn__p__title'>Green Tree Villas Website</h3>
               <p className='edn__p__breadcumb'>site /Branding</p>
             </div>
           </div>
@@ -154,13 +154,13 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='edn__p__title'>Green Tree one dfgdf Villas Web</h3>
+              <h3 className='edn__p__title'> Honor 9 – The Light Catcher</h3>
               <p className='edn__p__breadcumb'>site /Branding</p>
             </div>
           </div>
         </div>
 
-        <div>
+        <div className='mt-[25vh] md:mt-0'>
           <div>
             <video
               src='https://mater.agency/wp-content/uploads/2024/02/honor9.mp4'
@@ -169,7 +169,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='edn__p__title'>Green Tree Villas Web</h3>
+            <h3 className='edn__p__title'>Led Elektronika</h3>
             <p className='edn__p__breadcumb'>site /Branding</p>
           </div>
         </div>
@@ -185,8 +185,7 @@ function NewProjects() {
               alt='AZ Pension Fund'
             />
             <h3 className='edn__p__title'>
-              Blog image Stream live TV plus thousands of shows with NetTVPlus
-              Web
+              Rethinking the AZ Retirement Fund Mobile App
             </h3>
             <p className='edn__p__breadcumb'>site /Mobile app /Web shop</p>
           </div>
@@ -202,8 +201,7 @@ function NewProjects() {
                 alt='RBA'
               />
               <h3 className='edn__p__title'>
-                Nordeus Unleashed: Designing a Vibrant Journey for Press Play
-                2022
+                RBA: Evolution of digital banking, in black and yellow
               </h3>
               <p className='edn__p__breadcumb'> Branding</p>
             </div>
@@ -215,15 +213,15 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='edn__p__title'>Green Tree Villas Web</h3>
+              <h3 className='edn__p__title'>Telenor Bank</h3>
               <p className='edn__p__breadcumb'>site /Branding</p>
             </div>
           </div>
         </div>
 
         {/* fifth row */}
-        <div></div>
-        <div>
+        <div className='hidden md:block'></div>
+        <div className='mt-[15vh] md:mt-0'>
           <div>
             <video
               src='https://mater.agency/wp-content/uploads/2024/02/zvjerici-1.mp4'
@@ -232,7 +230,9 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='edn__p__title'>Green Tree Villas Web</h3>
+            <h3 className='edn__p__title'>
+              Journey into the world of wild animals called Zvjerići
+            </h3>
             <p className='edn__p__breadcumb'>site /Branding</p>
           </div>
         </div>

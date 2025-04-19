@@ -32,7 +32,7 @@ export default function Home() {
     {/* <Gallery/> */}
     <NewLattestProjects />
     {/* <AllStories/> */}
-    {/* <ClientsCollaboration/> */}
+    <ClientsCollaboration/>
   </section>
   );
 }
