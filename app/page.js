@@ -28,11 +28,11 @@ export default function Home() {
 
   return (
   <section>
-    <AboutUs/>
-    <Gallery/>
+    {/* <AboutUs/> */}
+    {/* <Gallery/> */}
     <NewLattestProjects />
-    <AllStories/>
-    <ClientsCollaboration/>
+    {/* <AllStories/> */}
+    {/* <ClientsCollaboration/> */}
   </section>
   );
 }
