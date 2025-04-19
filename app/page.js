@@ -8,6 +8,7 @@ import "./main.css"
 import NewLattestProjects from "./home/NewLattestProjects/NewLattestProjects";
 import { useEffect, useState } from "react";
 import Loader from "@/components/Loader/Loader";
+import HeaderBanner from "./home/HeaderBanner/HeaderBanner";
 
 
 
@@ -17,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Show loader for 2 seconds
+    } ); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -28,10 +29,11 @@ export default function Home() {
 
   return (
   <section>
-    {/* <AboutUs/> */}
-    {/* <Gallery/> */}
+    <HeaderBanner />
+    <AboutUs/>
+    <Gallery/>
     <NewLattestProjects />
-    {/* <AllStories/> */}
+    <AllStories/>
     <ClientsCollaboration/>
   </section>
   );
