@@ -62,7 +62,7 @@ function NewProjects() {
       <div className='edn__p__parent'>
         {/* first row start */}
         <div className=''>
-          <h2 className='text-5xl font-bold text-white '>
+          <h2 className='text-8xl font-bold gradient  '>
             Our latest <br /> projects
           </h2>
           <div className='edn__p__fr__img__parent'>
