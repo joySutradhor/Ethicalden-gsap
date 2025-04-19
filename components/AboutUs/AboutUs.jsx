@@ -11,7 +11,6 @@ const AboutUsMain = () => {
     const wordRefs = useRef([]);
     const charRefs = useRef([]);
 
-    // Clear refs on rerender
     wordRefs.current = [];
     charRefs.current = [];
 
@@ -39,8 +38,8 @@ const AboutUsMain = () => {
         return text.split('\n').map((line, lineIndex) => (
             <div key={lineIndex} className="block leading-tight">
                 {line.split('').map((char, charIndex) => (
-                    <span 
-                        key={`${lineIndex}-${charIndex}`} 
+                    <span
+                        key={`${lineIndex}-${charIndex}`}
                         ref={addToCharRefs}
                         className="char inline-block text-gray-400"
                     >
@@ -52,8 +51,7 @@ const AboutUsMain = () => {
     };
 
     useEffect(() => {
-        // Character reveal animation for title with ScrollTrigger
-        gsap.fromTo(charRefs.current, 
+        gsap.fromTo(charRefs.current,
             { color: 'gray' },
             {
                 color: 'black',
@@ -72,7 +70,6 @@ const AboutUsMain = () => {
             }
         );
 
-        // Word-by-word reveal animation for paragraphs
         gsap.fromTo(
             wordRefs.current,
             { opacity: 0, y: 30 },
@@ -103,29 +100,36 @@ const AboutUsMain = () => {
     return (
         <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[20vh]">
             <div className="max-w-6xl mx-auto">
-                {/* Title with line breaks and character animation */}
-                <h2 ref={titleRef} className="text-6xl font-bold mb-8">
+                {/* Title */}
+                <h2
+                    ref={titleRef}
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center sm:text-left"
+                >
                     {splitTextIntoChars(titleText)}
                 </h2>
 
-                <div className="flex pt-8">
-                    <div className="flex-1 flex justify-center items-center rotate-image">
+                <div className="flex flex-col sm:flex-row pt-8 gap-6 sm:gap-10">
+                    {/* Left Side (Image or Empty Placeholder) */}
+                    <div className="hidden min-[580px]:flex min-[580px]:w-1/3 justify-center items-center">
+                        <div className="" />
                     </div>
-                    <div className="flex-1">
+
+
+                    {/* Right Side (Text + Button) */}
+                    <div className="w-full sm:w-2/3">
                         {paragraphs.map((text, index) => (
-                            <p key={index} className="text-gray-600 text-2xl pb-5">
+                            <p key={index} className="text-gray-600 text-base sm:text-lg md:text-xl pb-4 leading-relaxed">
                                 {splitTextIntoWords(text, index)}
                             </p>
                         ))}
-                        <div className="mt-8">
-                            <button>
-                                <Link
-                                    className="px-8 py-3 bg-black text-white rounded-full text-lg shadow-lg transition-all justify-center flex items-center"
-                                    href={"#"}
-                                >
-                                    About Us
-                                </Link>
-                            </button>
+
+                        <div className="mt-6 sm:mt-8">
+                            <Link
+                                className="px-6 py-2 sm:px-8 sm:py-3 bg-black text-white rounded-full text-base sm:text-lg shadow-md transition-all inline-flex items-center justify-center"
+                                href={"#"}
+                            >
+                                About Us
+                            </Link>
                         </div>
                     </div>
                 </div>
