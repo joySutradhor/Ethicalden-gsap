@@ -1,11 +1,27 @@
-
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer utilities {
-    .dummy {
-        @apply border text-9xl bg-green-700
-    }
-    .largeText{
-        @apply text-4xl text-red-700 md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-5xl
-    }
+  
+  .v1__title {
+    @apply text-8xl font-bold;
+  }
+
+  /* use for main heading title - 72px */
+  .v2__title {
+    @apply text-7xl font-bold;
+  }
+
+  /* use for suheading - 60px */
+  .v3__title {
+    @apply text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold;
+  }
+  /* use for card title -36px*/
+  .v4__title {
+    @apply text-4xl font-bold;
+  }
+
+  /* common para title - 20px */
+  .base__para {
+    @apply text-xl font-bold;
+  }
 }

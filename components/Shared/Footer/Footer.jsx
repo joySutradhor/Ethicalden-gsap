@@ -68,7 +68,7 @@ function Footer() {
       <section className={`text-center my-[20vh]`}>
         <h2
           ref={titleRef}
-          className={`text-3xl md:text-6xl font-bold mb-[5vh] max-w-4xl mx-auto leading-snug px-4`}
+          className={`v3__title mb-[5vh] text-center 2xl:px-4 `}
         >
           {titleLines.map((line, lineIndex) => (
             <div key={lineIndex} className='block'>
@@ -132,7 +132,7 @@ function Footer() {
           <div className='edn__f__menu__parent'>
             <div>
               <h3 className='edn__f__title'>Follow Ethical Den</h3>
-              <div className='flex gap-3 mt-4'>
+              <div className='flex gap-3 mt-4 flex-wrap'>
                 <span className='edn__f___socail___icons '>
                   <FaLinkedin />
                 </span>
@@ -144,9 +144,6 @@ function Footer() {
                 </span>
                 <span className='edn__f___socail___icons'>
                   <FaInstagram />
-                </span>
-                <span className='edn__f___socail___icons'>
-                  <FaDribbble />
                 </span>
               </div>
             </div>
@@ -164,7 +161,7 @@ function Footer() {
               <p className='edn__f___socail___icons inline-block'>
                 <FaLocationDot />
               </p>
-              <p className='text-lg font-bold mt-10'>+8801627505755</p>
+              <p className='text-lg font-bold mt-5 lg:mt-10'>+8801627505755</p>
               <p className='text-lg font-bold'>Rimska 31, 44000 Sisak Croati</p>
             </div>
           </div>
