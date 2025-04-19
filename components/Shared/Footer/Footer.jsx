@@ -65,7 +65,7 @@ function Footer() {
     ]
   
     return (
-      <section className={`text-center my-[20vh]`}>
+      <section className={`text-center mb-[20vh]`}>
         <h2
           ref={titleRef}
           className={`v3__title mb-[5vh] text-center 2xl:px-4 `}

@@ -48,7 +48,7 @@ function ClientCollaboration() {
   ]
 
   return (
-    <section className='my-[30vh]'>
+    <section className='mb-[20vh]'>
       {/* title */}
       <h2
         ref={titleRef}
