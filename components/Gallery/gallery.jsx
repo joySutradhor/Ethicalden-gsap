@@ -15,67 +15,67 @@ const GalleryMain = () => {
     useEffect(() => {
         const video = videoRef.current;
         const section = sectionRef.current;
-
-        // 1. Move video down while scrolling
-        gsap.fromTo(
-            video,
-            { y: 0 },
-            {
-                y: 700,
-                scrollTrigger: {
-                    trigger: section,
-                    start: "bottom bottom",
-                    end: "+=100%",
-                    scrub: 1,
-                    markers: false,
-                }
-            }
-        );
-
-
-
-        // 2. Expand width animation
         const wrapper = wrapperRef.current;
-
+      
+        // STEP 1: Scroll down naturally with y: 700
+        gsap.fromTo(
+          video,
+          { y: 0 },
+          {
+            y: 900,
+            scrollTrigger: {
+              trigger: section,
+              start: "bottom bottom",
+              end: "+=100%",
+              scrub: 1,
+              markers: false,
+            },
+          }
+        );
+      
+        // STEP 2: Pin and expand video (while respecting layout scroll offset)
         if (wrapper && video) {
-            gsap.set(video, {
-                width: 'auto',
-                margin: '0 auto',
-                transformOrigin: 'center center',
+          gsap.set(video, {
+            width: '17.5vw',
+            height: '48vh',
+            position: 'absolute',
+            left: '50%',
+            xPercent: -50,
+            transformOrigin: 'center center',
+          });
+      
+          let mm = gsap.matchMedia();
+      
+          mm.add("(min-width: 768px)", () => {
+            const tl = gsap.timeline({
+              scrollTrigger: {
+                trigger: wrapper,
+                start: '+=150% bottom',
+                end: '+=400% bottom',
+                scrub: 1,
+                pin: true,
+                pinSpacing: true,
+                markers: false,
+              },
             });
-
-            let mm = gsap.matchMedia();
-
-            mm.add("(min-width: 1024px)", () => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: wrapper,
-                        start: '+=150% bottom',
-                        end: '+=400% bottom' ,
-                        scrub: 1.5,
-                        pin: true,
-                        pinSpacing: true,
-                        markers: false,
-                    },
-                });
-
-                tl.to(video, {
-                    y: 700,
-                    width: '120vw',
-                    xPercent: -35,
-                    ease: 'power2.out',
-                });
+      
+            tl.to(video, {
+              y: 900,
+              width: '80vw',
+              height: '80vh',
+              ease: 'power2.out',
             });
+          });
         }
-
+      
         return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+          ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
-    }, []);
+      }, []);
 
     return (
         <>
-            <section ref={sectionRef} className="min-h-screen bg-[#f1f2ee] flex justify-center items-center py-10 px-4 mb-[1000px] relative">
+            <section ref={sectionRef} className="min-h-screen bg-white flex justify-center items-center mt-[20vh] py-10 px-4 mb-[1000px] relative">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full relative">
                     {/* First Column */}
                     <div className="space-y-6">
@@ -104,8 +104,9 @@ const GalleryMain = () => {
                     {/* Third Column (Video) - Hidden on mobile/tablet */}
                     <div
                         ref={wrapperRef}
-                        className="hidden lg:flex tp-hero-bottom-img-wrap space-y-6 flex-col justify-end mx-auto w-full"
+                        className="hidden lg:flex tp-hero-bottom-img-wrap space-y-6 flex-col justify-end min-h-screen mx-auto w-full relative" 
                     >
+
                         <div
                             ref={videoRef}
                             className="tp-hero-bottom-img rounded-2xl overflow-hidden"
@@ -120,12 +121,13 @@ const GalleryMain = () => {
                                 muted
                                 autoPlay
                                 playsInline
-                                className="w-full h-[24vw] object-cover"
+                                className="w-full h-full object-cover"
                             >
                                 <source src="https://html.hixstudio.net/videos/liko/liko.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </div>
+
 
                     {/* Fourth Column */}
                     <div className="space-y-6">
