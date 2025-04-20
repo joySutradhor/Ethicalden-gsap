@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { HiMenu, HiX } from "react-icons/hi"; 
+import { HiMenu, HiX } from "react-icons/hi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +12,10 @@ const HeaderBannerMain = () => {
     const titleRef = useRef(null);
     const charRefs = useRef([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const leftVideoRef = useRef(null);
+    const topVideoRef = useRef(null);
+    const rightImageRef = useRef(null);
+    const bottomVideoRef = useRef(null);
 
     useEffect(() => {
         const banner = bannerRef.current;
@@ -55,6 +59,57 @@ const HeaderBannerMain = () => {
     }, []);
 
     const titleText = "You say jump,\nwe dance.";
+
+
+    // smooth image and video appearing animation
+    useEffect(() => {
+        const visuals = [leftVideoRef.current, topVideoRef.current, rightImageRef.current, bottomVideoRef.current];
+    
+        visuals.forEach((el, index) => {
+            if (el) {
+                gsap.fromTo(
+                    el,
+                    { opacity: 0, x: index % 2 === 0 ? -100 : 100, y: 50, scale: 0.95 },
+                    {
+                        opacity: 1,
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                        duration: 1,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 80%",
+                            toggleActions: "play none none none",
+                        },
+                    }
+                );
+            }
+        });
+    }, []);
+
+    // mouse parrellax on each
+    useEffect(() => {
+        const moveParallax = (e) => {
+            const { innerWidth, innerHeight } = window;
+            const moveX = (e.clientX - innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - innerHeight / 2) * 0.01;
+    
+            [leftVideoRef, topVideoRef, rightImageRef, bottomVideoRef].forEach((ref, idx) => {
+                if (ref.current) {
+                    gsap.to(ref.current, {
+                        x: moveX * (idx + 1),
+                        y: moveY * (idx + 1),
+                        duration: 0.4,
+                        ease: "power1.out",
+                    });
+                }
+            });
+        };
+    
+        window.addEventListener("mousemove", moveParallax);
+        return () => window.removeEventListener("mousemove", moveParallax);
+    }, []);
 
     // button animation
     const buttonRef = useRef(null);
@@ -118,7 +173,7 @@ const HeaderBannerMain = () => {
                         <span className="relative z-10">Let's Talk</span>
                         <span
                             ref={hoverRef}
-                            className="absolute inset-0 z-0 w-full h-full bg-blue-700"
+                            className="absolute inset-0 z-0 w-full h-full bg-[#8EFA6D]"
                         />
                     </button>
                 </div>
@@ -184,25 +239,25 @@ const HeaderBannerMain = () => {
                 {/* Visuals for screen width > 1200px */}
                 <div className="hidden lg:block">
                     {/* Left */}
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[320px] lg:h-[200px] xl:h-[380px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg z-20">
+                    <div ref={leftVideoRef} className="absolute left-0 top-1/2 -translate-y-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[320px] lg:h-[200px] xl:h-[380px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg z-20">
                         <video src="/images/banner/banner-v-left.mp4" autoPlay loop muted className="w-full h-full object-cover" />
                     </div>
 
                     {/* Top Center */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[300px] lg:h-[200px] xl:h-[250px] 2xl:h-[320px] rounded-xl overflow-hidden shadow-lg z-30">
+                    <div ref={topVideoRef} className="absolute top-0 left-1/2 -translate-x-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[300px] lg:h-[200px] xl:h-[250px] 2xl:h-[320px] rounded-xl overflow-hidden shadow-lg z-30">
                         <video src="/images/banner/banner-v-top.mp4" autoPlay loop muted className="w-full h-full object-cover" />
                     </div>
 
                     {/* Right */}
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[320px] lg:h-[200px] xl:h-[380px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg z-40">
+                    <div ref={rightImageRef} className="absolute right-0 top-1/2 -translate-y-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[320px] lg:h-[200px] xl:h-[380px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg z-40">
                         <img src="/images/banner/banner-v-right.jpg" alt="Right Visual" className="w-full h-full object-cover" />
                     </div>
                 </div>
 
                 {/* Bottom Video for all screen sizes */}
-                <div className="absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[500px]  overflow-hidden z-50 
+                <div ref={bottomVideoRef} className="absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[500px]  overflow-hidden z-50 
                 lg:left-1/2 lg:-translate-x-1/2 lg:w-[200px] lg:h-[200px] lg:pt-0 
-                xl:w-[380px] xl:h-[250px] 
+                xl:w-[380px] xl:h-[250px] xl:pt-10 
                 2xl:w-[500px] 2xl:h-[320px] lg:rounded-xl">
                     <video
                         src="/images/banner/banner-v-left.mp4"
