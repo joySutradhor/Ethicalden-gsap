@@ -1,21 +1,70 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import Image from 'next/image'
 function ClientsLogo () {
-  const [items, setItems] = useState([])
-
-  useEffect(() => {
-    axios
-      .get('/data/ClientsLogo.json')
-      .then(response => {
-        setItems(response.data)
-        console.log('check data', response.data)
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error)
-      })
-  }, [])
+  const items = [
+    {
+      id: 1,
+      src: 'https://mater.agency/wp-content/uploads/2024/03/vogue.png',
+      line: 'yes'
+    },
+    {
+      id: 2,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/unitedgroup-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 3,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/erste-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 4,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/a1-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 5,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/asseco-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 6,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/loreal-142x142.png',
+      line: 'no'
+    },
+    {
+      id: 7,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/mtv-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 8,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/nordeus-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 9,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/nfinnova-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 10,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/rba-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 11,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/telemach-142x142.png',
+      line: 'yes'
+    },
+    {
+      id: 12,
+      src: 'https://mater.agency/wp-content/uploads/2024/01/telenor-142x142.png',
+      line: 'no'
+    }
+  ];
+  
 
   return (
     <div className=' px-[5vw] lg:px-[15vw]'>
