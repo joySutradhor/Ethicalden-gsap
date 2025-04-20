@@ -98,12 +98,12 @@ const AboutUsMain = () => {
     const titleText = "We create impactful\ndigital experiences\nand redefine brand\nidentities.";
 
     return (
-        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[20vh]">
+        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
             <div className="max-w-6xl mx-auto">
                 {/* Title */}
                 <h2
                     ref={titleRef}
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center sm:text-left"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8  sm:text-left"
                 >
                     {splitTextIntoChars(titleText)}
                 </h2>
@@ -113,7 +113,6 @@ const AboutUsMain = () => {
                     <div className="hidden min-[580px]:flex min-[580px]:w-1/3 justify-center items-center">
                         <div className="" />
                     </div>
-
 
                     {/* Right Side (Text + Button) */}
                     <div className="w-full sm:w-2/3">

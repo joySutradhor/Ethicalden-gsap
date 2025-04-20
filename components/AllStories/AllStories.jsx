@@ -115,7 +115,7 @@ const AllStoriesMain = () => {
     }, []);
 
     return (
-        <div className="py-20 mt-[20vh] text-center ">
+        <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[20vh] text-center ">
             {/* Title with character spans */}
             <h2
                 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-400 pb-4 flex justify-center flex-wrap"
