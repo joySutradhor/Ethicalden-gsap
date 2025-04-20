@@ -9,6 +9,9 @@ const GalleryMain = () => {
     const sectionRef = useRef();
     const wrapperRef = useRef(null);
     const videoRef = useRef(null);
+    const col2Ref = useRef(null);
+    const col4Ref = useRef(null);
+    const col5Ref = useRef(null);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -61,6 +64,49 @@ const GalleryMain = () => {
                     height: '80vh',
                     ease: 'power2.out',
                 });
+
+                // Column scroll effects
+                gsap.fromTo(
+                    col2Ref.current,
+                    { y: 0 },
+                    {
+                        y: -100,
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: 1,
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    col5Ref.current,
+                    { y: 0 },
+                    {
+                        y: -80,
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: 1,
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    col4Ref.current,
+                    { y: 0 },
+                    {
+                        y: 100,
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: 1,
+                        },
+                    }
+                );
             });
         }
 
@@ -84,21 +130,21 @@ const GalleryMain = () => {
                         <img src="/images/gallery/gallery-1.jpg" alt="Award" className="rounded-2xl w-full" />
                     </div>
 
-                    {/* Second Column */}
-                    <div className="space-y-6 flex flex-col justify-end">
-                        <div className="bg-[#0a0a0a] text-white p-4 md:p-6 rounded-2xl w-full">
+                    {/* Second Column (animated up) */}
+                    <div ref={col2Ref} className="space-y-6 flex flex-col justify-end">
+                        <div className="bg-[#0a0a0a] text-white p-4 md:p-6 rounded-2xl  w-full md:h-[40vh]">
                             <p className="text-base md:text-xl">02 / <span className='text-gray-500'>06</span></p>
-                            <h2 className="text-5xl md:text-7xl lg:text-5xl xl:9xl font-bold pt-16 md:pt-24 lg:pt-28 pb-4 md:pb-5">34</h2>
+                            <h2 className="text-5xl md:text-7xl lg:text-5xl xl:9xl font-bold pt-16 md:pt-6 lg:pt-28 xl:pt-28 pb-2 md:pb-5">34</h2>
                             <p className="text-sm md:text-base">Fortune 500 companies who chose us. <a className="underline" href="#">View our work</a></p>
                         </div>
-                        <div className="bg-[#fdf98f] text-black p-4 md:p-6 rounded-2xl w-full">
+                        <div className="bg-[#fdf98f] text-black p-4 md:p-6 rounded-2xl w-full md:h-[40vh]">
                             <p className="text-base md:text-xl">MST / <span className='text-gray-500'>MATER STANDARD TIME</span></p>
-                            <h2 className="text-4xl md:text-4xl lg:text-5xl xl:9xl font-semibold pt-16 md:pt-24 pb-4 md:pb-5">10:25 <span className="text-sm">AM</span></h2>
+                            <h2 className="text-4xl md:text-4xl lg:text-5xl xl:9xl font-semibold pt-16 md:pt-6 lg:pt-8 xl:pt-28 pb-4 md:pb-5">10:25 <span className="text-sm">AM</span></h2>
                             <p className="text-sm md:text-base">Sleep mode initiated.</p>
                         </div>
                     </div>
 
-                    {/* Third Column (Video) */}
+                    {/* Third Column (video) */}
                     <div
                         ref={wrapperRef}
                         className="hidden lg:flex tp-hero-bottom-img-wrap space-y-6 flex-col justify-end min-h-screen mx-auto w-full relative"
@@ -124,11 +170,11 @@ const GalleryMain = () => {
                         </div>
                     </div>
 
-                    {/* Fourth Column */}
-                    <div className="space-y-6">
+                    {/* Fourth Column (animated down) */}
+                    <div ref={col4Ref} className="space-y-6">
                         <div className="bg-[#012d3d] text-white p-4 md:p-6 rounded-2xl w-full">
                             <p className="text-base md:text-xl">04 / <span className='text-gray-500'>06</span></p>
-                            <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold pt-16 md:pt-24 lg:pt-28 pb-4 md:pb-5">Fintech <br /> Experts</h3>
+                            <h3 className="text-3xl md:text-4xl lg:text-4xl font-semibold pt-16 md:pt-24 lg:pt-28 pb-4 md:pb-5">Fintech <br /> Experts</h3>
                             <p className="text-sm md:text-base">Unlocking the future of finance. <a className="underline" href="#">How do we do it?</a></p>
                         </div>
                         <div className="bg-[#012d3d] text-white p-4 md:p-6 rounded-2xl w-full">
@@ -138,12 +184,12 @@ const GalleryMain = () => {
                         </div>
                     </div>
 
-                    {/* Fifth Column */}
-                    <div className="space-y-6">
-                        <img src="/images/gallery/gallery-2.jpg" alt="Team" className="rounded-2xl w-full" />
-                        <div className="bg-[#fdf98f] text-black p-4 md:p-6 rounded-2xl w-full">
+                    {/* Fifth Column (animated up) */}
+                    <div ref={col5Ref} className="space-y-6 flex flex-col justify-end">
+                        <img src="/images/gallery/gallery-2.jpg" alt="Team" className="rounded-2xl w-full md:h-[40vh]" />
+                        <div className="bg-[#fdf98f] text-black p-4 md:p-6 rounded-2xl w-full md:h-[40vh]">
                             <p className="text-base md:text-xl">08 / <span className='text-gray-500'>06</span></p>
-                            <h3 className="text-3xl md:text-3xl lg:text-4xl xl:9xl font-semibold pt-16 md:pt-24 lg:pt-28 pb-4 md:pb-5">Masters of Telco</h3>
+                            <h3 className="text-3xl md:text-3xl lg:text-4xl xl:9xl font-semibold pt-16 md:pt-8 lg:pt-8 xl:pt-28 pb-4 md:pb-5">Masters of Telco</h3>
                             <p className="text-sm md:text-base">Transforming telco campaigns. <a className="underline" href="#">What's our secret?</a></p>
                         </div>
                     </div>
