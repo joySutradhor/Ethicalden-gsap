@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { HiMenu, HiX } from "react-icons/hi"; // Menu and Close icons
+import { HiMenu, HiX } from "react-icons/hi"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -140,21 +140,21 @@ const HeaderBannerMain = () => {
                         <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
                         <a href="#stories" onClick={() => setIsMenuOpen(false)}>Stories</a>
                         <button
-                        ref={buttonRef}
-                        className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-lg group"
-                    >
-                        <span className="relative z-10">Let's Talk</span>
-                        <span
-                            ref={hoverRef}
-                            className="absolute inset-0 z-0 w-full h-full bg-blue-700"
-                        />
-                    </button>
+                            ref={buttonRef}
+                            className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-lg group"
+                        >
+                            <span className="relative z-10">Let's Talk</span>
+                            <span
+                                ref={hoverRef}
+                                className="absolute inset-0 z-0 w-full h-full bg-blue-700"
+                            />
+                        </button>
                     </div>
                 </div>
             )}
 
             {/* Banner Content */}
-            <div ref={bannerRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none -mt-60 md:mt-0 px-4 text-center" style={{ zIndex: 30 }}>
+            <div ref={bannerRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-48 lg:mt-0 px-4 text-center" style={{ zIndex: 30 }}>
                 <div className="max-w-3xl">
                     <h1
                         ref={titleRef}
@@ -200,9 +200,19 @@ const HeaderBannerMain = () => {
                 </div>
 
                 {/* Bottom Video for all screen sizes */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[500px] xl:h-[250px] 2xl:h-[320px] pt-64 lg:pt-0 lg:h-[200px] lg:rounded-xl overflow-hidden shadow-lg z-50">
-                    <video src="/images/banner/banner-v-left.mp4" autoPlay loop muted className="w-full h-full object-cover" />
+                <div className="absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[500px]  overflow-hidden z-50 
+                lg:left-1/2 lg:-translate-x-1/2 lg:w-[200px] lg:h-[200px] lg:pt-0 
+                xl:w-[380px] xl:h-[250px] 
+                2xl:w-[500px] 2xl:h-[320px] lg:rounded-xl">
+                    <video
+                        src="/images/banner/banner-v-left.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        className="w-full h-full object-cover"
+                    />
                 </div>
+
             </div>
         </div>
     );
