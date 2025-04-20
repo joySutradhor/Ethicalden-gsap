@@ -1,5 +1,4 @@
 'use client'
-import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 function ClientsLogo () {
   const items = [
@@ -79,6 +78,7 @@ function ClientsLogo () {
               height={500}
               src={item.src}
               alt={`Item ${item.id}`}
+              unoptimized
               className='w-[80%] h-auto mb-2 '
             />
             {item.line === 'yes' && (
