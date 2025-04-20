@@ -56,11 +56,54 @@ const HeaderBannerMain = () => {
 
     const titleText = "You say jump,\nwe dance.";
 
+    // button animation
+    const buttonRef = useRef(null);
+    const hoverRef = useRef(null);
+
+
+    useEffect(() => {
+        const button = buttonRef.current;
+        const hoverElement = hoverRef.current;
+
+        if (!button || !hoverElement) return;
+
+        // Initial styles
+        gsap.set(hoverElement, {
+            scaleX: 0,
+            transformOrigin: 'left center',
+        });
+
+        const onMouseEnter = () => {
+            gsap.to(hoverElement, {
+                scaleX: 1,
+                duration: 0.4,
+                ease: 'power2.out',
+            });
+        };
+
+        const onMouseLeave = () => {
+            gsap.to(hoverElement, {
+                scaleX: 0,
+                duration: 0.4,
+                ease: 'power2.out',
+                transformOrigin: 'right center',
+            });
+        };
+
+        button.addEventListener('mouseenter', onMouseEnter);
+        button.addEventListener('mouseleave', onMouseLeave);
+
+        return () => {
+            button.removeEventListener('mouseenter', onMouseEnter);
+            button.removeEventListener('mouseleave', onMouseLeave);
+        };
+    }, []);
+
     return (
         <div className="relative h-screen overflow-hidden bg-white pb-20" style={{ zIndex: 30 }}>
             {/* Navbar */}
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
-                <div className="text-3xl font-black tracking-wide">MATER</div>
+                <div className="text-3xl font-black tracking-wide">Ethicalden</div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8 font-medium text-gray-800">
@@ -68,7 +111,16 @@ const HeaderBannerMain = () => {
                     <a href="#agency">The Agency</a>
                     <a href="#services">Services</a>
                     <a href="#stories">Stories</a>
-                    <button className="bg-[#003B49] text-white px-5 py-2 rounded-full">Let's Talk</button>
+                    <button
+                        ref={buttonRef}
+                        className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-lg group"
+                    >
+                        <span className="relative z-10">Let's Talk</span>
+                        <span
+                            ref={hoverRef}
+                            className="absolute inset-0 z-0 w-full h-full bg-blue-700"
+                        />
+                    </button>
                 </div>
 
                 {/* Mobile Menu Icon */}
@@ -87,7 +139,16 @@ const HeaderBannerMain = () => {
                         <a href="#agency" onClick={() => setIsMenuOpen(false)}>The Agency</a>
                         <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
                         <a href="#stories" onClick={() => setIsMenuOpen(false)}>Stories</a>
-                        <button className="bg-[#003B49] text-white px-5 py-2 rounded-full w-fit">Let's Talk</button>
+                        <button
+                        ref={buttonRef}
+                        className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-lg group"
+                    >
+                        <span className="relative z-10">Let's Talk</span>
+                        <span
+                            ref={hoverRef}
+                            className="absolute inset-0 z-0 w-full h-full bg-blue-700"
+                        />
+                    </button>
                     </div>
                 </div>
             )}
