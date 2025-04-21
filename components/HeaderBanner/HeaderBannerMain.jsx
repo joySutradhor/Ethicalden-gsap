@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiChevronDown, HiMenu, HiX } from "react-icons/hi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +16,8 @@ const HeaderBannerMain = () => {
     const topVideoRef = useRef(null);
     const rightImageRef = useRef(null);
     const bottomVideoRef = useRef(null);
+    const [subMenuOpen, setSubMenuOpen] = useState(false);
+
 
     useEffect(() => {
         const banner = bannerRef.current;
@@ -64,7 +66,7 @@ const HeaderBannerMain = () => {
     // smooth image and video appearing animation
     useEffect(() => {
         const visuals = [leftVideoRef.current, topVideoRef.current, rightImageRef.current, bottomVideoRef.current];
-    
+
         visuals.forEach((el, index) => {
             if (el) {
                 gsap.fromTo(
@@ -94,7 +96,7 @@ const HeaderBannerMain = () => {
             const { innerWidth, innerHeight } = window;
             const moveX = (e.clientX - innerWidth / 2) * 0.01;
             const moveY = (e.clientY - innerHeight / 2) * 0.01;
-    
+
             [leftVideoRef, topVideoRef, rightImageRef, bottomVideoRef].forEach((ref, idx) => {
                 if (ref.current) {
                     gsap.to(ref.current, {
@@ -106,7 +108,7 @@ const HeaderBannerMain = () => {
                 }
             });
         };
-    
+
         window.addEventListener("mousemove", moveParallax);
         return () => window.removeEventListener("mousemove", moveParallax);
     }, []);
@@ -158,22 +160,56 @@ const HeaderBannerMain = () => {
         <div className="relative h-screen overflow-hidden bg-white pb-20" style={{ zIndex: 30 }}>
             {/* Navbar */}
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
-                <div className="text-3xl font-black tracking-wide">Ethicalden</div>
+                <div className="text-3xl font-black tracking-wide"><a href="/">Ethicalden</a></div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8 font-medium text-gray-800">
-                    <a href="#work">Work</a>
-                    <a href="#agency">The Agency</a>
-                    <a href="#services">Services</a>
-                    <a href="#stories">Stories</a>
+                <div className="hidden md:flex items-center gap-8 font-medium text-gray-800 relative">
+                    <a href="#About Den">About Den</a>
+                    <a href="#Services">Services</a>
+                    <a href="#Products">Products</a>
+
+                    {/* Sub brands Dropdown Button */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setSubMenuOpen(!subMenuOpen)}
+                            className="flex items-center gap-1 hover:text-[#003b49]"
+                        >
+                            Sub brands
+                            <HiChevronDown
+                                className={`transform transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""
+                                    }`}
+                            />
+                        </button>
+
+                        {/* Dropdown Items */}
+                        {subMenuOpen && (
+                            <div className="absolute left-0 mt-2 bg-white border rounded shadow-md py-2 w-40 z-50">
+                                <a
+                                    href="https://eduden.example.com"
+                                    className="block px-4 py-2 hover:bg-gray-100"
+                                    target="_blank" rel="noopener noreferrer"
+                                >
+                                    Eduden
+                                </a>
+                                <a
+                                    href="https://hivyr.example.com"
+                                    className="block px-4 py-2 hover:bg-gray-100"
+                                    target="_blank" rel="noopener noreferrer"
+                                >
+                                    Hivyr
+                                </a>
+                            </div>
+                        )}
+                    </div>
+
                     <button
                         ref={buttonRef}
-                        className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-lg group"
+                        className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-4xl group"
                     >
                         <span className="relative z-10">Let's Talk</span>
                         <span
                             ref={hoverRef}
-                            className="absolute inset-0 z-0 w-full h-full bg-[#8EFA6D]"
+                            className="absolute inset-0 z-0 w-full h-full"
                         />
                     </button>
                 </div>
@@ -190,24 +226,32 @@ const HeaderBannerMain = () => {
             {isMenuOpen && (
                 <div className="md:hidden px-6 pb-6 bg-white z-30">
                     <div className="flex flex-col gap-4 font-medium text-gray-800">
-                        <a href="#work" onClick={() => setIsMenuOpen(false)}>Work</a>
-                        <a href="#agency" onClick={() => setIsMenuOpen(false)}>The Agency</a>
-                        <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
-                        <a href="#stories" onClick={() => setIsMenuOpen(false)}>Stories</a>
+                        <a href="#About Den" onClick={() => setIsMenuOpen(false)}>About Den</a>
+                        <a href="#Services" onClick={() => setIsMenuOpen(false)}>Services</a>
+                        <a href="#Products" onClick={() => setIsMenuOpen(false)}>Products</a>
+
+                        {/* Sub brands Mobile Dropdown */}
+                        <div className="flex flex-col gap-1 ml-2">
+                            <span className="font-semibold flex items-center">
+                                Sub brands <HiChevronDown className="ml-1" />
+                            </span>
+                            <a href="https://eduden.example.com" className="ml-4 text-sm text-blue-700" target="_blank" rel="noopener noreferrer">Eduden</a>
+                            <a href="https://hivyr.example.com" className="ml-4 text-sm text-blue-700" target="_blank" rel="noopener noreferrer">Hivyr</a>
+                        </div>
+
                         <button
                             ref={buttonRef}
-                            className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-lg group"
+                            className="relative px-8 py-3 overflow-hidden font-medium text-white bg-[#003b49] rounded-4xl group"
                         >
                             <span className="relative z-10">Let's Talk</span>
                             <span
                                 ref={hoverRef}
-                                className="absolute inset-0 z-0 w-full h-full bg-blue-700"
+                                className="absolute inset-0 z-0 w-full h-full "
                             />
                         </button>
                     </div>
                 </div>
             )}
-
             {/* Banner Content */}
             <div ref={bannerRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-48 lg:mt-0 px-4 text-center" style={{ zIndex: 30 }}>
                 <div className="max-w-3xl">
