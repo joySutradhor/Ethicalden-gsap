@@ -121,7 +121,7 @@ const AllStoriesMain = () => {
                 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-400 pb-4 flex justify-center flex-wrap"
                 ref={titleRef}
             >
-                {"Behind the Screens".split("").map((char, i) => (
+                {"Our Products".split("").map((char, i) => (
                     <span
                         key={i}
                         ref={(el) => (charRefs.current[i] = el)}
@@ -132,7 +132,7 @@ const AllStoriesMain = () => {
                 ))}
             </h2>
 
-            <button className="bg-black py-4 px-6 font-bold text-white rounded-3xl mb-20">All Stories</button>
+            <button className="bg-black py-4 px-6 font-bold text-white rounded-4xl mb-20">All Stories</button>
 
             <div className="relative overflow-hidden w-full flex items-center">
                 <div className="overflow-hidden w-full">
