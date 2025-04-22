@@ -52,7 +52,7 @@ function ClientCollaboration() {
       {/* title */}
       <h2
         ref={titleRef}
-        className='text-center text-3xl lg:text-6xl font-bold px-[5vw] lg:px-0 max-w-5xl mx-auto mb-[10vh] leading-snug'
+        className='text-center text-3xl lg:text-7xl font-rota font-bold px-[5vw] lg:px-0 max-w-5xl mx-auto mb-[10vh] '
       >
         {titleLines.map((line, lineIndex) => (
           <div key={lineIndex} className="block">

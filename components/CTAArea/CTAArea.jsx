@@ -48,7 +48,7 @@ function CTAArea({ darkBackground = false }) {
     <section className={`text-center my-[20vh] ${darkBackground ? 'bg-black' : ''}`}>
       <h2
         ref={titleRef}
-        className={`text-3xl md:text-6xl font-bold mb-[5vh] max-w-4xl mx-auto leading-snug px-4 ${darkBackground ? 'text-white' : 'text-black'}`}
+        className={`text-3xl  md:text-6xl font-bold mb-[5vh] max-w-4xl mx-auto leading-snug px-4   ${darkBackground ? 'text-white font-rota ' : 'text-black'}`}
       >
         {titleLines.map((line, lineIndex) => (
           <div key={lineIndex} className='block'>
