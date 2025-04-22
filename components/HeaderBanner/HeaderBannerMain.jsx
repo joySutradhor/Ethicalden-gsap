@@ -160,7 +160,7 @@ const HeaderBannerMain = () => {
         <div className="relative h-screen overflow-hidden bg-white pb-20" style={{ zIndex: 30 }}>
             {/* Navbar */}
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
-                <div className="text-3xl font-black tracking-wide"><a href="/">Ethicalden</a></div>
+                <div className="text-3xl font-rota gradient tracking-wide"><a href="/">Ethicalden</a></div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8 font-medium text-gray-800 relative">
@@ -257,7 +257,7 @@ const HeaderBannerMain = () => {
                 <div className="max-w-3xl">
                     <h1
                         ref={titleRef}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight"
+                        className="v1__title font-rota font-extrabold leading-tight"
                     >
                         {
                             titleText.split("").map((char, index) =>
@@ -275,7 +275,7 @@ const HeaderBannerMain = () => {
                             )
                         }
                     </h1>
-                    <p className="mt-6 text-lg md:text-xl text-gray-700">
+                    <p className="mt-6 font-ethosnova base__para">
                         We are mater, magicians of the digital age, <br /> dancing on the edge of creativity for more than two decades.
                     </p>
                 </div>
