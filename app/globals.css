@@ -26,12 +26,12 @@
 @layer utilities {
   
   .v1__title {
-    @apply text-8xl font-bold;
+    @apply text-3xl md:text-6xl lg:text-8xl font-bold;
   }
 
   /* use for main heading title - 72px */
   .v2__title {
-    @apply text-7xl font-bold;
+    @apply text-3xl md:text-6xl lg:text-7xl  font-bold;
   }
 
   /* use for suheading - 60px */
@@ -45,7 +45,7 @@
 
   /* common para title - 20px */
   .base__para {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold text-gray-600;
   }
 }
 

@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Shared/Footer/Footer";
-import HeaderBanner from "./home/HeaderBanner/HeaderBanner";
+import SmoothScroll from "@/components/hooks/smooth-scroll";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,10 +21,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {/* <Header/> */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <SmoothScroll />
         {children}
       </body>
     </html>

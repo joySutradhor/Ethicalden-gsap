@@ -118,7 +118,7 @@ const AllStoriesMain = () => {
         <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[20vh] text-center ">
             {/* Title with character spans */}
             <h2
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-400 pb-4 flex justify-center flex-wrap"
+                className="v1__title font-rota text-gray-400 pb-4 flex justify-center flex-wrap"
                 ref={titleRef}
             >
                 {"Our Products".split("").map((char, i) => (
@@ -154,8 +154,8 @@ const AllStoriesMain = () => {
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                                 <div className="mt-3 text-left px-2">
-                                    <p className="text-3xl font-bold pb-2 text-black">{blog.name}</p>
-                                    <p className="text-sm text-gray-700">{blog.title}</p>
+                                    <p className="v4__title font-rota font-bold pb-2 text-black">{blog.name}</p>
+                                    <p className="base__para font-ethosnova">{blog.title}</p>
                                 </div>
                             </div>
                         ))}
