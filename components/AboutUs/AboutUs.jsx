@@ -103,7 +103,7 @@ const AboutUsMain = () => {
                 {/* Title */}
                 <h2
                     ref={titleRef}
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8  sm:text-left"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-rota mb-8  sm:text-left"
                 >
                     {splitTextIntoChars(titleText)}
                 </h2>
@@ -117,7 +117,7 @@ const AboutUsMain = () => {
                     {/* Right Side (Text + Button) */}
                     <div className="w-full sm:w-2/3">
                         {paragraphs.map((text, index) => (
-                            <p key={index} className="text-gray-600 text-base sm:text-lg md:text-xl pb-4 leading-relaxed">
+                            <p key={index} className="font-ethosnova text-gray-600 text-base sm:text-lg md:text-xl pb-4 leading-relaxed">
                                 {splitTextIntoWords(text, index)}
                             </p>
                         ))}

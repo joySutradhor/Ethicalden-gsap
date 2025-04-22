@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'RotaBold';
+  src: url('/fonts/rota-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ethosnova';
+  src: url('/fonts/ethosnova-medium-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-ethosnova {
+  font-family: 'ethosnova', sans-serif;
+}
+.font-rota {
+  font-family: 'RotaBold', sans-serif;
+}
+
+
+
 @import 'tailwindcss';
 
 @layer utilities {
