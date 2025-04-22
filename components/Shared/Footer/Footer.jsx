@@ -10,11 +10,12 @@ import {
 } from 'react-icons/fa6'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import "./Footer.css"
+import './Footer.css'
+import '@/app/globals.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function Footer() {
+function Footer () {
   const footerRef = useRef(null)
   const [darkBackground, setDarkBackground] = useState(false)
   const [isReady, setIsReady] = useState(false)
@@ -34,12 +35,12 @@ function Footer() {
     }
   }, [])
 
-  function CTAArea({ darkMode }) {
+  function CTAArea ({ darkMode }) {
     const titleRef = useRef(null)
     const charRefs = useRef([])
     const animationRef = useRef(null)
 
-    const addToCharRefs = (el) => {
+    const addToCharRefs = el => {
       if (el && !charRefs.current.includes(el)) {
         charRefs.current.push(el)
       }
@@ -56,14 +57,14 @@ function Footer() {
         color: darkMode ? 'white' : 'black',
         stagger: {
           from: 'random',
-          each: 0.05,
+          each: 0.05
         },
         ease: 'power2.out',
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "top 80%",
-          end: "top 50%",
-          toggleActions: "play none none none",
+          start: 'top 80%',
+          end: 'top 50%',
+          toggleActions: 'play none none none',
           markers: false,
           invalidateOnRefresh: true
         }
@@ -75,7 +76,7 @@ function Footer() {
     }, [isReady, darkMode])
 
     const titleLines = [
-      "Up for an adventure?",
+      'Up for an adventure?',
       "Let's kickstart your next project."
     ]
 
@@ -83,13 +84,13 @@ function Footer() {
     charRefs.current = []
 
     return (
-      <section className="text-center mb-16 mt-[5vh] md:mt-[10vh] lg:mt-[20vh]">
+      <section className='text-center mb-16 mt-[5vh] md:mt-[10vh] lg:mt-[20vh]'>
         <h2
           ref={titleRef}
           className="v2__title font-rota mb-[5vh] max-w-4xl mx-auto leading-snug px-4"
         >
           {titleLines.map((line, lineIndex) => (
-            <div key={lineIndex} className="block">
+            <div key={lineIndex} className='block'>
               {line.split('').map((char, charIndex) => (
                 <span
                   key={charIndex}
@@ -104,7 +105,11 @@ function Footer() {
           ))}
         </h2>
 
-        <button className={`text-base font-semibold py-4 px-10 rounded-full transition-colors duration-300 ${darkMode ? 'bg-white text-[#06171D]' : 'bg-yellow-300'}`}>
+        <button
+          className={`text-base font-semibold py-4 px-10 rounded-full transition-colors duration-300 ${
+            darkMode ? 'bg-white text-[#06171D]' : 'bg-yellow-300'
+          }`}
+        >
           Let's Talk
         </button>
       </section>
@@ -159,46 +164,58 @@ function Footer() {
       <CTAArea darkMode={darkBackground} />
       <section
         ref={footerRef}
-        className="edn__f__container transition-all duration-500"
+        className='edn__f__container transition-all duration-500'
       >
-        <div className="edn__f__wrapper">
+        <div className='edn__f__wrapper'>
           <div>
-            <h3 className="text-3xl font-black">Ethical Den</h3>
+            <h3 className='text-3xl font-black'>Ethical Den</h3>
           </div>
-          <div className="edn__f__menu__parent">
+          <div className='edn__f__menu__parent'>
             <div>
-              <h3 className="edn__f__title">Follow Ethical Den</h3>
-              <div className="flex gap-3 mt-4 flex-wrap">
-                <span className="edn__f___socail___icons">
+              <h3 className='edn__f__title font-rota'>Follow Ethical Den</h3>
+              <div className='flex gap-3 mt-4 flex-wrap'>
+                <span className='edn__f___socail___icons'>
                   <FaLinkedin />
                 </span>
-                <span className="edn__f___socail___icons">
+                <span className='edn__f___socail___icons'>
                   <FaFacebook />
                 </span>
-                <span className="edn__f___socail___icons">
+                <span className='edn__f___socail___icons'>
                   <FaYoutube />
                 </span>
-                <span className="edn__f___socail___icons">
+                <span className='edn__f___socail___icons'>
                   <FaInstagram />
                 </span>
               </div>
             </div>
 
             <div>
-              <h3 className="edn__f__title">Work</h3>
-              <h3 className="edn__f__title">The Agency</h3>
-              <h3 className="edn__f__title">Services</h3>
-              <h3 className="edn__f__title">Stories</h3>
-              <h3 className="edn__f__title">Let's Talk</h3>
+              <h3 className='edn__f__title font-rota'>Work</h3>
+              <h3 className='edn__f__title font-rota'>The Agency</h3>
+              <h3 className='edn__f__title font-rota'>Services</h3>
+              <h3 className='edn__f__title font-rota'>Stories</h3>
+              <h3 className='edn__f__title font-rota'>Let's Talk</h3>
             </div>
 
             <div>
-              <h3 className="edn__f__title">hello@ethical.den.com</h3>
-              <p className="edn__f___socail___icons inline-block">
+              <h3 className='edn__f__title font-rota'>hello@ethical.den.com</h3>
+              <p className='edn__f___socail___icons inline-block'>
                 <FaLocationDot />
               </p>
-              <p className="text-lg font-bold mt-5 lg:mt-10">+8801627505755</p>
-              <p className="text-lg font-bold">Rimska 31, 44000 Sisak Croati</p>
+              <div className='my-5 lg:my-10'>
+                <p className='text-base font-rota'>+ 91 9547578920</p>
+                <p className='text-base font-ethosnova'>
+                  4/4E, Club Town Complex, Kolkata , Mahakavi Kuvempu Road,
+                  Rajajinar, Bangalore , India .
+                </p>
+              </div>
+
+              <div>
+                <p className='text-lg font-rota '>+880 17941-81603</p>
+                <p className='text-base font-ethosnova '>
+                  24/A, Road-06, Nabinagar Housing, Mohammadpur, Dhaka.
+                </p>
+              </div>
             </div>
           </div>
         </div>
