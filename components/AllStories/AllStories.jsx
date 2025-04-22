@@ -1,7 +1,8 @@
-"use client"
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AnimatedButton from "../hooks/AnimatedButoon";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,7 @@ const AllStoriesMain = () => {
 
     const titleRef = useRef(null);
     const charRefs = useRef([]);
+    const waveRef = useRef(null); // 👈 For waving animation
 
     const Stories = [
         { name: "Why Mater?", title: "Blog / Education / Idea's", img: "/images/stories/story-1.jpg" },
@@ -44,6 +46,20 @@ const AllStoriesMain = () => {
                 }
             }
         );
+    }, []);
+
+    // Waving hand animation
+    useEffect(() => {
+        if (!waveRef.current) return;
+
+        gsap.to(waveRef.current, {
+            rotate: 15,
+            duration: 0.4,
+            yoyo: true,
+            repeat: -1,
+            ease: "power1.inOut",
+            transformOrigin: "70% 70%"
+        });
     }, []);
 
     // Scroll horizontal card movement
@@ -114,8 +130,122 @@ const AllStoriesMain = () => {
         };
     }, []);
 
+
+    // Button animation setup
+    const buttonRef = useRef(null);
+    const buttonTextRef = useRef(null);
+    const buttonBgRef = useRef(null);
+    const buttonStaticTextRef = useRef(null);
+    const buttonScrollingTextRef = useRef(null);
+
+
+    useEffect(() => {
+        const button = buttonRef.current;
+        const textWrapper = buttonTextRef.current;
+        const bg = buttonBgRef.current;
+        const staticText = buttonStaticTextRef.current;
+        const scrollingText = buttonScrollingTextRef.current;
+
+        // Initial setup
+        gsap.set(button, { opacity: 1, y: 0 });
+        gsap.set(bg, {
+            scaleX: 0,
+            transformOrigin: "center center",
+            backgroundColor: "#9EFCF1"
+        });
+        gsap.set(scrollingText, { opacity: 0, x: 0 });
+        gsap.set(staticText, { opacity: 1 });
+
+        const hoverTL = gsap.timeline({ paused: true });
+
+        hoverTL
+            .to(bg, {
+                scaleX: 1,
+                duration: 0.5,
+                ease: "power2.out"
+            })
+            .to(staticText, {
+                opacity: 0,
+                duration: 0.2
+            }, "-=0.2")
+            .to(scrollingText, {
+                opacity: 1,
+                duration: 0.2
+            })
+            .to(textWrapper, {
+                color: "black",
+                duration: 0.3
+            }, "-=0.3");
+
+        let scrollTween;
+
+        const handleMouseEnter = () => {
+            hoverTL.play().then(() => {
+                // Start scrolling animation only after the hover animation completes
+                if (!scrollTween) {
+                    const contentWidth = scrollingText.scrollWidth;
+                    const buttonWidth = button.offsetWidth;
+                    const duration = contentWidth / 50; // Adjust speed here (lower number = faster)
+
+                    scrollTween = gsap.to(scrollingText, {
+                        x: `-=${contentWidth - buttonWidth}`,
+                        duration: duration,
+                        ease: "linear",
+                        repeat: -1
+                    });
+                } else {
+                    scrollTween.play();
+                }
+            });
+        };
+
+        const handleMouseLeave = () => {
+            hoverTL.reverse();
+            if (scrollTween) {
+                scrollTween.pause();
+                // Reset position when mouse leaves
+                gsap.set(scrollingText, { x: 0 });
+            }
+        };
+
+        button.addEventListener("mouseenter", handleMouseEnter);
+        button.addEventListener("mouseleave", handleMouseLeave);
+
+        gsap.from(button, {
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+            delay: 0.5,
+            ease: "back.out(1.7)",
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: button,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        return () => {
+            button.removeEventListener("mouseenter", handleMouseEnter);
+            button.removeEventListener("mouseleave", handleMouseLeave);
+            hoverTL.kill();
+            if (scrollTween) scrollTween.kill();
+        };
+    }, []);
+
+
     return (
-        <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[20vh] text-center ">
+        <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[20vh] text-center relative">
+            {/* Centered Waving Image */}
+            <div className="flex justify-center mb-2">
+                <img
+                    src="/images/stories/waving-hand.webp"
+                    alt="Waving Hand"
+                    ref={waveRef}
+                    className="w-20 h-20 md:w-24 md:h-24"
+                />
+            </div>
+
             {/* Title with character spans */}
             <h2
                 className="v1__title font-rota text-gray-400 pb-4 flex justify-center flex-wrap"
@@ -132,7 +262,34 @@ const AllStoriesMain = () => {
                 ))}
             </h2>
 
-            <button className="bg-black py-4 px-6 font-bold text-white rounded-4xl mb-20">All Stories</button>
+            <div className="my-6 sm:mt-8 relative inline-block">
+                <Link
+                    ref={buttonRef}
+                    className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-base sm:text-lg bg-[#003b49] overflow-hidden inline-flex items-center justify-center group"
+                    href={"#"}
+                    style={{ opacity: 1 }}
+                >
+                    <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                    <span
+                        ref={buttonTextRef}
+                        className="relative z-10 font-medium text-white overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                    >
+                        <span ref={buttonStaticTextRef} className="static-text">
+                            All stories
+                        </span>
+                        <span
+                            ref={buttonScrollingTextRef}
+                            className="scrolling-text absolute left-0"
+                        >
+                            {Array.from({ length: 20 }).map((_, i) => (
+                                <span key={i} className="inline-block mr-8">
+                                    All stories
+                                </span>
+                            ))}
+                        </span>
+                    </span>
+                </Link>
+            </div>
 
             <div className="relative overflow-hidden w-full flex items-center">
                 <div className="overflow-hidden w-full">

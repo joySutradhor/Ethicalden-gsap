@@ -26,7 +26,7 @@
 @layer utilities {
   
   .v1__title {
-    @apply text-3xl md:text-6xl lg:text-8xl font-bold;
+    @apply text-3xl md:text-6xl lg:text-8xl font-extrabold;
   }
 
   /* use for main heading title - 72px */
@@ -48,4 +48,5 @@
     @apply text-xl font-bold text-gray-600;
   }
 }
+
 
