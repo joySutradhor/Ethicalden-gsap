@@ -86,7 +86,7 @@ function Footer() {
       <section className="text-center mb-16 mt-[5vh] md:mt-[10vh] lg:mt-[20vh]">
         <h2
           ref={titleRef}
-          className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-[5vh] max-w-4xl mx-auto leading-snug px-4"
+          className="v2__title font-rota mb-[5vh] max-w-4xl mx-auto leading-snug px-4"
         >
           {titleLines.map((line, lineIndex) => (
             <div key={lineIndex} className="block">
