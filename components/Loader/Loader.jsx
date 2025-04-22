@@ -16,20 +16,25 @@ const Loader = ({ className = '' }) => {
 
   // GSAP animation for character reveal
   useEffect(() => {
-    const animation = gsap.to('.char', {
-      color: 'black',
-      delay: 0,
-      stagger: {
-        from: 'start',
-        amount: 1
-      },
-      ease: 'power2.out'
-    })
-
+    const animation = gsap.fromTo(
+      '.char',
+      { color: '#808080' },
+      {
+        color: 'black',
+        delay: 0,
+        stagger: {
+          from: 'start',
+          amount: 2 
+        },
+        ease: 'power2.out'
+      }
+    )
+  
     return () => {
       animation.kill()
     }
   }, [])
+  
 
   return (
     <section className='h-[100vh] w-full bg-[#EBECE7] fixed top-0 flex justify-center items-center z-50'>

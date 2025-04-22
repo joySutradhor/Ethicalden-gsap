@@ -17,7 +17,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    delay(1500).then(() => {
+    delay(2000).then(() => {
       setLoading(false);
     });
   }, []);
