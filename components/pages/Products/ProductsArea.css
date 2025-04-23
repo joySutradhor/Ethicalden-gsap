@@ -2,12 +2,15 @@
 
 @layer utilities {
     .edn__p__wrapper{
-        @apply px-[5vw] md:px-[12vw] mt-[5vh] md:mt-[15vh] lg:mt-[20vh]  py-[5vh] md:py-[10vh] lg:py-[20vh] text-white
+        @apply px-[5vw] md:px-[12vw]   py-[5vh] md:py-[10vh] lg:py-[20vh] text-white
     }
 
-    .edn__p__parent{
-        @apply grid grid-cols-2 md:gap-x-[5vw] xl:gap-x-[7vw] 
-    }
+    .edn__p__parent {
+        @apply grid grid-cols-2 gap-y-6 sm:gap-y-8 
+               gap-x-4 sm:gap-x-6 md:gap-x-[5vw] xl:gap-x-[7vw] 
+               px-4 sm:px-6 md:px-10;
+      }
+      
 
     .edn__p__fr__img__parent{
         @apply mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[80%]

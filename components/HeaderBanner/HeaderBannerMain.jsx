@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { HiChevronDown, HiMenu, HiX } from "react-icons/hi";
-import AnimatedButton from "../hooks/AnimatedButoon";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -229,9 +228,9 @@ const HeaderBannerMain = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8 font-medium text-gray-800 relative">
-                    <a href="#About Den">About Den</a>
-                    <a href="#Services">Services</a>
-                    <a href="#Products">Products</a>
+                    <a href="about-den">About Den</a>
+                    <a href="services">Services</a>
+                    <a href="products">Products</a>
 
                     {/* Sub brands Dropdown Button */}
                     <div className="relative">
@@ -270,7 +269,7 @@ const HeaderBannerMain = () => {
                     <div className="">
                         <Link
                             ref={buttonRef}
-                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-base sm:text-lg bg-[#003b49] overflow-hidden inline-flex items-center justify-center group"
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#003b49] overflow-hidden inline-flex items-center justify-center group"
                             href={"#"}
                             style={{ opacity: 1 }}
                         >
@@ -309,9 +308,9 @@ const HeaderBannerMain = () => {
             {isMenuOpen && (
                 <div className="md:hidden px-6 pb-6 bg-white z-50">
                     <div className="flex flex-col gap-4 font-medium text-gray-800">
-                        <a href="#About Den" onClick={() => setIsMenuOpen(false)}>About Den</a>
-                        <a href="#Services" onClick={() => setIsMenuOpen(false)}>Services</a>
-                        <a href="#Products" onClick={() => setIsMenuOpen(false)}>Products</a>
+                        <a href="about-den" onClick={() => setIsMenuOpen(false)}>About Den</a>
+                        <a href="services" onClick={() => setIsMenuOpen(false)}>Services</a>
+                        <a href="products" onClick={() => setIsMenuOpen(false)}>Products</a>
 
                         {/* Sub brands Mobile Dropdown */}
                         <div className="flex flex-col gap-1 ml-2">
