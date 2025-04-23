@@ -85,15 +85,21 @@ const GalleryMain = () => {
                         pin: true,
                         pinSpacing: true,
                         markers: false,
+                        anticipatePin: 1, 
                     },
+
+                    defaults: {
+                        ease: 'none'  // Smoother easing by default
+                    }
                 });
 
                 tl.to(video, {
                     y: 900,
                     width: '80vw',
                     height: '80vh',
-                    ease: 'power2.out',
-                });
+                    duration: 1,              // Shorter duration since scroll controls timing
+                    ease: 'none',    // Smooth easing for the animation
+                }, 0);
 
                 // Column scroll effects
                 gsap.fromTo(
@@ -150,7 +156,7 @@ const GalleryMain = () => {
         <>
             <section ref={sectionRef} className="min-h-screen bg-white  mt-[5vh] md:mt-[15vh] lg:mt-[20vh] py-10 px-4 lg:mb-[1000px] relative">
 
-                {/* Title with character spans */}            
+                {/* Title with character spans */}
                 <h2
                     className="v1__title font-rota pb-4 flex justify-center flex-wrap mb-16"
                     ref={titleRef}

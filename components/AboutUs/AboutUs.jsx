@@ -77,23 +77,24 @@ const AboutUsMain = () => {
         );
 
         // Word animation
-        gsap.fromTo(
-            wordRefs.current,
-            { opacity: 0, y: 30 },
-            {
-                opacity: 1,
-                y: 0,
-                stagger: 0.05,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: wordRefs.current[0],
-                    start: "top 80%",
-                    end: "top 40%",
-                    scrub: false,
-                },
-            }
-        );
+        wordRefs.current.forEach((wordEl, i) => {
+            gsap.fromTo(
+                wordEl,
+                { opacity: 0, y: 10 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: wordEl,
+                        start: "top 95%",
+                        end: "top 75%",
+                        scrub: true,
+                    },
+                }
+            );
+        });
+
 
         // Button animation setup
         const button = buttonRef.current;
@@ -142,7 +143,7 @@ const AboutUsMain = () => {
                     const contentWidth = scrollingText.scrollWidth;
                     const buttonWidth = button.offsetWidth;
                     const duration = contentWidth / 50; // Adjust speed here (lower number = faster)
-                    
+
                     scrollTween = gsap.to(scrollingText, {
                         x: `-=${contentWidth - buttonWidth}`,
                         duration: duration,
@@ -212,7 +213,15 @@ const AboutUsMain = () => {
 
                     <div className="w-full sm:w-2/3">
                         {paragraphs.map((text, index) => (
-                            <p key={index} className="font-ethosnova text-base pb-4 leading-relaxed">
+                            <p
+                                key={index}
+                                className="font-ethosnova base__para pb-4 leading-relaxed reveal-paragraph"
+                                ref={(el) => {
+                                    if (el && !wordRefs.current.includes(el)) {
+                                        wordRefs.current.push(el);
+                                    }
+                                }}
+                            >
                                 {splitTextIntoWords(text, index)}
                             </p>
                         ))}
@@ -232,8 +241,8 @@ const AboutUsMain = () => {
                                     <span ref={buttonStaticTextRef} className="static-text">
                                         About Us
                                     </span>
-                                    <span 
-                                        ref={buttonScrollingTextRef} 
+                                    <span
+                                        ref={buttonScrollingTextRef}
                                         className="scrolling-text absolute left-0"
                                     >
                                         {Array.from({ length: 20 }).map((_, i) => (
