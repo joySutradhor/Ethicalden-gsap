@@ -45,7 +45,7 @@
 
   /* common para title - 20px */
   .base__para {
-    @apply text-xl font-bold text-gray-600;
+    @apply text-2xl font-bold text-gray-600;
   }
 }
 
