@@ -80,16 +80,15 @@ const GalleryMain = () => {
                     scrollTrigger: {
                         trigger: wrapper,
                         start: '+=150% bottom',
-                        end: '+=400% bottom',
+                        end: '+=110%',
                         scrub: 1,
                         pin: true,
                         pinSpacing: true,
                         markers: false,
-                        anticipatePin: 1, 
                     },
 
                     defaults: {
-                        ease: 'none'  // Smoother easing by default
+                        ease: 'none'
                     }
                 });
 
@@ -97,8 +96,8 @@ const GalleryMain = () => {
                     y: 900,
                     width: '80vw',
                     height: '80vh',
-                    duration: 1,              // Shorter duration since scroll controls timing
-                    ease: 'none',    // Smooth easing for the animation
+                    duration: 1,
+                    ease: 'none',
                 }, 0);
 
                 // Column scroll effects
@@ -185,7 +184,7 @@ const GalleryMain = () => {
                         </div>
 
                         {/* Second Column (animated up) */}
-                        <div ref={col2Ref} className="space-y-6 flex flex-col justify-end">
+                        <div ref={col2Ref} className="space-y-6 flex flex-col lg:mt-50 ">
                             <div className="bg-[#0a0a0a] text-white p-4 md:p-6 rounded-2xl  w-full md:h-[40vh]">
                                 <p className="text-base md:text-xl">02 / <span className='text-gray-500'>06</span></p>
                                 <h2 className="text-5xl md:text-7xl lg:text-5xl xl:9xl font-bold pt-16 md:pt-6 lg:pt-28 xl:pt-28 pb-2 md:pb-5">34</h2>
@@ -239,7 +238,7 @@ const GalleryMain = () => {
                         </div>
 
                         {/* Fifth Column (animated up) */}
-                        <div ref={col5Ref} className="space-y-6 flex flex-col justify-end">
+                        <div ref={col5Ref} className="space-y-6 flex flex-col lg:mt-50">
                             <img src="/images/gallery/gallery-2.jpg" alt="Team" className="rounded-2xl w-full md:h-[40vh]" />
                             <div className="bg-[#fdf98f] text-black p-4 md:p-6 rounded-2xl w-full md:h-[40vh]">
                                 <p className="text-base md:text-xl">08 / <span className='text-gray-500'>06</span></p>

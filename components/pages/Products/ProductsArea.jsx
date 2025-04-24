@@ -39,7 +39,7 @@ function ProductsArea() {
             </h2>
             <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[80%]'>
               <Image
-                src='/images/lattest-projects/project-1.jpg'
+                src='https://mater.agency/wp-content/uploads/2024/02/hns.jpg'
                 height={1000}
                 width={1000}
                 className='object-cover w-full h-full'
