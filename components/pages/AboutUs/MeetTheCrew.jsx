@@ -27,11 +27,9 @@ const MeetTheCrew = () => {
         return activeFilter === 'All' || member.profession === activeFilter;
     };
 
-
-        // GSAP title animation
+    // GSAP title animation
     const titleRef = useRef(null);
     const charRefs = useRef([]);
-
 
     useEffect(() => {
         if (!charRefs.current.length) return;
@@ -61,7 +59,7 @@ const MeetTheCrew = () => {
     return (
         <section className="container mx-auto px-4 py-12">
             <div className="text-center mb-12">
-            <h2
+                <h2
                     ref={titleRef}
                     className="text-4xl md:text-5xl lg:text-7xl font-rota mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
@@ -81,7 +79,7 @@ const MeetTheCrew = () => {
             </div>
 
             <div className="flex justify-center mb-12">
-                <div className="md:inline-flex  overflow-hidden">
+                <div className="md:inline-flex overflow-hidden">
                     {['All', 'Creatives', 'Developers', 'Runners'].map((filter) => (
                         <button
                             key={filter}
@@ -101,13 +99,13 @@ const MeetTheCrew = () => {
                     return (
                         <div
                             key={`${member.id}-${member.imageUrl}`}
-                            className={`relative overflow-hidden rounded-lg transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] ${
+                            className={`relative overflow-hidden rounded-lg transition-all duration-300 ease-out ${
                                 isActive ? 'grayscale-0 group' : 'grayscale pointer-events-none'
                             }`}
                         >
                             <div className="relative h-80 overflow-hidden">
                                 <div
-                                    className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover:-translate-y-1"
+                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-300 ease-out group-hover:-translate-y-6"
                                     style={{
                                         backgroundImage: `url(${member.imageUrl})`,
                                         backgroundSize: 'cover',
@@ -116,10 +114,10 @@ const MeetTheCrew = () => {
                                 />
                             </div>
                             {isActive && (
-                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-white opacity-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] translate-y-full group-hover:translate-y-0 h-24 flex flex-col justify-center">
-                                    <div className="flex justify-between">
-                                        <span className="font-medium text-black">{member.name}</span>
-                                        <span className="text-gray-600">{member.profession}</span>
+                                <div className="absolute bottom-0 left-0 right-0  bg-white opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+                                    <div className="flex justify-between items-center h-full">
+                                        <span className="font-medium text-black text-lg">{member.name}</span>
+                                        <span className="text-gray-600 text-sm uppercase tracking-wider">{member.profession}</span>
                                     </div>
                                 </div>
                             )}
