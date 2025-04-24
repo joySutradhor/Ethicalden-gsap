@@ -17,7 +17,7 @@ const AboutUsArea = () => {
 
     gsap.fromTo(
       charRefs.current,
-      { color: 'black' },
+      { color: '#9EFCF1' },
       {
         color: 'white',
         stagger: {
