@@ -7,6 +7,10 @@ import Navbar from '@/components/Shared/Navbar/Navbar';
 import React from 'react';
 import AboutUsVideo from "./AboutUsVideo";
 import AboutUsArea from "./AboutUsArea";
+import MeetTheCrew from "./MeetTheCrew";
+import Recognition from "./Recognition";
+import AwardsSection from "./AwardSection";
+import AllStoriesMain from "@/components/AllStories/AllStories";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +80,18 @@ const AboutUsHome = () => {
 
             {/* about us area */}
             <AboutUsArea />
+
+            {/* meet the crew */}
+            <MeetTheCrew />
+
+            {/* recognition */}
+            <Recognition />
+
+            {/* award section */}
+            <AwardsSection />
+
+            {/* all stories */}
+            <AllStoriesMain />
 
             {/* footer */}
             <Footer />
