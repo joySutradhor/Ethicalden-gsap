@@ -11,8 +11,6 @@ const AboutUsArea = () => {
   const titleRef = useRef(null);
   const charRefs = useRef([]);
 
-  const img1 = '/images/about-us/2nd.jpg'
-  const img2 = '/images/about-us/1st.jpg'
 
   useEffect(() => {
     // Animate character-by-character title
@@ -299,7 +297,7 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end'>
             <Image
-              src={img1}
+              src='/1st.jpg'
               height={1000}
               width={1000}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
@@ -310,7 +308,7 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10'>
             <Image
-              src={img2}
+              src='/2nd.jpg'
               height={1000}
               width={1000}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
