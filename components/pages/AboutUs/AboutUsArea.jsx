@@ -236,29 +236,37 @@ const AboutUsArea = () => {
 
 
 
-  const titleText = 'Where digital expertise meets a personal touch.';
+  const titleText = 'Where digital __NEWLINE__ expertise meets a __NEWLINE__ personal touch.';
+
 
   return (
     <div className='bg-change-anim py-40  flex items-center'>
       <div className='container mx-auto px-4'>
         <h2
           ref={titleRef}
-          className="text-left text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-10 text-black font-rota leading-tight w-full max-w-xl"
+          className="text-left text-4xl md:text-6xl lg:text-6xl xl:text-8xl my-10 text-black font-helvetica font-extrabold leading-[1] w-full"
         >
-          {titleText.split(' ').map((word, wi) => (
-            <span key={wi} className="inline-block whitespace-nowrap mr-2">
-              {word.split('').map((char, ci) => (
-                <span
-                  key={ci}
-                  ref={(el) => (charRefs.current[wi * 100 + ci] = el)}
-                  className="inline-block"
-                >
-                  {char}
-                </span>
-              ))}
-            </span>
-          ))}
+          {titleText.split(' ').map((word, wi) => {
+            if (word === '__NEWLINE__') {
+              return <br key={wi} />;
+            }
+
+            return (
+              <span key={wi} className="inline-block whitespace-nowrap mr-2">
+                {word.split('').map((char, ci) => (
+                  <span
+                    key={ci}
+                    ref={(el) => (charRefs.current[wi * 100 + ci] = el)}
+                    className="inline-block"
+                  >
+                    {char}
+                  </span>
+                ))}
+              </span>
+            );
+          })}
         </h2>
+
 
 
         {/* grid layout */}

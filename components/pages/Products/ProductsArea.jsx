@@ -1,4 +1,5 @@
 'use client'
+import gsap from 'gsap'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
@@ -11,12 +12,12 @@ function ProductsArea() {
   useEffect(() => {
     const handleScroll = () => {
       if (!productsRef.current) return
-      
+
       // Get the bottom position of the ProductsArea component
       const productsBottom = productsRef.current.getBoundingClientRect().bottom
       // Get viewport height
       const viewportHeight = window.innerHeight
-      
+
       // Hide button when ProductsArea bottom reaches top of viewport (footer starts appearing)
       setButtonVisible(productsBottom > viewportHeight)
     }
@@ -27,16 +28,93 @@ function ProductsArea() {
   }, [])
 
 
+  // title animation
+  // title animation
+  const titleRef = useRef(null);
+  const charRefs = useRef([]);
+
+
+  // Title animation
+  useEffect(() => {
+    if (!charRefs.current.length) return;
+
+    gsap.fromTo(charRefs.current,
+      { color: 'gray' },
+      {
+        color: 'white',
+        stagger: {
+          from: 'random',
+          each: 0.05,
+        },
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 90%",
+          end: "top 50%",
+          toggleActions: "play none none none",
+        }
+      }
+    );
+  }, []);
+
+
 
   return (
     <>
-      <section ref={productsRef} className='px-[5vw] md:px-[12vw] mt-[5vh]  py-[10vh] md:py-[10vh] lg:py-[20vh] text-white'>
+      <section className='bg-change-anim px-[5vw] md:px-[12vw] mt-[5vh]  py-[10vh] md:py-[10vh] lg:py-[20vh] text-white'>
         <div className='grid grid-cols-2 gap-[4vh] md:gap-x-[5vw] xl:gap-x-[7vw]'>
           {/* first row start */}
           <div className=''>
-            <h2 className='v1__title text-[#9EFCF1] gradient md:text-4xl lg:text-6xl xl:text-7xl font-rota '>
-              Latest work <br /> & crafts
+            <h2
+              ref={titleRef}
+              className="text-left w-full max-w-2xl text-4xl md:text-6xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
+            >
+
+              <span className="inline-block">
+                {"Latest".split("").map((char, ci) => (
+                  <span
+                    key={`Latest-${ci}`}
+                    ref={(el) => (charRefs.current[ci] = el)}
+                    className="inline-block"
+                  >
+                    {char}
+                  </span>
+                ))}
+
+                <span
+                  ref={(el) => (charRefs.current[100] = el)}
+                  className="inline-block"
+                >
+                  &nbsp;
+                </span>
+                {"works".split("").map((char, ci) => (
+                  <span
+                    key={`works-${ci}`}
+                    ref={(el) => (charRefs.current[101 + ci] = el)}
+                    className="inline-block"
+                  >
+                    {char}
+                  </span>
+                ))}
+              </span>
+
+              {/* Line Break */}
+              <br />
+
+
+              <span className="inline-block">
+                {"& crafts".split("").map((char, ci) => (
+                  <span
+                    key={`& crafts-${ci}`}
+                    ref={(el) => (charRefs.current[200 + ci] = el)}
+                    className="inline-block"
+                  >
+                    {char}
+                  </span>
+                ))}
+              </span>
             </h2>
+
             <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[80%]'>
               <Image
                 src='https://mater.agency/wp-content/uploads/2024/02/hns.jpg'
@@ -45,12 +123,14 @@ function ProductsArea() {
                 className='object-cover w-full h-full'
                 alt='Project 1'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 hover:text-gradient'>
                 Blog image HNS
               </h3>
-              <p className='text-base font-semibold text-white/70 font-ethosnova'>
-                Web site /Social media /Branding
+              <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                site /Branding
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
+
             </div>
           </div>
 
@@ -62,8 +142,12 @@ function ProductsArea() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>Vogue Adria</h3>
-            <p className='text-base font-semibold text-white/70 font-ethosnova'>Web site</p>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Vogue Adria</h3>
+            <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+              site /Branding
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+            </p>
+
           </div>
 
           {/* second row start */}
@@ -76,10 +160,14 @@ function ProductsArea() {
                 className='object-cover h-full w-full'
                 alt='NetTV'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
                 Stream live TV plus thousands of shows with NetTVPlus
               </h3>
-              <p className='text-base font-semibold text-white/70 font-ethosnova'>site /Mobile app /Web shop</p>
+              <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                site /Branding
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+              </p>
+
             </div>
           </div>
 
@@ -93,10 +181,14 @@ function ProductsArea() {
                   loop
                   className='h-full w-full object-cover'
                 ></video>
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
                   Nordeus Unleashed
                 </h3>
-                <p className='text-base font-semibold text-white/70 font-ethosnova'> Branding</p>
+                <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                  site /Branding
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </p>
+
               </div>
 
               <div className='h-[30vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh]'>
@@ -107,8 +199,12 @@ function ProductsArea() {
                   loop
                   className='h-full w-full object-cover'
                 ></video>
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>Green Tree Villas Website</h3>
-                <p className='text-base font-semibold text-white/70 font-ethosnova'>site /Branding</p>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Green Tree Villas Website</h3>
+                <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                  site /Branding
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </p>
+
               </div>
             </div>
           </div>
@@ -124,8 +220,12 @@ function ProductsArea() {
                   loop
                   className='h-full w-full object-cover'
                 ></video>
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'> Honor 9 – The Light Catcher</h3>
-                <p className='text-base font-semibold text-white/70 font-ethosnova'>site /Branding</p>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'> Honor 9 – The Light Catcher</h3>
+                <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                  site /Branding
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </p>
+
               </div>
             </div>
           </div>
@@ -139,8 +239,12 @@ function ProductsArea() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>Led Elektronika</h3>
-              <p className='text-base font-semibold text-white/70 font-ethosnova'>site /Branding</p>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Led Elektronika</h3>
+              <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                site /Branding
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+              </p>
+
             </div>
           </div>
 
@@ -154,10 +258,14 @@ function ProductsArea() {
                 className='object-cover h-full w-full'
                 alt='AZ Pension Fund'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
                 Rethinking the AZ Retirement Fund Mobile App
               </h3>
-              <p className='text-base font-semibold text-white/70 font-ethosnova'>site /Mobile app /Web shop</p>
+              <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                site /Branding
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+              </p>
+
             </div>
           </div>
           <div className='mt-[5vh] md:mt-[10vh] lg:mt-[20vh] xl:mt-[30vh]'>
@@ -170,10 +278,14 @@ function ProductsArea() {
                   className='h-full w-full object-cover'
                   alt='RBA'
                 />
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
                   RBA: Evolution
                 </h3>
-                <p className='text-base font-semibold text-white/70 font-ethosnova'> Branding</p>
+                <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                  site /Branding
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </p>
+
               </div>
               <div className='h-[30vh] md:h-[20vh] lg:h-[30vh]'>
                 <video
@@ -183,8 +295,12 @@ function ProductsArea() {
                   loop
                   className='h-full w-full object-cover'
                 ></video>
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>Telenor Bank</h3>
-                <p className='text-base font-semibold text-white/70 font-ethosnova'>site /Branding</p>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Telenor Bank</h3>
+                <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                  site /Branding
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </p>
+
               </div>
             </div>
           </div>
@@ -200,20 +316,23 @@ function ProductsArea() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-rota'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
                 Journey into the world of wild animals called Zvjerići
               </h3>
-              <p className='text-base font-semibold text-white/70 font-ethosnova'>site /Branding</p>
+              <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+                site /Branding
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+              </p>
+
             </div>
           </div>
         </div>
       </section>
 
 
-       {/* Fixed bottom button */}
-      <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#1a1a1a] border-none px-8 py-6 rounded-full flex items-center gap-4 border shadow-lg transition-all duration-300 ${
-        buttonVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      }`}>
+      {/* Fixed bottom button */}
+      <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#1a1a1a] border-none px-8 py-6 rounded-full flex items-center gap-4 border shadow-lg transition-all duration-300 ${buttonVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}>
         {/* Services */}
         <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
           <span className="w-2 h-2 rounded-full bg-gray-400"></span>

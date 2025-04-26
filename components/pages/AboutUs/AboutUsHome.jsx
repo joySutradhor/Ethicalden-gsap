@@ -55,7 +55,7 @@ const AboutUsHome = () => {
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-16 my-10'>
                     <h2
                         ref={titleRef}
-                        className="text-left w-full max-w-2xl text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl text-gray-400 font-rota leading-tight"
+                        className="text-left w-full max-w-2xl text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
                     >
                         {"Digital agency with a human touch.".split(" ").map((word, wi) => (
                             <span key={wi} className="whitespace-nowrap inline-block mr-2">
@@ -73,7 +73,7 @@ const AboutUsHome = () => {
                     </h2>
 
 
-                    <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-gray-600'>
+                    <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed font-helvetica text-black'>
                         We believe in forging real-talk, fist-bump relationships with our clients and shaping their brands and products into amazing digital experiences.
                     </p>
                 </div>

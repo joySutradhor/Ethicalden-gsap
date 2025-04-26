@@ -52,7 +52,7 @@ const ServicesHome = () => {
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-16 my-10'>
                     <h2
                         ref={titleRef}
-                        className="text-left w-full max-w-2xl text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl text-gray-400 font-rota leading-tight"
+                        className="text-left w-full max-w-2xl text-4xl  md:text-6xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
                     >
                         {"The art of bringing it all together".split(" ").map((word, wi) => (
                             <span key={wi} className="whitespace-nowrap inline-block mr-2">
@@ -70,7 +70,7 @@ const ServicesHome = () => {
                     </h2>
 
 
-                    <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-gray-600'>
+                    <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-black'>
                     Anyone can design or code something and call it a project, but it’s the artistry of bringing your story to life, and the expertise that comes with experience, that sets us apart.
                     </p>
                 </div>

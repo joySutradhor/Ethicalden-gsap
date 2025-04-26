@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
@@ -41,7 +40,7 @@ const AboutUsMain = () => {
 
     const splitTextIntoChars = (text) => {
         return text.split('\n').map((line, lineIndex) => (
-            <div key={lineIndex} className="block leading-tight">
+            <div key={lineIndex} className="block">
                 {line.split('').map((char, charIndex) => (
                     <span
                         key={`${lineIndex}-${charIndex}`}
@@ -55,7 +54,7 @@ const AboutUsMain = () => {
         ));
     };
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         // Character animation
         gsap.fromTo(charRefs.current,
             { color: 'gray' },
@@ -77,7 +76,7 @@ const AboutUsMain = () => {
         );
 
         // Word animation
-        wordRefs.current.forEach((wordEl, i) => {
+        wordRefs.current.forEach((wordEl) => {
             gsap.fromTo(
                 wordEl,
                 { opacity: 0, y: 10 },
@@ -94,7 +93,6 @@ const AboutUsMain = () => {
                 }
             );
         });
-
 
         // Button animation setup
         const button = buttonRef.current;
@@ -201,10 +199,14 @@ const AboutUsMain = () => {
     return (
         <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
             <div className="max-w-6xl mx-auto">
-                {/* Title */}
-                <h2 ref={titleRef} className="v1__title font-rota mb-8">
+                <h2
+                    ref={titleRef}
+                    className="leading-[1] font-extrabold font-helvetica text-4xl md:text-6xl lg:text-6xl xl:text-8xl mb-8 whitespace-nowrap"
+                >
                     {splitTextIntoChars(titleText)}
                 </h2>
+
+
 
                 <div className="flex flex-col sm:flex-row pt-8 gap-6 sm:gap-10">
                     <div className="hidden min-[580px]:flex min-[580px]:w-1/3 justify-center items-center">
@@ -215,7 +217,7 @@ const AboutUsMain = () => {
                         {paragraphs.map((text, index) => (
                             <p
                                 key={index}
-                                className="font-ethosnova base__para pb-4 leading-relaxed reveal-paragraph"
+                                className="font-helvetica text-xl md:text-2xl text-black pb-4 leading-relaxed reveal-paragraph"
                                 ref={(el) => {
                                     if (el && !wordRefs.current.includes(el)) {
                                         wordRefs.current.push(el);

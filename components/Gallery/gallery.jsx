@@ -157,7 +157,7 @@ const GalleryMain = () => {
 
                 {/* Title with character spans */}
                 <h2
-                    className="v1__title font-rota pb-4 flex justify-center flex-wrap mb-16"
+                    className="font-helvetica text-4xl md:text-6xl xl:text-8xl font-extrabold leading-[1] pb-4 flex justify-center flex-wrap mb-16"
                     ref={titleRef}
                 >
                     {"Our Services".split("").map((char, i) => (

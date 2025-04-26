@@ -18,12 +18,12 @@ const awards = [
                 <div className="flex items-center gap-4 w-full">
                   <img src={award.icon} alt={award.name} className="w-10 h-10 object-contain" />
                   <div className="flex-1 border-b border-gray-300">
-                    <span className="font-bold text-3xl text-[#00263a]">{award.name}</span>
+                    <span className="font-bold text-3xl text-[#00263a]  font-helvetica">{award.name}</span>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-2xl font-bold text-black leading-none">{award.count}</p>
-                  <p className="text-2xl text-black">Awards</p>
+                  <p className="text-2xl font-bold text-black leading-none font-helvetica">{award.count}</p>
+                  <p className="text-2xl text-black font-helvetica">Awards</p>
                 </div>
               </div>
             ))}

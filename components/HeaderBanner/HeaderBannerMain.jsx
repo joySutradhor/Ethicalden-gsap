@@ -224,10 +224,10 @@ const HeaderBannerMain = () => {
         <div className="relative h-screen overflow-hidden bg-white pb-20" style={{ zIndex: 30 }}>
             {/* Navbar */}
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
-                <div className="text-3xl font-rota gradient tracking-wide"><a href="/">Ethicalden</a></div>
+                <div className=" font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl"><a href="/">Ethicalden</a></div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8 font-medium text-gray-800 relative">
+                <div className="hidden md:flex items-center gap-10 font-helvetica text-xl text-black relative ">
                     <a href="about-den">About Den</a>
                     <a href="services">Services</a>
                     <a href="products">Products</a>
@@ -278,7 +278,7 @@ const HeaderBannerMain = () => {
                                 ref={buttonTextRef}
                                 className="relative z-10 font-medium text-white overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                             >
-                                <span ref={buttonStaticTextRef} className="static-text">
+                                <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                                     Let's Talk
                                 </span>
                                 <span
@@ -286,7 +286,7 @@ const HeaderBannerMain = () => {
                                     className="scrolling-text absolute left-0"
                                 >
                                     {Array.from({ length: 20 }).map((_, i) => (
-                                        <span key={i} className="inline-block mr-8">
+                                        <span key={i} className="inline-block mr-8 font-helvetica">
                                             Let's Talk
                                         </span>
                                     ))}
@@ -307,7 +307,7 @@ const HeaderBannerMain = () => {
             {/* Mobile Dropdown Menu */}
             {isMenuOpen && (
                 <div className="md:hidden px-6 pb-6 bg-white z-50">
-                    <div className="flex flex-col gap-4 font-medium text-gray-800">
+                    <div className="flex flex-col gap-4 font-helvetica text-gray-800">
                         <a href="about-den" onClick={() => setIsMenuOpen(false)}>About Den</a>
                         <a href="services" onClick={() => setIsMenuOpen(false)}>Services</a>
                         <a href="products" onClick={() => setIsMenuOpen(false)}>Products</a>
@@ -333,7 +333,7 @@ const HeaderBannerMain = () => {
                                     ref={buttonTextRef}
                                     className="relative z-10 font-medium text-white overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                                 >
-                                    <span ref={buttonStaticTextRef} className="static-text">
+                                    <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                                         Let's Talk
                                     </span>
                                     <span
@@ -341,7 +341,7 @@ const HeaderBannerMain = () => {
                                         className="scrolling-text absolute left-0"
                                     >
                                         {Array.from({ length: 20 }).map((_, i) => (
-                                            <span key={i} className="inline-block mr-8">
+                                            <span key={i} className="inline-block mr-8 font-helvetica">
                                                 Let's Talk
                                             </span>
                                         ))}
@@ -353,11 +353,11 @@ const HeaderBannerMain = () => {
                 </div>
             )}
             {/* Banner Content */}
-            <div ref={bannerRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-48 lg:mt-0 px-4 text-center" style={{ zIndex: 30 }}>
+            <div ref={bannerRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-48 lg:mt-0 px-4 lg:text-center" style={{ zIndex: 30 }}>
                 <div className="max-w-3xl">
                     <h1
                         ref={titleRef}
-                        className="v1__title font-rota font-extrabold leading-tight"
+                        className="text-4xl md:text-6xl xl:text-8xl font-helvetica font-extrabold leading-[1]"
                     >
                         {
                             titleText.split("").map((char, index) =>
@@ -375,7 +375,7 @@ const HeaderBannerMain = () => {
                             )
                         }
                     </h1>
-                    <p className="mt-6 font-ethosnova base__para">
+                    <p className="mt-6 font-helvetica text-xl md:text-2xl text-black">
                         We are mater, magicians of the digital age, <br /> dancing on the edge of creativity for more than two decades.
                     </p>
                 </div>
@@ -399,7 +399,7 @@ const HeaderBannerMain = () => {
                 </div>
 
                 {/* Bottom Video for all screen sizes */}
-                <div ref={bottomVideoRef} className="absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[500px]  overflow-hidden z-50 
+                <div ref={bottomVideoRef} className="absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[500px] lg:[550px] overflow-hidden z-50 
                 lg:left-1/2 lg:-translate-x-1/2 lg:w-[200px] lg:h-[200px] lg:pt-0 
                 xl:w-[380px] xl:h-[250px] xl:pt-10 
                 2xl:w-[500px] 2xl:h-[320px] lg:rounded-xl">

@@ -60,7 +60,7 @@ const TechStack = () => {
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-5xl md:text-5xl lg:text-7xl font-rota mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-4xl md:text-6xl xl:text-8xl font-helvetica font-extrabold leading-[1] mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split('').map((char, i) => (
                         <span
@@ -73,11 +73,11 @@ const TechStack = () => {
                         </span>
                     ))}
                 </h2>
-                <p className="base__para font-ethosnova ">All the wizardry behind our work</p>
+                <p className="font-helvetica text-black text-xl md:text-2xl ">All the wizardry behind our work</p>
             </div>
 
             <div className="flex justify-start md:justify-center mb-12">
-                <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex flex-col md:flex-row gap-4 font-helvetica font-bold">
                     {['All', 'Creative', 'Deliver', 'Develop'].map((filter) => (
                         <button
                             key={filter}
@@ -112,7 +112,7 @@ const TechStack = () => {
                                 {isActive && (
                                     <div className="absolute bottom-0 left-0 right-0  p-4">
                                         <div className="flex flex-col items-center text-center">
-                                            <span className="font-medium text-black text-lg whitespace-nowrap">{tech.name}</span>
+                                            <span className="font-bold font-helvetica text-black text-lg whitespace-nowrap">{tech.name}</span>
                                         </div>
                                     </div>
                                 )}

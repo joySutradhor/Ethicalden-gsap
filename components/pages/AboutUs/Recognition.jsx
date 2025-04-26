@@ -84,7 +84,7 @@ const Recognition = () => {
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-4xl md:text-5xl lg:text-7xl font-rota mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-4xl md:text-6xl xl:text-8xl font-extrabold font-helvetica mb-4 leading-[1] flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split(' ').map((word, wi) => (
                         <span key={wi} className="flex whitespace-nowrap">
@@ -103,7 +103,7 @@ const Recognition = () => {
                     ))}
                 </h2>
 
-                <p className="base__para font-ethosnova ">We’re not in it for the shiny trophies, but they do make a killer shelf display.</p>
+                <p className="text-black text-xl md:text-2xl font-helvetica ">We’re not in it for the shiny trophies, but they do make a killer shelf display.</p>
             </div>
             <div
                 ref={wrapperRef}

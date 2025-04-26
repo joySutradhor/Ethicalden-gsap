@@ -201,7 +201,7 @@ const IndustryServices = () => {
         <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
             <div className="max-w-6xl mx-auto">
                 {/* Title */}
-                <h2 ref={titleRef} className="v1__title font-rota mb-8">
+                <h2 ref={titleRef} className="font-helvetica font-extrabold text-4xl md:text-6xl xl:text-8xl leading-[1] mb-8">
                     {splitTextIntoChars(titleText)}
                 </h2>
 
@@ -214,7 +214,7 @@ const IndustryServices = () => {
                         {paragraphs.map((text, index) => (
                             <p
                                 key={index}
-                                className="font-ethosnova base__para pb-4 leading-relaxed reveal-paragraph"
+                                className="font-helvetica text-xl md:text-2xl text-black pb-4 leading-relaxed reveal-paragraph"
                                 ref={(el) => {
                                     if (el && !wordRefs.current.includes(el)) {
                                         wordRefs.current.push(el);

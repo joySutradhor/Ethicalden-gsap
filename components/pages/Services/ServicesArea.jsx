@@ -292,7 +292,7 @@ const ServicesArea = () => {
                         {/* left title */}
                         <h2
                             ref={titleRef}
-                            className="text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-7xl -mt-40 text-black font-rota leading-tight w-full max-w-4xl"
+                            className="text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-7xl font-extrabold -mt-40 text-black font-helvetica leading-[1] w-full max-w-4xl"
                         >
                             {titleText.split(' ').map((word, wi) => (
                                 <span key={wi} className="inline-block whitespace-nowrap mr-2">
@@ -322,13 +322,13 @@ const ServicesArea = () => {
 
                                 {/* Fixed overlay text on video */}
                                 <div 
-                                    className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
+                                    className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-helvetica pointer-events-none"
                                     ref={el => overlayTextRefs.current[0] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         01 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold font-helvetica mt-4">
                                         Strategy
                                     </p>
                                 </div>
@@ -338,7 +338,7 @@ const ServicesArea = () => {
                                     className='absolute -bottom-28 md:-bottom-40 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[0] = el}
                                 >
-                                    <ul className='text-xl md:text-xl space-y-1 md:space-y-3'>
+                                    <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
                                         <li>Digital strategy</li>
                                         <li>Growth strategy</li>
                                         <li>Brand strategy</li>
@@ -366,17 +366,17 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         02 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-8xl font-helvetica font-extrabold mt-4">
                                         Digital <br />products
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div 
-                                    className='absolute -bottom-60 md:-bottom-78 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-70 md:-bottom-105 lg:-bottom-94 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[1] = el}
                                 >
-                                    <ul className='text-xl md:text-xl space-y-1 md:space-y-3'>
+                                    <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
                                         <li>User research</li>
                                         <li>User experience</li>
                                         <li>Web development</li>
@@ -408,17 +408,17 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         03 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-8xl font-helvetica font-extrabold mt-4">
                                         Brand <br />& Identity
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div 
-                                    className='absolute -bottom-54 md:-bottom-70 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-54 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[2] = el}
                                 >
-                                    <ul className='text-xl md:text-xl space-y-1 md:space-y-3'>
+                                    <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
                                         <li>Visual identity</li>
                                         <li>Branding</li>
                                         <li>Art direction</li>
@@ -449,17 +449,17 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         04 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold font-helvetica mt-4">
                                         Performance <br />& Growth
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div 
-                                    className='absolute -bottom-28 md:-bottom-40 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-28 md:-bottom-55 lg:-bottom-40 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[3] = el}
                                 >
-                                    <ul className='text-xl md:text-xl space-y-1 md:space-y-3'>
+                                    <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
                                         <li>Content strategy</li>
                                         <li>Social media</li>
                                         <li>Measurement and reporting</li>

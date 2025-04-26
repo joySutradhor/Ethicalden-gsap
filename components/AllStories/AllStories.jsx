@@ -248,7 +248,7 @@ const AllStoriesMain = () => {
 
             {/* Title with character spans */}
             <h2
-                className="v1__title font-rota text-gray-400 pb-4 flex justify-center flex-wrap"
+                className="font-helvetica font-extrabold text-4xl md:text-6xl xl:text-8xl leading-[1] text-gray-400 pb-4 flex justify-center flex-wrap"
                 ref={titleRef}
             >
                 {"Our Products".split("").map((char, i) => (
@@ -274,7 +274,7 @@ const AllStoriesMain = () => {
                         ref={buttonTextRef}
                         className="relative z-10 font-medium text-white overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                     >
-                        <span ref={buttonStaticTextRef} className="static-text">
+                        <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                             All stories
                         </span>
                         <span
@@ -282,7 +282,7 @@ const AllStoriesMain = () => {
                             className="scrolling-text absolute left-0"
                         >
                             {Array.from({ length: 20 }).map((_, i) => (
-                                <span key={i} className="inline-block mr-8">
+                                <span key={i} className="inline-block mr-8 font-helvetica">
                                     All stories
                                 </span>
                             ))}
@@ -311,8 +311,8 @@ const AllStoriesMain = () => {
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                                 <div className="mt-3 text-left px-2">
-                                    <p className="v4__title font-rota font-bold pb-2 text-black">{blog.name}</p>
-                                    <p className="base__para font-ethosnova">{blog.title}</p>
+                                    <p className="v4__title font-helvetica font-bold pb-2 text-black ">{blog.name}</p>
+                                    <p className="base__para font-helvetica">{blog.title}</p>
                                 </div>
                             </div>
                         ))}
