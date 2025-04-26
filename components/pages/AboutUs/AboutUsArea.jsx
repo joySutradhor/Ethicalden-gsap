@@ -11,13 +11,16 @@ const AboutUsArea = () => {
   const titleRef = useRef(null);
   const charRefs = useRef([]);
 
+  const img1 = '/images/about-us/2nd.jpg'
+  const img2 = '/images/about-us/1st.jpg'
+
   useEffect(() => {
     // Animate character-by-character title
     if (!charRefs.current.length) return;
 
     gsap.fromTo(
       charRefs.current,
-      { color: '#9EFCF1' },
+      { color: 'black' },
       {
         color: 'white',
         stagger: {
@@ -240,18 +243,23 @@ const AboutUsArea = () => {
       <div className='container mx-auto px-4'>
         <h2
           ref={titleRef}
-          className='text-left text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-10 text-black font-rota leading-tight w-full max-w-4xl whitespace-pre-wrap break-words'
+          className="text-left text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-10 text-black font-rota leading-tight w-full max-w-xl"
         >
-          {titleText.split('').map((char, i) => (
-            <span
-              key={i}
-              ref={(el) => (charRefs.current[i] = el)}
-              className={char === ' ' ? '' : 'inline'}
-            >
-              {char === ' ' ? '\u00A0' : char}
+          {titleText.split(' ').map((word, wi) => (
+            <span key={wi} className="inline-block whitespace-nowrap mr-2">
+              {word.split('').map((char, ci) => (
+                <span
+                  key={ci}
+                  ref={(el) => (charRefs.current[wi * 100 + ci] = el)}
+                  className="inline-block"
+                >
+                  {char}
+                </span>
+              ))}
             </span>
           ))}
         </h2>
+
 
         {/* grid layout */}
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
@@ -283,7 +291,7 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end'>
             <Image
-              src='/images/about-us/2nd.jpg'
+              src={img1}
               height={1000}
               width={1000}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
@@ -294,7 +302,7 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10'>
             <Image
-              src='/images/about-us/1st.jpg'
+              src={img2}
               height={1000}
               width={1000}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
@@ -326,7 +334,7 @@ const AboutUsArea = () => {
             </p>
 
             {/* button */}
-            <div className=" relative inline-block">
+            <div className=" relative mt-8 md:mt-3 inline-block">
               <Link
                 ref={buttonRef}
                 className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-yellow-400 overflow-hidden inline-flex items-center justify-center group"

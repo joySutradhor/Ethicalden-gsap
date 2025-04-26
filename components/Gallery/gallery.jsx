@@ -79,7 +79,7 @@ const GalleryMain = () => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: wrapper,
-                        start: '+=150% bottom',
+                        start: '+=130% bottom',
                         end: '+=110%',
                         scrub: 1,
                         pin: true,
@@ -93,7 +93,7 @@ const GalleryMain = () => {
                 });
 
                 tl.to(video, {
-                    y: 900,
+                    y: 100,
                     width: '80vw',
                     height: '80vh',
                     duration: 1,
@@ -153,7 +153,7 @@ const GalleryMain = () => {
 
     return (
         <>
-            <section ref={sectionRef} className="min-h-screen bg-white  mt-[5vh] md:mt-[15vh] lg:mt-[20vh] py-10 px-4 lg:mb-[1000px] relative">
+            <section ref={sectionRef} className="min-h-screen bg-white  mt-[5vh] md:mt-[15vh] lg:mt-[20vh] py-10 px-4  relative">
 
                 {/* Title with character spans */}
                 <h2
@@ -216,7 +216,7 @@ const GalleryMain = () => {
                                     muted
                                     autoPlay
                                     playsInline
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full rounded-2xl object-cover"
                                 >
                                     <source src="https://html.hixstudio.net/videos/liko/liko.mp4" type="video/mp4" />
                                 </video>

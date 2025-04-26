@@ -1,20 +1,17 @@
-"use client"
-import { useEffect, useRef } from "react";
+'use client'
+import Navbar from '@/components/Shared/Navbar/Navbar';
+import React, { useEffect, useRef } from 'react';
+import AboutUsVideo from '../AboutUs/AboutUsVideo';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ServicesArea from './ServicesArea';
 import Footer from '@/components/Shared/Footer/Footer';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
-import AboutUsVideo from "./AboutUsVideo";
-import AboutUsArea from "./AboutUsArea";
-import MeetTheCrew from "./MeetTheCrew";
-import Recognition from "./Recognition";
-import AwardsSection from "./AwardSection";
-import AllStoriesMain from "@/components/AllStories/AllStories";
+import IndustryServices from './IndustryServices';
+import TechStack from './TechStack';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutUsHome = () => {
+const ServicesHome = () => {
 
     const titleRef = useRef(null);
     const charRefs = useRef([]);
@@ -43,9 +40,9 @@ const AboutUsHome = () => {
         );
     }, []);
 
-    return (
-        <div className="">
 
+    return (
+        <div>
             {/* navbar */}
             <Navbar textColor="text-black" bgColor="bg-white" />
 
@@ -57,7 +54,7 @@ const AboutUsHome = () => {
                         ref={titleRef}
                         className="text-left w-full max-w-2xl text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl text-gray-400 font-rota leading-tight"
                     >
-                        {"Digital agency with a human touch.".split(" ").map((word, wi) => (
+                        {"The art of bringing it all together".split(" ").map((word, wi) => (
                             <span key={wi} className="whitespace-nowrap inline-block mr-2">
                                 {word.split("").map((char, ci) => (
                                     <span
@@ -74,7 +71,7 @@ const AboutUsHome = () => {
 
 
                     <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-gray-600'>
-                        We believe in forging real-talk, fist-bump relationships with our clients and shaping their brands and products into amazing digital experiences.
+                    Anyone can design or code something and call it a project, but it’s the artistry of bringing your story to life, and the expertise that comes with experience, that sets us apart.
                     </p>
                 </div>
             </div>
@@ -83,20 +80,16 @@ const AboutUsHome = () => {
             {/* about us video */}
             <AboutUsVideo />
 
-            {/* about us area */}
-            <AboutUsArea />
+            {/* services area */}
+            <ServicesArea />
 
-            {/* meet the crew */}
-            <MeetTheCrew />
+            {/* Industry services */}
+            <IndustryServices />
+            
 
-            {/* recognition */}
-            <Recognition />
-
-            {/* award section */}
-            <AwardsSection />
-
-            {/* all stories */}
-            <AllStoriesMain />
+            {/* techstack */}
+            <TechStack />
+            
 
             {/* footer */}
             <Footer />
@@ -104,4 +97,4 @@ const AboutUsHome = () => {
     );
 };
 
-export default AboutUsHome;
+export default ServicesHome;

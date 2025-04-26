@@ -61,15 +61,14 @@ const MeetTheCrew = () => {
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-4xl md:text-5xl lg:text-7xl font-rota mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-5xl md:text-5xl lg:text-7xl font-rota mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split('').map((char, i) => (
                         <span
                             key={i}
                             ref={(el) => (charRefs.current[i] = el)}
-                            className={`inline-block ${
-                                char === ' ' ? 'w-2 md:w-4 lg:w-5' : ''
-                            }`}
+                            className={`inline-block ${char === ' ' ? 'w-2 md:w-4 lg:w-5' : ''
+                                }`}
                         >
                             {char}
                         </span>
@@ -78,8 +77,9 @@ const MeetTheCrew = () => {
                 <p className="base__para font-ethosnova ">The determination behind your next project</p>
             </div>
 
-            <div className="flex justify-center mb-12">
-                <div className="md:inline-flex overflow-hidden">
+            <div className="flex justify-start md:justify-center mb-12">
+    <div className="flex flex-col md:flex-row gap-4">
+
                     {['All', 'Creatives', 'Developers', 'Runners'].map((filter) => (
                         <button
                             key={filter}
@@ -95,17 +95,17 @@ const MeetTheCrew = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-4 xl:gap-8">
                 {crewMembers.map((member) => {
                     const isActive = shouldShowMember(member);
-                    
+
                     return (
                         <div
                             key={`${member.id}-${member.imageUrl}`}
-                            className={`relative overflow-hidden rounded-lg transition-all duration-300 ease-out ${
-                                isActive ? 'grayscale-0 group' : 'grayscale pointer-events-none'
-                            }`}
+                            className={`relative overflow-hidden rounded-lg transition-all duration-300 ease-out ${isActive ? 'grayscale-0 group' : 'grayscale pointer-events-none'
+                                }`}
                         >
                             <div className="relative h-80 overflow-hidden">
                                 <div
-                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-300 ease-out group-hover:-translate-y-6"
+                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-10"
+
                                     style={{
                                         backgroundImage: `url(${member.imageUrl})`,
                                         backgroundSize: 'cover',
