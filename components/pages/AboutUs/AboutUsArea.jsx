@@ -297,7 +297,7 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end'>
             <Image
-              src='/1st.jpg'
+              src='/project-2.jpg'
               height={1000}
               width={1000}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
@@ -308,7 +308,7 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10'>
             <Image
-              src='/2nd.jpg'
+              src='/project-1.jpg'
               height={1000}
               width={1000}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
