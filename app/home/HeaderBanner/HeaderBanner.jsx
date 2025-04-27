@@ -3,7 +3,7 @@ import React from 'react';
 
 const HeaderBanner = () => {
     return (
-        <div>
+        <div id="header-banner" className='relative'>
             <HeaderBannerMain />
         </div>
     );

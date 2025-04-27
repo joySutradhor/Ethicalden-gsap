@@ -10,7 +10,7 @@ function NewProjects() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
+  
     const bgOverlay = document.createElement('div');
     bgOverlay.style.position = 'fixed';
     bgOverlay.style.top = '0';
@@ -22,7 +22,7 @@ function NewProjects() {
     bgOverlay.style.opacity = '0';
     bgOverlay.style.pointerEvents = 'none';
     document.body.appendChild(bgOverlay);
-
+  
     // Main timeline for entry background change
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -32,31 +32,25 @@ function NewProjects() {
         toggleActions: 'play none none reverse',
       }
     });
-
+  
     tl.to(bgOverlay, {
       opacity: 1,
       ease: 'none'
-    }, 0).to('.bg-change-anim', {
-      backgroundColor: '#06171D',
-      ease: 'none'
     }, 0);
-
-    // 🧼 Reset background to white and overlay opacity to 0 after section
+  
+    // Reset background when leaving section
     ScrollTrigger.create({
       trigger: '.bg-change-anim',
       start: 'bottom bottom',
       end: 'bottom+=1 bottom',
       onEnterBack: () => {
-        gsap.to(bgOverlay, { opacity: 1, backgroundColor: '#06171D' });
-        gsap.to('.bg-change-anim', { backgroundColor: '#06171D' });
+        gsap.to(bgOverlay, { opacity: 1 });
       },
       onLeave: () => {
-        gsap.to(bgOverlay, { opacity: 0, backgroundColor: 'white' });
-        gsap.to('.bg-change-anim', { backgroundColor: 'white' });
+        gsap.to(bgOverlay, { opacity: 0 });
       }
     });
-
-
+  
     return () => {
       ScrollTrigger.getAll().forEach(instance => instance.kill());
       bgOverlay.remove();

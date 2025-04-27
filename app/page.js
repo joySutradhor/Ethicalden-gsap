@@ -12,6 +12,7 @@ import "./globals.css";
 import "./main.css";
 import { delay } from "@/components/utils/delay"
 import Footer from "@/components/Shared/Footer/Footer";
+import FloatingImage from "@/components/FloatingImage/FloatingImage";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function Home() {
 
   return (
     <section>
+      <FloatingImage />
       <HeaderBanner />
       <AboutUs />
       <Gallery />

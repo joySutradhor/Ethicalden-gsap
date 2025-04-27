@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Link from 'next/link';
+import OurProcess from './OurProcess';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -502,6 +503,9 @@ const ServicesArea = () => {
                     </div>
                 </div>
             </div>
+
+            {/* our process */}
+            <OurProcess />
         </div>
     );
 };

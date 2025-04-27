@@ -95,7 +95,7 @@ function Footer() {
         gsap.set(bg, {
             scaleX: 0,
             transformOrigin: "center center",
-            backgroundColor: "black"
+            backgroundColor: "#4DEFA7"
         });
         gsap.set(scrollingText, { opacity: 0, x: 0 });
         gsap.set(staticText, { opacity: 1 });
@@ -190,7 +190,7 @@ function Footer() {
       <section className="text-center mb-16 mt-[5vh] md:mt-[10vh] lg:mt-[20vh]">
         <h2
           ref={titleRef}
-          className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-helvetica font-bold mb-[5vh] max-w-4xl mx-auto leading-[1] px-4"
+          className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-helvetica font-bold mb-[5vh]  max-w-4xl mx-auto leading-[1] px-4"
         >
           {titleLines.map((line, lineIndex) => (
             <div key={lineIndex} className="block">
@@ -213,7 +213,7 @@ function Footer() {
     <div className="relative mt-8 md:mt-3 inline-block">
         <Link
             ref={buttonRef}
-            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-yellow-200 overflow-hidden inline-flex items-center justify-center group"
+            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
             href={"#"}
             style={{ opacity: 1 }}
         >
@@ -239,7 +239,7 @@ function Footer() {
                 </span>
                 <span
                     ref={buttonScrollingTextRef}
-                    className="scrolling-text absolute left-0 text-yellow-200"
+                    className="scrolling-text absolute left-0 text-black"
                     style={{ opacity: 0 }}
                 >
                     {Array.from({ length: 20 }).map((_, i) => (

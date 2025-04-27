@@ -4,7 +4,7 @@ import AboutUsMain from '@/components/AboutUs/AboutUs'
 
 function AboutUs () {
   return (
-    <div >
+    <div>
       <AboutUsMain />
     </div>
   )

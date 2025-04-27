@@ -151,7 +151,7 @@ const AllStoriesMain = () => {
         gsap.set(bg, {
             scaleX: 0,
             transformOrigin: "center center",
-            backgroundColor: "#9EFCF1"
+            backgroundColor: "#4DEFA7"
         });
         gsap.set(scrollingText, { opacity: 0, x: 0 });
         gsap.set(staticText, { opacity: 1 });
@@ -265,14 +265,14 @@ const AllStoriesMain = () => {
             <div className="my-6 sm:mt-8 relative inline-block">
                 <Link
                     ref={buttonRef}
-                    className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-base sm:text-lg bg-[#003b49] overflow-hidden inline-flex items-center justify-center group"
+                    className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-base sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
                     href={"#"}
                     style={{ opacity: 1 }}
                 >
                     <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                     <span
                         ref={buttonTextRef}
-                        className="relative z-10 font-medium text-white overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                        className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                     >
                         <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                             All stories
