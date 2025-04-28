@@ -485,8 +485,8 @@ const HeaderBannerMain = () => {
             )}
 
             {/* Banner Content */}
-            <div ref={bannerRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-48 lg:mt-0 px-4 lg:text-center" style={{ zIndex: 30 }}>
-                <div className="max-w-3xl">
+            <div ref={bannerRef} className="absolute inset-0 text-start flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-60 lg:mt-0 px-4 lg:text-center" style={{ zIndex: 30 }}>
+                <div className="max-w-3xl ">
                     <h1
                         ref={titleRef}
                         className="text-4xl md:text-6xl xl:text-8xl font-helvetica font-extrabold leading-[1]"
@@ -499,7 +499,7 @@ const HeaderBannerMain = () => {
                                     <span
                                         key={index}
                                         ref={el => charRefs.current[index] = el}
-                                        className={`inline-block text-gray-400 ${char === " " ? "w-5" : ""}`}
+                                        className={`inline-block text-gray-400 ${char === " " ? "w-2" : ""}`}
                                     >
                                         {char === " " ? "\u00A0" : char}
                                     </span>
@@ -534,7 +534,7 @@ const HeaderBannerMain = () => {
                 {/* Bottom Video for all screen sizes */}
                 <div
                     ref={bottomVideoRef}
-                    className={`absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[500px] lg:[550px] overflow-hidden z-50 
+                    className={`absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[600px] lg:[550px] overflow-hidden z-50 
     lg:left-1/2 lg:-translate-x-1/2 lg:w-[200px] lg:h-[200px] lg:pt-0 
     xl:w-[380px] xl:h-[250px] xl:pt-10 
     2xl:w-[500px] 2xl:h-[320px] lg:rounded-xl`}
