@@ -70,7 +70,7 @@ function NewProjects() {
     gsap.fromTo(charRefs.current,
       { color: 'gray' },
       {
-        color: 'white',
+        color: '#4DEFA7',
         stagger: {
           from: 'random',
           each: 0.05,
