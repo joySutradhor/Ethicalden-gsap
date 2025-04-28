@@ -61,7 +61,7 @@ function ProductsArea() {
 
   return (
     <>
-      <section className='bg-change-anim px-[5vw] md:px-[12vw] mt-[5vh]  py-[10vh] md:py-[10vh] lg:py-[20vh] text-white'>
+      <section className='bg-change-anim mt-32 md:mt-40 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto text-white'>
         <div className='grid grid-cols-2 gap-[4vh] md:gap-x-[5vw] xl:gap-x-[7vw]'>
           {/* first row start */}
           <div className=''>
@@ -123,7 +123,7 @@ function ProductsArea() {
                 className='object-cover w-full h-full'
                 alt='Project 1'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 hover:text-gradient'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#4DEFA7]'>
                 Blog image HNS
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -142,7 +142,7 @@ function ProductsArea() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Vogue Adria</h3>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Vogue Adria</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               site /Branding
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -160,7 +160,7 @@ function ProductsArea() {
                 className='object-cover h-full w-full'
                 alt='NetTV'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
                 Stream live TV plus thousands of shows with NetTVPlus
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -199,7 +199,7 @@ function ProductsArea() {
                   loop
                   className='h-full w-full object-cover'
                 ></video>
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Green Tree Villas Website</h3>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Green Tree Villas Website</h3>
                 <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                   site /Branding
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -220,7 +220,7 @@ function ProductsArea() {
                   loop
                   className='h-full w-full object-cover'
                 ></video>
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'> Honor 9 – The Light Catcher</h3>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'> Honor 9 – The Light Catcher</h3>
                 <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                   site /Branding
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -239,7 +239,7 @@ function ProductsArea() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Led Elektronika</h3>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Led Elektronika</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -258,7 +258,7 @@ function ProductsArea() {
                 className='object-cover h-full w-full'
                 alt='AZ Pension Fund'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
                 Rethinking the AZ Retirement Fund Mobile App
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -278,7 +278,7 @@ function ProductsArea() {
                   className='h-full w-full object-cover'
                   alt='RBA'
                 />
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
                   RBA: Evolution
                 </h3>
                 <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -295,7 +295,7 @@ function ProductsArea() {
                   loop
                   className='h-full w-full object-cover'
                 ></video>
-                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Telenor Bank</h3>
+                <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Telenor Bank</h3>
                 <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                   site /Branding
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -316,7 +316,7 @@ function ProductsArea() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
                 Journey into the world of wild animals called Zvjerići
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">

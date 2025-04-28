@@ -101,7 +101,7 @@ const MeetTheCrew = () => {
                             key={filter}
                             onClick={() => {
                                 setActiveFilter(filter);
-                                setHoveredMember(null); // reset on filter
+                                setHoveredMember(null); 
                             }}
                             className={`px-6 py-2 font-rota text-3xl rounded-4xl transition-colors ${
                                 activeFilter === filter
@@ -126,25 +126,25 @@ const MeetTheCrew = () => {
                             className={`relative overflow-hidden rounded-lg transition-all duration-300 ease-out ${
                                 isActive ? 'grayscale-0 group' : 'grayscale pointer-events-none'
                             }`}
-                            onClick={() => isMobile && setHoveredMember(index)}  // Click for Mobile
-                            onMouseEnter={() => !isMobile && setHoveredMember(index)} // Hover for Tablet/Desktop
-                            onMouseLeave={() => !isMobile && setHoveredMember(null)} // Remove hover for Tablet/Desktop
+                            onClick={() => isMobile && setHoveredMember(index)}  
+                            onMouseEnter={() => !isMobile && setHoveredMember(index)} 
+                            onMouseLeave={() => !isMobile && setHoveredMember(null)} 
                         >
-                            <div className="relative h-80 overflow-hidden">
+                            <div className="relative h-80 overflow-hidden z-10">
                                 <div
-                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-10"
+                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-900 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-10"
                                     style={{
                                         backgroundImage: `url(${member.imageUrl})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
-                                        transform: isRevealed && isMobile ? 'translateY(-2.5rem)' : 'translateY(0)', // Mobile specific effect
+                                        transform: isRevealed && isMobile ? 'translateY(-2.5rem)' : 'translateY(0)', 
                                     }}
                                 />
                             </div>
 
                             {isActive && (
                                 <div
-                                    className={`absolute bottom-0 left-0 right-0 bg-white opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out ${
+                                    className={`absolute bottom-0 left-0 right-0 bg-white opacity-0 group-hover:opacity-100 transition-all duration-900 z-0 ease-out ${
                                         isRevealed && isMobile ? 'opacity-100' : ''
                                     }`}
                                 >

@@ -51,11 +51,11 @@ const AboutUsHome = () => {
 
 
             {/* banner */}
-            <div className='mt-32 md:mt-40 px-20 md:px-20 lg:px-30 xl:max-w-screen-xl xl:mx-auto'>
+            <div className='mt-32 md:mt-40 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto'>
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-16 my-10'>
                     <h2
                         ref={titleRef}
-                        className="text-left w-full max-w-2xl text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
+                        className="text-left w-full  text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
                     >
                         {"Digital agency with a human touch.".split(" ").map((word, wi) => (
                             <span key={wi} className="whitespace-nowrap inline-block mr-2">

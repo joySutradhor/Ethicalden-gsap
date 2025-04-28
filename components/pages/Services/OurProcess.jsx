@@ -138,7 +138,7 @@ const OurProcess = () => {
   }, []);
 
   return (
-    <div className="relative mt-70 px-5 md:px-20 lg:px-30 xl:max-w-screen-xl xl:mx-auto min-h-screen">
+    <div className="relative mt-70 px-5 md:px-10 lg:px-10 xl:max-w-screen-xl xl:mx-auto min-h-screen">
       {/* The pinned title */}
       <div ref={processRef} className="flex flex-col justify-center items-center my-20 z-0">
         <p className="bg-cyan-900 p-9 h-20 w-20 text-gray-200 border border-cyan-300 rounded-full">

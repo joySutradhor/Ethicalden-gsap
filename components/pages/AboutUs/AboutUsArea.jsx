@@ -150,7 +150,7 @@ const AboutUsArea = () => {
     gsap.set(bg, {
       scaleX: 0,
       transformOrigin: "center center",
-      backgroundColor: "black"
+      backgroundColor: "#4DEFA7"
     });
     gsap.set(scrollingText, { opacity: 0, x: 0 });
     gsap.set(staticText, { opacity: 1 });
@@ -172,7 +172,7 @@ const AboutUsArea = () => {
         duration: 0.2
       })
       .to(textWrapper, {
-        color: "yellow",
+        color: "black",
         duration: 0.3
       }, "-=0.3");
 
@@ -297,7 +297,7 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end'>
             <Image
-              src='/project-2.jpg'
+              src='https://mater.agency/wp-content/uploads/2024/05/Rectangle-39-524x524.jpg'
               height={1000}
               width={1000}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
@@ -308,7 +308,7 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10'>
             <Image
-              src='/project-1.jpg'
+              src='https://mater.agency/wp-content/uploads/2024/05/Rectangle-16-41-524x524.jpg'
               height={1000}
               width={1000}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
@@ -343,7 +343,7 @@ const AboutUsArea = () => {
             <div className=" relative mt-8 md:mt-3 inline-block">
               <Link
                 ref={buttonRef}
-                className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-yellow-400 overflow-hidden inline-flex items-center justify-center group"
+                className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
                 href={"#"}
                 style={{ opacity: 1 }}
               >

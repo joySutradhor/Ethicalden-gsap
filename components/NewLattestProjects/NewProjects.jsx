@@ -10,7 +10,7 @@ function NewProjects() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-  
+
     const bgOverlay = document.createElement('div');
     bgOverlay.style.position = 'fixed';
     bgOverlay.style.top = '0';
@@ -22,7 +22,7 @@ function NewProjects() {
     bgOverlay.style.opacity = '0';
     bgOverlay.style.pointerEvents = 'none';
     document.body.appendChild(bgOverlay);
-  
+
     // Main timeline for entry background change
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -32,12 +32,12 @@ function NewProjects() {
         toggleActions: 'play none none reverse',
       }
     });
-  
+
     tl.to(bgOverlay, {
       opacity: 1,
       ease: 'none'
     }, 0);
-  
+
     // Reset background when leaving section
     ScrollTrigger.create({
       trigger: '.bg-change-anim',
@@ -50,7 +50,7 @@ function NewProjects() {
         gsap.to(bgOverlay, { opacity: 0 });
       }
     });
-  
+
     return () => {
       ScrollTrigger.getAll().forEach(instance => instance.kill());
       bgOverlay.remove();
@@ -97,7 +97,7 @@ function NewProjects() {
             className="text-left w-full max-w-2xl text-4xl md:text-6xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
           >
             {/* First Line: "Our latest" */}
-            <span className="inline-block">
+            <span className="inline-block whitespace-nowrap">
               {"Our".split("").map((char, ci) => (
                 <span
                   key={`our-${ci}`}
@@ -107,7 +107,7 @@ function NewProjects() {
                   {char}
                 </span>
               ))}
-              {/* Add real space after "Our" */}
+              {/* Real space after "Our" */}
               <span
                 ref={(el) => (charRefs.current[100] = el)}
                 className="inline-block"
@@ -125,11 +125,11 @@ function NewProjects() {
               ))}
             </span>
 
-            {/* Line Break */}
+            {/* Line Break after "Our latest" */}
             <br />
 
             {/* Second Line: "projects" */}
-            <span className="inline-block">
+            <span className="inline-block whitespace-nowrap">
               {"projects".split("").map((char, ci) => (
                 <span
                   key={`projects-${ci}`}
@@ -142,6 +142,7 @@ function NewProjects() {
             </span>
           </h2>
 
+
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[80%]'>
             <Image
               src='https://mater.agency/wp-content/uploads/2024/02/hns.jpg'
@@ -150,7 +151,7 @@ function NewProjects() {
               className='object-cover w-full h-full'
               alt='Project 1'
             />
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 hover:text-gradient'>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#4DEFA7]'>
               Blog image HNS
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -161,7 +162,7 @@ function NewProjects() {
           </div>
         </div>
 
-        <div className='h-[30vh] md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
+        <div className='h-[30vh] md:mt-[15vh] lg:mt-0 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
           <video
             src='https://mater.agency/wp-content/uploads/2024/02/vogue-1.mp4'
             muted
@@ -169,7 +170,7 @@ function NewProjects() {
             loop
             className='h-full w-full object-cover'
           ></video>
-          <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Vogue Adria</h3>
+          <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Vogue Adria</h3>
           <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
             site /Branding
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -187,7 +188,7 @@ function NewProjects() {
               className='object-cover h-full w-full'
               alt='NetTV'
             />
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
               Stream live TV plus thousands of shows with NetTVPlus
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -208,7 +209,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
                 Nordeus Unleashed
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -226,7 +227,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Green Tree Villas Website</h3>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Green Tree Villas Website</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -247,7 +248,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'> Honor 9 – The Light Catcher</h3>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'> Honor 9 – The Light Catcher</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -266,7 +267,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Led Elektronika</h3>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Led Elektronika</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               site /Branding
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -285,7 +286,7 @@ function NewProjects() {
               className='object-cover h-full w-full'
               alt='AZ Pension Fund'
             />
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
               Rethinking the AZ Retirement Fund Mobile App
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -305,7 +306,7 @@ function NewProjects() {
                 className='h-full w-full object-cover'
                 alt='RBA'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
                 RBA: Evolution
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -322,7 +323,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>Telenor Bank</h3>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>Telenor Bank</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -343,7 +344,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica'>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#4DEFA7]'>
               Journey into the world of wild animals called Zvjerići
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">

@@ -21,6 +21,7 @@ const HeaderBannerMain = () => {
     const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
 
+
     // Close menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -81,52 +82,77 @@ const HeaderBannerMain = () => {
 
     // smooth image and video appearing animation
     useEffect(() => {
-        const visuals = [leftVideoRef.current, topVideoRef.current, rightImageRef.current, bottomVideoRef.current];
+        const handleResize = () => {
+            if (window.innerWidth > 1000) {
+                const visuals = [leftVideoRef.current, topVideoRef.current, rightImageRef.current, bottomVideoRef.current];
 
-        visuals.forEach((el, index) => {
-            if (el) {
-                gsap.fromTo(
-                    el,
-                    { opacity: 0, x: index % 2 === 0 ? -100 : 100, y: 50, scale: 0.95 },
-                    {
-                        opacity: 1,
-                        x: 0,
-                        y: 0,
-                        scale: 1,
-                        duration: 1,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: el,
-                            start: "top 80%",
-                            toggleActions: "play none none none",
-                        },
+                visuals.forEach((el, index) => {
+                    if (el) {
+                        gsap.fromTo(
+                            el,
+                            { opacity: 0, x: index % 2 === 0 ? -100 : 100, y: 50, scale: 0.95 },
+                            {
+                                opacity: 1,
+                                x: 0,
+                                y: 0,
+                                scale: 1,
+                                duration: 1,
+                                ease: "power3.out",
+                                scrollTrigger: {
+                                    trigger: el,
+                                    start: "top 80%",
+                                    toggleActions: "play none none none",
+                                },
+                            }
+                        );
                     }
-                );
+                });
             }
-        });
+        };
+
+        // Run once on mount
+        handleResize();
+
+        // Optional: Add resize listener if you want it to re-check on window resize
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     // mouse parallax on each
     useEffect(() => {
-        const moveParallax = (e) => {
-            const { innerWidth, innerHeight } = window;
-            const moveX = (e.clientX - innerWidth / 2) * 0.01;
-            const moveY = (e.clientY - innerHeight / 2) * 0.01;
+        const handleResize = () => {
+            if (window.innerWidth > 1000) {
+                const moveParallax = (e) => {
+                    const { innerWidth, innerHeight } = window;
+                    const moveX = (e.clientX - innerWidth / 2) * 0.01;
+                    const moveY = (e.clientY - innerHeight / 2) * 0.01;
 
-            [leftVideoRef, topVideoRef, rightImageRef, bottomVideoRef].forEach((ref, idx) => {
-                if (ref.current) {
-                    gsap.to(ref.current, {
-                        x: moveX * (idx + 1),
-                        y: moveY * (idx + 1),
-                        duration: 0.4,
-                        ease: "power1.out",
+                    [leftVideoRef, topVideoRef, rightImageRef, bottomVideoRef].forEach((ref, idx) => {
+                        if (ref.current) {
+                            gsap.to(ref.current, {
+                                x: moveX * (idx + 1),
+                                y: moveY * (idx + 1),
+                                duration: 0.4,
+                                ease: "power1.out",
+                            });
+                        }
                     });
-                }
-            });
+                };
+
+                window.addEventListener("mousemove", moveParallax);
+                return () => window.removeEventListener("mousemove", moveParallax);
+            }
         };
 
-        window.addEventListener("mousemove", moveParallax);
-        return () => window.removeEventListener("mousemove", moveParallax);
+        // Run once on mount
+        const cleanup = handleResize();
+
+        // Optional: Add resize listener if you want it to re-check on window resize
+        window.addEventListener('resize', handleResize);
+        return () => {
+            cleanup && cleanup();
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     // Button animation setup
@@ -230,220 +256,229 @@ const HeaderBannerMain = () => {
         };
     }, []);
 
-    // Mobile menu animation
+    // Mobile menu animation - updated for right-to-left
     useEffect(() => {
         if (isMenuOpen) {
-            gsap.from(mobileMenuRef.current, {
-                y: -20,
+            gsap.fromTo(mobileMenuRef.current,
+                { x: '100%', opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                }
+            );
+        } else if (mobileMenuRef.current) {
+            gsap.to(mobileMenuRef.current, {
+                x: '100%',
                 opacity: 0,
                 duration: 0.3,
-                ease: "power2.out"
+                ease: "power2.in"
             });
         }
     }, [isMenuOpen]);
 
+
+
+
     return (
-<div className="relative h-screen overflow-hidden bg-white pb-20" style={{ zIndex: 30 }}>
-    {/* Navbar */}
-    <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
-        <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl"><a href="/">Ethicalden</a></div>
+        <div className="relative h-screen overflow-hidden bg-white pb-20" style={{ zIndex: 30 }}>
+            {/* Navbar - updated for mobile */}
+            <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
+                <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
+                    <a href="/"><img className="w-32 md:w-40 h-auto" src="/images/logo/PNG.png" alt="Mater Logo" /></a>
+                </div>
 
-        {/* Desktop Menu - hidden on medium and below */}
-        <div className="hidden lg:flex items-center gap-10 font-helvetica text-xl text-black relative">
-            <a href="about-den" className="underline-animation">About Den</a>
-            <a href="services" className="underline-animation">Services</a>
-            <a href="products" className="underline-animation">Products</a>
-
-            {/* Sub brands Dropdown Button */}
-            <div className="relative inline-block">
-                <button
-                    onClick={() => setSubMenuOpen(!subMenuOpen)}
-                    className="group flex items-center underline-animation"
-                >
-                    <span className="mr-1">Sub brands</span>
-                    <HiChevronDown
-                        className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`}
-                    />
-                </button>
-
-                {/* Dropdown Items */}
-                {subMenuOpen && (
-                    <div className="absolute left-0 mt-2 py-2 w-40 bg-white rounded-md shadow-lg z-50">
-                        <a
-                            href="https://eduden.example.com"
-                            className="block px-4 py-2 underline-animation hover:bg-gray-100"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Eduden
-                        </a>
-                        <a
-                            href="https://hivyr.example.com"
-                            className="block px-4 py-2 underline-animation hover:bg-gray-100"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Hivyr
-                        </a>
-                    </div>
-                )}
-            </div>
-
-            <div className="">
-                <Link
-                    ref={buttonRef}
-                    className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
-                    href={"/contact"}
-                    style={{ opacity: 1 }}
-                >
-                    <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-                    <span
-                        ref={buttonTextRef}
-                        className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
-                    >
-                        <span ref={buttonStaticTextRef} className="static-text font-helvetica">
-                            Let's Talk
+                {/* Desktop Menu - with hover effect */}
+                <div className="hidden lg:flex items-center gap-10 font-helvetica text-xl text-black relative">
+                    <a href="about-den" className="relative group">
+                        <span className="relative inline-block">
+                            About Den
+                            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
                         </span>
-                        <span
-                            ref={buttonScrollingTextRef}
-                            className="scrolling-text absolute left-0"
+                    </a>
+                    <a href="services" className="relative group">
+                        <span className="relative inline-block">
+                            Services
+                            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                    </a>
+                    <a href="products" className="relative group">
+                        <span className="relative inline-block">
+                            Products
+                            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                    </a>
+
+                    {/* Sub brands Dropdown Button */}
+                    <div className="relative inline-block">
+                        <button
+                            onClick={() => setSubMenuOpen(!subMenuOpen)}
+                            className="group flex items-center"
                         >
-                            {Array.from({ length: 20 }).map((_, i) => (
-                                <span key={i} className="inline-block mr-8 font-helvetica">
+                            <span className="relative inline-block mr-1">
+                                Sub brands
+                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                            </span>
+                            <HiChevronDown
+                                className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`}
+                            />
+                        </button>
+
+                        {/* Dropdown Items */}
+                        {subMenuOpen && (
+                            <div className="absolute left-0 mt-2 py-2 w-40 bg-white rounded-md shadow-lg z-50">
+                                <a
+                                    href="https://eduden.example.com"
+                                    className="block px-4 py-2 relative group"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <span className="relative inline-block">
+                                        Eduden
+                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                    </span>
+                                </a>
+                                <a
+                                    href="https://hivyr.example.com"
+                                    className="block px-4 py-2 relative group"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <span className="relative inline-block">
+                                        Hivyr
+                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                    </span>
+                                </a>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="">
+                        <Link
+                            ref={buttonRef}
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
+                            href={"/contact"}
+                            style={{ opacity: 1 }}
+                        >
+                            <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                            <span
+                                ref={buttonTextRef}
+                                className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                            >
+                                <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                                     Let's Talk
                                 </span>
-                            ))}
-                        </span>
-                    </span>
-                </Link>
-            </div>
-        </div>
+                                <span
+                                    ref={buttonScrollingTextRef}
+                                    className="scrolling-text absolute left-0"
+                                >
+                                    {Array.from({ length: 20 }).map((_, i) => (
+                                        <span key={i} className="inline-block mr-8 font-helvetica">
+                                            Let's Talk
+                                        </span>
+                                    ))}
+                                </span>
+                            </span>
+                        </Link>
+                    </div>
+                </div>
 
-        {/* Mobile Menu Icon - shown on medium and small devices */}
-        <div className="lg:hidden">
-            <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="menu-toggle"
-                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            >
-                {isMenuOpen ? (
-                    <HiX className="text-3xl text-black transition-colors duration-300" />
-                ) : (
-                    <HiMenu className="text-3xl text-black transition-colors duration-300" />
-                )}
-            </button>
-        </div>
-    </nav>
-
-    {/* Mobile Dropdown Menu - shown on medium and small devices */}
-    {isMenuOpen && (
-        <div
-            ref={mobileMenuRef}
-            className="lg:hidden fixed inset-0 bg-white z-50 pt-20 px-6 overflow-y-auto"
-            style={{ marginTop: '0' }}
-        >
-            {/* Close Button at the top */}
-            <div className="flex justify-end mb-6">
-                <button
-                    onClick={() => setIsMenuOpen(false)}
-                    className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-                    aria-label="Close menu"
-                >
-                    <HiX className="text-2xl text-gray-700" />
-                </button>
-            </div>
-
-            <div className="flex flex-col gap-6 font-helvetica text-xl text-gray-800">
-                <a
-                    href="about-den"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="py-3 border-b border-gray-200 underline-animation"
-                >
-                    About Den
-                </a>
-                <a
-                    href="services"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="py-3 border-b border-gray-200 underline-animation"
-                >
-                    Services
-                </a>
-                <a
-                    href="products"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="py-3 border-b border-gray-200 underline-animation"
-                >
-                    Products
-                </a>
-
-                {/* Sub brands Mobile Dropdown */}
-                <div className="flex flex-col border-b border-gray-200">
+                {/* Mobile Menu Button */}
+                <div className="lg:hidden">
                     <button
-                        onClick={() => setMobileSubMenuOpen(!mobileSubMenuOpen)}
-                        className="py-3 flex items-center justify-between underline-animation"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="menu-toggle flex items-center gap-2"
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     >
-                        <span>Sub brands</span>
-                        <HiChevronDown
-                            className={`transition-transform duration-300 ${mobileSubMenuOpen ? "rotate-180" : ""}`}
-                        />
+                        {!isMenuOpen ? (
+                            <HiMenu className="text-2xl text-black transition-colors duration-300" />
+                        ) : null}
                     </button>
-
-                    {mobileSubMenuOpen && (
-                        <div className="flex flex-col gap-3 pb-3 pl-4">
-                            <a
-                                href="https://eduden.example.com"
-                                className="text-lg text-gray-700 underline-animation hover:text-black"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Eduden
-                            </a>
-                            <a
-                                href="https://hivyr.example.com"
-                                className="text-lg text-gray-700 underline-animation hover:text-black"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Hivyr
-                            </a>
-                        </div>
-                    )}
                 </div>
+            </nav>
 
-                <div className="pt-4">
-                    <Link
-                        ref={buttonRef}
-                        className="relative px-6 py-3 rounded-full text-lg bg-[#003b49] overflow-hidden inline-flex items-center justify-center group w-full"
-                        href={"/contact"}
-                        style={{ opacity: 1 }}
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-                        <span
-                            ref={buttonTextRef}
-                            className="relative z-10 font-medium text-white overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <div
+                    ref={mobileMenuRef}
+                    className="lg:hidden fixed inset-0 w-full bg-gray-200 z-50 overflow-y-auto shadow-xl"
+                    style={{ marginTop: '0' }}
+                >
+                    {/* Close Button inside Mobile Menu */}
+                    <div className="flex justify-end p-4">
+                        <button
+                            onClick={() => setIsMenuOpen(false)}
+                            aria-label="Close menu"
+                            className="text-3xl text-gray-800 hover:text-black transition-colors"
                         >
-                            <span ref={buttonStaticTextRef} className="static-text font-helvetica">
-                                Let's Talk
-                            </span>
-                            <span
-                                ref={buttonScrollingTextRef}
-                                className="scrolling-text absolute left-0"
-                            >
-                                {Array.from({ length: 20 }).map((_, i) => (
-                                    <span key={i} className="inline-block mr-8 font-helvetica">
-                                        Let's Talk
+                            <HiX />
+                        </button>
+                    </div>
+
+                    {/* Logo */}
+                    <a href="/">
+                        <img className="w-70 h-auto pt-4 pl-8 " src="/images/logo/PNG.png" alt="Logo" />
+                    </a>
+
+                    {/* Menu Items */}
+                    <div className="flex flex-col h-full pl-16 -mt-28 px-6">
+                        <div className="flex-1 flex flex-col justify-center items-start gap-8 font-helvetica font-extrabold text-4xl md:text-5xl text-black">
+                            <a href="/about-den" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">About Den</a>
+                            <a href="/services" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Services</a>
+                            <a href="/products" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Products</a>
+                            {/* Sub brands Dropdown Button */}
+                            <div className="relative inline-block">
+                                <button
+                                    onClick={() => setSubMenuOpen(!subMenuOpen)}
+                                    className="group flex items-center"
+                                >
+                                    <span className="relative inline-block mr-1">
+                                        Sub brands
+                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
                                     </span>
-                                ))}
-                            </span>
-                        </span>
-                    </Link>
+                                    <HiChevronDown
+                                        className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`}
+                                    />
+                                </button>
+
+                                {/* Dropdown Items */}
+                                {subMenuOpen && (
+                                    <div className="absolute left-0 mt-2 py-2 w-auto bg-white p-5 rounded-b-lg  z-50">
+                                        <a
+                                            href="https://eduden.example.com"
+                                            className="block px-4 py-2 relative group"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span className="relative inline-block">
+                                                Eduden
+                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                            </span>
+                                        </a>
+                                        <a
+                                            href="https://hivyr.example.com"
+                                            className="block px-4 py-2 relative group"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span className="relative inline-block">
+                                                Hivyr
+                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
+                            <a href="/contact" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Let's Talk</a>
+
+
+                        </div>
+
+
+                    </div>
                 </div>
-            </div>
-        </div>
-    )}
+            )}
 
             {/* Banner Content */}
             <div ref={bannerRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-48 lg:mt-0 px-4 lg:text-center" style={{ zIndex: 30 }}>
@@ -509,36 +544,25 @@ const HeaderBannerMain = () => {
                 </div>
             </div>
 
-            {/* Add the CSS for the underline animation */}
+            {/* Add the CSS for the mobile menu */}
             <style jsx>{`
-                .underline-animation {
-                    position: relative;
-                    display: inline-block;
-                }
-                
-                .underline-animation::after {
-                    content: '';
-                    position: absolute;
-                    width: 0;
-                    height: 2px;
-                    bottom: -2px;
+                /* Mobile menu overlay */
+                .mobile-menu-overlay {
+                    position: fixed;
+                    top: 0;
                     left: 0;
-                    background-color: black;
-                    transition: width 0.3s ease;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 40;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s ease;
                 }
                 
-                .underline-animation:hover::after {
-                    width: 100%;
-                }
-
-                /* Mobile menu animations */
-                @keyframes fadeIn {
-                    from { opacity: 0; transform: translateY(-10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-
-                .mobile-menu-item {
-                    animation: fadeIn 0.3s ease forwards;
+                .mobile-menu-overlay.active {
+                    opacity: 1;
+                    pointer-events: auto;
                 }
             `}</style>
         </div>

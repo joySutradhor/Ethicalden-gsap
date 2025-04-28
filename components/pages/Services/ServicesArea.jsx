@@ -113,7 +113,7 @@ const ServicesArea = () => {
         gsap.set(bg, {
             scaleX: 0,
             transformOrigin: "center center",
-            backgroundColor: "black"
+            backgroundColor: "#4DEFA7"
         });
         gsap.set(scrollingText, { opacity: 0, x: 0 });
         gsap.set(staticText, { opacity: 1 });
@@ -135,7 +135,7 @@ const ServicesArea = () => {
                 duration: 0.2
             })
             .to(textWrapper, {
-                color: "yellow",
+                color: "black",
                 duration: 0.3
             }, "-=0.3");
 
@@ -476,7 +476,7 @@ const ServicesArea = () => {
                     <div className="relative mt-8 md:mt-3 inline-block">
                         <Link
                             ref={buttonRef}
-                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-yellow-200 overflow-hidden inline-flex items-center justify-center group"
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
                             href={"#"}
                             style={{ opacity: 1 }}
                         >
