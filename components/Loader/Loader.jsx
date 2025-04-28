@@ -37,7 +37,7 @@ const Loader = ({ className = '' }) => {
   
 
   return (
-    <section className='h-[100vh] w-full bg-[#EBECE7] fixed top-0 flex justify-center items-center z-50'>
+    <section className='h-[100vh] w-full bg-[#EBECE7] fixed top-0 flex justify-center items-center px-10 md:px-12 lg:px-16 xl:px-20 z-50'>
       <div
         className={`flex flex-wrap gap-2 md:gap-3 text-gray-400  text-4xl md:text-6xl lg:text-6xl xl:text-7xl font-helvetica font-extrabold py-8 md:py-30 ${className}`}
       >

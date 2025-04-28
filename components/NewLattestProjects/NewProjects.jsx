@@ -200,7 +200,7 @@ function NewProjects() {
         </div>
 
         <div className=''>
-          <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[25vh] md:mt-0'>
+          <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[20vh] md:mt-0'>
             <div className='h-[30vh] md:h-[20vh] lg:h-[30vh]'>
               <video
                 src='https://mater.agency/wp-content/uploads/2024/03/nordeus.mp4'

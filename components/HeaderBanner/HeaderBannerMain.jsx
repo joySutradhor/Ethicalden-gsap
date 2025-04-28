@@ -388,11 +388,11 @@ const HeaderBannerMain = () => {
                 <div className="lg:hidden">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="menu-toggle flex items-center gap-2"
+                        className=" flex items-center gap-2"
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     >
                         {!isMenuOpen ? (
-                            <HiMenu className="text-2xl text-black transition-colors duration-300" />
+                            <HiMenu className="text-3xl text-black transition-colors duration-300" />
                         ) : null}
                     </button>
                 </div>
@@ -408,12 +408,16 @@ const HeaderBannerMain = () => {
                     {/* Close Button inside Mobile Menu */}
                     <div className="flex justify-end p-4">
                         <button
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setIsMenuOpen(false);
+                            }}
                             aria-label="Close menu"
-                            className="text-3xl text-gray-800 hover:text-black transition-colors"
+                            className="text-3xl -mr-2 cursor-pointer text-gray-800 hover:text-black transition-colors"
                         >
-                            <HiX />
+                            <HiX className="h-fit w-fit"/>
                         </button>
+
                     </div>
 
                     {/* Logo */}
@@ -524,6 +528,7 @@ const HeaderBannerMain = () => {
                     <div ref={rightImageRef} className="absolute right-0 top-1/2 -translate-y-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[320px] lg:h-[200px] xl:h-[380px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg z-40">
                         <img src="/images/banner/banner-v-right.jpg" alt="Right Visual" className="w-full h-full object-cover" />
                     </div>
+
                 </div>
 
                 {/* Bottom Video for all screen sizes */}

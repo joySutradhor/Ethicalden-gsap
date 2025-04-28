@@ -52,18 +52,23 @@ function ClientCollaboration() {
       {/* title */}
       <h2
         ref={titleRef}
-        className='text-center v2__title font-extrabold font-helvetica px-[5vw] lg:px-0 max-w-5xl mx-auto mb-[10vh] leading-[1]'
+        className="text-center v2__title font-extrabold font-helvetica px-[5vw] lg:px-0 max-w-5xl mx-auto mb-[10vh] leading-[1]"
       >
         {titleLines.map((line, lineIndex) => (
-          <div key={lineIndex} className="block">
-            {line.split('').map((char, charIndex) => (
-              <span key={charIndex} ref={addToCharRefs}>
-                {char === ' ' ? '\u00A0' : char}
+          <div key={lineIndex} className="block flex flex-wrap justify-center">
+            {line.split(' ').map((word, wordIndex) => (
+              <span key={wordIndex} className="flex whitespace-nowrap mr-2">
+                {word.split('').map((char, charIndex) => (
+                  <span key={charIndex} ref={addToCharRefs} className="inline-block">
+                    {char}
+                  </span>
+                ))}
               </span>
             ))}
           </div>
         ))}
       </h2>
+
 
       {/* clients logos */}
       <div>
