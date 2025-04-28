@@ -235,7 +235,7 @@ const AllStoriesMain = () => {
 
 
     return (
-        <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[20vh] text-center relative">
+        <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[15vh] text-center relative">
             {/* Centered Waving Image */}
             <div className="flex justify-center mb-2">
                 <img
