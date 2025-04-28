@@ -8,354 +8,334 @@ import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [subMenuOpen, setSubMenuOpen] = useState(false);
-  const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState(false);
-  const mobileMenuRef = useRef(null);
+const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
+    const titleRef = useRef(null);
+    const charRefs = useRef([]);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [subMenuOpen, setSubMenuOpen] = useState(false);
+    const mobileMenuRef = useRef(null);
 
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
-        if (event.target.closest('button')?.classList.contains('menu-toggle')) return;
-        setIsMenuOpen(false);
-      }
-    };
+    // Close menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+                if (event.target.closest('button')?.classList.contains('menu-toggle')) return;
+                setIsMenuOpen(false);
+            }
+        };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
-  // Button animation setup
-  const buttonRef = useRef(null);
-  const buttonTextRef = useRef(null);
-  const buttonBgRef = useRef(null);
-  const buttonStaticTextRef = useRef(null);
-  const buttonScrollingTextRef = useRef(null);
+    useEffect(() => {
+        if (!charRefs.current.length) return;
+        gsap.fromTo(
+            charRefs.current,
+            { color: 'gray' },
+            {
+                color: textColor,
+                stagger: {
+                    from: 'random',
+                    each: 0.05,
+                },
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: titleRef.current,
+                    start: "top 90%",
+                    end: "top 50%",
+                    toggleActions: "play none none none",
+                }
+            }
+        );
+    }, [textColor]);
 
-  useEffect(() => {
-      const button = buttonRef.current;
-      const textWrapper = buttonTextRef.current;
-      const bg = buttonBgRef.current;
-      const staticText = buttonStaticTextRef.current;
-      const scrollingText = buttonScrollingTextRef.current;
+    // Button animation setup
+    const buttonRef = useRef(null);
+    const buttonTextRef = useRef(null);
+    const buttonBgRef = useRef(null);
+    const buttonStaticTextRef = useRef(null);
+    const buttonScrollingTextRef = useRef(null);
 
-      // Initial setup
-      gsap.set(button, { opacity: 1, y: 0 });
-      gsap.set(bg, {
-          scaleX: 0,
-          transformOrigin: "center center",
-          backgroundColor: "#4DEFA7"
-      });
-      gsap.set(scrollingText, { opacity: 0, x: 0 });
-      gsap.set(staticText, { opacity: 1 });
+    useEffect(() => {
+        const button = buttonRef.current;
+        const textWrapper = buttonTextRef.current;
+        const bg = buttonBgRef.current;
+        const staticText = buttonStaticTextRef.current;
+        const scrollingText = buttonScrollingTextRef.current;
 
-      const hoverTL = gsap.timeline({ paused: true });
+        gsap.set(button, { opacity: 1, y: 0 });
+        gsap.set(bg, { scaleX: 0, transformOrigin: "center center", backgroundColor: "#4DEFA7" });
+        gsap.set(scrollingText, { opacity: 0, x: 0 });
+        gsap.set(staticText, { opacity: 1 });
 
-      hoverTL
-          .to(bg, {
-              scaleX: 1,
-              duration: 0.5,
-              ease: "power2.out"
-          })
-          .to(staticText, {
-              opacity: 0,
-              duration: 0.2
-          }, "-=0.2")
-          .to(scrollingText, {
-              opacity: 1,
-              duration: 0.2
-          })
-          .to(textWrapper, {
-              color: "black",
-              duration: 0.3
-          }, "-=0.3");
+        const hoverTL = gsap.timeline({ paused: true });
 
-      let scrollTween;
+        hoverTL
+            .to(bg, { scaleX: 1, duration: 0.5, ease: "power2.out" })
+            .to(staticText, { opacity: 0, duration: 0.2 }, "-=0.2")
+            .to(scrollingText, { opacity: 1, duration: 0.2 })
+            .to(textWrapper, { color: "black", duration: 0.3 }, "-=0.3");
 
-      const handleMouseEnter = () => {
-          hoverTL.play().then(() => {
-              // Start scrolling animation only after the hover animation completes
-              if (!scrollTween) {
-                  const contentWidth = scrollingText.scrollWidth;
-                  const buttonWidth = button.offsetWidth;
-                  const duration = contentWidth / 50; // Adjust speed here (lower number = faster)
+        let scrollTween;
 
-                  scrollTween = gsap.to(scrollingText, {
-                      x: `-=${contentWidth - buttonWidth}`,
-                      duration: duration,
-                      ease: "linear",
-                      repeat: -1
-                  });
-              } else {
-                  scrollTween.play();
-              }
-          });
-      };
+        const handleMouseEnter = () => {
+            hoverTL.play().then(() => {
+                if (!scrollTween) {
+                    const contentWidth = scrollingText.scrollWidth;
+                    const buttonWidth = button.offsetWidth;
+                    const duration = contentWidth / 50;
+                    scrollTween = gsap.to(scrollingText, {
+                        x: `-=${contentWidth - buttonWidth}`,
+                        duration: duration,
+                        ease: "linear",
+                        repeat: -1
+                    });
+                } else {
+                    scrollTween.play();
+                }
+            });
+        };
 
-      const handleMouseLeave = () => {
-          hoverTL.reverse();
-          if (scrollTween) {
-              scrollTween.pause();
-              // Reset position when mouse leaves
-              gsap.set(scrollingText, { x: 0 });
-          }
-      };
+        const handleMouseLeave = () => {
+            hoverTL.reverse();
+            if (scrollTween) {
+                scrollTween.pause();
+                gsap.set(scrollingText, { x: 0 });
+            }
+        };
 
-      button?.addEventListener("mouseenter", handleMouseEnter);
-      button?.addEventListener("mouseleave", handleMouseLeave);
+        button?.addEventListener("mouseenter", handleMouseEnter);
+        button?.addEventListener("mouseleave", handleMouseLeave);
 
-      gsap.from(button, {
-          y: 20,
-          opacity: 0,
-          duration: 0.8,
-          delay: 0.5,
-          ease: "back.out(1.7)",
-          immediateRender: false,
-          scrollTrigger: {
-              trigger: button,
-              start: "top 85%",
-              toggleActions: "play none none none"
-          }
-      });
+        gsap.from(button, {
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+            delay: 0.5,
+            ease: "back.out(1.7)",
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: button,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            }
+        });
 
-      return () => {
-          button?.removeEventListener("mouseenter", handleMouseEnter);
-          button?.removeEventListener("mouseleave", handleMouseLeave);
-          hoverTL.kill();
-          if (scrollTween) scrollTween.kill();
-      };
-  }, []);
+        return () => {
+            button?.removeEventListener("mouseenter", handleMouseEnter);
+            button?.removeEventListener("mouseleave", handleMouseLeave);
+            hoverTL.kill();
+            if (scrollTween) scrollTween.kill();
+        };
+    }, []);
 
-  return (
-    <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
-      <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
-        <a href="/"><img className="w-50 h-auto" src="/images/logo/PNG.png" alt="" /></a>
-      </div>
+    useEffect(() => {
+        if (isMenuOpen) {
+            gsap.fromTo(mobileMenuRef.current,
+                { x: '100%', opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" }
+            );
+        } else if (mobileMenuRef.current) {
+            gsap.to(mobileMenuRef.current, { x: '100%', opacity: 0, duration: 0.3, ease: "power2.in" });
+        }
+    }, [isMenuOpen]);
 
-      {/* Desktop Menu - hidden on medium and below */}
-      <div className="hidden lg:flex items-center gap-10 font-helvetica text-xl text-black relative">
-        <a href="about-den" className="underline-animation">About Den</a>
-        <a href="services" className="underline-animation">Services</a>
-        <a href="products" className="underline-animation">Products</a>
-
-        {/* Sub brands Dropdown Button */}
-        <div className="relative inline-block">
-          <button
-            onClick={() => setSubMenuOpen(!subMenuOpen)}
-            className="group flex items-center underline-animation"
-          >
-            <span className="mr-1">Sub brands</span>
-            <HiChevronDown
-              className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`}
-            />
-          </button>
-
-          {/* Dropdown Items */}
-          {subMenuOpen && (
-            <div className="absolute left-0 mt-2 py-2 w-40 bg-white rounded-md shadow-lg z-50">
-              <a
-                href="https://eduden.example.com"
-                className="block px-4 py-2 underline-animation hover:bg-gray-100"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Eduden
-              </a>
-              <a
-                href="https://hivyr.example.com"
-                className="block px-4 py-2 underline-animation hover:bg-gray-100"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Hivyr
-              </a>
-            </div>
-          )}
-        </div>
-
-        <div className="">
-          <Link
-            ref={buttonRef}
-            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
-            href={"/contact"}
-            style={{ opacity: 1 }}
-          >
-            <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-            <span
-              ref={buttonTextRef}
-              className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
-            >
-              <span ref={buttonStaticTextRef} className="static-text font-helvetica">
-                Let's Talk
-              </span>
-              <span
-                ref={buttonScrollingTextRef}
-                className="scrolling-text absolute left-0"
-              >
-                {Array.from({ length: 20 }).map((_, i) => (
-                  <span key={i} className="inline-block mr-8 font-helvetica">
-                    Let's Talk
-                  </span>
-                ))}
-              </span>
-            </span>
-          </Link>
-        </div>
-      </div>
-
-      {/* Mobile Menu Icon - shown on medium and small devices */}
-      <div className="lg:hidden">
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="menu-toggle"
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {isMenuOpen ? (
-            <HiX className="text-3xl text-black transition-colors duration-300" />
-          ) : (
-            <HiMenu className="text-3xl text-black transition-colors duration-300" />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Dropdown Menu - shown on medium and small devices */}
-      {isMenuOpen && (
-        <div
-          ref={mobileMenuRef}
-          className="lg:hidden fixed inset-0 bg-white z-50 pt-20 px-6 overflow-y-auto"
-          style={{ marginTop: '0' }}
-        >
-          {/* Close Button at the top */}
-          <div className="flex justify-end mb-6">
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-              aria-label="Close menu"
-            >
-              <HiX className="text-2xl text-gray-700" />
-            </button>
-          </div>
-
-          <div className="flex flex-col gap-6 font-helvetica text-xl text-gray-800">
-            <a
-              href="about-den"
-              onClick={() => setIsMenuOpen(false)}
-              className="py-3 border-b border-gray-200 underline-animation"
-            >
-              About Den
-            </a>
-            <a
-              href="services"
-              onClick={() => setIsMenuOpen(false)}
-              className="py-3 border-b border-gray-200 underline-animation"
-            >
-              Services
-            </a>
-            <a
-              href="products"
-              onClick={() => setIsMenuOpen(false)}
-              className="py-3 border-b border-gray-200 underline-animation"
-            >
-              Products
-            </a>
-
-            {/* Sub brands Mobile Dropdown */}
-            <div className="flex flex-col border-b border-gray-200">
-              <button
-                onClick={() => setMobileSubMenuOpen(!mobileSubMenuOpen)}
-                className="py-3 flex items-center justify-between underline-animation"
-              >
-                <span>Sub brands</span>
-                <HiChevronDown
-                  className={`transition-transform duration-300 ${mobileSubMenuOpen ? "rotate-180" : ""}`}
-                />
-              </button>
-
-              {mobileSubMenuOpen && (
-                <div className="flex flex-col gap-3 pb-3 pl-4">
-                  <a
-                    href="https://eduden.example.com"
-                    className="text-lg text-gray-700 underline-animation hover:text-black"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Eduden
-                  </a>
-                  <a
-                    href="https://hivyr.example.com"
-                    className="text-lg text-gray-700 underline-animation hover:text-black"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Hivyr
-                  </a>
+    return (
+        <div className="lg:pb-20 overflow-hidden" style={{ backgroundColor, zIndex: 30 }}>
+            <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6">
+                <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
+                    <a href="/">
+                        <img className="w-32 md:w-40 h-auto" src="/images/logo/PNG.png" alt="Mater Logo" />
+                    </a>
                 </div>
-              )}
-            </div>
 
-            <div className="pt-4">
-              <Link
-                ref={buttonRef}
-                className="relative px-6 py-3 rounded-full text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group w-full"
-                href={"/contact"}
-                style={{ opacity: 1 }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-                <span
-                  ref={buttonTextRef}
-                  className="relative z-10 font-medium text-white overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                <div className={`hidden lg:flex items-center gap-10 font-helvetica text-xl relative`} style={{ color: textColor }}>
+                    <a href="about-den" className="relative group">
+                        <span className="relative inline-block">
+                            About Den
+                            <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
+                        </span>
+                    </a>
+                    <a href="services" className="relative group">
+                        <span className="relative inline-block">
+                            Services
+                            <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
+                        </span>
+                    </a>
+                    <a href="products" className="relative group">
+                        <span className="relative inline-block">
+                            Products
+                            <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
+                        </span>
+                    </a>
+
+                    <div className="relative inline-block">
+                        <button onClick={() => setSubMenuOpen(!subMenuOpen)} className="group flex items-center">
+                            <span className="relative inline-block mr-1">
+                                Sub brands
+                                <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
+                            </span>
+                            <HiChevronDown className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`} style={{ color: textColor }} />
+                        </button>
+
+                        {subMenuOpen && (
+                            <div className="absolute left-0 mt-2 py-2 w-40 bg-white rounded-md shadow-lg z-50">
+                                <a href="https://eduden.example.com" className="block px-4 py-2 relative group" target="_blank" rel="noopener noreferrer">
+                                    <span className="relative inline-block">
+                                        Eduden
+                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                    </span>
+                                </a>
+                                <a href="https://hivyr.example.com" className="block px-4 py-2 relative group" target="_blank" rel="noopener noreferrer">
+                                    <span className="relative inline-block">
+                                        Hivyr
+                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                    </span>
+                                </a>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="">
+                        <Link
+                            ref={buttonRef}
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
+                            href={"/contact"}
+                            style={{ opacity: 1 }}
+                        >
+                            <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                            <span ref={buttonTextRef} className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center">
+                                <span ref={buttonStaticTextRef} className="static-text font-helvetica">Let's Talk</span>
+                                <span ref={buttonScrollingTextRef} className="scrolling-text absolute left-0">
+                                    {Array.from({ length: 20 }).map((_, i) => (
+                                        <span key={i} className="inline-block mr-8 font-helvetica">Let's Talk</span>
+                                    ))}
+                                </span>
+                            </span>
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="lg:hidden">
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="menu-toggle flex items-center gap-2"
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    >
+                        {!isMenuOpen && <HiMenu className="text-2xl" style={{ color: textColor }} />}
+                    </button>
+                </div>
+            </nav>
+
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <div
+                    ref={mobileMenuRef}
+                    className="lg:hidden fixed inset-0 w-full bg-gray-200 z-50 overflow-y-auto shadow-xl"
+                    style={{ marginTop: '0' }}
                 >
-                  <span ref={buttonStaticTextRef} className="static-text font-helvetica">
-                    Let's Talk
-                  </span>
-                  <span
-                    ref={buttonScrollingTextRef}
-                    className="scrolling-text absolute left-0"
-                  >
-                    {Array.from({ length: 20 }).map((_, i) => (
-                      <span key={i} className="inline-block mr-8 font-helvetica">
-                        Let's Talk
-                      </span>
-                    ))}
-                  </span>
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
+                    {/* Close Button inside Mobile Menu */}
+                    <div className="flex justify-end p-4">
+                        <button
+                            onClick={() => setIsMenuOpen(false)}
+                            aria-label="Close menu"
+                            className="text-3xl text-gray-800 hover:text-black transition-colors"
+                        >
+                            <HiX />
+                        </button>
+                    </div>
 
-      {/* Add the CSS for the underline animation */}
-      <style jsx>{`
-                .underline-animation {
-                    position: relative;
-                    display: inline-block;
-                }
-                
-                .underline-animation::after {
-                    content: '';
-                    position: absolute;
-                    width: 0;
-                    height: 2px;
-                    bottom: -2px;
+                    {/* Logo */}
+                    <a href="/">
+                        <img className="w-70 h-auto pt-4 pl-8 " src="/images/logo/PNG.png" alt="Logo" />
+                    </a>
+
+                    {/* Menu Items */}
+                    <div className="flex flex-col h-full pl-16 -mt-28 px-6">
+                        <div className="flex-1 flex flex-col justify-center items-start gap-8 font-helvetica font-extrabold text-4xl md:text-5xl text-black">
+                            <a href="/about-den" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">About Den</a>
+                            <a href="/services" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Services</a>
+                            <a href="/products" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Products</a>
+                            {/* Sub brands Dropdown Button */}
+                            <div className="relative inline-block">
+                                <button
+                                    onClick={() => setSubMenuOpen(!subMenuOpen)}
+                                    className="group flex items-center"
+                                >
+                                    <span className="relative inline-block mr-1">
+                                        Sub brands
+                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                    </span>
+                                    <HiChevronDown
+                                        className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`}
+                                    />
+                                </button>
+
+                                {/* Dropdown Items */}
+                                {subMenuOpen && (
+                                    <div className="absolute left-0 mt-2 py-2 w-auto bg-white p-5 rounded-b-lg  z-50">
+                                        <a
+                                            href="https://eduden.example.com"
+                                            className="block px-4 py-2 relative group"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span className="relative inline-block">
+                                                Eduden
+                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                            </span>
+                                        </a>
+                                        <a
+                                            href="https://hivyr.example.com"
+                                            className="block px-4 py-2 relative group"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span className="relative inline-block">
+                                                Hivyr
+                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
+                            <a href="/contact" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Let's Talk</a>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            )}
+
+
+            {/* Add the CSS for the mobile menu */}
+            <style jsx>{`
+                /* Mobile menu overlay */
+                .mobile-menu-overlay {
+                    position: fixed;
+                    top: 0;
                     left: 0;
-                    background-color: black;
-                    transition: width 0.3s ease;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 40;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s ease;
                 }
                 
-                .underline-animation:hover::after {
-                    width: 100%;
+                .mobile-menu-overlay.active {
+                    opacity: 1;
+                    pointer-events: auto;
                 }
             `}</style>
-    </nav>
-  );
+        </div>
+    );
 };
 
 export default Navbar;

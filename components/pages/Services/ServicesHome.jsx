@@ -44,7 +44,7 @@ const ServicesHome = () => {
     return (
         <div>
             {/* navbar */}
-            <Navbar textColor="text-black" bgColor="bg-white" />
+            <Navbar backgroundColor="white" textColor="black"  />
 
 
             {/* banner */}

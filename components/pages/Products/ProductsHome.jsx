@@ -6,7 +6,7 @@ import ProductsArea from './ProductsArea';
 const ProductsHome = () => {
     return (
         <div className="bg-[#06171D] text-white min-h-screen">
-            <Navbar textColor="text-white" bgColor="bg-[#06171D]" />
+            <Navbar backgroundColor="#06171D" textColor="white"  />
             <div>
                 <ProductsArea />
             </div>
