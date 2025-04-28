@@ -48,7 +48,7 @@ const ServicesHome = () => {
 
 
             {/* banner */}
-            <div className='mt-32 md:mt-40 px-20 md:px-20 lg:px-30 xl:max-w-screen-xl xl:mx-auto'>
+            <div className='mt-32 md:mt-40 px-5 md:px-20 lg:px-30 xl:max-w-screen-xl xl:mx-auto'>
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-16 my-10'>
                     <h2
                         ref={titleRef}
@@ -70,7 +70,7 @@ const ServicesHome = () => {
                     </h2>
 
 
-                    <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-black'>
+                    <p className='text-left text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-black'>
                     Anyone can design or code something and call it a project, but it’s the artistry of bringing your story to life, and the expertise that comes with experience, that sets us apart.
                     </p>
                 </div>
