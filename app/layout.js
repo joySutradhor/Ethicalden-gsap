@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Ethicalden",
+  title: "Ethical Den",
   description: "Best Software Company in India",
 };
 

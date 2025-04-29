@@ -15,32 +15,6 @@ const GalleryMain = () => {
 
 
 
-    // title animation
-    const titleRef = useRef(null);
-    const charRefs = useRef([]);
-
-    useEffect(() => {
-        if (!charRefs.current.length) return;
-
-        gsap.fromTo(charRefs.current,
-            { color: 'gray' },
-            {
-                color: 'black',
-                stagger: {
-                    from: 'random',
-                    each: 0.05,
-                },
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: titleRef.current,
-                    start: "top 90%",
-                    end: "top 50%",
-                    toggleActions: "play none none none",
-                }
-            }
-        );
-    }, []);
-
 
 
     useEffect(() => {
@@ -154,22 +128,6 @@ const GalleryMain = () => {
     return (
         <>
             <section ref={sectionRef} className="min-h-screen  mt-[5vh] md:mt-[15vh] lg:mt-[20vh] py-10 px-4  relative">
-
-                {/* Title with character spans */}
-                <h2
-                    className="font-helvetica text-4xl md:text-6xl xl:text-8xl font-extrabold leading-[1] pb-4 flex justify-center flex-wrap mb-16"
-                    ref={titleRef}
-                >
-                    {"Our Services".split("").map((char, i) => (
-                        <span
-                            key={i}
-                            ref={(el) => (charRefs.current[i] = el)}
-                            className="mx-[1px] sm:mx-[2px]"
-                        >
-                            {char === " " ? "\u00A0" : char}
-                        </span>
-                    ))}
-                </h2>
                 <div className='flex justify-center items-center'>
                     <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 w-full relative">
 
@@ -218,13 +176,13 @@ const GalleryMain = () => {
                                     playsInline
                                     className="w-full h-full rounded-2xl object-cover"
                                 >
-                                    <source src="https://html.hixstudio.net/videos/liko/liko.mp4" type="video/mp4" />
+                                    <source src="/video/services/service-home.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>
 
                         {/* Fourth Column (animated down) */}
-                        <div ref={col4Ref} className="space-y-6 -mt-29 md:-mt-20">
+                        <div ref={col4Ref} className="space-y-6 -mt-15 md:-mt-10">
                             <div className="bg-black text-white h-[35vh] md:h-[45vh] lg:h-[38vh] xl:h-[45vh] p-4 md:p-6 rounded-2xl w-full">
                                 <p className="text-base md:text-xl">04 / <span className='text-gray-500'>06</span></p>
                                 <h3 className="text-3xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-semibold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5">Fintech <br /> Experts</h3>
