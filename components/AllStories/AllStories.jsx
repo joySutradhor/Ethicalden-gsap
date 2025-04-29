@@ -233,9 +233,11 @@ const AllStoriesMain = () => {
         };
     }, []);
 
+    const titleText = "Our Products"
+
 
     return (
-        <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[15vh] text-center relative">
+        <div className="py-20 mt-[5vh] md:mt-[10vh] lg:mt-[15vh] xl:mt-[2vh] text-center relative">
             {/* Centered Waving Image */}
             <div className="flex justify-center mb-2">
                 <img
@@ -247,49 +249,61 @@ const AllStoriesMain = () => {
             </div>
 
             {/* Title with character spans */}
-            <h2
-                className="font-helvetica font-extrabold text-4xl md:text-6xl xl:text-8xl leading-[1] text-gray-400 pb-4 flex justify-center flex-wrap"
+            <h1
                 ref={titleRef}
+                className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06]"
             >
-                {"Our Products".split("").map((char, i) => (
-                    <span
-                        key={i}
-                        ref={(el) => (charRefs.current[i] = el)}
-                        className="mx-[1px] sm:mx-[2px]"
-                    >
-                        {char === " " ? "\u00A0" : char}
-                    </span>
-                ))}
-            </h2>
+                {
+                    titleText.split("").map((char, index) =>
+                        char === "\n" ? (
+                            <br key={index} />
+                        ) : (
+                            <span
+                                key={index}
+                                ref={el => charRefs.current[index] = el}
+                                className={`inline-block text-gray-400 ${char === " " ? "w-2 lg:w-4" : ""}`}
+                                style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
+                            >
+                                {char === " " ? "\u00A0" : char}
+                            </span>
+                        )
+                    )
+                }
+            </h1>
 
-            <div className="my-6 sm:mt-8 relative inline-block">
-                <Link
-                    ref={buttonRef}
-                    className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-base sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
-                    href={"#"}
-                    style={{ opacity: 1 }}
-                >
-                    <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-                    <span
-                        ref={buttonTextRef}
-                        className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+            {/* Wrapper for responsive positioning */}
+            <div className="flex flex-col-reverse lg:flex-col items-center lg:items-center">
+                {/* Button (moves to bottom on mobile, stays here on large screens) */}
+                <div className="my-6 sm:mt-8 lg:order-last order-first relative inline-block">
+                    <Link
+                        ref={buttonRef}
+                        className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-2xl font-bold sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
+                        href={"#"}
+                        style={{ opacity: 1 }}
                     >
-                        <span ref={buttonStaticTextRef} className="static-text font-helvetica">
-                            All stories
-                        </span>
+                        <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                         <span
-                            ref={buttonScrollingTextRef}
-                            className="scrolling-text absolute left-0"
+                            ref={buttonTextRef}
+                            className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                         >
-                            {Array.from({ length: 20 }).map((_, i) => (
-                                <span key={i} className="inline-block mr-8 font-helvetica">
-                                    All stories
-                                </span>
-                            ))}
+                            <span ref={buttonStaticTextRef} className="static-text font-helvetica">
+                                All stories
+                            </span>
+                            <span
+                                ref={buttonScrollingTextRef}
+                                className="scrolling-text absolute left-0"
+                            >
+                                {Array.from({ length: 20 }).map((_, i) => (
+                                    <span key={i} className="inline-block mr-8 font-helvetica">
+                                        All stories
+                                    </span>
+                                ))}
+                            </span>
                         </span>
-                    </span>
-                </Link>
+                    </Link>
+                </div>
             </div>
+
 
             <div className="relative overflow-hidden w-full flex items-center">
                 <div className="overflow-hidden w-full">
@@ -300,9 +314,9 @@ const AllStoriesMain = () => {
                         {Stories.map((blog, index) => (
                             <div
                                 key={index}
-                                className="relative min-w-[250px] h-[400px] rounded-xl m-3 group flex flex-col"
+                                className="relative w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[260px] 2xl:w-[280px] flex-shrink-0 rounded-xl m-2 md:m-3 group flex flex-col"
                             >
-                                <div className="relative w-full h-[350px] overflow-hidden rounded-xl">
+                                <div className="relative w-full aspect-[4/5] overflow-hidden rounded-xl">
                                     <img
                                         src={blog.img}
                                         alt={blog.name}
@@ -311,14 +325,20 @@ const AllStoriesMain = () => {
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                                 <div className="mt-3 text-left px-2">
-                                    <p className="v4__title font-helvetica font-bold pb-2 text-black ">{blog.name}</p>
-                                    <p className="base__para font-helvetica">{blog.title}</p>
+                                    <p className="font-helvetica font-bold pb-1 text-black text-sm md:text-base lg:text-lg">
+                                        {blog.name}
+                                    </p>
+                                    <p className="font-helvetica text-xs md:text-sm lg:text-base text-gray-700">
+                                        {blog.title}
+                                    </p>
                                 </div>
                             </div>
+
                         ))}
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

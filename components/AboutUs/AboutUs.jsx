@@ -197,15 +197,29 @@ const AboutUsMain = () => {
     const titleText = "We create impactful\ndigital experiences\nand redefine brand\nidentities.";
 
     return (
-        <div className=" bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
-            <div className="max-w-6xl mx-auto">
-                <h2
-                    ref={titleRef}
-                    className="leading-[1.1] font-extrabold font-helvetica text-4xl md:text-6xl lg:text-6xl xl:text-8xl mb-8 whitespace-nowrap"
-                >
-                    {splitTextIntoChars(titleText)}
-                </h2>
-
+        <div className=" bg-white py-16 px-5  md:px-10 lg:px-10 xl:px-40 2xl:px-50 z-10 mt-[6vh] md:mt-[6vh] lg:mt-[1vh]">
+            <div className="">
+            <h1
+                        ref={titleRef}
+                        className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06]"
+                    >
+                        {
+                            titleText.split("").map((char, index) =>
+                                char === "\n" ? (
+                                    <br key={index} />
+                                ) : (
+                                    <span
+                                        key={index}
+                                        ref={el => charRefs.current[index] = el}
+                                        className={`inline-block text-gray-400 ${char === " " ? "w-2 lg:w-4" : ""}`}
+                                        style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
+                                    >
+                                        {char === " " ? "\u00A0" : char}
+                                    </span>
+                                )
+                            )
+                        }
+                    </h1>
 
 
                 <div className="flex flex-col sm:flex-row pt-8 gap-6 sm:gap-10">
@@ -238,7 +252,7 @@ const AboutUsMain = () => {
                                 <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                                 <span
                                     ref={buttonTextRef}
-                                    className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                                    className="relative z-10 font-bold text-2xl  text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                                 >
                                     <span ref={buttonStaticTextRef} className="static-text">
                                         About Us

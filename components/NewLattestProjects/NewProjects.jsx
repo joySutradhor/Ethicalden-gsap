@@ -88,13 +88,13 @@ function NewProjects() {
 
 
   return (
-    <section className='bg-change-anim px-[5vw] md:px-[12vw] mt-[5vh]  py-[10vh] md:py-[10vh] lg:py-[20vh] text-white'>
+    <section className='bg-change-anim px-5 xl:px-20 2xl:px-50 mt-[5vh]  py-[10vh] md:py-[10vh] lg:py-[20vh] text-white'>
       <div className='grid grid-cols-2 gap-[4vh] md:gap-x-[5vw] xl:gap-x-[7vw]'>
         {/* first row start */}
         <div className=''>
           <h2
             ref={titleRef}
-            className="text-left w-full max-w-2xl text-4xl md:text-6xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
+            className="text-left w-full max-w-2xl text-4xl md:text-6xl lg:text-7xl xl:text-7xl text-gray-400 font-helvetica font-extrabold leading-[1]"
           >
             {/* First Line: "Our latest" */}
             <span className="inline-block whitespace-nowrap">
@@ -162,7 +162,7 @@ function NewProjects() {
           </div>
         </div>
 
-        <div className='h-[30vh] md:mt-[15vh] lg:mt-0 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
+        <div className='h-[30vh] md:mt-[0vh] lg:mt-0 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
           <video
             src='https://mater.agency/wp-content/uploads/2024/02/vogue-1.mp4'
             muted
@@ -200,7 +200,7 @@ function NewProjects() {
         </div>
 
         <div className=''>
-          <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[20vh] md:mt-0'>
+          <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[16vh] md:mt-0'>
             <div className='h-[30vh] md:h-[20vh] lg:h-[30vh]'>
               <video
                 src='https://mater.agency/wp-content/uploads/2024/03/nordeus.mp4'
@@ -238,7 +238,7 @@ function NewProjects() {
         </div>
 
         {/* third row start */}
-        <div className='-mt-[8vh] md:mt-[30vh] lg:mt-[50vh] '>
+        <div className='-mt-[20vh] md:mt-[30vh] lg:mt-[50vh] '>
           <div className='h-[40vh] md:w-[80%]'>
             <div>
               <video
@@ -277,7 +277,7 @@ function NewProjects() {
         </div>
 
         {/* fourth row start */}
-        <div className='md:mt-[25vh] -mt-[20vh] lg:mt-[40vh] xl:mt-[50vh]'>
+        <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
           <div>
             <Image
               src='https://mater.agency/wp-content/uploads/2024/01/AZ-pension-fund.jpg'
@@ -335,7 +335,7 @@ function NewProjects() {
 
         {/* fifth row */}
         <div className='hidden md:block'></div>
-        <div className='-mt-[55vh] md:mt-[5vh] '>
+        <div className='-mt-[65vh] md:mt-[5vh] '>
           <div>
             <video
               src='https://mater.agency/wp-content/uploads/2024/02/zvjerici-1.mp4'

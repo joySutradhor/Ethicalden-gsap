@@ -52,7 +52,7 @@ const HeaderBannerMain = () => {
         const moveBanner = (e) => {
             // Don't move banner if menu is open
             if (isMenuOpen) return;
-            
+
             const { innerWidth, innerHeight } = window;
             const moveX = (e.clientX - innerWidth / 2) * -0.10;
             const moveY = (e.clientY - innerHeight / 2) * -0.10;
@@ -79,7 +79,7 @@ const HeaderBannerMain = () => {
                 duration: 0.5,
                 ease: "power2.out"
             });
-            
+
             [leftVideoRef, topVideoRef, rightImageRef, bottomVideoRef].forEach(ref => {
                 if (ref.current) {
                     gsap.to(ref.current, {
@@ -120,7 +120,7 @@ const HeaderBannerMain = () => {
     // smooth image and video appearing animation
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 1000) {
+            if (window.innerWidth > 1200) {
                 const visuals = [leftVideoRef.current, topVideoRef.current, rightImageRef.current, bottomVideoRef.current];
 
                 visuals.forEach((el, index) => {
@@ -158,11 +158,11 @@ const HeaderBannerMain = () => {
     // mouse parallax on each
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 1000) {
+            if (window.innerWidth > 1200) {
                 const moveParallax = (e) => {
                     // Don't move elements if menu is open
                     if (isMenuOpen) return;
-                    
+
                     const { innerWidth, innerHeight } = window;
                     const moveX = (e.clientX - innerWidth / 2) * 0.01;
                     const moveY = (e.clientY - innerHeight / 2) * 0.01;
@@ -323,11 +323,11 @@ const HeaderBannerMain = () => {
             {/* Navbar */}
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
                 <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
-                    <a href="/"><img className="w-12 md:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" /></a>
+                    <a href="/"><img className="w-9 md:w-12 lg:w-14 xl:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" /></a>
                 </div>
 
                 {/* Desktop Menu - with hover effect */}
-                <div className="hidden lg:flex items-center gap-10 font-helvetica text-xl text-black relative">
+                <div className="hidden lg:flex items-center gap-10 font-helvetica text-2xl z-999 font-bold text-black relative">
                     <a href="about-den" className="relative group">
                         <span className="relative inline-block">
                             About Den
@@ -401,7 +401,7 @@ const HeaderBannerMain = () => {
                             <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                             <span
                                 ref={buttonTextRef}
-                                className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                                className="relative z-10 font-bold text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                             >
                                 <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                                     Let's Talk
@@ -515,11 +515,11 @@ const HeaderBannerMain = () => {
             )}
 
             {/* Banner Content */}
-            <div ref={bannerRef} className="absolute inset-0 text-start flex flex-col items-center justify-center pointer-events-none -mt-80 md:-mt-60 lg:mt-0 px-4 lg:text-center" style={{ zIndex: 30 }}>
-                <div className="max-w-3xl ">
+            <div ref={bannerRef} className="absolute inset-0 text-start flex flex-col items-center justify-center pointer-events-none -mt-60 md:-mt-60 lg:-mt-45 xl:-mt-20 px-5  xl:text-center" style={{ zIndex: 30 }}>
+                <div className=" px-5">
                     <h1
                         ref={titleRef}
-                        className="text-4xl md:text-6xl xl:text-7xl font-urbanist font-black leading-[1]"
+                        className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px] 2xl:text-[90px] font-urbanist font-black leading-[1]"
                     >
                         {
                             titleText.split("").map((char, index) =>
@@ -529,7 +529,8 @@ const HeaderBannerMain = () => {
                                     <span
                                         key={index}
                                         ref={el => charRefs.current[index] = el}
-                                        className={`inline-block text-gray-400 ${char === " " ? "w-2" : ""}`}
+                                        className={`inline-block text-gray-400 ${char === " " ? "w-2 lg:w-4" : ""}`}
+                                        style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
                                     >
                                         {char === " " ? "\u00A0" : char}
                                     </span>
@@ -537,13 +538,14 @@ const HeaderBannerMain = () => {
                             )
                         }
                     </h1>
-                    <p className="mt-6 font-helvetica text-xl md:text-2xl text-black">
-                        We are mater, magicians of the digital age, <br /> dancing on the edge of creativity for more than two decades.
+
+                    <p className="mt-6 font-helvetica text-xl  md:text-2xl xl:max-w-lg 2xl:max-w-xl text-black">
+                        We are mater, magicians of the digital age, dancing on the edge of creativity for more than two decades.
                     </p>
                 </div>
 
                 {/* Visuals for screen width > 1200px */}
-                <div className="hidden lg:block">
+                <div className="hidden xl:block">
                     {/* Left */}
                     <div ref={leftVideoRef} className="absolute left-0 top-1/2 -translate-y-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[320px] lg:h-[200px] xl:h-[380px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg z-20">
                         <video src="/images/banner/banner-v-left.mp4" autoPlay loop muted className="w-full h-full object-cover" />
@@ -563,10 +565,10 @@ const HeaderBannerMain = () => {
                 {/* Bottom Video for all screen sizes */}
                 <div
                     ref={bottomVideoRef}
-                    className={`absolute bottom-0 left-0 w-full h-[500px] pt-24 md:pt-44 md:h-[600px] lg:[550px] overflow-hidden z-50 
-    lg:left-1/2 lg:-translate-x-1/2 lg:w-[200px] lg:h-[200px] lg:pt-0 
+                    className={`absolute bottom-0 lg:bottom-10 left-0 w-full h-[500px] pt-34  md:pt-64 md:h-[600px] lg:h-[550px] overflow-hidden z-50 
+    lg:left-1/2 lg:-translate-x-1/2    
     xl:w-[380px] xl:h-[250px] xl:pt-10 
-    2xl:w-[500px] 2xl:h-[320px] lg:rounded-xl`}
+    2xl:w-[500px] 2xl:h-[320px] `}
                 >
                     <video
                         src="/images/banner/banner-v-left.mp4"

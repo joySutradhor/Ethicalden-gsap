@@ -66,7 +66,7 @@ function ClientsLogo () {
   
 
   return (
-    <div className=' px-[5vw] lg:px-[15vw]'>
+    <div className='px-5 xl:px-20 2xl:px-50'>
       <div className='grid grid-cols-3 lg:grid-cols-6  gap-4'>
         {items.map(item => (
           <div

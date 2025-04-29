@@ -41,33 +41,38 @@ function ClientCollaboration() {
     )
   }, [])
 
-  // Split sentences
-  const titleLines = [
-    "Relationships this intimate",
-    "are illegal in some countries."
-  ]
+  // Split title into words and characters
+  const titleText = "Relationships this intimate are illegal in some countries."
+  const words = titleText.split(" ")
 
   return (
-    <section className='mb-[20vh] mt-[5vh] md:mt-[10vh] lg:mt-[20vh]'>
-      {/* title */}
-      <h2
+    <section className='mb-[25vh]  px-5 mt-[5vh] md:mt-[10vh] lg:mt-[10vh]'>
+      <div className='flex justify-center mb-[80px]'>
+        {/* Title with character spans */}
+        <h1
           ref={titleRef}
-          className="text-xl sm:text-2xl md:text-4xl lg:text-6xl text-center font-helvetica font-bold mb-[5vh]  max-w-4xl mx-auto leading-[1] px-4"
+          className="text-center text-[35px] md:text-[40px] lg:text-[50px] xl:text-[55px] 2xl:text-[65px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-3xl font-urbanist font-black leading-[1.06] flex flex-wrap justify-center"
         >
-          {titleLines.map((line, lineIndex) => (
-            <div key={lineIndex} className="block">
-              {line.split('').map((char, charIndex) => (
-                <span
-                  key={charIndex}
-                  ref={addToCharRefs}
-                  style={{ color: 'gray' }}
-                >
-                  {char === ' ' ? '\u00A0' : char}
-                </span>
-              ))}
-            </div>
+          {words.map((word, wordIndex) => (
+            <span key={wordIndex} className="whitespace-nowrap mr-2">
+              {word.split("").map((char, charIndex) => {
+                const globalIndex = word.split("").slice(0, charIndex).join("").length + wordIndex
+                return (
+                  <span
+                    key={`${wordIndex}-${charIndex}`}
+                    ref={el => charRefs.current.push(el)}
+                    className="inline-block text-gray-400"
+                    style={{ letterSpacing: "-0.05em" }}
+                  >
+                    {char}
+                  </span>
+                )
+              })}
+            </span>
           ))}
-        </h2>
+        </h1>
+
+      </div>
 
 
       {/* clients logos */}
