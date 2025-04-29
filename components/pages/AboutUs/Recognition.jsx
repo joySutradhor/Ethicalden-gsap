@@ -80,11 +80,11 @@ const Recognition = () => {
     }, []);
 
     return (
-        <section className="container mx-auto px-4 my-20 ">
+        <section className=" px-4 my-20 ">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-4xl md:text-6xl xl:text-8xl font-extrabold font-helvetica mb-4 leading-[1] flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-4xl md:text-6xl xl:text-6xl font-extrabold font-helvetica mb-4 leading-[1] flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split(' ').map((word, wi) => (
                         <span key={wi} className="flex whitespace-nowrap">
@@ -98,7 +98,7 @@ const Recognition = () => {
                                 </span>
                             ))}
                             {/* Add a space after each word */}
-                            <span className="w-2 md:w-4 lg:w-5" />
+                            <span className="w-2 md:w-3 " />
                         </span>
                     ))}
                 </h2>

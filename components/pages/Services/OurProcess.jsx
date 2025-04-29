@@ -7,19 +7,17 @@ gsap.registerPlugin(ScrollTrigger);
 const OurProcess = () => {
   const processRef = useRef(null);
   const numberRef = useRef(null);
+  const numberInnerRef = useRef(null); // for animating number movement
   const titleRef = useRef(null);
+  const charRefs = useRef([]);
 
   useEffect(() => {
     const element = processRef.current;
-  
+
     const getEndValue = () => {
-      if (window.innerWidth < 1220) {
-        return '+=4100'; 
-      } else {
-        return '+=4500'; 
-      }
+      return window.innerWidth < 1220 ? '+=4100' : '+=4500';
     };
-    
+
     ScrollTrigger.create({
       trigger: element,
       start: 'top center',
@@ -28,93 +26,112 @@ const OurProcess = () => {
       pinSpacing: false,
       scrub: true,
     });
-  
+
     const timeline = gsap.timeline();
-  
-    const changeProcess = (number, title) => {
-      numberRef.current.innerText = number;
-      titleRef.current.innerText = title;
+
+    const animateTitle = (text) => {
+      if (!titleRef.current) return;
+
+      titleRef.current.innerHTML = '';
+      charRefs.current = [];
+
+      text.split('').forEach((char) => {
+        const span = document.createElement('span');
+        span.innerText = char;
+        span.style.display = 'inline-block';
+        span.style.color = 'gray';
+        titleRef.current.appendChild(span);
+        charRefs.current.push(span);
+      });
+
+      gsap.fromTo(
+        charRefs.current,
+        { color: 'gray' },
+        {
+          color: 'white',
+          stagger: { from: 'random', each: 0.05 },
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: 'top 90%',
+            end: 'top 50%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
     };
-  
+
+    const animateNumber = (newNumber, direction) => {
+      const numberEl = numberInnerRef.current;
+
+      const tl = gsap.timeline();
+
+      tl.to(numberEl, {
+        x: direction === 'up' ? 30 : -30,
+        opacity: 0,
+        duration: 0.2,
+        ease: 'power2.out',
+        onComplete: () => {
+          numberEl.innerText = newNumber;
+        },
+      }).to(numberEl, {
+        x: 0,
+        opacity: 1,
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    };
+
+    const changeProcess = (number, title, direction = 'down') => {
+      animateNumber(number, direction);
+      animateTitle(title);
+    };
+
     let lastScrollTop = 0;
     const handleScrollDirection = () => {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const direction = scrollTop > lastScrollTop ? 'down' : 'up';
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
       return direction;
     };
-  
-    // 🛠️ NEW: Reset to Discover when scroll back to top
+
+    animateTitle('Discover');
+
     gsap.timeline({
       scrollTrigger: {
         trigger: element,
         start: 'top top',
         end: '+=1',
-        onEnterBack: () => {
-          changeProcess('1', 'Discover');
-        },
+        onEnterBack: () => changeProcess('1', 'Discover', 'up'),
       },
     });
-  
-    // Process 2 (Design)
-    timeline.add(
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.second-process',
-          start: '-=60% top',
-          end: '+=100',
-          onUpdate: (self) => {
-            const direction = handleScrollDirection();
-            if (direction === 'down' && self.progress > 0.5) {
-              changeProcess('2', 'Design');
-            } else if (direction === 'up' && self.progress < 0.5) {
-              changeProcess('1', 'Discover');
-            }
-          },
-        },
-      })
-    );
-  
 
-    // Process 3 (Develop)
-    timeline.add(
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.third-process',
-          start: '-=60% top',
-          end: '+=100',
-          onUpdate: (self) => {
-            const direction = handleScrollDirection();
-            if (direction === 'down' && self.progress > 0.5) {
-              changeProcess('3', 'Develop');
-            } else if (direction === 'up' && self.progress < 0.5) {
-              changeProcess('2', 'Design');
-            }
-          },
-        },
-      })
-    );
+    const processes = [
+      { class: '.second-process', number: '2', title: 'Design', previous: '1', previousTitle: 'Discover' },
+      { class: '.third-process', number: '3', title: 'Develop', previous: '2', previousTitle: 'Design' },
+      { class: '.fourth-process', number: '4', title: 'Deliver', previous: '3', previousTitle: 'Develop' },
+    ];
 
-    // Process 4 (Deliver)
-    timeline.add(
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.fourth-process',
-          start: '-=60% top',
-          end: '+=100',
-          onUpdate: (self) => {
-            const direction = handleScrollDirection();
-            if (direction === 'down' && self.progress > 0.5) {
-              changeProcess('4', 'Deliver');
-            } else if (direction === 'up' && self.progress < 0.5) {
-              changeProcess('3', 'Develop');
-            }
+    processes.forEach(({ class: triggerClass, number, title, previous, previousTitle }) => {
+      timeline.add(
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerClass,
+            start: '-=60% top',
+            end: '+=100',
+            onUpdate: (self) => {
+              const direction = handleScrollDirection();
+              if (direction === 'down' && self.progress > 0.5) {
+                changeProcess(number, title, direction);
+              } else if (direction === 'up' && self.progress < 0.5) {
+                changeProcess(previous, previousTitle, direction);
+              }
+            },
           },
-        },
-      })
-    );
+        })
+      );
+    });
 
-    // Fade-out the whole div after the last process
     timeline.add(
       gsap.timeline({
         scrollTrigger: {
@@ -138,18 +155,18 @@ const OurProcess = () => {
   }, []);
 
   return (
-    <div className="relative mt-70 px-5 md:px-10 lg:px-10 xl:max-w-screen-xl xl:mx-auto min-h-screen">
-      {/* The pinned title */}
+    <div className="relative mt-40 lg:mt-70 px-5 md:px-10 lg:px-10 xl:max-w-screen-xl xl:mx-auto min-h-screen">
       <div ref={processRef} className="flex flex-col justify-center items-center my-20 z-0">
-        <p className="bg-cyan-900 p-9 h-20 w-20 text-gray-200 border border-cyan-300 rounded-full">
-          <span ref={numberRef} className="text-2xl font-bold">
-            1
+        <p className="bg-cyan-900 p-9 h-20 w-20 flex justify-center items-center text-gray-200 border border-cyan-300 rounded-full overflow-hidden">
+          <span
+            ref={numberRef}
+            className="text-2xl font-bold relative w-full h-full flex items-center justify-center"
+          >
+            <span ref={numberInnerRef} className="inline-block">1</span>
           </span>
         </p>
         <p className="text-2xl md:text-3xl font-extrabold font-helvetica leading-[1] text-cyan-300">Our Process</p>
-        <h2 ref={titleRef} className="text-5xl md:text-8xl font-helvetica font-extrabold text-gray-300">
-          Discover
-        </h2>
+        <h2 ref={titleRef} className="text-5xl md:text-8xl font-helvetica font-extrabold text-gray-300"></h2>
       </div>
 
       {/* 1st Process */}

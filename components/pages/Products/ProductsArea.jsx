@@ -331,7 +331,7 @@ function ProductsArea() {
 
 
       {/* Fixed bottom button */}
-      <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#1a1a1a] border-none px-8 py-6 rounded-full flex items-center gap-4 border shadow-lg transition-all duration-300 ${buttonVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#1a1a1a] border-none px-4 md:px-8 py-3 md:py-6 rounded-full flex items-center gap-4 border shadow-lg transition-all duration-300 ${buttonVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}>
         {/* Services */}
         <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">

@@ -73,17 +73,17 @@ const MeetTheCrew = () => {
     const title = 'Meet the crew';
 
     return (
-        <section className="container mx-auto px-4 py-12">
+        <section className="container mx-auto px-4 pt-0 md:pt-5 lg:pt-12 pb-12">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-4xl md:text-6xl lg:text-6xl xl:text-8xl font-extrabold font-helvetica leading-[1]  mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-4xl md:text-6xl lg:text-6xl xl:text-6xl font-extrabold font-helvetica leading-[1]  mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split('').map((char, i) => (
                         <span
                             key={i}
                             ref={(el) => (charRefs.current[i] = el)}
-                            className={`inline-block ${char === ' ' ? 'w-2 md:w-4 lg:w-5' : ''}`}
+                            className={`inline-block ${char === ' ' ? 'w-2 md:w-3 ' : ''}`}
                         >
                             {char}
                         </span>
@@ -94,7 +94,7 @@ const MeetTheCrew = () => {
                 </p>
             </div>
 
-            <div className="flex justify-start md:justify-center mb-12">
+            <div className="md:flex text-start  md:justify-center mb-12">
                 <div className="flex flex-col md:flex-row gap-4 font-helvetica font-bold">
                     {['All', 'Creatives', 'Developers', 'Runners'].map((filter) => (
                         <button
@@ -130,7 +130,7 @@ const MeetTheCrew = () => {
                             onMouseEnter={() => !isMobile && setHoveredMember(index)} 
                             onMouseLeave={() => !isMobile && setHoveredMember(null)} 
                         >
-                            <div className="relative h-80 overflow-hidden z-10">
+                            <div className="relative h-60 md:h-90 lg:h-80 overflow-hidden z-10">
                                 <div
                                     className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-900 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-10"
                                     style={{
@@ -149,7 +149,7 @@ const MeetTheCrew = () => {
                                     }`}
                                 >
                                     <div className="flex justify-between items-center h-full px-3 py-2">
-                                        <span className="font-medium text-black text-lg font-helvetica">{member.name}</span>
+                                        <span className="font-medium text-black text-sm md:text-lg font-helvetica">{member.name}</span>
                                         <span className="text-gray-600 text-sm uppercase tracking-wider">
                                             {member.profession}
                                         </span>

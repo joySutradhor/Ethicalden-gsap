@@ -238,11 +238,11 @@ const AboutUsArea = () => {
 
 
   return (
-    <div className='bg-change-anim py-40  flex items-center'>
+    <div className='bg-change-anim pt-20 md:pt-30 lg:pt-40 pb-40  flex items-center'>
       <div className='container mx-auto px-4'>
         <h2
           ref={titleRef}
-          className="text-left text-4xl md:text-6xl lg:text-6xl xl:text-8xl my-10 text-black font-helvetica font-extrabold leading-[1] w-full"
+          className="text-left text-4xl md:text-6xl lg:text-6xl xl:text-6xl my-10 text-black font-helvetica font-extrabold leading-[1] w-full"
         >
           {titleText.split(' ').map((word, wi) => {
             if (word === '__NEWLINE__') {

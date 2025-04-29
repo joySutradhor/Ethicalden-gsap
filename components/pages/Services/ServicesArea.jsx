@@ -293,7 +293,7 @@ const ServicesArea = () => {
                         {/* left title */}
                         <h2
                             ref={titleRef}
-                            className="text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-7xl font-extrabold -mt-40 text-black font-helvetica leading-[1] w-full max-w-4xl"
+                            className="text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mt-0 md:-mt-40 text-black font-helvetica leading-[1] w-full max-w-4xl"
                         >
                             {titleText.split(' ').map((word, wi) => (
                                 <span key={wi} className="inline-block whitespace-nowrap mr-2">
@@ -329,14 +329,14 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         01 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold font-helvetica mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
                                         Strategy
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div 
-                                    className='absolute -bottom-28 md:-bottom-40 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-38 md:-bottom-40 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[0] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -361,20 +361,20 @@ const ServicesArea = () => {
 
                                 {/* Fixed overlay text on video */}
                                 <div 
-                                    className="absolute inset-0 flex flex-col items-start bottom-0 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
+                                    className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
                                     ref={el => overlayTextRefs.current[1] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         02 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-helvetica font-extrabold mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
                                         Digital <br />products
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div 
-                                    className='absolute -bottom-70 md:-bottom-105 lg:-bottom-94 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-90 md:-bottom-105 lg:-bottom-94 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[1] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -391,7 +391,7 @@ const ServicesArea = () => {
                         </div>
 
                         {/* 3rd video */}
-                        <div className="mt-0 md:mt-[100px] lg:mt-[100px] xl:mt-[400px]" ref={el => videoContainerRefs.current[2] = el}>
+                        <div className="mt-10 md:mt-[100px] lg:mt-[100px] xl:mt-[400px]" ref={el => videoContainerRefs.current[2] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video3Ref}>
                                 <video
                                     src="/video/services/service3.mp4"
@@ -403,20 +403,20 @@ const ServicesArea = () => {
 
                                 {/* Fixed overlay text on video */}
                                 <div 
-                                    className="absolute inset-0 flex flex-col items-start bottom-0 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
+                                    className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
                                     ref={el => overlayTextRefs.current[2] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         03 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-helvetica font-extrabold mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
                                         Brand <br />& Identity
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div 
-                                    className='absolute -bottom-54 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-74 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[2] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -432,7 +432,7 @@ const ServicesArea = () => {
                         </div>
 
                         {/* 4th video */}
-                        <div className="mt-0 md:-mt-[200px]" ref={el => videoContainerRefs.current[3] = el}>
+                        <div className="mt-0 md:-mt-[110px] lg:-mt-[100px]" ref={el => videoContainerRefs.current[3] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video4Ref}>
                                 <video
                                     src="/video/services/service4.mp4"
@@ -444,20 +444,20 @@ const ServicesArea = () => {
 
                                 {/* Fixed overlay text on video */}
                                 <div 
-                                    className="absolute inset-0 flex flex-col items-start bottom-0 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
+                                    className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
                                     ref={el => overlayTextRefs.current[3] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         04 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-8xl font-extrabold font-helvetica mt-4">
+                                    <p className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
                                         Performance <br />& Growth
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div 
-                                    className='absolute -bottom-28 md:-bottom-55 lg:-bottom-40 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-38 md:-bottom-55 lg:-bottom-40 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[3] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>

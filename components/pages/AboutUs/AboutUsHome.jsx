@@ -51,7 +51,7 @@ const AboutUsHome = () => {
 
 
             {/* banner */}
-            <div className='mt-32 md:mt-40 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto'>
+            <div className='mt-20 md:mt-40 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto'>
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-16 my-10'>
                     <h2
                         ref={titleRef}
