@@ -17,7 +17,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
     const [subMenuOpen, setSubMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
 
-    // Helper function to check if a link is active
+    // function to check if a link is active
     const isActive = (href) => {
         // Handle root path
         if (href === '/') return pathname === href;
