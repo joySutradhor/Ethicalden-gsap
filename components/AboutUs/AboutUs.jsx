@@ -201,7 +201,7 @@ const AboutUsMain = () => {
             <div className="max-w-6xl mx-auto">
                 <h2
                     ref={titleRef}
-                    className="leading-[1] font-extrabold font-helvetica text-4xl md:text-6xl lg:text-6xl xl:text-8xl mb-8 whitespace-nowrap"
+                    className="leading-[1.1] font-extrabold font-helvetica text-4xl md:text-6xl lg:text-6xl xl:text-8xl mb-8 whitespace-nowrap"
                 >
                     {splitTextIntoChars(titleText)}
                 </h2>

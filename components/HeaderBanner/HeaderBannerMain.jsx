@@ -18,9 +18,19 @@ const HeaderBannerMain = () => {
     const rightImageRef = useRef(null);
     const bottomVideoRef = useRef(null);
     const [subMenuOpen, setSubMenuOpen] = useState(false);
-    const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
 
+    // Prevent body scroll when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
 
     // Close menu when clicking outside
     useEffect(() => {
@@ -40,6 +50,9 @@ const HeaderBannerMain = () => {
     useEffect(() => {
         const banner = bannerRef.current;
         const moveBanner = (e) => {
+            // Don't move banner if menu is open
+            if (isMenuOpen) return;
+            
             const { innerWidth, innerHeight } = window;
             const moveX = (e.clientX - innerWidth / 2) * -0.10;
             const moveY = (e.clientY - innerHeight / 2) * -0.10;
@@ -54,7 +67,31 @@ const HeaderBannerMain = () => {
 
         window.addEventListener("mousemove", moveBanner);
         return () => window.removeEventListener("mousemove", moveBanner);
-    }, []);
+    }, [isMenuOpen]);
+
+    // Reset positions when menu opens/closes
+    useEffect(() => {
+        if (isMenuOpen) {
+            // Reset all parallax positions when menu opens
+            gsap.to(bannerRef.current, {
+                x: 0,
+                y: 0,
+                duration: 0.5,
+                ease: "power2.out"
+            });
+            
+            [leftVideoRef, topVideoRef, rightImageRef, bottomVideoRef].forEach(ref => {
+                if (ref.current) {
+                    gsap.to(ref.current, {
+                        x: 0,
+                        y: 0,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+                }
+            });
+        }
+    }, [isMenuOpen]);
 
     useEffect(() => {
         if (!charRefs.current.length) return;
@@ -123,6 +160,9 @@ const HeaderBannerMain = () => {
         const handleResize = () => {
             if (window.innerWidth > 1000) {
                 const moveParallax = (e) => {
+                    // Don't move elements if menu is open
+                    if (isMenuOpen) return;
+                    
                     const { innerWidth, innerHeight } = window;
                     const moveX = (e.clientX - innerWidth / 2) * 0.01;
                     const moveY = (e.clientY - innerHeight / 2) * 0.01;
@@ -153,7 +193,7 @@ const HeaderBannerMain = () => {
             cleanup && cleanup();
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [isMenuOpen]);
 
     // Button animation setup
     const buttonRef = useRef(null);
@@ -278,12 +318,9 @@ const HeaderBannerMain = () => {
         }
     }, [isMenuOpen]);
 
-
-
-
     return (
         <div className="relative h-screen overflow-hidden bg-white pb-20" style={{ zIndex: 30 }}>
-            {/* Navbar - updated for mobile */}
+            {/* Navbar */}
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
                 <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
                     <a href="/"><img className="w-12 md:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" /></a>
@@ -388,7 +425,7 @@ const HeaderBannerMain = () => {
                 <div className="lg:hidden">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className=" flex items-center gap-2"
+                        className="p-3 -mr-3 flex items-center justify-center"
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     >
                         {!isMenuOpen ? (
@@ -402,10 +439,9 @@ const HeaderBannerMain = () => {
             {isMenuOpen && (
                 <div
                     ref={mobileMenuRef}
-                    className="lg:hidden fixed inset-0 w-full bg-gray-200 z-50 overflow-y-auto shadow-xl"
-                    style={{ marginTop: '0' }}
+                    className="lg:hidden fixed inset-0 w-full h-full bg-gray-200 z-50 overflow-y-auto shadow-xl"
+                    style={{ marginTop: '0', left: isMenuOpen ? '0' : '100%' }}
                 >
-                    {/* Close Button inside Mobile Menu */}
                     <div className="flex justify-end p-4">
                         <button
                             onClick={(e) => {
@@ -413,13 +449,11 @@ const HeaderBannerMain = () => {
                                 setIsMenuOpen(false);
                             }}
                             aria-label="Close menu"
-                            className="text-3xl -mr-2 cursor-pointer text-gray-800 hover:text-black transition-colors"
+                            className="p-3 text-3xl -mr-2 cursor-pointer text-gray-800 hover:text-black transition-colors"
                         >
-                            <HiX className="h-fit w-fit"/>
+                            <HiX className="h-8 w-8" />
                         </button>
-
                     </div>
-
                     {/* Logo */}
                     <a href="/">
                         <img className="w-20 md:w-24 h-auto -mt-10 md:-mt-10 pl-8 " src="/images/logo/ethicalden.png" alt="Logo" />
@@ -475,11 +509,7 @@ const HeaderBannerMain = () => {
                                 )}
                             </div>
                             <a href="/contact" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Let's Talk</a>
-
-
                         </div>
-
-
                     </div>
                 </div>
             )}
@@ -489,7 +519,7 @@ const HeaderBannerMain = () => {
                 <div className="max-w-3xl ">
                     <h1
                         ref={titleRef}
-                        className="text-4xl md:text-6xl xl:text-7xl font-urbanist font-extrabold leading-[1]"
+                        className="text-4xl md:text-6xl xl:text-7xl font-urbanist font-black leading-[1]"
                     >
                         {
                             titleText.split("").map((char, index) =>
@@ -528,7 +558,6 @@ const HeaderBannerMain = () => {
                     <div ref={rightImageRef} className="absolute right-0 top-1/2 -translate-y-1/2 w-[320px] lg:w-[200px] xl:w-[380px] 2xl:w-[500px] h-[320px] lg:h-[200px] xl:h-[380px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg z-40">
                         <img src="/images/banner/banner-v-right.jpg" alt="Right Visual" className="w-full h-full object-cover" />
                     </div>
-
                 </div>
 
                 {/* Bottom Video for all screen sizes */}
@@ -548,28 +577,6 @@ const HeaderBannerMain = () => {
                     />
                 </div>
             </div>
-
-            {/* Add the CSS for the mobile menu */}
-            <style jsx>{`
-                /* Mobile menu overlay */
-                .mobile-menu-overlay {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    z-index: 40;
-                    opacity: 0;
-                    pointer-events: none;
-                    transition: opacity 0.3s ease;
-                }
-                
-                .mobile-menu-overlay.active {
-                    opacity: 1;
-                    pointer-events: auto;
-                }
-            `}</style>
         </div>
     );
 };
