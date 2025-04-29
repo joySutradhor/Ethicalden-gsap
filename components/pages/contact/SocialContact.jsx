@@ -2,7 +2,7 @@ import { FaDiscord, FaLinkedinIn, FaDribbble } from "react-icons/fa";
 
 export default function SocialContact() {
   return (
-    <section className=" mt-24 px-5 md:px-20 lg:px-30 xl:max-w-screen-2xl xl:mx-auto p-6  rounded-lg">
+    <section className=" mt-24 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto p-6  rounded-lg">
       <div className="">
         <h1 className="text-4xl break-words max-w-3xl lg:text-5xl font-bold text-gray-900 leading-[1] font-helvetica">
           It’s a nice looking web form, but
@@ -20,7 +20,7 @@ export default function SocialContact() {
               href="#"
               className="flex items-center gap-2 px-6 py-3  text-gray-900 hover:bg-gray-200 transition"
             >
-              <FaDiscord className="w-12 h-12 lg:w-14 lg:h-14 border rounded-full p-2 font-helvetica" />
+              <FaDiscord className="w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 border rounded-full p-2 font-helvetica" />
               <span className="font-bold text-xl">Discord</span>
             </a>
 
@@ -29,7 +29,7 @@ export default function SocialContact() {
               href="#"
               className="flex items-center gap-2 px-6 py-3  text-gray-900 hover:bg-gray-200 transition"
             >
-              <FaLinkedinIn className="w-12 h-12 lg:w-14 lg:h-14 border rounded-full p-2 font-helvetica" />
+              <FaLinkedinIn className="w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 border rounded-full p-2 font-helvetica" />
               <span className="font-bold text-xl">Linkedin</span>
             </a>
 
@@ -38,7 +38,7 @@ export default function SocialContact() {
               href="#"
               className="flex items-center gap-2 px-6 py-3  text-gray-900 hover:bg-gray-200 transition"
             >
-              <FaDribbble className="w-12 h-12 lg:w-14 lg:h-14 border rounded-full p-2 font-helvetica" />
+              <FaDribbble className="w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 border rounded-full p-2 font-helvetica" />
               <span className="font-bold text-xl">Dribbble</span>
             </a>
           </div>

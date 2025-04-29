@@ -50,7 +50,7 @@ const ContactHome = () => {
 
 
             {/* banner */}
-            <div className='mt-32 md:mt-40 px-5 md:px-20 lg:px-30 xl:max-w-screen-2xl xl:mx-auto'>
+            <div className='mt-32 md:mt-40 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto'>
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-16 my-10'>
                     <h2
                         ref={titleRef}
@@ -80,15 +80,15 @@ const ContactHome = () => {
                 <div className='grid grid-cols-2 lg:grid-cols-3 gap-10 mt-20'>
                     <div className='px-8 lg:px-6 xl:px-12 py-10 bg-yellow-200 rounded-2xl'>
                         <p className='text-xl '>01/ <span className='text-gray-400'>03</span></p>
-                        <h3 className='font-bold text-2xl mt-10 font-helvetica'>I have a project in mind.</h3>
+                        <h3 className='font-bold text-lg md:text-2xl mt-10 font-helvetica'>I have a project in mind.</h3>
                     </div>
                     <div className='px-8 lg:px-6 xl:px-12 py-6 bg-cyan-800  rounded-2xl'>
                         <p className='text-xl text-cyan-300'>02/ <span className='text-gray-400'>03</span></p>
-                        <h3 className='font-bold text-2xl mt-10 font-helvetica text-white'>I have something to tell you.</h3>
+                        <h3 className='font-bold text-lg md:text-2xl mt-10 font-helvetica text-white'>I have something to tell you.</h3>
                     </div>
                     <div className='px-8 lg:px-6 xl:px-12 py-6 bg-cyan-800 rounded-2xl'>
                         <p className='text-xl text-cyan-300'>03/ <span className='text-gray-400'>03</span></p>
-                        <h3 className='font-bold text-2xl mt-10 font-helvetica text-white'>I have a bussiness proposal.</h3>
+                        <h3 className='font-bold text-lg md:text-2xl mt-10 font-helvetica text-white'>I have a bussiness proposal.</h3>
                     </div>
                 </div>
             </div>

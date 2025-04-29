@@ -107,7 +107,7 @@ const FAQSection = () => {
     ];
 
     return (
-        <div className="mt-24 px-5 md:px-20 lg:px-30 xl:max-w-screen-2xl xl:mx-auto p-6 ">
+        <div className="mt-24 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto p-6 ">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-10 leading-[1] font-helvetica">
                 Tackling your frequently asked <br /> questions head-on.
             </h1>

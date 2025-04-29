@@ -5,15 +5,26 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { HiChevronDown, HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
+    const pathname = usePathname();
     const titleRef = useRef(null);
     const charRefs = useRef([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [subMenuOpen, setSubMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
+
+    // Helper function to check if a link is active
+    const isActive = (href) => {
+        // Handle root path
+        if (href === '/') return pathname === href;
+        
+        // Handle other paths
+        return pathname?.startsWith(href);
+    };
 
     // Close menu when clicking outside
     useEffect(() => {
@@ -152,22 +163,31 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     </a>
                 </div>
 
-                <div className={`hidden lg:flex items-center gap-10 font-helvetica text-xl relative`} style={{ color: textColor }}>
-                    <a href="about-den" className="relative group">
+                <div className="hidden lg:flex items-center gap-10 font-helvetica text-xl relative" style={{ color: textColor }}>
+                    <a href="/about-den" className="relative group">
                         <span className="relative inline-block">
                             About Den
+                            {isActive('/about-den') && (
+                                <span className="absolute left-0 top-1/2 w-full h-0.5 transform -translate-y-1/2 bg-current origin-left animate-strikethrough"></span>
+                            )}
                             <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
                         </span>
                     </a>
-                    <a href="services" className="relative group">
+                    <a href="/services" className="relative group">
                         <span className="relative inline-block">
                             Services
+                            {isActive('/services') && (
+                                <span className="absolute left-0 top-1/2 w-full h-0.5 transform -translate-y-1/2 bg-current origin-left animate-strikethrough"></span>
+                            )}
                             <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
                         </span>
                     </a>
-                    <a href="products" className="relative group">
+                    <a href="/products" className="relative group">
                         <span className="relative inline-block">
                             Products
+                            {isActive('/products') && (
+                                <span className="absolute left-0 top-1/2 w-full h-0.5 transform -translate-y-1/2 bg-current origin-left animate-strikethrough"></span>
+                            )}
                             <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
                         </span>
                     </a>
@@ -332,6 +352,17 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                 .mobile-menu-overlay.active {
                     opacity: 1;
                     pointer-events: auto;
+                }
+            `}</style>
+
+            <style jsx global>{`
+                @keyframes strikethrough {
+                    0% {
+                        transform: scaleX(0) translateY(-50%);
+                    }
+                    100% {
+                        transform: scaleX(1) translateY(-50%);
+                    }
                 }
             `}</style>
         </div>
