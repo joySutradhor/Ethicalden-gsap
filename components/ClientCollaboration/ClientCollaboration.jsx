@@ -51,23 +51,23 @@ function ClientCollaboration() {
     <section className='mb-[20vh] mt-[5vh] md:mt-[10vh] lg:mt-[20vh]'>
       {/* title */}
       <h2
-        ref={titleRef}
-        className="text-center v2__title font-extrabold font-helvetica px-[5vw] lg:px-0 max-w-5xl mx-auto mb-[10vh] leading-[1]"
-      >
-        {titleLines.map((line, lineIndex) => (
-          <div key={lineIndex} className="block flex flex-wrap justify-center">
-            {line.split(' ').map((word, wordIndex) => (
-              <span key={wordIndex} className="flex whitespace-nowrap mr-2">
-                {word.split('').map((char, charIndex) => (
-                  <span key={charIndex} ref={addToCharRefs} className="inline-block">
-                    {char}
-                  </span>
-                ))}
-              </span>
-            ))}
-          </div>
-        ))}
-      </h2>
+          ref={titleRef}
+          className="text-xl sm:text-2xl md:text-4xl lg:text-6xl text-center font-helvetica font-bold mb-[5vh]  max-w-4xl mx-auto leading-[1] px-4"
+        >
+          {titleLines.map((line, lineIndex) => (
+            <div key={lineIndex} className="block">
+              {line.split('').map((char, charIndex) => (
+                <span
+                  key={charIndex}
+                  ref={addToCharRefs}
+                  style={{ color: 'gray' }}
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </span>
+              ))}
+            </div>
+          ))}
+        </h2>
 
 
       {/* clients logos */}
