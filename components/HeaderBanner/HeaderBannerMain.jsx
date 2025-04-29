@@ -286,7 +286,7 @@ const HeaderBannerMain = () => {
             {/* Navbar - updated for mobile */}
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6 bg-white">
                 <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
-                    <a href="/"><img className="w-32 md:w-40 h-auto" src="/images/logo/PNG.png" alt="Mater Logo" /></a>
+                    <a href="/"><img className="w-12 md:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" /></a>
                 </div>
 
                 {/* Desktop Menu - with hover effect */}
@@ -422,7 +422,7 @@ const HeaderBannerMain = () => {
 
                     {/* Logo */}
                     <a href="/">
-                        <img className="w-70 h-auto pt-4 pl-8 " src="/images/logo/PNG.png" alt="Logo" />
+                        <img className="w-20 md:w-24 h-auto -mt-10 md:-mt-10 pl-8 " src="/images/logo/ethicalden.png" alt="Logo" />
                     </a>
 
                     {/* Menu Items */}
@@ -489,7 +489,7 @@ const HeaderBannerMain = () => {
                 <div className="max-w-3xl ">
                     <h1
                         ref={titleRef}
-                        className="text-4xl md:text-6xl xl:text-8xl font-helvetica font-extrabold leading-[1]"
+                        className="text-4xl md:text-6xl xl:text-7xl font-urbanist font-extrabold leading-[1]"
                     >
                         {
                             titleText.split("").map((char, index) =>
