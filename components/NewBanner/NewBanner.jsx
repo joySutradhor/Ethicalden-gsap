@@ -21,14 +21,19 @@ const NewBanner = () => {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Animate title color on scroll
   useEffect(() => {
     if (!charRefs.current.length) return;
-    gsap.fromTo(
+  
+    const title = "Extraordinary Digital Experiences";
+    const digitalStartIndex = title.indexOf("Digital");
+    const digitalEndIndex = digitalStartIndex + "Digital ".length;
+  
+    const scrollTl = gsap.fromTo(
       charRefs.current,
       { color: 'gray' },
       {
-        color: 'black',
+        color: (i) =>
+          i >= digitalStartIndex && i < digitalEndIndex ? "#a8ff57" : "black",
         stagger: { from: 'random', each: 0.05 },
         ease: 'power2.out',
         scrollTrigger: {
@@ -36,12 +41,26 @@ const NewBanner = () => {
           start: "top 90%",
           end: "top 50%",
           toggleActions: "play none none none",
+          onEnter: () => {
+            // After scroll animation ends, start infinite color animation on "Digital"
+            const digitalChars = charRefs.current.slice(digitalStartIndex, digitalEndIndex);
+  
+            gsap.to(digitalChars, {
+              color: "#09e5e5",
+              duration: 2,
+              repeat: -1,
+              yoyo: true,
+              ease: "power1.inOut",
+              delay: 3, 
+            });
+          }
         }
       }
     );
   }, []);
+  
 
-  // Cycle stats every 4 seconds with GSAP animation
+  // Cycle stats every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       const tl = gsap.timeline();
@@ -85,12 +104,11 @@ const NewBanner = () => {
     const staticText = buttonStaticTextRef.current;
     const scrollingText = buttonScrollingTextRef.current;
 
-    // Initial setup
     gsap.set(button, { opacity: 1, y: 0 });
     gsap.set(bg, {
       scaleX: 0,
       transformOrigin: "center center",
-      backgroundColor: "#4DEFA7"
+      backgroundColor: "#09e5e5"
     });
     gsap.set(scrollingText, { opacity: 0, x: 0 });
     gsap.set(staticText, { opacity: 1 });
@@ -120,11 +138,10 @@ const NewBanner = () => {
 
     const handleMouseEnter = () => {
       hoverTL.play().then(() => {
-        // Start scrolling animation only after the hover animation completes
         if (!scrollTween) {
           const contentWidth = scrollingText.scrollWidth;
           const buttonWidth = button.offsetWidth;
-          const duration = contentWidth / 50; // Adjust speed here (lower number = faster)
+          const duration = contentWidth / 50;
 
           scrollTween = gsap.to(scrollingText, {
             x: `-=${contentWidth - buttonWidth}`,
@@ -142,7 +159,6 @@ const NewBanner = () => {
       hoverTL.reverse();
       if (scrollTween) {
         scrollTween.pause();
-        // Reset position when mouse leaves
         gsap.set(scrollingText, { x: 0 });
       }
     };
@@ -172,7 +188,7 @@ const NewBanner = () => {
     };
   }, []);
 
-  const titleText = "Extraordinary\nDigital Experiences";
+  const titleText = "Extraordinary\n Digital Experiences";
 
   return (
     <section className="bg-white pt-[60px] lg:pt-[0px] 2xl:pt-[40px] px-[20px]  md:px-10 lg:px-[50px]  xl:px-[80px] 2xl:px-[90px]">
@@ -204,16 +220,10 @@ const NewBanner = () => {
         <div className="xl:flex md:flex-row items-center justify-between gap-8 mt-12 md:mt-20 lg:mt-28">
           {/* Animated Number & Label */}
           <div ref={statsRef} className="flex-1 text-center flex gap-5 md:gap-8 items-center overflow-hidden pb-[30px]">
-            <p
-
-              className="text-sm md:text-2xl font-bold text-white bg-black w-10 md:w-14 h-10 md:h-14 lg:w-20 lg:h-20  flex items-center justify-center rounded-full"
-            >
+            <p className="text-sm md:text-2xl font-bold text-white bg-black w-10 md:w-14 h-10 md:h-14 lg:w-20 lg:h-20  flex items-center justify-center rounded-full">
               <span ref={numberRef}>{stats[currentIndex].number}</span>
             </p>
-            <p
-              ref={textRef}
-              className="text-sm lg:text-[18px] xl:text-xl text-gray-600"
-            >
+            <p ref={textRef} className="text-sm lg:text-[18px] xl:text-xl text-gray-600">
               {stats[currentIndex].label}
             </p>
           </div>
@@ -225,14 +235,14 @@ const NewBanner = () => {
             <div className="pt-[15px]">
               <Link
                 ref={buttonRef}
-                className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
+                className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
                 href={"#"}
                 style={{ opacity: 1 }}
               >
                 <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                 <span
                   ref={buttonTextRef}
-                  className="relative z-10  text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                  className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                 >
                   <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                     Our Work

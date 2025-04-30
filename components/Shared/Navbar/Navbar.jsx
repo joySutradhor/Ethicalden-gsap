@@ -65,7 +65,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
         const scrollingText = buttonScrollingTextRef.current;
 
         gsap.set(button, { opacity: 1, y: 0 });
-        gsap.set(bg, { scaleX: 0, transformOrigin: "center center", backgroundColor: "#4DEFA7" });
+        gsap.set(bg, { scaleX: 0, transformOrigin: "center center", backgroundColor: "#09e5e5" });
         gsap.set(scrollingText, { opacity: 0, x: 0 });
         gsap.set(staticText, { opacity: 1 });
 
@@ -209,7 +209,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     <div className="">
                         <Link
                             ref={buttonRef}
-                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-2xl font-bold sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-2xl font-bold sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
                             href={"/contact"}
                             style={{ opacity: 1 }}
                         >
