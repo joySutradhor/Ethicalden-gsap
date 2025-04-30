@@ -56,16 +56,17 @@ const TechStack = () => {
     const title = 'Our Tech Stack';
 
     return (
-        <section className="container mx-auto px-4 py-12">
+        <section className=" px-5 md:px-10 lg:px-15 xl:px-30 2xl:px-50 py-12">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-4xl md:text-6xl xl:text-8xl font-helvetica font-extrabold leading-[1] mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split('').map((char, i) => (
                         <span
                             key={i}
                             ref={(el) => (charRefs.current[i] = el)}
+                            style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
                             className={`inline-block ${char === ' ' ? 'w-2 md:w-4 lg:w-5' : ''
                                 }`}
                         >

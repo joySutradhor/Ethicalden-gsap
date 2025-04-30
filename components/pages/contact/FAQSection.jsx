@@ -107,8 +107,8 @@ const FAQSection = () => {
     ];
 
     return (
-        <div className="mt-24 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto p-6 ">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-10 leading-[1] font-helvetica">
+        <div className="mt-24 px-5 md:px-10 lg:px-10 xl:px-20 xl:max-w-screen-2xl xl:mx-auto p-6 ">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1] xl:max-w-3xl mb-8" style={ { letterSpacing: "-0.05em" }}>
                 Tackling your frequently asked <br /> questions head-on.
             </h1>
 
@@ -120,8 +120,8 @@ const FAQSection = () => {
                                 className="w-full flex justify-between items-center p-6 text-left focus:outline-none hover:bg-gray-50 transition-colors"
                                 onClick={() => toggleAccordion(index)}
                             >
-                                <div className="flex items-center space-x-4">
-                                    <h2 className="text-3xl font-bold font-helvetica text-gray-800">
+                                <div className="flex items-center space-x-4" >
+                                    <h2 className="text-3xl font-extrabold font-helvetica text-gray-800" style={ { letterSpacing: "-0.05em" }}>
                                         {faq.question}
                                     </h2>
                                 </div>

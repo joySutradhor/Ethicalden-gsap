@@ -287,13 +287,13 @@ const ServicesArea = () => {
 
     return (
         <div className='bg-change-anim py-40 pb-40'>
-            <div className='px-20 md:px-20 lg:px-30 xl:max-w-screen-xl xl:mx-auto '>
+            <div className='px-20 md:px-20 lg:px-30 xl:px-40 2xl:px-50 '>
                 <div className='flex flex-col items-center'>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-80 md:gap-40 lg:gap-30 xl:gap-50  justify-center items-center w-full'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2  gap-80 md:gap-40 lg:gap-30 xl:gap-50  justify-center items-center w-full'>
                         {/* left title */}
                         <h2
                             ref={titleRef}
-                            className="text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mt-0 md:-mt-40 text-black font-helvetica leading-[1] w-full max-w-4xl"
+                            className="xl:max-w-2xl 2xl:max-w-md text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl -ml-12  md:ml-0 font-extrabold mt-0 md:-mt-40 text-black font-helvetica leading-[1] w-full max-w-4xl"
                         >
                             {titleText.split(' ').map((word, wi) => (
                                 <span key={wi} className="inline-block whitespace-nowrap mr-2">
@@ -302,6 +302,7 @@ const ServicesArea = () => {
                                             key={ci}
                                             ref={(el) => (charRefs.current[wi * 100 + ci] = el)}
                                             className="inline-block"
+                                            style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
                                         >
                                             {char}
                                         </span>
@@ -329,7 +330,7 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         01 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
+                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
                                         Strategy
                                     </p>
                                 </div>
@@ -367,7 +368,7 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         02 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
+                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
                                         Digital <br />products
                                     </p>
                                 </div>
@@ -409,7 +410,7 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         03 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
+                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
                                         Brand <br />& Identity
                                     </p>
                                 </div>
@@ -450,7 +451,7 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         04 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
+                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
                                         Performance <br />& Growth
                                     </p>
                                 </div>
@@ -483,14 +484,14 @@ const ServicesArea = () => {
                             <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                             <span
                                 ref={buttonTextRef}
-                                className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                                className="relative z-10 font-bold text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                             >
                                 <span ref={buttonStaticTextRef} className="static-text">
                                     View our Work
                                 </span>
                                 <span
                                     ref={buttonScrollingTextRef}
-                                    className="scrolling-text absolute left-0"
+                                    className="scrolling-text absolute left-0 font-bold text-2xl"
                                 >
                                     {Array.from({ length: 20 }).map((_, i) => (
                                         <span key={i} className="inline-block mr-8">

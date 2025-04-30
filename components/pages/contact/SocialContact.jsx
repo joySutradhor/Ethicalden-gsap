@@ -2,15 +2,15 @@ import { FaDiscord, FaLinkedinIn, FaDribbble } from "react-icons/fa";
 
 export default function SocialContact() {
   return (
-    <section className=" mt-24 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto p-6  rounded-lg">
+    <section className=" mt-24 px-5 md:px-10 lg:px-10 xl:px-20 xl:max-w-screen-2xl xl:mx-auto p-6  rounded-lg">
       <div className="">
-        <h1 className="text-4xl break-words max-w-3xl lg:text-5xl font-bold text-gray-900 leading-[1] font-helvetica">
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1] xl:max-w-3xl" style={ { letterSpacing: "-0.05em" }}>
           It’s a nice looking web form, but
           you’d like to speak to a person?
         </h1>
 
-        <div className="mt-12 w-full lg:ml-50 xl:ml-60">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 font-helvetica">
+        <div className="mt-12 w-full lg:ml-50 xl:ml-60" style={ { letterSpacing: "-0.05em" }}>
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-8 font-helvetica">
             Jump into a quick chat
           </h2>
 

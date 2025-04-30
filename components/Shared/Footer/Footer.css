@@ -3,7 +3,7 @@
 @layer utilities {
 
     .edn__f__container{
-        @apply mt-[20vh] mb-[10vh] lg:mb-[10vh] px-5 lg:px-10 
+        @apply mt-[20vh] pb-[10vh] lg:pb-[10vh] px-5 lg:px-10 
     }
     .edn__f__wrapper{
         @apply grid space-y-10 lg:space-y-0 lg:grid-cols-[20%__80%] 2xl:grid-cols-[30%_70%] 

@@ -94,7 +94,7 @@ const ServiceGallery = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="min-h-screen bg-white mt-[5vh] md:mt-[15vh] lg:mt-[20vh] py-10 px-4 relative">
+        <section ref={sectionRef} className="min-h-screen bg-white mt-[5vh] md:mt-[15vh] lg:mt-[20vh] py-10 px-5 md:mx-10 lg:px-10 relative">
             <div className='flex justify-center items-center'>
                 <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 w-full relative">
 

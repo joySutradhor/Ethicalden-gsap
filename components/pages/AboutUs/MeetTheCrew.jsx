@@ -73,17 +73,18 @@ const MeetTheCrew = () => {
     const title = 'Meet the crew';
 
     return (
-        <section className="container mx-auto px-4 pt-0 md:pt-5 lg:pt-12 pb-12">
+        <section className="px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40  pt-0 md:pt-5 lg:pt-12 pb-12">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-4xl md:text-6xl lg:text-6xl xl:text-6xl font-extrabold font-helvetica leading-[1]  mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split('').map((char, i) => (
                         <span
                             key={i}
                             ref={(el) => (charRefs.current[i] = el)}
                             className={`inline-block ${char === ' ' ? 'w-2 md:w-3 ' : ''}`}
+                            style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
                         >
                             {char}
                         </span>

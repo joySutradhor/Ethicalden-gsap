@@ -93,6 +93,8 @@ const HeaderBannerMain = () => {
         }
     }, [isMenuOpen]);
 
+    // title
+
     useEffect(() => {
         if (!charRefs.current.length) return;
         gsap.fromTo(

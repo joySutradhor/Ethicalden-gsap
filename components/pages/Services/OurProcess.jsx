@@ -166,7 +166,7 @@ const OurProcess = () => {
           </span>
         </p>
         <p className="text-2xl md:text-3xl font-extrabold font-helvetica leading-[1] text-cyan-300">Our Process</p>
-        <h2 ref={titleRef} className="text-5xl md:text-8xl font-helvetica font-extrabold text-gray-300"></h2>
+        <h2 ref={titleRef} style={ { letterSpacing: "-0.05em" }} className="text-5xl md:text-8xl font-helvetica font-extrabold text-gray-300"></h2>
       </div>
 
       {/* 1st Process */}

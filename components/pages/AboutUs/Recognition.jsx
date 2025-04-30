@@ -80,11 +80,11 @@ const Recognition = () => {
     }, []);
 
     return (
-        <section className=" px-4 my-20 ">
+        <section className=" px-5 md:px-10 lg:px-20 xl:px-30 2xl:px-40 my-20 ">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-4xl md:text-6xl xl:text-6xl font-extrabold font-helvetica mb-4 leading-[1] flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-5 flex flex-wrap justify-center gap-x-1 gap-y-2"
                 >
                     {title.split(' ').map((word, wi) => (
                         <span key={wi} className="flex whitespace-nowrap">
@@ -93,6 +93,7 @@ const Recognition = () => {
                                     key={ci}
                                     ref={(el) => (charRefs.current[wi * 100 + ci] = el)}
                                     className="inline-block"
+                                    style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
                                 >
                                     {char}
                                 </span>

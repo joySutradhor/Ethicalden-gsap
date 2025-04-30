@@ -25,10 +25,10 @@ const GamePlan = () => {
   };
 
   return (
-    <div className="mt-24 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto p-6 bg-white rounded-lg">
+    <div className="mt-24 px-5 md:px-10 lg:px-10 xl:px-20 xl:max-w-screen-2xl xl:mx-auto p-6 bg-white rounded-lg">
       <div className="mb-6 lg:flex gap-20">
         <div className="flex-1/3">
-          <h2 className="text-4xl lg:text-5xl font-extrabold font-helvetica">What’s the game plan?</h2>
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={ { letterSpacing: "-0.05em" }}>What’s the game plan?</h2>
           <p className="mt-5 mb-5 lg:mb-0 text-xl text-gray-700 font-helvetica">
             Tell us how we can back you up. Select all the services your project requires.
           </p>

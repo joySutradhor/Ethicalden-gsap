@@ -11,7 +11,7 @@ const awards = [
   
   const AwardsSection = () => {
     return (
-        <div className="max-w-4xl mx-auto px-6  font-sans">
+        <div className="2xl:max-w-4xl 2xl:mx-auto px-5 md:px-10 lg:px-10 xl:px-20   font-sans">
           <div className="grid md:grid-cols-1 gap-6">
             {awards.map((award, index) => (
               <div key={index} className="flex items-center justify-between pb-4 ">

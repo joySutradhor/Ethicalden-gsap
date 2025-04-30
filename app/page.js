@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from "react";
 import AboutUs from "./home/AboutUs/AboutUs";
-import AllStories from "./home/AllStories/AllStories";
 import ClientsCollaboration from "./home/ClientsCollaboration/ClientsCollaboration";
 import Gallery from "./home/Gallery/Gallery";
 import NewLattestProjects from "./home/NewLattestProjects/NewLattestProjects";
-import HeaderBanner from "./home/HeaderBanner/HeaderBanner";
 import Loader from "@/components/Loader/Loader";
 import "./globals.css";
 import "./main.css";
 import { delay } from "@/components/utils/delay"
 import Footer from "@/components/Shared/Footer/Footer";
-import Banner from "./home/Banner/Banner";
+import Navbar from "@/components/Shared/Navbar/Navbar";
+import NewBanner from "@/components/NewBanner/NewBanner";
+import OurProducts from "@/components/OurProducts/OurProducts";
 
 
 export default function Home() {
@@ -30,11 +30,12 @@ export default function Home() {
 
   return (
     <section>
-      <HeaderBanner />
+      <Navbar />
+      <NewBanner />
       <AboutUs />
       <Gallery />
       <NewLattestProjects />
-      <AllStories />
+      <OurProducts />
       <ClientsCollaboration />
       <Footer />
     </section>

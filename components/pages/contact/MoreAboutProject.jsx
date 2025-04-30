@@ -180,10 +180,10 @@ const MoreAboutProject = () => {
 
 
     return (
-        <div className="mt-24 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto p-6 bg-white rounded-lg">
+        <div className="mt-24 px-5 md:px-10 lg:px-10 xl:px-20 xl:max-w-screen-2xl xl:mx-auto p-6 bg-white rounded-lg">
             <div className="mb-6 lg:flex gap-20 lg:gap-15">
                 <div className="flex-1/3">
-                    <h2 className="text-4xl lg:text-5xl font-extrabold font-helvetica leading-[1]">More about your project.</h2>
+                    <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={ { letterSpacing: "-0.05em" }}>More about your project.</h2>
                     <p className="mt-5 mb-5 lg:mb-0 text-xl text-gray-700 font-helvetica ">
                         Share as much details as you want and we'll take it from there.
                     </p>
@@ -313,7 +313,7 @@ const MoreAboutProject = () => {
                                     ref={buttonTextRef}
                                     className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                                 >
-                                    <span ref={buttonStaticTextRef} className="static-text font-helvetica">
+                                    <span ref={buttonStaticTextRef} className="static-text font-helvetica text-2xl font-bold">
                                         Send Inquiry
                                     </span>
                                     <span
@@ -321,7 +321,7 @@ const MoreAboutProject = () => {
                                         className="scrolling-text absolute left-0"
                                     >
                                         {Array.from({ length: 20 }).map((_, i) => (
-                                            <span key={i} className="inline-block mr-8 font-helvetica">
+                                            <span key={i} className="inline-block mr-8 font-helvetica text-2xl font-bold">
                                                 Send Inquiry
                                             </span>
                                         ))}

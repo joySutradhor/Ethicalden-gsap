@@ -198,10 +198,10 @@ const IndustryServices = () => {
     const titleText = "We adapt to the\nunique demands of\neach industry. ";
 
     return (
-        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 z-10 mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
+        <div className="bg-white py-16 px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40 z-10 mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
             <div className="max-w-6xl mx-auto">
                 {/* Title */}
-                <h2 ref={titleRef} className="font-helvetica font-extrabold text-4xl md:text-6xl xl:text-8xl leading-[1] mb-8">
+                <h2 style={{ letterSpacing: "-0.05em" }} ref={titleRef} className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-8">
                     {splitTextIntoChars(titleText)}
                 </h2>
 
@@ -240,7 +240,7 @@ const IndustryServices = () => {
                     <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                     <span
                         ref={buttonTextRef}
-                        className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                        className="relative z-10 font-bold text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                     >
                         <span ref={buttonStaticTextRef} className="static-text">
                             View our work
@@ -250,7 +250,7 @@ const IndustryServices = () => {
                             className="scrolling-text absolute left-0"
                         >
                             {Array.from({ length: 20 }).map((_, i) => (
-                                <span key={i} className="inline-block mr-8">
+                                <span key={i} className="inline-block mr-8 font-bold text-2xl">
                                     View our work
                                 </span>
                             ))}
