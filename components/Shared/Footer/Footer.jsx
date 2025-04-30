@@ -234,7 +234,7 @@ function Footer() {
               {/* Text container */}
               <span
                 ref={buttonTextRef}
-                className="relative z-10 font-medium overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                className="relative z-10 text-[16px] md:text-2xl overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                 style={{ color: 'black' }} // Force text color
               >
                 <span

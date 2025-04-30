@@ -342,18 +342,18 @@ const AboutUsArea = () => {
 
             {/* button */}
             <div className=" relative mt-8 md:mt-3 inline-block">
-              <Link
+            <Link
                 ref={buttonRef}
-                className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
+                className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
                 href={"#"}
                 style={{ opacity: 1 }}
               >
                 <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                 <span
                   ref={buttonTextRef}
-                  className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                  className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                 >
-                  <span ref={buttonStaticTextRef} className="static-text">
+                  <span ref={buttonStaticTextRef} className="static-text font-helvetica">
                     Stories
                   </span>
                   <span
@@ -361,7 +361,7 @@ const AboutUsArea = () => {
                     className="scrolling-text absolute left-0"
                   >
                     {Array.from({ length: 20 }).map((_, i) => (
-                      <span key={i} className="inline-block mr-8">
+                      <span key={i} className="inline-block mr-8 font-helvetica">
                         Stories
                       </span>
                     ))}

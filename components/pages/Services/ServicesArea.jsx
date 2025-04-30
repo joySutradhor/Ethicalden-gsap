@@ -323,20 +323,20 @@ const ServicesArea = () => {
                                 />
 
                                 {/* Fixed overlay text on video */}
-                                <div 
+                                <div
                                     className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-helvetica pointer-events-none"
                                     ref={el => overlayTextRefs.current[0] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         01 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
                                         Strategy
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
-                                <div 
+                                <div
                                     className='absolute -bottom-38 md:-bottom-40 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[0] = el}
                                 >
@@ -361,20 +361,20 @@ const ServicesArea = () => {
                                 />
 
                                 {/* Fixed overlay text on video */}
-                                <div 
+                                <div
                                     className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
                                     ref={el => overlayTextRefs.current[1] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         02 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
                                         Digital <br />products
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
-                                <div 
+                                <div
                                     className='absolute -bottom-90 md:-bottom-105 lg:-bottom-94 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[1] = el}
                                 >
@@ -403,20 +403,20 @@ const ServicesArea = () => {
                                 />
 
                                 {/* Fixed overlay text on video */}
-                                <div 
+                                <div
                                     className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
                                     ref={el => overlayTextRefs.current[2] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         03 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
                                         Brand <br />& Identity
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
-                                <div 
+                                <div
                                     className='absolute -bottom-74 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[2] = el}
                                 >
@@ -444,20 +444,20 @@ const ServicesArea = () => {
                                 />
 
                                 {/* Fixed overlay text on video */}
-                                <div 
+                                <div
                                     className="absolute inset-0 flex flex-col items-start bottom-8 -left-17 md:-left-20 justify-end text-white font-rota pointer-events-none"
                                     ref={el => overlayTextRefs.current[3] = el}
                                 >
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         04 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={ { letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
                                         Performance <br />& Growth
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
-                                <div 
+                                <div
                                     className='absolute -bottom-38 md:-bottom-55 lg:-bottom-40 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[3] = el}
                                 >
@@ -477,25 +477,25 @@ const ServicesArea = () => {
                     <div className="relative mt-8 md:mt-3 inline-block">
                         <Link
                             ref={buttonRef}
-                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
                             href={"#"}
                             style={{ opacity: 1 }}
                         >
                             <span ref={buttonBgRef} className="absolute inset-0 z-0" />
                             <span
                                 ref={buttonTextRef}
-                                className="relative z-10 font-bold text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                                className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                             >
-                                <span ref={buttonStaticTextRef} className="static-text">
-                                    View our Work
+                                <span ref={buttonStaticTextRef} className="static-text font-helvetica">
+                                    View Our Work
                                 </span>
                                 <span
                                     ref={buttonScrollingTextRef}
-                                    className="scrolling-text absolute left-0 font-bold text-2xl"
+                                    className="scrolling-text absolute left-0"
                                 >
                                     {Array.from({ length: 20 }).map((_, i) => (
-                                        <span key={i} className="inline-block mr-8">
-                                            View our Work
+                                        <span key={i} className="inline-block mr-8 font-helvetica">
+                                            View Our Work
                                         </span>
                                     ))}
                                 </span>

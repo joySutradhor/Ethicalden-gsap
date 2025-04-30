@@ -21,12 +21,12 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
     const isActive = (href) => {
         // Handle root path
         if (href === '/') return pathname === href;
-        
+
         // Handle other paths
         return pathname?.startsWith(href);
     };
 
-   
+
 
     useEffect(() => {
         if (!charRefs.current.length) return;
@@ -146,11 +146,11 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
             <nav className="top-0 left-0 w-full z-40 flex items-center justify-between  py-6">
                 <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
                     <a href="/">
-                    <img className="w-9 md:w-12 lg:w-14 xl:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" />
+                        <img className="w-9 md:w-12 lg:w-14 xl:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" />
                     </a>
                 </div>
 
-                <div className="hidden xl:flex items-center gap-10 font-helvetica text-2xl font-bold relative" style={{ color: textColor }}>
+                <div className="hidden xl:flex items-center gap-10 font-helvetica text-2xl  relative" style={{ color: textColor }}>
                     <a href="/about-den" className="relative group">
                         <span className="relative inline-block">
                             About Den
@@ -189,7 +189,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                         </button>
 
                         {subMenuOpen && (
-                            <div className="absolute left-0 mt-2 py-2 w-40 bg-white rounded-md shadow-lg z-50">
+                            <div className="absolute left-0 mt-2 py-2 w-40  z-50">
                                 <a href="https://eduden.example.com" className="block px-4 py-2 relative group" target="_blank" rel="noopener noreferrer">
                                     <span className="relative inline-block">
                                         Eduden
@@ -209,16 +209,26 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     <div className="">
                         <Link
                             ref={buttonRef}
-                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-2xl font-bold sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
                             href={"/contact"}
                             style={{ opacity: 1 }}
                         >
                             <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-                            <span ref={buttonTextRef} className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center">
-                                <span ref={buttonStaticTextRef} className="static-text font-helvetica text-2xl font-bold">Let's Talk</span>
-                                <span ref={buttonScrollingTextRef} className="scrolling-text absolute left-0">
+                            <span
+                                ref={buttonTextRef}
+                                className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                            >
+                                <span ref={buttonStaticTextRef} className="static-text">
+                                    Let's Talk
+                                </span>
+                                <span
+                                    ref={buttonScrollingTextRef}
+                                    className="scrolling-text absolute left-0"
+                                >
                                     {Array.from({ length: 20 }).map((_, i) => (
-                                        <span key={i} className="inline-block mr-8 font-helvetica text-2xl font-bold">Let's Talk</span>
+                                        <span key={i} className="inline-block mr-8 font-helvetica">
+                                            Let's Talk
+                                        </span>
                                     ))}
                                 </span>
                             </span>

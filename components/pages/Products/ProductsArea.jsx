@@ -40,7 +40,7 @@ function ProductsArea() {
     gsap.fromTo(charRefs.current,
       { color: 'gray' },
       {
-        color: 'white',
+        color: '#09e5e5',
         stagger: {
           from: 'random',
           each: 0.05,
