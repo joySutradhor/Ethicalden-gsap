@@ -141,7 +141,7 @@ const GalleryMain = () => {
 
     return (
         <>
-            <section ref={sectionRef} className="min-h-screen  -mt-[4vh] md:mt-[1vh] lg:mt-[1vh] py-10 px-5   relative">
+            <section ref={sectionRef} className="min-h-screen  mt-5 md:mt-[1vh] lg:mt-[1vh] py-10 px-5   relative">
                 <div className='flex justify-center items-center'>
                     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 w-full relative">
 

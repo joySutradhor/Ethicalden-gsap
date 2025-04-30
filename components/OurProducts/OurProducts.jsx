@@ -3,17 +3,25 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const OurProducts = () => {
     const sectionRef = useRef(null);
     const scrollContainerRef = useRef(null);
-    const [isLargeScreen, setIsLargeScreen] = useState(false);
+    const [screenSize, setScreenSize] = useState("large"); // 'small', 'medium', 'large'
 
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsLargeScreen(window.innerWidth > 1020);
+            const width = window.innerWidth;
+            if (width <= 768) {
+                setScreenSize("small");
+            } else if (width > 768 && width <= 1024) {
+                setScreenSize("medium");
+            } else {
+                setScreenSize("large");
+            }
         };
 
         checkScreenSize();
@@ -23,14 +31,14 @@ const OurProducts = () => {
     }, []);
 
     useEffect(() => {
-        if (!isLargeScreen) return;
-    
+        if (screenSize !== "large") return;
+
         const section = sectionRef.current;
         const scrollContainer = scrollContainerRef.current;
         const scrollWidth = scrollContainer.scrollWidth;
         const viewportWidth = section.offsetWidth;
         const totalScroll = scrollWidth - viewportWidth;
-    
+
         const ctx = gsap.context(() => {
             gsap.to(scrollContainer, {
                 x: () => `-${totalScroll}`,
@@ -46,10 +54,111 @@ const OurProducts = () => {
                 },
             });
         }, sectionRef);
-    
+
         return () => ctx.revert();
-    }, [isLargeScreen]); 
-    
+    }, [screenSize]);
+
+     // Button animation setup
+     const buttonRef = useRef(null);
+     const buttonTextRef = useRef(null);
+     const buttonBgRef = useRef(null);
+     const buttonStaticTextRef = useRef(null);
+     const buttonScrollingTextRef = useRef(null);
+ 
+ 
+     useEffect(() => {
+         const button = buttonRef.current;
+         const textWrapper = buttonTextRef.current;
+         const bg = buttonBgRef.current;
+         const staticText = buttonStaticTextRef.current;
+         const scrollingText = buttonScrollingTextRef.current;
+ 
+         // Initial setup
+         gsap.set(button, { opacity: 1, y: 0 });
+         gsap.set(bg, {
+             scaleX: 0,
+             transformOrigin: "center center",
+             backgroundColor: "#4DEFA7"
+         });
+         gsap.set(scrollingText, { opacity: 0, x: 0 });
+         gsap.set(staticText, { opacity: 1 });
+ 
+         const hoverTL = gsap.timeline({ paused: true });
+ 
+         hoverTL
+             .to(bg, {
+                 scaleX: 1,
+                 duration: 0.5,
+                 ease: "power2.out"
+             })
+             .to(staticText, {
+                 opacity: 0,
+                 duration: 0.2
+             }, "-=0.2")
+             .to(scrollingText, {
+                 opacity: 1,
+                 duration: 0.2
+             })
+             .to(textWrapper, {
+                 color: "black",
+                 duration: 0.3
+             }, "-=0.3");
+ 
+         let scrollTween;
+ 
+         const handleMouseEnter = () => {
+             hoverTL.play().then(() => {
+                 // Start scrolling animation only after the hover animation completes
+                 if (!scrollTween) {
+                     const contentWidth = scrollingText.scrollWidth;
+                     const buttonWidth = button.offsetWidth;
+                     const duration = contentWidth / 50; // Adjust speed here (lower number = faster)
+ 
+                     scrollTween = gsap.to(scrollingText, {
+                         x: `-=${contentWidth - buttonWidth}`,
+                         duration: duration,
+                         ease: "linear",
+                         repeat: -1
+                     });
+                 } else {
+                     scrollTween.play();
+                 }
+             });
+         };
+ 
+         const handleMouseLeave = () => {
+             hoverTL.reverse();
+             if (scrollTween) {
+                 scrollTween.pause();
+                 // Reset position when mouse leaves
+                 gsap.set(scrollingText, { x: 0 });
+             }
+         };
+ 
+         button.addEventListener("mouseenter", handleMouseEnter);
+         button.addEventListener("mouseleave", handleMouseLeave);
+ 
+         gsap.from(button, {
+             y: 20,
+             opacity: 0,
+             duration: 0.8,
+             delay: 0.5,
+             ease: "back.out(1.7)",
+             immediateRender: false,
+             scrollTrigger: {
+                 trigger: button,
+                 start: "top 85%",
+                 toggleActions: "play none none none"
+             }
+         });
+ 
+         return () => {
+             button.removeEventListener("mouseenter", handleMouseEnter);
+             button.removeEventListener("mouseleave", handleMouseLeave);
+             hoverTL.kill();
+             if (scrollTween) scrollTween.kill();
+         };
+     }, []);
 
     const projects = [
         {
@@ -81,7 +190,7 @@ const OurProducts = () => {
             isNew: true
         },
         {
-            id: 3,
+            id: 5,
             title: "Alveena Casa",
             tags: ["UI/UX Design", "E-commerce"],
             image: "/images/our-products/products6.jpg",
@@ -92,60 +201,151 @@ const OurProducts = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-screen overflow-hidden bg-white py-40"
+            className="relative w-full overflow-hidden bg-white py-20 md:py-40 px-5 md:px-10"
         >
-            <div
-                ref={scrollContainerRef}
-                className="grid grid-cols-1 md:grid-cols-2 lg:flex items-start gap-10 px-6 md:px-16 py-12 w-max"
-            >
-                {/* Left Text Section */}
-                <div className="shrink-0 w-[400px] flex flex-col justify-between h-[450px] sticky left-0 top-0">
-                    <div>
-                        <h1 className="text-[60px] font-black mb-4">Work</h1>
-                        <p className="text-gray-600 mb-6">
+            {/* For small and medium screens - static layout */}
+            {(screenSize === "small" || screenSize === "medium") && (
+                <div className="max-w-7xl mx-auto">
+                    <div className="mb-12">
+                        <h1 className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-extrabold leading-[1.06] mb-4" style={{ letterSpacing: "-0.05em" }}>Work</h1>
+                        <p className="text-gray-600 mb-6 max-w-2xl">
                             A selection of our crafted work, built from scratch by our talented in-house team.
                         </p>
+                        <button className="border border-indigo-500 text-black hover:bg-indigo-500 hover:text-white transition-all px-6 py-3 rounded-full w-fit">
+                            Case Studies
+                        </button>
                     </div>
-                    <button className="border border-indigo-500 text-black hover:bg-indigo-500 hover:text-white transition-all px-6 py-3 rounded-full w-full">
-                        Case Studies
-                    </button>
-                </div>
 
-                {/* Right Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2  lg:flex gap-10">
-                    {projects.map((project) => (
-                        <div key={project.id} className="relative bg-black rounded-3xl overflow-hidden w-[700px] h-[450px] flex items-end justify-start p-6">
-                            {project.isNew && (
-                                <span className="absolute top-4 right-4 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                                    New
-                                </span>
-                            )}
-                            <img
-                                src={project.image}
-                                alt={`${project.title} Preview`}
-                                className="absolute inset-0 w-full h-full object-cover opacity-80"
-                            />
-                            <div className="relative z-10">
-                                <h3 className="text-white text-2xl font-bold mb-4">{project.title}</h3>
-                                <div className="flex gap-2">
-                                    {project.tags.map((tag, index) => (
-                                        <span key={index} className="bg-black/60 text-white px-4 py-1 rounded-full text-sm">
-                                            {tag}
-                                        </span>
-                                    ))}
+                    <div className={`grid ${screenSize === "medium" ? "grid-cols-2" : "grid-cols-1"} gap-6`}>
+                        {projects.map((project) => (
+                            <div
+                                key={project.id}
+                                className="relative bg-black rounded-3xl overflow-hidden 
+                                    w-full h-[300px] md:h-[350px]"
+                            >
+                                {project.isNew && (
+                                    <span className="absolute top-4 right-4 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-medium z-20">
+                                        New
+                                    </span>
+                                )}
+                                <img
+                                    src={project.image}
+                                    alt={`${project.title} Preview`}
+                                    className="absolute inset-0 w-full h-full object-cover opacity-80 z-10"
+                                />
+                                <div className="relative z-20 w-full h-full flex flex-col justify-end p-6">
+                                    <h3 className="text-white text-xl md:text-2xl font-bold mb-2 md:mb-4">{project.title}</h3>
+                                    <div className="flex gap-2 flex-wrap">
+                                        {project.tags.map((tag, index) => (
+                                            <span key={index} className="bg-black/60 text-white px-3 py-1 rounded-full text-xs md:text-sm">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                    {/* View More */}
-                    <div className="flex flex-col items-center justify-center p-6 min-w-[300px]">
-                        <h2 className="text-5xl mb-6">View More</h2>
-                        <button className="border border-indigo-500 text-black hover:bg-indigo-500 hover:text-white transition-all px-6 py-3 rounded-full w-full">
+                        ))}
+                    </div>
+
+                    <div className="flex flex-col items-center justify-center py-12 mt-6">
+                        <h2 className="text-3xl md:text-4xl mb-6">View More</h2>
+                        <button className="border border-indigo-500 text-black hover:bg-indigo-500 hover:text-white transition-all px-6 py-3 rounded-full">
                             Case Studies
                         </button>
                     </div>
                 </div>
-            </div>
+            )}
+
+            {/* For large screens - horizontal scroll layout */}
+            {screenSize === "large" && (
+                <div
+                    ref={scrollContainerRef}
+                    className="flex items-start gap-10 px-6 md:px-16 py-12 w-max"
+                >
+                    {/* Left Text Section */}
+                    <div className="shrink-0 w-[400px] flex flex-col justify-between h-[450px] sticky left-0 top-0">
+                        <div>
+                            <h1 className="text-[60px] font-black mb-4">Work</h1>
+                            <p className="text-gray-600 mb-6">
+                                A selection of our crafted work, built from scratch by our talented in-house team.
+                            </p>
+                        </div>
+                        <div className="">
+                            <Link
+                                ref={buttonRef}
+                                className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-2xl font-bold sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
+                                href={"/contact"}
+                                style={{ opacity: 1 }}
+                            >
+                                <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                                <span ref={buttonTextRef} className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center">
+                                    <span ref={buttonStaticTextRef} className="static-text font-helvetica text-2xl font-bold">Case Studies</span>
+                                    <span ref={buttonScrollingTextRef} className="scrolling-text absolute left-0">
+                                        {Array.from({ length: 20 }).map((_, i) => (
+                                            <span key={i} className="inline-block mr-8 font-helvetica text-2xl font-bold">Case Studies</span>
+                                        ))}
+                                    </span>
+                                </span>
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Right Cards */}
+                    <div className="flex gap-10 px-4">
+                        {projects.map((project) => (
+                            <div
+                                key={project.id}
+                                className="relative bg-black rounded-3xl overflow-hidden 
+                                    w-[700px] h-[450px] flex items-end justify-start p-6"
+                            >
+                                {project.isNew && (
+                                    <span className="absolute top-4 right-4 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-medium z-20">
+                                        New
+                                    </span>
+                                )}
+                                <img
+                                    src={project.image}
+                                    alt={`${project.title} Preview`}
+                                    className="absolute inset-0 w-full h-full object-cover opacity-80 z-10"
+                                />
+                                <div className="relative z-20 w-full">
+                                    <h3 className="text-white text-2xl font-bold mb-4">{project.title}</h3>
+                                    <div className="flex gap-2 flex-wrap">
+                                        {project.tags.map((tag, index) => (
+                                            <span key={index} className="bg-black/60 text-white px-4 py-1 rounded-full text-sm">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+
+                        {/* View More */}
+                        <div className="flex flex-col items-center justify-center p-6 min-w-[300px]">
+                            <h2 className="text-5xl mb-6">View More</h2>
+                            <div className="">
+                                <Link
+                                    ref={buttonRef}
+                                    className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-2xl font-bold sm:text-lg bg-[#09E5E5] overflow-hidden inline-flex items-center justify-center group"
+                                    href={"/contact"}
+                                    style={{ opacity: 1 }}
+                                >
+                                    <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                                    <span ref={buttonTextRef} className="relative z-10 font-medium text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center">
+                                        <span ref={buttonStaticTextRef} className="static-text font-helvetica text-2xl font-bold">Case Studies</span>
+                                        <span ref={buttonScrollingTextRef} className="scrolling-text absolute left-0">
+                                            {Array.from({ length: 20 }).map((_, i) => (
+                                                <span key={i} className="inline-block mr-8 font-helvetica text-2xl font-bold">Case Studies</span>
+                                            ))}
+                                        </span>
+                                    </span>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

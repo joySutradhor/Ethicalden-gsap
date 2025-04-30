@@ -32,7 +32,7 @@ export default function Home() {
     <section>
       <Navbar />
       <NewBanner />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <Gallery />
       <NewLattestProjects />
       <OurProducts />

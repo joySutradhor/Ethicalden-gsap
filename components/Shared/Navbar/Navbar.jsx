@@ -142,15 +142,15 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
     }, [isMenuOpen]);
 
     return (
-        <div className="lg:pb-20 overflow-hidden" style={{ backgroundColor, zIndex: 30 }}>
-            <nav className="top-0 left-0 w-full z-40 flex items-center justify-between px-6 py-6">
+        <div className="lg:pb-20 overflow-hidden px-[20px] md:px-[40px] lg:px-[50px] xl:px-[80px] 2xl:px-[95px]" style={{ backgroundColor, zIndex: 30 }}>
+            <nav className="top-0 left-0 w-full z-40 flex items-center justify-between  py-6">
                 <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
                     <a href="/">
                     <img className="w-9 md:w-12 lg:w-14 xl:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" />
                     </a>
                 </div>
 
-                <div className="hidden lg:flex items-center gap-10 font-helvetica text-2xl font-bold relative" style={{ color: textColor }}>
+                <div className="hidden xl:flex items-center gap-10 font-helvetica text-2xl font-bold relative" style={{ color: textColor }}>
                     <a href="/about-den" className="relative group">
                         <span className="relative inline-block">
                             About Den
@@ -226,7 +226,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     </div>
                 </div>
 
-                <div className="lg:hidden">
+                <div className="xl:hidden">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="menu-toggle flex items-center gap-2"
@@ -241,7 +241,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
             {isMenuOpen && (
                 <div
                     ref={mobileMenuRef}
-                    className="lg:hidden fixed inset-0 w-full bg-gray-200 z-50 overflow-y-auto shadow-xl"
+                    className="xl:hidden fixed inset-0 w-full bg-gray-200 z-50 overflow-y-auto shadow-xl"
                     style={{ marginTop: '0' }}
                 >
                     {/* Close Button inside Mobile Menu */}
@@ -283,7 +283,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
 
                                 {/* Dropdown Items */}
                                 {subMenuOpen && (
-                                    <div className="absolute left-0 mt-2 py-2 w-auto bg-white p-5 rounded-b-lg  z-50">
+                                    <div className="block left-0 mt-2 py-2 w-auto  p-5 z-50">
                                         <a
                                             href="https://eduden.example.com"
                                             className="block px-4 py-2 relative group"
