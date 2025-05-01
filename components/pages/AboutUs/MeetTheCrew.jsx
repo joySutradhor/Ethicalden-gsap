@@ -27,17 +27,26 @@ const MeetTheCrew = () => {
     const isMobile = useIsMobile();
 
     const crewMembers = [
-        { id: 1, name: 'John Doe', profession: 'Creatives', imageUrl: '/images/about-us/crew/Andrej1.jpg' },
-        { id: 2, name: 'Jane Smith', profession: 'Creatives', imageUrl: '/images/about-us/crew/edin.jpg' },
-        { id: 3, name: 'Mike Johnson', profession: 'Developers', imageUrl: '/images/about-us/crew/k1.jpg' },
-        { id: 4, name: 'Sarah Williams', profession: 'Runners', imageUrl: '/images/about-us/crew/Petra-1.jpg' },
-        { id: 5, name: 'Tom Hardy', profession: 'Runners', imageUrl: '/images/about-us/crew/seb2.jpg' },
-        { id: 6, name: 'Lena Ray', profession: 'Runners', imageUrl: '/images/about-us/crew/Vlada-1.jpg' },
-        { id: 7, name: 'John Doe', profession: 'Creatives', imageUrl: '/images/about-us/crew/Andrej1.jpg' },
-        { id: 8, name: 'Jane Smith', profession: 'Creatives', imageUrl: '/images/about-us/crew/edin.jpg' },
-        { id: 9, name: 'Mike Johnson', profession: 'Developers', imageUrl: '/images/about-us/crew/k1.jpg' },
-        { id: 10, name: 'Sarah Williams', profession: 'Runners', imageUrl: '/images/about-us/crew/Petra-1.jpg' },
-        { id: 11, name: 'Tom Hardy', profession: 'Runners', imageUrl: '/images/about-us/crew/seb2.jpg' },
+        { id: 1, name: 'Fardeen', profession: 'Founder & CEO', imageUrl: '/images/about-us/crew/Fardeen.png' },
+        { id: 2, name: 'Arihant', profession: 'Co-Founder & CEO', imageUrl: '/images/about-us/crew/Arihant.png' },
+        { id: 3, name: 'Nazmul', profession: 'Manager', imageUrl: '/images/about-us/crew/Nazmul.png' },
+        { id: 4, name: 'Ayusi', profession: 'Content Executive', imageUrl: '/images/about-us/crew/Ayushi.png' },
+        { id: 5, name: 'Samrat', profession: 'Senior Software Developer', imageUrl: '/images/about-us/crew/Samrat.png' },
+        { id: 6, name: 'Khokon', profession: 'Cyber Security Expert', imageUrl: '/images/about-us/crew/khokon.jpg' },
+        { id: 7, name: 'Yathish', profession: 'Chief Data Scientist', imageUrl: '/images/about-us/crew/Yathish.jpg' },
+        { id: 8, name: 'Shad', profession: 'Graphics Designer', imageUrl: '/images/about-us/crew/shad.png' },
+        { id: 9, name: 'Alvira', profession: 'HR officer India', imageUrl: '/images/about-us/crew/Alvira.jpg' },
+        { id: 10, name: 'Shaorin', profession: 'Global HR Director', imageUrl: '/images/about-us/crew/Shaorin.jpg' },
+        { id: 11, name: 'Shagnik', profession: 'Business Development Expert', imageUrl: '/images/about-us/crew/Shagnik.jpg' },
+        { id: 12, name: 'Sushmita', profession: 'Digital Marketer', imageUrl: '/images/about-us/crew/Sushmita.jpg' },
+        { id: 13, name: 'Rafia', profession: 'Motion Graphics Designer', imageUrl: '/images/about-us/crew/Rafia.png' },
+        { id: 14, name: 'Tahamid', profession: 'Wordpress Developer', imageUrl: '/images/about-us/crew/Tahamid.jpg' },
+        { id: 15, name: 'Rakib', profession: 'Junior Frontend Developer', imageUrl: '/images/about-us/crew/Rakib.jpg' },
+        { id: 16, name: 'Jewel', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/Mafuzur.jpg' },
+        { id: 17, name: 'Joy', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/joyy.png' },
+        { id: 18, name: 'Nafijur', profession: 'junior Backend Developer', imageUrl: '/images/about-us/crew/Nafijur.jpg' },
+        { id: 19, name: 'MD. Shakil', profession: 'Senior Backend Developer', imageUrl: '/images/about-us/crew/MD. Shakil.jpg' },
+        { id: 20, name: 'Fatema', profession: 'Mobile App Developer', imageUrl: '/images/about-us/crew/Fatema.png' },
     ];
 
     const shouldShowMember = (member) => {
@@ -145,15 +154,15 @@ const MeetTheCrew = () => {
 
                             {isActive && (
                                 <div
-                                    className={`absolute bottom-0 left-0 right-0 bg-white opacity-0 group-hover:opacity-100 transition-all duration-900 z-0 ease-out ${
+                                    className={`absolute bottom-0 left-0 right-0 bg-white opacity-0 group-hover:opacity-100 transition-all  duration-900 z-0 ease-out ${
                                         isRevealed && isMobile ? 'opacity-100' : ''
                                     }`}
                                 >
-                                    <div className="flex justify-between items-center h-full px-3 py-2">
-                                        <span className="font-medium text-black text-sm md:text-lg font-helvetica">{member.name}</span>
-                                        <span className="text-gray-600 text-sm uppercase tracking-wider">
+                                    <div className=" xl:flex xl:justify-between xl:items-center h-full px-3">
+                                        <div className="font-medium text-black text-sm md:text-lg font-helvetica">{member.name}</div>
+                                        <div className="text-gray-600 text-sm uppercase tracking-wider">
                                             {member.profession}
-                                        </span>
+                                        </div>
                                     </div>
                                 </div>
                             )}
