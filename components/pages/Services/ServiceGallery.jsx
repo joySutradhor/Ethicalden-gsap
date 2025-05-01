@@ -13,7 +13,7 @@ const ServiceGallery = () => {
     const col5Ref = useRef(null);
 
     useEffect(() => {
-        if (window.innerWidth > 1200) { // ✅ Only larger than 1200px
+        if (window.innerWidth > 1200) { 
 
             const section = sectionRef.current;
 
@@ -120,7 +120,7 @@ const ServiceGallery = () => {
                     </div>
 
                     {/* Third Column */}
-                    <div ref={col3Ref} className="space-y-6 flex flex-col xl:-mb-20  lg:justify-end">
+                    <div ref={col3Ref} className="space-y-6 flex flex-col mt-2 md:mt-3 xl:mt-0 xl:-mb-20  lg:justify-end">
                         <div className=" bg-[#012d3d] text-white p-4 md:p-6 rounded-2xl w-full h-[35vh] md:h-[40vh] lg:h-[45vh]">
                             <p className="text-base md:text-xl">03 / <span className='text-gray-500'>05</span></p>
                             <h2 className="text-2xl md:text-4xl lg:text-3xl xl:text-4xl  font-bold pt-24 md:pt-24 lg:pt-20 xl:pt-28 pb-2 md:pb-5">Corporate</h2>
@@ -129,7 +129,7 @@ const ServiceGallery = () => {
                     </div>
 
                     {/* Fourth Column */}
-                    <div ref={col4Ref} className="flex flex-row gap-4 md:gap-6 lg:gap-8 mt-4 xl:mt-8 space-y-6 xl:block 2xl:block ">
+                    <div ref={col4Ref} className="flex flex-row gap-4 md:gap-6 lg:gap-8 mt-4 mt-5 lg:mt-8 xl:mt-8 space-y-6 xl:block 2xl:block ">
                         <div className="flex-1 bg-[#071f2b] text-white p-4 md:p-6 rounded-2xl w-[28vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh]">
                             <p className="text-base md:text-xl">04 / <span className='text-gray-500'>05</span></p>
                             <h3 className="text-2xl md:text-4xl lg:text-3xl font-semibold pt-12 md:pt-12 lg:pt-20 xl:pt-30 2xl:pt-38 pb-4 md:pb-5">Startups</h3>
