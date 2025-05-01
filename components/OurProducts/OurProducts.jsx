@@ -211,9 +211,32 @@ const OurProducts = () => {
                         <p className="text-gray-600 mb-6 max-w-2xl">
                             A selection of our crafted work, built from scratch by our talented in-house team.
                         </p>
-                        <button className="border border-indigo-500 text-black hover:bg-indigo-500 hover:text-white transition-all px-6 py-3 rounded-full w-fit">
-                            Case Studies
-                        </button>
+                        <Link
+                            ref={buttonRef}
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
+                            href={"/contact"}
+                            style={{ opacity: 1 }}
+                        >
+                            <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                            <span
+                                ref={buttonTextRef}
+                                className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                            >
+                                <span ref={buttonStaticTextRef} className="static-text">
+                                    Case Studies
+                                </span>
+                                <span
+                                    ref={buttonScrollingTextRef}
+                                    className="scrolling-text absolute left-0"
+                                >
+                                    {Array.from({ length: 20 }).map((_, i) => (
+                                        <span key={i} className="inline-block mr-8 font-helvetica">
+                                            Case Studies
+                                        </span>
+                                    ))}
+                                </span>
+                            </span>
+                        </Link>
                     </div>
 
                     <div className={`grid ${screenSize === "medium" ? "grid-cols-2" : "grid-cols-1"} gap-6`}>
@@ -224,7 +247,7 @@ const OurProducts = () => {
                                     w-full h-[300px] md:h-[350px]"
                             >
                                 {project.isNew && (
-                                    <span className="absolute top-4 right-4 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-medium z-20">
+                                    <span className="absolute top-4 right-4 bg-[#a8ff57] text-black px-4 py-1 rounded-full text-sm font-medium z-20">
                                         New
                                     </span>
                                 )}
@@ -249,9 +272,32 @@ const OurProducts = () => {
 
                     <div className="flex flex-col items-center justify-center py-12 mt-6">
                         <h2 className="text-3xl md:text-4xl mb-6">View More</h2>
-                        <button className="border border-indigo-500 text-black hover:bg-indigo-500 hover:text-white transition-all px-6 py-3 rounded-full">
-                            Case Studies
-                        </button>
+                        <Link
+                            ref={buttonRef}
+                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
+                            href={"/contact"}
+                            style={{ opacity: 1 }}
+                        >
+                            <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                            <span
+                                ref={buttonTextRef}
+                                className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
+                            >
+                                <span ref={buttonStaticTextRef} className="static-text">
+                                    Case Studies
+                                </span>
+                                <span
+                                    ref={buttonScrollingTextRef}
+                                    className="scrolling-text absolute left-0"
+                                >
+                                    {Array.from({ length: 20 }).map((_, i) => (
+                                        <span key={i} className="inline-block mr-8 font-helvetica">
+                                            Case Studies
+                                        </span>
+                                    ))}
+                                </span>
+                            </span>
+                        </Link>
                     </div>
                 </div>
             )}
