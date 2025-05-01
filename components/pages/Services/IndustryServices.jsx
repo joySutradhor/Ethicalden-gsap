@@ -198,36 +198,38 @@ const IndustryServices = () => {
     const titleText = "We adapt to the\nunique demands of\neach industry. ";
 
     return (
-        <div className="bg-white py-16 px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40 z-10 mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
-            <div className="max-w-6xl mx-auto">
-                {/* Title */}
-                <h2 style={{ letterSpacing: "-0.05em" }} ref={titleRef} className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-8">
-                    {splitTextIntoChars(titleText)}
-                </h2>
+        <div className="bg-white  mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
+            <div className="py-16 px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40 z-10">
+                <div className="max-w-6xl mx-auto">
+                    {/* Title */}
+                    <h2 style={{ letterSpacing: "-0.05em" }} ref={titleRef} className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-8">
+                        {splitTextIntoChars(titleText)}
+                    </h2>
 
-                <div className="flex flex-col sm:flex-row pt-8 gap-6 sm:gap-10">
-                    <div className="hidden min-[580px]:flex min-[580px]:w-1/3 justify-center items-center">
-                        <div className="" />
+                    <div className="flex flex-col sm:flex-row pt-8 gap-6 sm:gap-10">
+                        <div className="hidden min-[580px]:flex min-[580px]:w-1/3 justify-center items-center">
+                            <div className="" />
+                        </div>
+
+                        <div className="w-full sm:w-2/3">
+                            {paragraphs.map((text, index) => (
+                                <p
+                                    key={index}
+                                    className="font-helvetica text-xl md:text-2xl text-black pb-4 leading-relaxed reveal-paragraph"
+                                    ref={(el) => {
+                                        if (el && !wordRefs.current.includes(el)) {
+                                            wordRefs.current.push(el);
+                                        }
+                                    }}
+                                >
+                                    {splitTextIntoWords(text, index)}
+                                </p>
+                            ))}
+
+                        </div>
                     </div>
 
-                    <div className="w-full sm:w-2/3">
-                        {paragraphs.map((text, index) => (
-                            <p
-                                key={index}
-                                className="font-helvetica text-xl md:text-2xl text-black pb-4 leading-relaxed reveal-paragraph"
-                                ref={(el) => {
-                                    if (el && !wordRefs.current.includes(el)) {
-                                        wordRefs.current.push(el);
-                                    }
-                                }}
-                            >
-                                {splitTextIntoWords(text, index)}
-                            </p>
-                        ))}
-
-                    </div>
                 </div>
-
             </div>
             <ServiceGallery />
             <div className="mt-6 sm:mt-8 relative flex justify-center">

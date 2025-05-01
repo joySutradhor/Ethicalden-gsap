@@ -46,9 +46,9 @@ const OurProcess = () => {
 
       gsap.fromTo(
         charRefs.current,
-        { color: 'gray' },
+        { color: 'white' },
         {
-          color: 'white',
+          color: 'gray',
           stagger: { from: 'random', each: 0.05 },
           ease: 'power2.out',
           scrollTrigger: {
@@ -156,7 +156,7 @@ const OurProcess = () => {
 
   return (
     <div className="relative mt-40 lg:mt-70 px-5 md:px-10 lg:px-10 xl:max-w-screen-xl xl:mx-auto min-h-screen">
-      <div ref={processRef} className="flex flex-col justify-center items-center my-20 z-0">
+      <div ref={processRef} className="flex flex-col justify-center items-center  z-0">
         <p className="bg-cyan-900 p-9 h-20 w-20 flex justify-center items-center text-gray-200 border border-cyan-300 rounded-full overflow-hidden">
           <span
             ref={numberRef}
@@ -166,7 +166,7 @@ const OurProcess = () => {
           </span>
         </p>
         <p className="text-2xl md:text-3xl font-extrabold font-helvetica leading-[1] text-cyan-300">Our Process</p>
-        <h2 ref={titleRef} style={ { letterSpacing: "-0.05em" }} className="text-5xl md:text-8xl font-helvetica font-extrabold text-gray-300"></h2>
+        <h2 ref={titleRef} style={ { letterSpacing: "-0.05em" }} className="text-5xl md:text-8xl 2xl:text-[220px] font-helvetica font-extrabold text-gray-300"></h2>
       </div>
 
       {/* 1st Process */}
