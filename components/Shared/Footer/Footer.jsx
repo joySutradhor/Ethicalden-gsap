@@ -187,7 +187,7 @@ function Footer() {
     charRefs.current = []
 
     return (
-      <section className="text-center mb-16 mt-[5vh] md:mt-[10vh] lg:mt-[20vh]">
+      <section className="text-center px-5 mb-16 mt-[5vh] md:mt-[10vh] lg:mt-[20vh]">
         <div className='flex justify-center mb-[80px]'>
           {/* Title with character spans */}
           <h1

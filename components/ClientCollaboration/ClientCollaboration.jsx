@@ -46,7 +46,7 @@ function ClientCollaboration() {
   const words = titleText.split(" ")
 
   return (
-    <section className='mb-[25vh]  px-5 mt-[5vh] md:mt-[10vh] lg:mt-[10vh]'>
+    <section className='  px-5 mt-[5vh] md:mt-[10vh] lg:mt-[10vh]'>
       <div className='flex justify-center mb-[80px]'>
         {/* Title with character spans */}
         <h1

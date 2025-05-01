@@ -15,9 +15,9 @@ const OurProducts = () => {
     useEffect(() => {
         const checkScreenSize = () => {
             const width = window.innerWidth;
-            if (width <= 768) {
+            if (width <= 575) {
                 setScreenSize("small");
-            } else if (width > 768 && width <= 1024) {
+            } else if (width > 575 && width <= 1024) {
                 setScreenSize("medium");
             } else {
                 setScreenSize("large");
@@ -48,7 +48,7 @@ const OurProducts = () => {
                     start: "top top",
                     end: () => `+=${scrollWidth * 0.5}`,
                     pin: true,
-                    scrub: 1.2,
+                    scrub: 1.4,
                     anticipatePin: 1,
                     markers: false,
                 },
@@ -201,7 +201,7 @@ const OurProducts = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-full overflow-hidden bg-white py-20 md:py-40 px-5 md:px-10"
+            className="relative w-full overflow-hidden bg-white pt-[60px] lg:pt-[70px] 2xl:pt-[80px] px-5 md:px-10"
         >
             {/* For small and medium screens - static layout */}
             {(screenSize === "small" || screenSize === "medium") && (
