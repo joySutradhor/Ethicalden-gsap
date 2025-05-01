@@ -135,7 +135,7 @@ function ProductsArea() {
             </div>
           </div>
 
-          <div className='h-[30vh] md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
+          <div className='h-[23vh] mt-5 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
             <video
               src='https://mater.agency/wp-content/uploads/2024/02/vogue-1.mp4'
               muted
@@ -174,7 +174,7 @@ function ProductsArea() {
 
           <div className=''>
             <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[10vh] md:mt-0'>
-              <div className='h-[30vh] md:h-[20vh] lg:h-[30vh]'>
+              <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
                 <video
                   src='https://mater.agency/wp-content/uploads/2024/03/nordeus.mp4'
                   muted
@@ -192,7 +192,7 @@ function ProductsArea() {
 
               </div>
 
-              <div className='h-[30vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[10vh]'>
+              <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh]'>
                 <video
                   src='https://mater.agency/wp-content/uploads/2024/02/green_tree.mp4'
                   muted
@@ -211,7 +211,7 @@ function ProductsArea() {
           </div>
 
           {/* third row start */}
-          <div className='-mt-[24vh] md:mt-[30vh] lg:mt-[50vh] '>
+          <div className='-mt-[10vh] md:mt-[30vh] lg:mt-[50vh] '>
             <div className='h-[40vh] md:w-[80%]'>
               <div>
                 <video
@@ -231,7 +231,7 @@ function ProductsArea() {
             </div>
           </div>
 
-          <div className='mt-[15vh] md:mt-0'>
+          <div className='mt-[20vh] md:mt-0'>
             <div>
               <video
                 src='https://mater.agency/wp-content/uploads/2024/02/honor9.mp4'
@@ -250,7 +250,7 @@ function ProductsArea() {
           </div>
 
           {/* fourth row start */}
-          <div className='md:mt-[25vh] -mt-[30vh] lg:mt-[40vh] xl:mt-[50vh]'>
+          <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
             <div>
               <Image
                 src='https://mater.agency/wp-content/uploads/2024/01/AZ-pension-fund.jpg'
@@ -269,9 +269,9 @@ function ProductsArea() {
 
             </div>
           </div>
-          <div className='mt-[5vh] md:mt-[10vh] lg:mt-[20vh] xl:mt-[30vh]'>
+          <div className='mt-[8vh] md:mt-[10vh] lg:mt-[20vh] xl:mt-[30vh]'>
             <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[20vh] md:gap-y-0'>
-              <div className='h-[30vh] md:h-[20vh] lg:h-[30vh]'>
+              <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
                 <Image
                   height={1000}
                   width={1000}
@@ -288,7 +288,7 @@ function ProductsArea() {
                 </p>
 
               </div>
-              <div className='h-[30vh] md:h-[20vh] lg:h-[30vh]'>
+              <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
                 <video
                   src='https://mater.agency/wp-content/uploads/2024/02/telenor-2.mp4'
                   muted
@@ -308,7 +308,7 @@ function ProductsArea() {
 
           {/* fifth row */}
           <div className='hidden md:block'></div>
-          <div className='-mt-[75vh] md:mt-[5vh] '>
+          <div className='-mt-[55vh] md:mt-[5vh] '>
             <div>
               <video
                 src='https://mater.agency/wp-content/uploads/2024/02/zvjerici-1.mp4'
