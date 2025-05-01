@@ -270,7 +270,7 @@ const OurProducts = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-col items-center justify-center py-12 mt-6">
+                    <div className="flex flex-col items-center justify-center py-6 lg:py-10 mb-6">
                         <h2 className="text-3xl md:text-4xl mb-6">View More</h2>
                         <Link
                             ref={buttonRef}
