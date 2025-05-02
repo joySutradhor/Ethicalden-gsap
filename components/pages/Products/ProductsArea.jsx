@@ -60,7 +60,7 @@ function ProductsArea() {
 
   return (
     <>
-      <section className=' mb-30 mt-20  lg:mt-32 md:mt-30 px-5 md:px-10 lg:px-10 xl:max-w-screen-2xl xl:mx-auto text-white'>
+      <section className=' px-[20px]  md:px-10 lg:px-[50px] xl:px-39 2xl:px-50 mt-[5vh]  py-[10vh] md:py-[10vh] lg:py-[20vh] text-white'>
         <div className='grid grid-cols-2 gap-[4vh] md:gap-x-[5vw] xl:gap-x-[7vw]'>
           {/* first row start */}
           <div className=''>
@@ -116,7 +116,7 @@ function ProductsArea() {
               </span>
             </h2>
 
-            <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[80%]'>
+            <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%]'>
               <Image
                 src='https://mater.agency/wp-content/uploads/2024/02/hns.jpg'
                 height={1000}
@@ -212,7 +212,7 @@ function ProductsArea() {
 
           {/* third row start */}
           <div className='-mt-[10vh] md:mt-[30vh] lg:mt-[50vh] '>
-            <div className='h-[40vh] md:w-[80%]'>
+            <div className='h-[40vh] md:w-[60%]'>
               <div>
                 <video
                   src='https://mater.agency/wp-content/uploads/2024/02/led_elektronika.mp4'
