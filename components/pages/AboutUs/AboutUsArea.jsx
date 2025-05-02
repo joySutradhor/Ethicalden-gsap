@@ -238,7 +238,7 @@ const AboutUsArea = () => {
 
 
   return (
-    <div className='bg-change-anim pt-20 md:pt-30 lg:pt-40 pb-40  flex items-center'>
+    <div className='bg-change-anim pt-0 md:-mt-15 lg:pt-16 xl:pt-20 pb-25  flex items-center'>
       <div className='mt-20 md:mt-40 lg:mt-30 px-5 md:px-10 lg:px-10 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto'>
         <h2
           ref={titleRef}

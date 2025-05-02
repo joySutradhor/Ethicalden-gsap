@@ -42,18 +42,19 @@ const OurProducts = () => {
         const ctx = gsap.context(() => {
             gsap.to(scrollContainer, {
                 x: () => `-${totalScroll}`,
-                ease: "none",
+                ease: "power1.inOut", 
                 scrollTrigger: {
                     trigger: section,
                     start: "top top",
                     end: () => `+=${scrollWidth * 0.5}`,
                     pin: true,
-                    scrub: 1.4,
-                    anticipatePin: 1,
+                    scrub: 2, 
+                    anticipatePin: 3,
                     markers: false,
                 },
             });
         }, sectionRef);
+        
 
         return () => ctx.revert();
     }, [screenSize]);

@@ -82,7 +82,7 @@ const MeetTheCrew = () => {
     const title = 'Meet the crew';
 
     return (
-        <section className="px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40  pt-0 md:pt-5 lg:pt-12 pb-12">
+        <section className="px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40  pt-0 md:pt-15 lg:pt-18 pb-12">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
@@ -113,7 +113,7 @@ const MeetTheCrew = () => {
                                 setActiveFilter(filter);
                                 setHoveredMember(null); 
                             }}
-                            className={`px-6 py-2 font-rota text-3xl rounded-4xl transition-colors ${
+                            className={`px-6 py-2 font-rota text-2xl md:text-3xl rounded-4xl transition-colors ${
                                 activeFilter === filter
                                     ? 'bg-[#9EFCF1] text-black'
                                     : 'bg-white text-black hover:bg-gray-100'
