@@ -4,64 +4,55 @@ function ClientsLogo () {
   const items = [
     {
       id: 1,
-      src: 'https://mater.agency/wp-content/uploads/2024/03/vogue.png',
+      src: '/images/clients-logo/1.png',
       line: 'yes'
     },
     {
       id: 2,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/unitedgroup-142x142.png',
+      src: '/images/clients-logo/2.png',
       line: 'yes'
     },
     {
       id: 3,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/erste-142x142.png',
+      src: '/images/clients-logo/3.png',
       line: 'yes'
     },
     {
       id: 4,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/a1-142x142.png',
+      src: '/images/clients-logo/4.png',
       line: 'yes'
     },
     {
       id: 5,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/asseco-142x142.png',
-      line: 'yes'
-    },
-    {
-      id: 6,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/loreal-142x142.png',
+      src: '/images/clients-logo/5.png',
       line: 'no'
     },
     {
+      id: 6,
+      src: '/images/clients-logo/6.png',
+      line: 'yes'
+    },
+    {
       id: 7,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/mtv-142x142.png',
+      src: '/images/clients-logo/7.png',
       line: 'yes'
     },
     {
       id: 8,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/nordeus-142x142.png',
+      src: '/images/clients-logo/8.png',
       line: 'yes'
     },
     {
       id: 9,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/nfinnova-142x142.png',
+      src: '/images/clients-logo/9.png',
       line: 'yes'
     },
     {
       id: 10,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/rba-142x142.png',
+      src: '/images/clients-logo/test.png',
       line: 'yes'
     },
-    {
-      id: 11,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/telemach-142x142.png',
-      line: 'yes'
-    },
-    {
-      id: 12,
-      src: 'https://mater.agency/wp-content/uploads/2024/01/telenor-142x142.png',
-      line: 'no'
-    }
+
   ];
   
 
