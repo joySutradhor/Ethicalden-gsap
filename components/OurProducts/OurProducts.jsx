@@ -202,7 +202,7 @@ const OurProducts = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-full overflow-hidden bg-white pt-[60px] lg:pt-[70px] 2xl:pt-[80px] px-5 md:px-10"
+            className="relative w-full overflow-hidden pt-[60px] lg:pt-[70px] 2xl:pt-[80px] px-5 md:px-10 xl:mb-20"
         >
             {/* For small and medium screens - static layout */}
             {(screenSize === "small" || screenSize === "medium") && (

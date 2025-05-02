@@ -11,6 +11,7 @@ import MeetTheCrew from "./MeetTheCrew";
 import Recognition from "./Recognition";
 import AwardsSection from "./AwardSection";
 import AllStoriesMain from "@/components/AllStories/AllStories";
+import OurProducts from "@/components/OurProducts/OurProducts";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,8 +97,8 @@ const AboutUsHome = () => {
             {/* award section */}
             <AwardsSection />
 
-            {/* all stories */}
-            <AllStoriesMain />
+            {/* our products*/}
+            <OurProducts />
 
             {/* footer */}
             <Footer />

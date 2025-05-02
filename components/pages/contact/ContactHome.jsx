@@ -78,7 +78,7 @@ const ContactHome = () => {
                     </p>
                 </div>
 
-                <div className='grid grid-cols-2 lg:grid-cols-3 gap-10 mt-20'>
+                <div className='grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10  mt-20'>
                     <div className='px-8 lg:px-6 xl:px-12 py-10 bg-yellow-200 rounded-2xl'>
                         <p className='text-xl '>01/ <span className='text-gray-400'>03</span></p>
                         <h3 className='font-bold text-lg md:text-2xl mt-10 font-helvetica'>I have a project in mind.</h3>

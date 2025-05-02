@@ -286,7 +286,7 @@ const ServicesArea = () => {
     const titleText = 'Skills we bring to the table';
 
     return (
-        <div className='bg-change-anim py-40 pb-40'>
+        <div className='bg-change-anim pt-20 md:pt-35 pb-40'>
             <div className='px-20 md:px-20 lg:px-30 xl:px-40 2xl:px-50 '>
                 <div className='flex flex-col items-center'>
                     <div className='grid grid-cols-1 sm:grid-cols-2  gap-80 md:gap-40 lg:gap-30 xl:gap-50  justify-center items-center w-full'>

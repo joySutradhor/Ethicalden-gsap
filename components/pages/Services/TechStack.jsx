@@ -56,7 +56,7 @@ const TechStack = () => {
     const title = 'Our Tech Stack';
 
     return (
-        <section className=" px-5 md:px-10 lg:px-15 xl:px-30 2xl:px-50 py-12">
+        <section className=" px-5 md:px-10 lg:px-15 xl:px-30 2xl:px-50 py-12 pt-20 md:pt-30 lg:mt-35 xl:pt-25">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
@@ -78,12 +78,12 @@ const TechStack = () => {
             </div>
 
             <div className="flex justify-start md:justify-center mb-12">
-                <div className="flex flex-col md:flex-row gap-4 font-helvetica font-bold">
+                <div className="flex flex-col justify-center w-full md:flex-row gap-4 font-helvetica font-bold">
                     {['All', 'Creative', 'Deliver', 'Develop'].map((filter) => (
                         <button
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
-                            className={`px-6 py-2 font-rota text-3xl rounded-4xl transition-colors ${activeFilter === filter ? 'bg-[#9EFCF1] text-black' : 'bg-white text-black hover:bg-gray-100'}`}
+                            className={`px-6 py-2 font-rota text-2xl md:text-3xl rounded-4xl transition-colors ${activeFilter === filter ? 'bg-[#9EFCF1] text-black' : 'bg-white text-black hover:bg-gray-100'}`}
                         >
                             {filter}
                         </button>

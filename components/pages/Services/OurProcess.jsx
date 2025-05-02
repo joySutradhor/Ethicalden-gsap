@@ -15,7 +15,7 @@ const OurProcess = () => {
     const element = processRef.current;
 
     const getEndValue = () => {
-      return window.innerWidth < 1220 ? '+=4100' : '+=4500';
+      return window.innerWidth < 1220 ? '+=4000' : '+=4500';
     };
 
     ScrollTrigger.create({
