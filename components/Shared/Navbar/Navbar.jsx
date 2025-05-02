@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
@@ -17,17 +17,12 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
     const [subMenuOpen, setSubMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
 
-    // function to check if a link is active
     const isActive = (href) => {
-        // Handle root path
         if (href === '/') return pathname === href;
-
-        // Handle other paths
         return pathname?.startsWith(href);
     };
 
-
-
+    // Animate text on scroll
     useEffect(() => {
         if (!charRefs.current.length) return;
         gsap.fromTo(
@@ -35,10 +30,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
             { color: 'gray' },
             {
                 color: textColor,
-                stagger: {
-                    from: 'random',
-                    each: 0.05,
-                },
+                stagger: { from: 'random', each: 0.05 },
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: titleRef.current,
@@ -50,7 +42,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
         );
     }, [textColor]);
 
-    // Button animation setup
+    // Button hover animation
     const buttonRef = useRef(null);
     const buttonTextRef = useRef(null);
     const buttonBgRef = useRef(null);
@@ -65,7 +57,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
         const scrollingText = buttonScrollingTextRef.current;
 
         gsap.set(button, { opacity: 1, y: 0 });
-        gsap.set(bg, { scaleX: 0, transformOrigin: "center center", backgroundColor: "#09e5e5" });
+        gsap.set(bg, { scaleX: 0, transformOrigin: "center", backgroundColor: "#09e5e5" });
         gsap.set(scrollingText, { opacity: 0, x: 0 });
         gsap.set(staticText, { opacity: 1 });
 
@@ -130,238 +122,165 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
         };
     }, []);
 
-    useEffect(() => {
-        if (isMenuOpen) {
-            gsap.fromTo(mobileMenuRef.current,
-                { x: '100%', opacity: 0 },
-                { x: 0, opacity: 1, duration: 0.3, ease: "power2.out" }
-            );
-        } else if (mobileMenuRef.current) {
-            gsap.to(mobileMenuRef.current, { x: '100%', opacity: 0, duration: 0.3, ease: "power2.in" });
-        }
-    }, [isMenuOpen]);
+    const handleCloseMenu = () => {
+        setIsMenuOpen(false);
+    };
 
     return (
-        <div className="lg:pb-20 overflow-hidden px-[20px] md:px-[40px] lg:px-[50px] xl:px-[80px] 2xl:px-[95px]" style={{ backgroundColor, zIndex: 30 }}>
-            <nav className="top-0 left-0 w-full z-40 flex items-center justify-between  py-6">
-                <div className="font-rota gradient tracking-wide font-helvetica font-extrabold text-4xl">
+        <div className="relative z-30 px-6 md:px-10 lg:px-12 xl:px-20" style={{ backgroundColor }}>
+            <nav className="flex items-center justify-between py-6">
+                <div className="font-bold text-4xl">
                     <a href="/">
-                        <img className="w-9 md:w-12 lg:w-14 xl:w-16 h-auto" src="/images/logo/ethicalden.png" alt="Mater Logo" />
+                        <img src="/images/logo/ethicalden.png" className="w-12 h-auto" alt="Logo" />
                     </a>
                 </div>
 
-                <div className="hidden xl:flex items-center gap-10 font-helvetica text-2xl  relative" style={{ color: textColor }}>
-                    <a href="/about-den" className="relative group">
-                        <span className="relative inline-block">
-                            About Den
-                            {isActive('/about-den') && (
-                                <span className="absolute left-0 top-1/2 w-full h-0.5 transform -translate-y-1/2 bg-current origin-left animate-strikethrough"></span>
-                            )}
-                            <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
-                        </span>
-                    </a>
-                    <a href="/services" className="relative group">
-                        <span className="relative inline-block">
-                            Services
-                            {isActive('/services') && (
-                                <span className="absolute left-0 top-1/2 w-full h-0.5 transform -translate-y-1/2 bg-current origin-left animate-strikethrough"></span>
-                            )}
-                            <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
-                        </span>
-                    </a>
-                    <a href="/products" className="relative group">
-                        <span className="relative inline-block">
-                            Products
-                            {isActive('/products') && (
-                                <span className="absolute left-0 top-1/2 w-full h-0.5 transform -translate-y-1/2 bg-current origin-left animate-strikethrough"></span>
-                            )}
-                            <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
-                        </span>
+                {/* Desktop Nav */}
+                <div className="hidden xl:flex items-center gap-10 text-2xl" style={{ color: textColor }}>
+                    <a
+                        href="/about-den"
+                        className={`relative font-medium 
+                                ${isActive('/about-den')
+                                ? 'line-through decoration-2 decoration-current pointer-events-none'
+                                : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
+                            }`}
+                    >
+                        About Den
                     </a>
 
-                    <div className="relative inline-block">
-                        <button onClick={() => setSubMenuOpen(!subMenuOpen)} className="group flex items-center">
-                            <span className="relative inline-block mr-1">
+                    <a
+                        href="/services"
+                        className={`relative font-medium 
+                                ${isActive('/services')
+                                ? 'line-through decoration-2 decoration-current pointer-events-none'
+                                : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
+                            }`}
+                    >
+                        Services
+                    </a>
+
+                    <a
+                        href="/products"
+                        className={`relative font-medium 
+                                ${isActive('/products')
+                                ? 'line-through decoration-2 decoration-current pointer-events-none'
+                                : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
+                            }`}
+                    >
+                        Products
+                    </a>
+
+
+                    <div className="relative">
+                        <button onClick={() => setSubMenuOpen(!subMenuOpen)} className="flex items-center group font-medium relative">
+                            <span className="mr-1 relative after:content-[''] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
                                 Sub brands
-                                <span className="absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: textColor }}></span>
                             </span>
-                            <HiChevronDown className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`} style={{ color: textColor }} />
+                            <HiChevronDown
+                                className={`transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`}
+                            />
                         </button>
 
                         {subMenuOpen && (
-                            <div className="absolute left-0 mt-2 py-2 w-40  z-50">
-                                <a href="https://eduden.example.com" className="block px-4 py-2 relative group" target="_blank" rel="noopener noreferrer">
-                                    <span className="relative inline-block">
-                                        Eduden
-                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                                    </span>
+                            <div className="absolute left-0 mt-2 rounded-md z-50 w-40  text-black">
+                                <a
+                                    href="https://eduden.example.com"
+                                    target="_blank"
+                                    className="block px-4 py-2 relative font-medium 
+                                            after:content-[''] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+                                >
+                                    Eduden
                                 </a>
-                                <a href="https://hivyr.example.com" className="block px-4 py-2 relative group" target="_blank" rel="noopener noreferrer">
-                                    <span className="relative inline-block">
-                                        Hivyr
-                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                                    </span>
+                                <a
+                                    href="https://hivyr.example.com"
+                                    target="_blank"
+                                    className="block px-4 py-2 relative font-medium 
+                                            after:content-[''] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+                                >
+                                    Hivyr
                                 </a>
                             </div>
                         )}
                     </div>
 
-                    <div className="">
-                        <Link
-                            ref={buttonRef}
-                            className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
-                            href={"/contact"}
-                            style={{ opacity: 1 }}
-                        >
-                            <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-                            <span
-                                ref={buttonTextRef}
-                                className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
-                            >
-                                <span ref={buttonStaticTextRef} className="static-text">
-                                    Let's Talk
-                                </span>
-                                <span
-                                    ref={buttonScrollingTextRef}
-                                    className="scrolling-text absolute left-0"
-                                >
-                                    {Array.from({ length: 20 }).map((_, i) => (
-                                        <span key={i} className="inline-block mr-8 font-helvetica">
-                                            Let's Talk
-                                        </span>
-                                    ))}
-                                </span>
+
+                    <Link
+                        ref={buttonRef}
+                        href="/contact"
+                        className="relative px-6 py-2 bg-[#a8ff57] rounded-full overflow-hidden group"
+                    >
+                        <span ref={buttonBgRef} className="absolute inset-0 z-0" />
+                        <span ref={buttonTextRef} className="relative z-10 flex items-center text-black">
+                            <span ref={buttonStaticTextRef}>Let's Talk</span>
+                            <span ref={buttonScrollingTextRef} className="absolute left-0 flex whitespace-nowrap">
+                                {Array.from({ length: 20 }).map((_, i) => (
+                                    <span key={i} className="mr-8">Let's Talk</span>
+                                ))}
                             </span>
-                        </Link>
-                    </div>
+                        </span>
+                    </Link>
                 </div>
 
-                <div className="xl:hidden">
+                {/* Mobile Toggle */}
+                <div className="xl:hidden z-50">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="menu-toggle flex items-center gap-2"
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                        className="text-4xl p-2 rounded-md focus:outline-none"
+                        aria-label="Toggle Menu"
                     >
-                        {!isMenuOpen && <HiMenu className="text-2xl" style={{ color: textColor }} />}
+                        {isMenuOpen ? <HiX /> : <HiMenu />}
                     </button>
                 </div>
             </nav>
 
             {/* Mobile Menu */}
-            {isMenuOpen && (
-                <div
-                    ref={mobileMenuRef}
-                    className="xl:hidden fixed inset-0 w-full bg-gray-200 z-50 overflow-y-auto shadow-xl"
-                    style={{ marginTop: '0' }}
-                >
-                    {/* Close Button inside Mobile Menu */}
-                    <div className="flex justify-end p-4">
-                        <button
-                            onClick={() => setIsMenuOpen(false)}
-                            aria-label="Close menu"
-                            className="text-3xl text-gray-800 hover:text-black transition-colors"
-                        >
-                            <HiX />
-                        </button>
-                    </div>
-
-                    {/* Logo */}
-                    <a href="/">
-                        <img className="w-20 md:w-24 h-auto -mt-10 md:-mt-10 pl-8 " src="/images/logo/ethicalden.png" alt="Logo" />
+            <div
+                ref={mobileMenuRef}
+                className={`fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col justify-center p-6 space-y-6 xl:hidden transition-opacity duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+            >
+                {/* Logo - Positioned a little bit down and bigger */}
+                <div className="absolute top-8 left-8 transform ">
+                    <a href="/" className="text-xl font-bold text-black">
+                        <img src="/images/logo/ethicalden.png" alt="Logo" className="h-12 w-auto" />
                     </a>
-
-                    {/* Menu Items */}
-                    <div className="flex flex-col h-full pl-16 -mt-28 px-6">
-                        <div className="flex-1 flex flex-col justify-center items-start gap-8 font-helvetica font-extrabold text-4xl md:text-5xl text-black">
-                            <a href="/about-den" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">About Den</a>
-                            <a href="/services" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Services</a>
-                            <a href="/products" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Products</a>
-                            {/* Sub brands Dropdown Button */}
-                            <div className="relative inline-block">
-                                <button
-                                    onClick={() => setSubMenuOpen(!subMenuOpen)}
-                                    className="group flex items-center"
-                                >
-                                    <span className="relative inline-block mr-1">
-                                        Sub brands
-                                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                                    </span>
-                                    <HiChevronDown
-                                        className={`inline-block transition-transform duration-300 ${subMenuOpen ? "rotate-180" : ""}`}
-                                    />
-                                </button>
-
-                                {/* Dropdown Items */}
-                                {subMenuOpen && (
-                                    <div className="block left-0 mt-2 py-2 w-auto  p-5 z-50">
-                                        <a
-                                            href="https://eduden.example.com"
-                                            className="block px-4 py-2 relative group"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <span className="relative inline-block">
-                                                Eduden
-                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                                            </span>
-                                        </a>
-                                        <a
-                                            href="https://hivyr.example.com"
-                                            className="block px-4 py-2 relative group"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <span className="relative inline-block">
-                                                Hivyr
-                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                )}
-                            </div>
-                            <a href="/contact" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-black transition-colors">Let's Talk</a>
-
-
-                        </div>
-
-
-                    </div>
                 </div>
-            )}
 
+                {/* Close Button - Positioned a little bit down and bigger */}
+                <button
+                    onClick={handleCloseMenu}
+                    className="absolute top-8 right-8 text-black text-4xl font-bold focus:outline-none"
+                    aria-label="Close Menu"
+                >
+                    <HiX />
+                </button>
 
-            {/* Add the CSS for the mobile menu */}
-            <style jsx>{`
-                /* Mobile menu overlay */
-                .mobile-menu-overlay {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    z-index: 40;
-                    opacity: 0;
-                    pointer-events: none;
-                    transition: opacity 0.3s ease;
-                }
-                
-                .mobile-menu-overlay.active {
-                    opacity: 1;
-                    pointer-events: auto;
-                }
-            `}</style>
+                {/* Centered Menu Links with left alignment */}
+                <div className="flex flex-col items-start space-y-4">
+                    <a href="/about-den" className="text-4xl font-semibold hover:underline">About Den</a>
+                    <a href="/services" className="text-4xl font-semibold hover:underline">Services</a>
+                    <a href="/products" className="text-4xl font-semibold hover:underline">Products</a>
+                    {/* Sub Brands Title */}
+                    <div className="text-4xl font-semibold hover:underline">
+                        Sub Brands
+                    </div>
 
-            <style jsx global>{`
-                @keyframes strikethrough {
-                    0% {
-                        transform: scaleX(0) translateY(-50%);
-                    }
-                    100% {
-                        transform: scaleX(1) translateY(-50%);
-                    }
-                }
-            `}</style>
+                    {/* Sub-brands (Eduden and Hivyr) with special styling */}
+                    <div className="flex flex-col items-start space-y-4 mt-2">
+                        <a href="https://eduden.example.com" target="_blank" className="text-2xl font-medium text-[#333]  hover:underline">
+                            Eduden
+                        </a>
+                        <a href="https://hivyr.example.com" target="_blank" className="text-2xl font-medium text-[#333]  hover:underline">
+                            Hivyr
+                        </a>
+                    </div>
+                    <Link
+                        href="/contact"
+                        className=" rounded-full text-[#09e5e5] text-4xl font-semibold "
+                    >
+                        Let's Talk
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 };
