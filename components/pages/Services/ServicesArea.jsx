@@ -417,7 +417,7 @@ const ServicesArea = () => {
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute -bottom-70 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-73 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[2] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -433,7 +433,7 @@ const ServicesArea = () => {
                         </div>
 
                         {/* 4th video */}
-                        <div className="mt-15 md:-mt-[110px] lg:-mt-[100px]" ref={el => videoContainerRefs.current[3] = el}>
+                        <div className="mt-20 md:-mt-[110px] lg:-mt-[100px]" ref={el => videoContainerRefs.current[3] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video4Ref}>
                                 <video
                                     src="/video/services/service4.mp4"

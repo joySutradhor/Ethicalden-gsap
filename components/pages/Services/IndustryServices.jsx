@@ -198,7 +198,7 @@ const IndustryServices = () => {
     const titleText = "We adapt to the\nunique demands of\neach industry. ";
 
     return (
-        <div className="bg-white  mt-[6vh] md:mt-[15vh] lg:mt-[20vh]">
+        <div className="bg-white  mt-[6vh] md:mt-[25vh] lg:mt-[30vh]">
             <div className="py-16 px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40 z-10">
                 <div className="max-w-6xl mx-auto">
                     {/* Title */}
