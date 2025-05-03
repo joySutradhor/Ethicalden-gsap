@@ -95,7 +95,7 @@ function NewProjects() {
           <h2
             ref={titleRef}
             className="text-left w-full max-w-2xl text-4xl md:text-6xl lg:text-7xl xl:text-7xl text-gray-400 font-helvetica font-extrabold leading-[1]"
-            style={ { letterSpacing: "-0.05em" }}
+            style={{ letterSpacing: "-0.05em" }}
           >
             {/* First Line: "Our latest" */}
             <span className="inline-block whitespace-nowrap">
@@ -146,13 +146,14 @@ function NewProjects() {
 
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
             <Image
-              src='/images/lattest-projects/proj-1.png'
+              src='https://i.ibb.co/9k6J9vgY/proj-1.png' 
               height={1000}
               width={1000}
               className='object-cover w-full h-full'
               alt='Project 1'
             />
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
+
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
               Prakrithi Study Center
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -171,7 +172,7 @@ function NewProjects() {
             loop
             className='h-full w-full object-cover'
           ></video>
-          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>Vogue Adria</h3>
+          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Vogue Adria</h3>
           <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
             site /Branding
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -183,13 +184,13 @@ function NewProjects() {
         <div className=' md:mt-[15vh] lg:mt-[25vh] '>
           <div className='h-[23vh] md:h-[50vh] lg:h-[75vh]'>
             <Image
-              src='/images/lattest-projects/proj-3.png'
+              src='https://i.ibb.co/Td3tk5f/proj-3.png'
               width={1000}
               height={1000}
               className='object-cover h-full w-full'
               alt='NetTV'
             />
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
               Marzii
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -210,7 +211,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
                 Nordeus Unleashed
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -228,7 +229,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>Green Tree Villas Website</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Green Tree Villas Website</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -249,7 +250,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}> Honor 9 – The Light Catcher</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}> Honor 9 – The Light Catcher</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -268,7 +269,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>Led Elektronika</h3>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Led Elektronika</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               site /Branding
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -281,13 +282,13 @@ function NewProjects() {
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
           <div className='h-[23vh] md:h-[50vh] lg:h-[70vh]'>
             <Image
-              src='/images/lattest-projects/proj-5.png'
+              src='https://i.ibb.co/Gvbk0Znv/proj-5.png'
               height={1000}
               width={1000}
               className='object-cover h-full w-full'
               alt='AZ Pension Fund'
             />
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
               Dream Health
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -303,11 +304,11 @@ function NewProjects() {
               <Image
                 height={1000}
                 width={1000}
-                src='/images/lattest-projects/proj-7.jpg'
+                src='https://i.ibb.co/9Hdzy63W/proj-7.jpg'
                 className='h-full w-full object-cover'
                 alt='RBA'
               />
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
                 e-laj
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -324,7 +325,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>Telenor Bank</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Telenor Bank</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -345,7 +346,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
               Journey into the world of wild animals called Zvjerići
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
