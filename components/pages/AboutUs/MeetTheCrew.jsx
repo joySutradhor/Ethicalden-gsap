@@ -93,7 +93,7 @@ const MeetTheCrew = () => {
                             key={i}
                             ref={(el) => (charRefs.current[i] = el)}
                             className={`inline-block ${char === ' ' ? 'w-2 md:w-3 ' : ''}`}
-                            style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
+                            style={char !== " " ? { letterSpacing: "-0.13em" } : {}}
                         >
                             {char}
                         </span>

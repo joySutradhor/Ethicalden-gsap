@@ -337,7 +337,7 @@ const ServicesArea = () => {
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute -bottom-38 md:-bottom-40 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-36 md:-bottom-40 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[0] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -375,7 +375,7 @@ const ServicesArea = () => {
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute -bottom-90 md:-bottom-105 lg:-bottom-94 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-80 md:-bottom-105 lg:-bottom-94 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[1] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -392,7 +392,7 @@ const ServicesArea = () => {
                         </div>
 
                         {/* 3rd video */}
-                        <div className="mt-10 md:mt-[100px] lg:mt-[100px] xl:mt-[400px]" ref={el => videoContainerRefs.current[2] = el}>
+                        <div className="mt-24 md:mt-[100px] lg:mt-[100px] xl:mt-[400px]" ref={el => videoContainerRefs.current[2] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video3Ref}>
                                 <video
                                     src="/video/services/service3.mp4"
@@ -417,7 +417,7 @@ const ServicesArea = () => {
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute -bottom-74 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-70 md:-bottom-100 lg:-bottom-80 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[2] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -433,7 +433,7 @@ const ServicesArea = () => {
                         </div>
 
                         {/* 4th video */}
-                        <div className="mt-0 md:-mt-[110px] lg:-mt-[100px]" ref={el => videoContainerRefs.current[3] = el}>
+                        <div className="mt-15 md:-mt-[110px] lg:-mt-[100px]" ref={el => videoContainerRefs.current[3] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video4Ref}>
                                 <video
                                     src="/video/services/service4.mp4"
