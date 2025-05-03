@@ -144,19 +144,19 @@ function NewProjects() {
           </h2>
 
 
-          <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%]'>
+          <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
             <Image
-              src='https://mater.agency/wp-content/uploads/2024/02/hns.jpg'
+              src='/images/lattest-projects/proj-1.png'
               height={1000}
               width={1000}
               className='object-cover w-full h-full'
               alt='Project 1'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
-              Blog image HNS
+              Prakrithi Study Center
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              site /Branding
+              Social Media Marketing
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 
@@ -180,20 +180,20 @@ function NewProjects() {
         </div>
 
         {/* second row start */}
-        <div className=' md:mt-[15vh] lg:mt-[25vh]'>
-          <div>
+        <div className=' md:mt-[15vh] lg:mt-[25vh] '>
+          <div className='h-[23vh] md:h-[50vh] lg:h-[75vh]'>
             <Image
-              src='https://mater.agency/wp-content/uploads/2024/02/NetTV.jpg'
+              src='/images/lattest-projects/proj-3.png'
               width={1000}
               height={1000}
               className='object-cover h-full w-full'
               alt='NetTV'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
-              Stream live TV plus thousands of shows with NetTVPlus
+              Marzii
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              site /Branding
+              Branding / Social Media Marketing
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 
@@ -279,19 +279,19 @@ function NewProjects() {
 
         {/* fourth row start */}
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
-          <div>
+          <div className='h-[23vh] md:h-[50vh] lg:h-[70vh]'>
             <Image
-              src='https://mater.agency/wp-content/uploads/2024/01/AZ-pension-fund.jpg'
+              src='/images/lattest-projects/proj-5.png'
               height={1000}
               width={1000}
               className='object-cover h-full w-full'
               alt='AZ Pension Fund'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
-              Rethinking the AZ Retirement Fund Mobile App
+              Dream Health
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              site /Branding
+              UI/Ux /Website Development
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 
@@ -303,15 +303,15 @@ function NewProjects() {
               <Image
                 height={1000}
                 width={1000}
-                src='https://mater.agency/wp-content/uploads/2024/03/rba.jpg'
+                src='/images/lattest-projects/proj-7.jpg'
                 className='h-full w-full object-cover'
                 alt='RBA'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
-                RBA: Evolution
+                e-laj
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                site /Branding
+                App Development
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 

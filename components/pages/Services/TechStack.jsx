@@ -66,7 +66,7 @@ const TechStack = () => {
                         <span
                             key={i}
                             ref={(el) => (charRefs.current[i] = el)}
-                            style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
+                            style={char !== " " ? { letterSpacing: "-0.12em" } : {}}
                             className={`inline-block ${char === ' ' ? 'w-2 md:w-4 lg:w-5' : ''
                                 }`}
                         >

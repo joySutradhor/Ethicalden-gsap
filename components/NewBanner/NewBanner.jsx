@@ -192,7 +192,7 @@ const NewBanner = () => {
   const titleText = "Extraordinary \nDigital Experiences";
 
   return (
-    <section className="bg-white pt-[60px] lg:pt-[0px] xl:pt-[80px] 2xl:pt-[80px] px-[20px]  md:px-10 lg:px-[50px]  xl:px-[80px] 2xl:px-[90px]">
+    <section className="bg-white pt-[60px] lg:pt-[0px] xl:pt-[80px] 2xl:pt-[110px] px-[20px]  md:px-10 lg:px-[50px]  xl:px-[80px] 2xl:px-[90px]">
       <div className="">
         <div className="mb-[60px] lg:mb-[10px]">
           <h1

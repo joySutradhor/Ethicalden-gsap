@@ -356,7 +356,7 @@ const OurProducts = () => {
                                     w-[700px] h-[450px] flex items-end justify-start p-6"
                             >
                                 {project.isNew && (
-                                    <span className="absolute top-4 right-4 bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-medium z-20">
+                                    <span className="absolute top-4 right-4 bg-[#a8ff57] text-black px-4 py-1 rounded-full text-sm font-medium z-20">
                                         New
                                     </span>
                                 )}
