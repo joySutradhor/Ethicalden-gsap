@@ -31,19 +31,19 @@ const FAQSection = () => {
             answer: (
                 <>
                     <p className="mb-3">
-                    With the paperwork signed and boring stuff agreed on, it’s time to get creative. We will assign a project lead from our side who will guide you through the process and be your point of contact for any and all questions and issues you might have.
+                        With the paperwork signed and boring stuff agreed on, it’s time to get creative. We will assign a project lead from our side who will guide you through the process and be your point of contact for any and all questions and issues you might have.
                     </p>
                     <p className="mb-3">
-                    At this point we usually set up a discovery workshop with all the shareholders so our design and development team can get a clear picture of the project, iron out all the necessary details and get all the potential roadblocks or issues out of the way.
+                        At this point we usually set up a discovery workshop with all the shareholders so our design and development team can get a clear picture of the project, iron out all the necessary details and get all the potential roadblocks or issues out of the way.
                     </p>
                     <p className="mb-3">
-                    After that it’s time to pull up our sleeves and get to work. Through design iterations and with your helpful feedback we work together towards the final product and launch. Depending on the size and structure of the project and its specific needs, we can set up weekly workshops/meetings, to discuss the work done and next steps.
+                        After that it’s time to pull up our sleeves and get to work. Through design iterations and with your helpful feedback we work together towards the final product and launch. Depending on the size and structure of the project and its specific needs, we can set up weekly workshops/meetings, to discuss the work done and next steps.
                     </p>
                     <p className="mb-3">
-                    For web and mobile projects that include front-end and back-end development, we will usually require a confirmation of design before moving to the next step.
+                        For web and mobile projects that include front-end and back-end development, we will usually require a confirmation of design before moving to the next step.
                     </p>
                     <p>
-                    Once the project is launched, we have your back. We provide support to get you through the early stages, educate your employees and, depending on the retainer contract, offer long-term maintenance support for any issues and further updates.
+                        Once the project is launched, we have your back. We provide support to get you through the early stages, educate your employees and, depending on the retainer contract, offer long-term maintenance support for any issues and further updates.
                     </p>
                 </>
             )
@@ -53,14 +53,14 @@ const FAQSection = () => {
             answer: (
                 <>
                     <p className="mb-3">
-                    No two projects are the same and cost estimates will always depend on the scale of the project and its requirements. Depending on your specific needs we offer various billing structures, such as fixed project fees or monthly retainers, and we are open to finding the best billing structure that works for you and your company.
+                        No two projects are the same and cost estimates will always depend on the scale of the project and its requirements. Depending on your specific needs we offer various billing structures, such as fixed project fees or monthly retainers, and we are open to finding the best billing structure that works for you and your company.
                     </p>
                     <p className="mb-3">
-                    Our general hourly rate is €45 and it’s mostly used for retainer purposes. A typical branding project could cost anywhere between €3.000 - €13.000, UX/UI design projects between €5.000 and €15.000, while development projects vary between €10.000 and €50.000.
+                        Our general hourly rate is €45 and it’s mostly used for retainer purposes. A typical branding project could cost anywhere between €3.000 - €13.000, UX/UI design projects between €5.000 and €15.000, while development projects vary between €10.000 and €50.000.
 
                     </p>
                     <p>
-                    The exact price of your project will usually be determined after our introductory meeting, where we will get our first proper look at its scope and requirements.
+                        The exact price of your project will usually be determined after our introductory meeting, where we will get our first proper look at its scope and requirements.
                     </p>
                 </>
             )
@@ -70,10 +70,10 @@ const FAQSection = () => {
             answer: (
                 <>
                     <p className="mb-3">
-                    We pride ourselves at being a well tuned machine, which means in most cases we can take on new projects as they come. For most projects it takes a couple of weeks from the initial contact to set up the first introductory meeting and take it from there.
+                        We pride ourselves at being a well tuned machine, which means in most cases we can take on new projects as they come. For most projects it takes a couple of weeks from the initial contact to set up the first introductory meeting and take it from there.
                     </p>
                     <p>
-                    The actual design kick-off will also depend on details outside of our influence, such as the dynamics of delivering all necessary documentation, specifications and brand materials from the client’s side.
+                        The actual design kick-off will also depend on details outside of our influence, such as the dynamics of delivering all necessary documentation, specifications and brand materials from the client’s side.
                     </p>
                 </>
             )
@@ -83,10 +83,10 @@ const FAQSection = () => {
             answer: (
                 <>
                     <p className="mb-3">
-                    When it comes to UX/UI design, our primary tool of choice for all wireframing, design and prototyping purposes is Figma. For all other design purposes (print design, branding, video production etc.) we rely on the proven set of Adobe Creative Cloud tools.
+                        When it comes to UX/UI design, our primary tool of choice for all wireframing, design and prototyping purposes is Figma. For all other design purposes (print design, branding, video production etc.) we rely on the proven set of Adobe Creative Cloud tools.
                     </p>
                     <p>
-                    Our development tech stack supports a wide variety of tools and technologies which can adapt to any industry and all project sizes. You can find more details on our Services page.
+                        Our development tech stack supports a wide variety of tools and technologies which can adapt to any industry and all project sizes. You can find more details on our Services page.
                     </p>
                 </>
             )
@@ -96,10 +96,10 @@ const FAQSection = () => {
             answer: (
                 <>
                     <p className="mb-3">
-                    The delivery of the final product is the pinnacle of each project, yet the answer to this question highly depends on the type and scale of each project. While typical branding projects can take up to several weeks, a medium sized website up to five or six weeks, more extensive projects such as fintech solutions can last up to six months and more.
+                        The delivery of the final product is the pinnacle of each project, yet the answer to this question highly depends on the type and scale of each project. While typical branding projects can take up to several weeks, a medium sized website up to five or six weeks, more extensive projects such as fintech solutions can last up to six months and more.
                     </p>
                     <p>
-                    The timeline of each project (together with its cost estimate) is determined after the introductory meeting, once we have gathered enough information about the project’s scope and its base requirements.
+                        The timeline of each project (together with its cost estimate) is determined after the introductory meeting, once we have gathered enough information about the project’s scope and its base requirements.
                     </p>
                 </>
             )
@@ -108,7 +108,7 @@ const FAQSection = () => {
 
     return (
         <div className="mt-15 md:mt-18 lg:mt-24 px-5 md:px-10 lg:px-10 xl:px-20 xl:max-w-screen-2xl xl:mx-auto p-6 ">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1] xl:max-w-3xl mb-8" style={ { letterSpacing: "-0.05em" }}>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1] xl:max-w-3xl mb-8" style={{ letterSpacing: "-0.05em" }}>
                 Tackling your frequently asked <br /> questions head-on.
             </h1>
 
@@ -121,15 +121,18 @@ const FAQSection = () => {
                                 onClick={() => toggleAccordion(index)}
                             >
                                 <div className="flex items-center space-x-4" >
-                                    <h2 className="text-3xl font-extrabold font-helvetica text-gray-800" style={ { letterSpacing: "-0.05em" }}>
+                                    <h2 className="text-3xl font-extrabold font-helvetica text-gray-800" style={{ letterSpacing: "-0.05em" }}>
                                         {faq.question}
                                     </h2>
                                 </div>
-                                {activeIndex === index ? (
-                                    <FiChevronUp className="h-12 w-12 text-cyan-900 border border-cyan-900 rounded-full p-2" />
-                                ) : (
-                                    <FiChevronDown className="h-12 w-12 text-cyan-900 border border-cyan-900 rounded-full p-2" />
-                                )}
+                                <div className="flex justify-center items-center h-12 w-12 min-w-12 min-h-12 aspect-square border border-cyan-900 rounded-full text-cyan-900">
+                                    {activeIndex === index ? (
+                                        <FiChevronUp className="w-6 h-6" />
+                                    ) : (
+                                        <FiChevronDown className="w-6 h-6" />
+                                    )}
+                                </div>
+
                             </button>
 
                             <div
