@@ -42,22 +42,22 @@ const OurProducts = () => {
         const ctx = gsap.context(() => {
             gsap.to(scrollContainer, {
                 x: () => `-${totalScroll}`,
-                ease: "power1.inOut", 
+                ease: "power1.inOut",
                 scrollTrigger: {
                     trigger: section,
                     start: "top top",
                     end: () => `+=${scrollWidth * 0.5}`,
                     pin: true,
-                    scrub: 2, 
-                    anticipatePin: 3,
+                    pinSpacing: true,
+                    scrub: 0.5, 
                     markers: false,
                 },
             });
         }, sectionRef);
-        
-
+    
         return () => ctx.revert();
     }, [screenSize]);
+    
 
     // Button animation setup
     const buttonRef = useRef(null);
@@ -208,7 +208,7 @@ const OurProducts = () => {
             {(screenSize === "small" || screenSize === "medium") && (
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-12">
-                        <h1 className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-extrabold leading-[1.06] mb-4" style={{ letterSpacing: "-0.05em" }}>Work</h1>
+                        <h1 className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-extrabold leading-[1.06] mb-4" style={{ letterSpacing: "-0.05em" }}>Our Services</h1>
                         <p className="text-gray-600 mb-6 max-w-2xl">
                             A selection of our crafted work, built from scratch by our talented in-house team.
                         </p>
@@ -312,7 +312,7 @@ const OurProducts = () => {
                     {/* Left Text Section */}
                     <div className="shrink-0 w-[400px] flex flex-col justify-between h-[450px] sticky left-0 top-0">
                         <div>
-                            <h1 className="text-[60px] font-black mb-4">Work</h1>
+                            <h1 className="text-[60px] font-black mb-4">Our Services</h1>
                             <p className="text-gray-600 mb-6">
                                 A selection of our crafted work, built from scratch by our talented in-house team.
                             </p>
