@@ -250,7 +250,7 @@ const AboutUsArea = () => {
             }
 
             return (
-              <span key={wi} className="inline-block whitespace-nowrap mr-2">
+              <span key={wi} className="inline-block whitespace-nowrap mr-3 lg:mr-4 xl:mr-5">
                 {word.split('').map((char, ci) => (
                   <span
                     key={ci}

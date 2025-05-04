@@ -127,7 +127,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
     };
 
     return (
-        <div className="relative z-30 px-6 md:px-10 lg:px-12 xl:px-20" style={{ backgroundColor }}>
+        <div className="relative z-30 px-6 md:px-10 lg:px-12 xl:px-20 pt-5" style={{ backgroundColor }}>
             <nav className="flex items-center justify-between py-6">
                 <div className="font-bold text-4xl">
                     <a href="/">
@@ -136,7 +136,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                 </div>
 
                 {/* Desktop Nav */}
-                <div className="hidden xl:flex items-center gap-10 text-2xl" style={{ color: textColor }}>
+                <div className="hidden xl:flex items-center gap-10 text-[20px]" style={{ color: textColor }}>
                     <a
                         href="/about-den"
                         className={`relative font-medium 
@@ -146,6 +146,12 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                             }`}
                     >
                         About Den
+                    </a>
+                    <a
+                        href="https://www.behance.net/Realethicalden" target="_blank"
+                        className='after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
+                    >
+                        Our Works
                     </a>
 
                     <a
@@ -210,9 +216,9 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                         className="relative px-6 py-2 bg-[#a8ff57] rounded-full overflow-hidden group"
                     >
                         <span ref={buttonBgRef} className="absolute inset-0 z-0" />
-                        <span ref={buttonTextRef} className="relative z-10 flex items-center text-black">
+                        <span ref={buttonTextRef} className="relative text-[20px] z-10 flex items-center text-black">
                             <span ref={buttonStaticTextRef}>Let's Talk</span>
-                            <span ref={buttonScrollingTextRef} className="absolute left-0 flex whitespace-nowrap">
+                            <span ref={buttonScrollingTextRef} className="absolute left-0 text-[20px] flex whitespace-nowrap">
                                 {Array.from({ length: 20 }).map((_, i) => (
                                     <span key={i} className="mr-8">Let's Talk</span>
                                 ))}

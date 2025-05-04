@@ -95,7 +95,7 @@ function Footer() {
       gsap.set(bg, {
         scaleX: 0,
         transformOrigin: "center center",
-        backgroundColor: "#09e5e5"
+        backgroundColor: "#111"
       });
       gsap.set(scrollingText, { opacity: 0, x: 0 });
       gsap.set(staticText, { opacity: 1 });
@@ -129,7 +129,7 @@ function Footer() {
           if (!scrollTween) {
             const contentWidth = scrollingText.scrollWidth;
             const buttonWidth = button.offsetWidth;
-            const duration = contentWidth / 50; // Adjust speed here (lower number = faster)
+            const duration = contentWidth / 50; 
 
             scrollTween = gsap.to(scrollingText, {
               x: `-=${contentWidth - buttonWidth}`,
@@ -273,7 +273,7 @@ function Footer() {
       end: 'bottom top',
       onEnter: () => {
         gsap.to(document.body, {
-          backgroundColor: '#06171D',
+          backgroundColor: '#111',
           color: '#ffffff',
           duration: 0.5
         })

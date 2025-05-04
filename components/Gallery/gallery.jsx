@@ -176,9 +176,9 @@ const GalleryMain = () => {
 
                         {/* Second Column (animated up) */}
                         <div ref={col2Ref} className="space-y-6 flex flex-col mt-30 lg:mt-30 xl:mt-40 ">
-                            <div className="bg-black text-white h-[35vh] p-4 md:p-6 rounded-2xl  w-full md:h-[50vh] lg:h-[38vh] xl:h-[44vh]">
+                            <div className="bg-[#111] text-white h-[35vh] p-4 md:p-6 rounded-2xl  w-full md:h-[50vh] lg:h-[38vh] xl:h-[44vh]">
                                 <p className="text-base md:text-xl">02 / <span className='text-gray-500'>06</span></p>
-                                <h2 className="text-5xl md:text-7xl lg:text-5xl xl:text-7xl 2xl:text-9xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-2 md:pb-5">100+</h2>
+                                <h2 className="text-5xl md:text-7xl lg:text-5xl xl:text-7xl 2xl:text-9xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-2 md:pb-5">500+</h2>
                                 <p className="text-sm md:text-base">Projects complete. <a className="underline" href="#">View our work</a></p>
                             </div>
                             <div className="bg-[#a8ff57] text-black h-[35vh] md:h-[50vh] p-4 md:p-6 rounded-2xl w-full lg:h-[38vh] xl:h-[44vh]">
@@ -220,7 +220,7 @@ const GalleryMain = () => {
 
                         {/* Fourth Column (animated down) */}
                         <div ref={col4Ref} className="space-y-6 -mt-28 md:-mt-28 lg:mt-30 2xl:mt-20">
-                            <div className="bg-black text-white h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full">
+                            <div className="bg-[#111] text-white h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full">
                                 <p className="text-base md:text-xl">04 / <span className='text-gray-500'>06</span></p>
                                 <h3 className="text-xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5">Clients <br /> Satisfaction</h3>
                                 <p className="text-sm md:text-base">Satisfying the clients what they need. <a className="underline" href="#">What's our secret?</a></p>
@@ -237,7 +237,7 @@ const GalleryMain = () => {
                             <img src="/images/gallery/gallery-2.jpg" alt="Team" className="rounded-2xl w-full h-[20vh] md:h-[35vh]  lg:h-[38vh] xl:h-[44vh]" />
                             <div className="bg-[#09e5e5] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full ">
                                 <p className="text-base md:text-xl">06 / <span className='text-gray-500'>06</span></p>
-                                <h3 className="text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-7xl font-semibold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5">5 Star Reviews</h3>
+                                <h3 className="text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-semibold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5">5 Star Reviews</h3>
                                 <p className="text-sm md:text-base">Always getting 5star reviews. <a className="underline" href="#">How do we do it?</a></p>
                             </div>
                         </div>

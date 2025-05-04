@@ -192,7 +192,7 @@ const NewBanner = () => {
   const titleText = "Extraordinary \nDigital Experiences";
 
   return (
-    <section className="bg-white pt-[60px] lg:pt-[0px] xl:pt-[80px] 2xl:pt-[110px] px-[20px]  md:px-10 lg:px-[50px]  xl:px-[80px] 2xl:px-[90px]">
+    <section className="bg-white pt-[60px] md:pt-[160px] lg:pt-[150px] xl:pt-[150px] 2xl:pt-[200px] px-[20px]  md:px-10 lg:px-[50px]  xl:px-[80px] 2xl:px-[90px]">
       <div className="">
         <div className="mb-[60px] lg:mb-[10px]">
           <h1
@@ -218,7 +218,7 @@ const NewBanner = () => {
           </h1>
         </div>
 
-        <div className="xl:flex md:flex-row items-center justify-between gap-8 mt-12 md:mt-20 lg:mt-28">
+        <div className="xl:flex md:flex-row items-center justify-between gap-8 -mt-8 md:-mt-[20px] lg:mt-14 xl:mt-28">
           {/* Animated Number & Label */}
           <div ref={statsRef} className="flex-1 text-center flex gap-5 md:gap-8 items-center overflow-hidden pb-[30px]">
             <p className="text-sm md:text-2xl font-bold text-white bg-black w-10 md:w-14 h-10 md:h-14 lg:w-20 lg:h-20  flex items-center justify-center rounded-full">

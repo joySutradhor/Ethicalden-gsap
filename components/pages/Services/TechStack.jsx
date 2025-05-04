@@ -10,16 +10,11 @@ const TechStack = () => {
 
     const techs = [
         { id: 1, name: 'Adobe', profession: 'Creative', imageUrl: '/images/services/tech/service-item-acc.svg' },
-        { id: 2, name: 'Apache', profession: 'Creative', imageUrl: '/images/services/tech/service-item-apache.svg' },
-        { id: 3, name: 'AWS', profession: 'Develop', imageUrl: '/images/services/tech/service-item-aws.svg' },
-        { id: 4, name: 'Click up', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-click-up.svg' },
-        { id: 4, name: 'Cloud Flare', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-cloud-flare.svg' },
+        { id: 2, name: 'AWS', profession: 'Develop', imageUrl: '/images/services/tech/service-item-aws.svg' },
+        { id: 3, name: 'Cloud Flare', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-cloud-flare.svg' },
         { id: 4, name: 'Firebase', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-firebase.svg' },
-        { id: 4, name: 'Github', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-github.svg' },
-        { id: 1, name: 'Google Ads', profession: 'Creative', imageUrl: '/images/services/tech/service-item-google.svg' },
-        { id: 2, name: 'Adobe', profession: 'Creative', imageUrl: '/images/services/tech/service-item-acc.svg' },
-        { id: 3, name: 'Apache', profession: 'Develop', imageUrl: '/images/services/tech/service-item-apache.svg' },
-        { id: 4, name: 'Firebase', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-firebase.svg' },
+        { id: 5, name: 'Github', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-github.svg' },
+
     ];
 
     const shouldShowtech = (tech) => {

@@ -48,7 +48,7 @@ const AboutUsHome = () => {
         <div className="">
 
             {/* navbar */}
-            <Navbar backgroundColor="white" textColor="black"  />
+            <Navbar backgroundColor="white" textColor="black" />
 
 
             {/* banner */}
@@ -59,13 +59,16 @@ const AboutUsHome = () => {
                         className="text-left w-full  text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06]"
                     >
                         {"Digital agency with a human touch.".split(" ").map((word, wi) => (
-                            <span key={wi} className="whitespace-nowrap inline-block mr-2">
+                            <span
+                                key={wi}
+                                className="inline-block whitespace-nowrap mr-[0.2em] lg:mr-[0.3]" 
+                            >
                                 {word.split("").map((char, ci) => (
                                     <span
                                         key={ci}
                                         ref={(el) => (charRefs.current[wi * 100 + ci] = el)}
                                         className="inline-block"
-                                        style={char !== " " ? { letterSpacing: "-0.05em" } : {}}
+                                        style={{ letterSpacing: "-0.05em" }} 
                                     >
                                         {char}
                                     </span>

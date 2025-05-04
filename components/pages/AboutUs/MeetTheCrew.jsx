@@ -30,23 +30,20 @@ const MeetTheCrew = () => {
         { id: 1, name: 'Fardeen', profession: 'Founder & CEO', imageUrl: '/images/about-us/crew/Fardeen.png' },
         { id: 2, name: 'Arihant', profession: 'Co-Founder & CEO', imageUrl: '/images/about-us/crew/Arihant.png' },
         { id: 3, name: 'Nazmul', profession: 'Manager', imageUrl: '/images/about-us/crew/Nazmul.png' },
-        { id: 4, name: 'Ayusi', profession: 'Content Executive', imageUrl: '/images/about-us/crew/Ayushi.png' },
+        { id: 4, name: 'Ayushi', profession: 'Content Executive', imageUrl: '/images/about-us/crew/Ayushi.png' },
         { id: 5, name: 'Samrat', profession: 'Senior Software Developer', imageUrl: '/images/about-us/crew/Samrat.png' },
         { id: 6, name: 'Khokon', profession: 'Cyber Security Expert', imageUrl: '/images/about-us/crew/khokon.jpg' },
         { id: 7, name: 'Yathish', profession: 'Chief Data Scientist', imageUrl: '/images/about-us/crew/Yathish.jpg' },
         { id: 8, name: 'Shad', profession: 'Graphics Designer', imageUrl: '/images/about-us/crew/shad.png' },
         { id: 9, name: 'Alvira', profession: 'HR officer India', imageUrl: '/images/about-us/crew/Alvira.jpg' },
-        { id: 10, name: 'Shaorin', profession: 'Global HR Director', imageUrl: '/images/about-us/crew/Shaorin.jpg' },
-        { id: 11, name: 'Shagnik', profession: 'Business Development Expert', imageUrl: '/images/about-us/crew/Shagnik.jpg' },
-        { id: 12, name: 'Sushmita', profession: 'Digital Marketer', imageUrl: '/images/about-us/crew/Sushmita.jpg' },
-        { id: 13, name: 'Rafia', profession: 'Motion Graphics Designer', imageUrl: '/images/about-us/crew/Rafia.png' },
-        { id: 14, name: 'Tahamid', profession: 'Wordpress Developer', imageUrl: '/images/about-us/crew/Tahamid.jpg' },
-        { id: 15, name: 'Rakib', profession: 'Junior Frontend Developer', imageUrl: '/images/about-us/crew/Rakib.jpg' },
-        { id: 16, name: 'Jewel', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/Mafuzur.jpg' },
-        { id: 17, name: 'Joy', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/joyy.png' },
-        { id: 18, name: 'Nafijur', profession: 'junior Backend Developer', imageUrl: '/images/about-us/crew/Nafijur.jpg' },
-        { id: 19, name: 'MD. Shakil', profession: 'Senior Backend Developer', imageUrl: '/images/about-us/crew/MD. Shakil.jpg' },
-        { id: 20, name: 'Fatema', profession: 'Mobile App Developer', imageUrl: '/images/about-us/crew/Fatema.png' },
+        { id: 10, name: 'Shagnik', profession: 'Business Development Expert', imageUrl: '/images/about-us/crew/Shagnik.jpg' },
+        { id: 11, name: 'Tahamid', profession: 'Wordpress Developer', imageUrl: '/images/about-us/crew/Tahamid.jpg' },
+        { id: 12, name: 'Rakib', profession: 'Junior Frontend Developer', imageUrl: '/images/about-us/crew/Rakib.jpg' },
+        { id: 13, name: 'Jewel', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/Mafuzur.jpg' },
+        { id: 14, name: 'Joy', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/joyy.png' },
+        { id: 15, name: 'Nafijur', profession: 'junior Backend Developer', imageUrl: '/images/about-us/crew/Nafijur.jpg' },
+        { id: 16, name: 'MD. Shakil', profession: 'Senior Backend Developer', imageUrl: '/images/about-us/crew/shakil.jpg' },
+        { id: 27, name: 'Fatema', profession: 'Mobile App Developer', imageUrl: '/images/about-us/crew/Fatema.png' },
     ];
 
     const shouldShowMember = (member) => {
@@ -106,18 +103,17 @@ const MeetTheCrew = () => {
 
             <div className="md:flex text-start  md:justify-center mb-12">
                 <div className="flex flex-col md:flex-row gap-4 font-helvetica font-bold">
-                    {['All', 'Creatives', 'Developers', 'Runners'].map((filter) => (
+                    {['All', 'Creatives', 'Developers', 'Interns'].map((filter) => (
                         <button
                             key={filter}
                             onClick={() => {
                                 setActiveFilter(filter);
-                                setHoveredMember(null); 
+                                setHoveredMember(null);
                             }}
-                            className={`px-6 py-2 font-rota text-2xl md:text-3xl rounded-4xl transition-colors ${
-                                activeFilter === filter
-                                    ? 'bg-[#9EFCF1] text-black'
-                                    : 'bg-white text-black hover:bg-gray-100'
-                            }`}
+                            className={`px-6 py-2 font-rota text-2xl md:text-3xl rounded-4xl transition-colors ${activeFilter === filter
+                                ? 'bg-[#9EFCF1] text-black'
+                                : 'bg-white text-black hover:bg-gray-100'
+                                }`}
                         >
                             {filter}
                         </button>
@@ -133,34 +129,32 @@ const MeetTheCrew = () => {
                     return (
                         <div
                             key={`${member.id}-${member.imageUrl}-${index}`}
-                            className={`relative overflow-hidden rounded-lg transition-all duration-300 ease-out ${
-                                isActive ? 'grayscale-0 group' : 'grayscale pointer-events-none'
-                            }`}
-                            onClick={() => isMobile && setHoveredMember(index)}  
-                            onMouseEnter={() => !isMobile && setHoveredMember(index)} 
-                            onMouseLeave={() => !isMobile && setHoveredMember(null)} 
+                            className={`relative overflow-hidden rounded-lg transition-all duration-300 ease-out ${isActive ? 'grayscale-0 group' : 'grayscale pointer-events-none'
+                                }`}
+                            onClick={() => isMobile && setHoveredMember(index)}
+                            onMouseEnter={() => !isMobile && setHoveredMember(index)}
+                            onMouseLeave={() => !isMobile && setHoveredMember(null)}
                         >
                             <div className="relative h-60 md:h-90 lg:h-80 overflow-hidden z-10">
                                 <div
-                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-900 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-10"
+                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-900 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-7"
                                     style={{
                                         backgroundImage: `url(${member.imageUrl})`,
                                         backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
-                                        transform: isRevealed && isMobile ? 'translateY(-2.5rem)' : 'translateY(0)', 
+                                        backgroundPosition: 'top center',
+                                        transform: isRevealed && isMobile ? 'translateY(-2.5rem)' : 'translateY(0)',
                                     }}
                                 />
                             </div>
 
                             {isActive && (
                                 <div
-                                    className={`absolute bottom-0 left-0 right-0 bg-white opacity-0 group-hover:opacity-100 transition-all  duration-900 z-0 ease-out ${
-                                        isRevealed && isMobile ? 'opacity-100' : ''
-                                    }`}
+                                    className={`absolute bottom-0 left-0 right-0 bg-white opacity-0 group-hover:opacity-100 transition-all  duration-900 z-0 ease-out ${isRevealed && isMobile ? 'opacity-100' : ''
+                                        }`}
                                 >
                                     <div className=" xl:flex xl:justify-between xl:items-center h-full px-3">
                                         <div className="font-medium text-black text-sm md:text-lg font-helvetica">{member.name}</div>
-                                        <div className="text-gray-600 text-sm uppercase tracking-wider">
+                                        <div className="text-gray-700 text-[10px] md:text-sm uppercase tracking-wider">
                                             {member.profession}
                                         </div>
                                     </div>

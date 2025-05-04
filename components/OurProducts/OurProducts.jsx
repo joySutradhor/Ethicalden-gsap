@@ -32,27 +32,36 @@ const OurProducts = () => {
 
     useEffect(() => {
         if (screenSize !== "large") return;
-
+    
         const section = sectionRef.current;
         const scrollContainer = scrollContainerRef.current;
         const scrollWidth = scrollContainer.scrollWidth;
         const viewportWidth = section.offsetWidth;
         const totalScroll = scrollWidth - viewportWidth;
-
+    
         const ctx = gsap.context(() => {
-            gsap.to(scrollContainer, {
-                x: () => `-${totalScroll}`,
-                ease: "power1.inOut",
+            // Calculate the distance to scroll based on container width
+            const scrollDistance = scrollWidth - viewportWidth;
+            
+            // Create a smoother animation timeline
+            const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
                     start: "top top",
-                    end: () => `+=${scrollWidth * 0.5}`,
+                    end: () => `+=${scrollDistance + viewportWidth}`, // Add viewport width to ensure smooth end
                     pin: true,
-                    pinSpacing: true,
-                    scrub: 0.5, 
+                    scrub: 1, // Smoother scrubbing
                     markers: false,
-                },
+                    anticipatePin: 1,
+                    ease: "sine.inOut"
+                }
             });
+    
+            tl.to(scrollContainer, {
+                x: -scrollDistance,
+                ease: "none" // Use "none" for precise scrubbing control
+            });
+    
         }, sectionRef);
     
         return () => ctx.revert();

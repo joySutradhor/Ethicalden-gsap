@@ -17,7 +17,7 @@ function NewProjects() {
     bgOverlay.style.left = '0';
     bgOverlay.style.width = '100vw';
     bgOverlay.style.height = '100vh';
-    bgOverlay.style.backgroundColor = '#010101';
+    bgOverlay.style.backgroundColor = '#111';
     bgOverlay.style.zIndex = '-1';
     bgOverlay.style.opacity = '0';
     bgOverlay.style.pointerEvents = 'none';

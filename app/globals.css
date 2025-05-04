@@ -63,3 +63,12 @@ body {
 
 
 
+/* For the pinned section */
+.pinned-section {
+  will-change: transform; /* Hint to browser for better performance */
+  backface-visibility: hidden; /* Prevent flickering */
+}
+
+
+
+
