@@ -182,9 +182,9 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                         </button>
 
                         {subMenuOpen && (
-                            <div className="absolute left-0 mt-2 rounded-md z-50 w-40  text-black">
+                            <div className="absolute left-0 mt-2 rounded-md z-50 w-40 ">
                                 <a
-                                    href="https://eduden.example.com"
+                                    href="http://eduden.io/"
                                     target="_blank"
                                     className="block px-4 py-2 relative font-medium 
                                             after:content-[''] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
@@ -192,7 +192,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                                     Eduden
                                 </a>
                                 <a
-                                    href="https://hivyr.example.com"
+                                    href="http://hivyr.ai/"
                                     target="_blank"
                                     className="block px-4 py-2 relative font-medium 
                                             after:content-[''] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
