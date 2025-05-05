@@ -52,10 +52,9 @@ export default function Home() {
   }
 
   return (
-    <section>
+    <div className="">
       <Navbar />
       <NewBanner />
-      {/* <AboutUs /> */}
       <Gallery />
       <NewLattestProjects />
       <OurProducts />
@@ -76,6 +75,6 @@ export default function Home() {
           <SiWhatsapp size={28} />
         </a>
       </div>
-    </section>
+    </div>
   );
 }

@@ -48,9 +48,9 @@ const OurProducts = () => {
                 scrollTrigger: {
                     trigger: section,
                     start: "top top",
-                    end: () => `+=${scrollDistance + viewportWidth}`, // Add viewport width to ensure smooth end
+                    end: () => `+=${scrollDistance + viewportWidth}`, 
                     pin: true,
-                    scrub: 1, // Smoother scrubbing
+                    scrub: 0.01, 
                     markers: false,
                     anticipatePin: 1,
                     ease: "sine.inOut"
@@ -59,7 +59,7 @@ const OurProducts = () => {
     
             tl.to(scrollContainer, {
                 x: -scrollDistance,
-                ease: "none" // Use "none" for precise scrubbing control
+                ease: "none" 
             });
     
         }, sectionRef);
@@ -316,7 +316,7 @@ const OurProducts = () => {
             {screenSize === "large" && (
                 <div
                     ref={scrollContainerRef}
-                    className="flex items-start gap-10 px-6 md:px-16 py-12 w-max"
+                    className="flex  gap-10 px-6 md:px-16 py-12 w-max"
                 >
                     {/* Left Text Section */}
                     <div className="shrink-0 w-[400px] flex flex-col justify-between h-[450px] sticky left-0 top-0">
