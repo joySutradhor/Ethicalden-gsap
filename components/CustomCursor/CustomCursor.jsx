@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { MdOutlineArrowOutward } from 'react-icons/md';
+import { MdArrowOutward } from 'react-icons/md';
 
 const CustomCursor = () => {
   const dotRef = useRef(null);
@@ -9,6 +9,10 @@ const CustomCursor = () => {
   const mouse = useRef({ x: 0, y: 0 });
   const pos = useRef({ x: 0, y: 0 });
   const [isButtonHover, setIsButtonHover] = useState(false);
+  const observerRef = useRef(null);
+
+  const handleMouseEnter = () => setIsButtonHover(true);
+  const handleMouseLeave = () => setIsButtonHover(false);
 
   useEffect(() => {
     const dot = dotRef.current;
@@ -40,20 +44,57 @@ const CustomCursor = () => {
 
     document.addEventListener('mousemove', updateMouse);
 
-    const buttons = document.querySelectorAll('button, a, .cursor-pointer');
-    buttons.forEach((btn) => {
-      btn.addEventListener('mouseenter', () => setIsButtonHover(true));
-      btn.addEventListener('mouseleave', () => setIsButtonHover(false));
+    // Function to add event listeners to all interactive elements
+    const addEventListeners = () => {
+      const interactiveElements = document.querySelectorAll(
+        'button, a, [role="button"], .cursor-pointer, [data-cursor-hover]'
+      );
+
+      interactiveElements.forEach((el) => {
+        el.addEventListener('mouseenter', handleMouseEnter);
+        el.addEventListener('mouseleave', handleMouseLeave);
+      });
+    };
+
+    // Initial setup
+    addEventListeners();
+
+    // Set up MutationObserver to watch for DOM changes
+    observerRef.current = new MutationObserver((mutations) => {
+      let needsUpdate = false;
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+          needsUpdate = true;
+        }
+      });
+      if (needsUpdate) {
+        addEventListeners();
+      }
+    });
+
+    observerRef.current.observe(document.body, {
+      childList: true,
+      subtree: true,
     });
 
     follow();
 
     return () => {
       document.removeEventListener('mousemove', updateMouse);
-      buttons.forEach((btn) => {
-        btn.removeEventListener('mouseenter', () => setIsButtonHover(true));
-        btn.removeEventListener('mouseleave', () => setIsButtonHover(false));
+      
+      // Clean up event listeners
+      const interactiveElements = document.querySelectorAll(
+        'button, a, [role="button"], .cursor-pointer, [data-cursor-hover]'
+      );
+      interactiveElements.forEach((el) => {
+        el.removeEventListener('mouseenter', handleMouseEnter);
+        el.removeEventListener('mouseleave', handleMouseLeave);
       });
+
+      // Disconnect the observer
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
     };
   }, []);
 
@@ -67,21 +108,17 @@ const CustomCursor = () => {
       ></div>
 
       {/* Dot OR Button icon */}
-      {isButtonHover ? (
-        <div
-          ref={dotRef}
-          className="pointer-events-none fixed top-0 left-0 text-lg text-white bg-[#111] px-2 py-1 rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
-          style={{ zIndex: 999999 }}
-        >
-          <MdOutlineArrowOutward />
-        </div>
-      ) : (
-        <div
-          ref={dotRef}
-          className="pointer-events-none fixed top-0 left-0 w-3 h-3 bg-[#111] rounded-full -translate-x-1/2 -translate-y-1/2"
-          style={{ zIndex: 999999 }}
-        ></div>
-      )}
+      <div
+        ref={dotRef}
+        className={`pointer-events-none fixed top-0 left-0 rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center ${
+          isButtonHover
+            ? 'text-xl text-[#111] px-1 py-1'
+            : 'w-3 h-3 bg-[#111]'
+        }`}
+        style={{ zIndex: 999999 }}
+      >
+        {isButtonHover ? <MdArrowOutward /> : null}
+      </div>
     </>
   );
 };
