@@ -29,7 +29,7 @@ const MeetTheCrew = () => {
     const crewMembers = [
         { id: 1, name: 'Fardeen', profession: 'Founder & CEO', imageUrl: '/images/about-us/crew/Fardeen.png' },
         { id: 2, name: 'Arihant', profession: 'Co-Founder & CEO', imageUrl: '/images/about-us/crew/Arihant.png' },
-        { id: 3, name: 'Nazmul', profession: 'Creative Director and Country Head', imageUrl: '/images/about-us/crew/Nazmul.png' },
+        { id: 3, name: 'Nazmul', profession: 'Creative Director \n& Country Head', imageUrl: '/images/about-us/crew/Nazmul.png' },
         { id: 4, name: 'Ayushi', profession: 'Content Executive', imageUrl: '/images/about-us/crew/Ayushi.png' },
         { id: 5, name: 'Samrat', profession: 'Senior Software Developer', imageUrl: '/images/about-us/crew/Samrat.png' },
         { id: 6, name: 'Khokon', profession: 'Cyber Security Expert', imageUrl: '/images/about-us/crew/khokon.jpg' },

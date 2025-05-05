@@ -14,6 +14,13 @@ const TechStack = () => {
         { id: 3, name: 'Cloud Flare', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-cloud-flare.svg' },
         { id: 4, name: 'Firebase', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-firebase.svg' },
         { id: 5, name: 'Github', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-github.svg' },
+        { id: 5, name: 'React JS', profession: 'Develop', imageUrl: '/images/services/tech/react-icon_svg_.webp' },
+        { id: 5, name: 'Next JS', profession: 'Develop', imageUrl: '/images/services/tech/next-js.png' },
+        { id: 5, name: 'HTML', profession: 'Develop', imageUrl: '/images/services/tech/html.png' },
+        { id: 5, name: 'CSS', profession: 'Develop', imageUrl: '/images/services/tech/CSS.png' },
+        { id: 5, name: 'React Native', profession: 'Develop', imageUrl: '/images/services/tech/react-native-1.png' },
+        { id: 5, name: 'Python', profession: 'Develop', imageUrl: '/images/services/tech/pythoned.png' },
+        { id: 5, name: 'DJango', profession: 'Develop', imageUrl: '/images/services/tech/django.webp' },
 
     ];
 

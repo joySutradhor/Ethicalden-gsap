@@ -369,7 +369,7 @@ const ServicesArea = () => {
                                         02 / <span className='text-gray-500'>04</span>
                                     </p>
                                     <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
-                                        Digital <br />products
+                                        Digital <br />Marketing
                                     </p>
                                 </div>
 
@@ -452,28 +452,33 @@ const ServicesArea = () => {
                                         04 / <span className='text-gray-500'>04</span>
                                     </p>
                                     <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
-                                        Performance <br />& Growth
+                                        UI/UX <br />Design
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute -bottom-38 md:-bottom-55 lg:-bottom-40 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-64 md:-bottom-100 lg:-bottom-75 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[3] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
-                                        <li>Content strategy</li>
-                                        <li>Social media</li>
-                                        <li>Measurement and reporting</li>
+                                        <li>User research & anlysis</li>
+                                        <li>Mobile UI/UX design</li>
+                                        <li>Desktop UI/UX design</li>
+                                        <li>Usability testing</li>
+                                        <li>Wireframing & prototyping</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
+
+                        
                     </div>
                 </div>
 
                 {/* button */}
-                <div className='mt-40 md:mt-50 flex justify-center'>
+                <div className='mt-55 md:mt-90 lg:mt-80 flex justify-center'>
                     <div className="relative mt-8 md:mt-3 inline-block">
                         <Link
                             ref={buttonRef}
