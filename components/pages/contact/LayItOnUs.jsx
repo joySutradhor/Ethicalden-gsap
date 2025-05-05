@@ -2,20 +2,12 @@ import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 
-const MoreAboutProject = () => {
+const LayItOnUs = () => {
     const projectAboutRef = useRef(null);
-    const budgetRef = useRef(null);
     const findUsRef = useRef(null);
-    const [budget, setBudget] = useState('');
     const [findUs, setFindUs] = useState('');
     const [privacyPolicy, setPrivacyPolicy] = useState(false);
 
-    const budgetOptions = [
-        'Under $10,000',
-        '$10,000 - $25,000',
-        '$25,000 - $50,000',
-        'Above $50,000'
-    ];
 
     const findUsOptions = [
         'word of mouth',
@@ -52,28 +44,7 @@ const MoreAboutProject = () => {
         }
     };
 
-    useEffect(() => {
-        if (budget && budgetRef.current) {
-            const placeholder = budgetRef.current.previousElementSibling;
-            gsap.to(placeholder, {
-                y: -10,
-                fontSize: '14px',
-                color: 'white',
-                duration: 0.3,
-                ease: 'power2.out'
-            });
-        }
-        if (findUs && findUsRef.current) {
-            const placeholder = findUsRef.current.previousElementSibling;
-            gsap.to(placeholder, {
-                y: -10,
-                fontSize: '14px',
-                color: 'white',
-                duration: 0.3,
-                ease: 'power2.out'
-            });
-        }
-    }, [budget, findUs]);
+
 
 
     // Button animation setup
@@ -180,62 +151,24 @@ const MoreAboutProject = () => {
 
 
     return (
-        <div className="mt-5 md:mt-15 xl:mt-20  bg-white rounded-lg">
-            <div className="mb-6 lg:flex gap-20">
+        <div className="mt-5 xl:mt-20 bg-white rounded-lg">
+            <div className="mb-6 lg:flex gap-20 ">
                 <div className="flex-1/3">
-                    <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={ { letterSpacing: "-0.05em" }}>More about your project.</h2>
+                    <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={ { letterSpacing: "-0.05em" }}>Lay it on us.</h2>
                     <p className="mt-5 mb-5 lg:mb-0 text-xl text-gray-700 font-helvetica ">
-                        Share as much details as you want and we'll take it from there.
+                    Share some more details about your business proposal or partnership idea and we’ll get back to you.
                     </p>
                 </div>
 
                 <div className="space-y-8 flex-2/3 relative">
-                    {/* Budget Field */}
-                    <div className="relative font-helvetica">
-                        <label
-                            htmlFor="budget"
-                            className={`absolute left-6 ${budget ? 'top-2 text-sm' : 'top-6 text-xl'} pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
-                        >
-                            What is your estimated budget?
-                        </label>
-                        <select
-                            ref={budgetRef}
-                            id="budget"
-                            value={budget}
-                            onChange={(e) => setBudget(e.target.value)}
-                            className="mt-1 block w-full p-6 pt-8 bg-[#111] text-white text-xl font-bold font-helvetica appearance-none"
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                            required
-                        >
-                            <option value="" disabled hidden></option>
-                            {budgetOptions.map((option, index) => (
-                                <option key={index} value={option}>
-                                    {option}
-                                </option>
-                            ))}
-                        </select>
-                        <div className="absolute right-6 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-
-                        {/* Show Selected Budget Text */}
-                        {budget && (
-                            <div className="mt-3 text-[#111] text-lg font-semibold">
-                                {budget}
-                            </div>
-                        )}
-                    </div>
-
+                    
                     {/* Project About Field */}
                     <div className="relative font-helvetica">
                         <label
                             htmlFor="projectAbout"
                             className={`absolute left-6 ${projectAboutRef.current?.value ? 'top-2 text-sm' : 'top-6 text-xl'} pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
                         >
-                            What is your project about?
+                            Tell us about your bussiness proposal
                         </label>
                         <textarea
                             ref={projectAboutRef}
@@ -336,4 +269,4 @@ const MoreAboutProject = () => {
     );
 };
 
-export default MoreAboutProject;
+export default LayItOnUs;

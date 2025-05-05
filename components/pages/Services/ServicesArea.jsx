@@ -47,7 +47,7 @@ const ServicesArea = () => {
         bgOverlay.style.left = '0';
         bgOverlay.style.width = '100vw';
         bgOverlay.style.height = '100vh';
-        bgOverlay.style.backgroundColor = '#06171D';
+        bgOverlay.style.backgroundColor = '#111';
         bgOverlay.style.zIndex = '-1';
         bgOverlay.style.opacity = '0';
         bgOverlay.style.pointerEvents = 'none';
@@ -68,7 +68,7 @@ const ServicesArea = () => {
         }).to(
             '.bg-change-anim',
             {
-                backgroundColor: '#06171D',
+                backgroundColor: '#111',
                 ease: 'none',
             },
             0
@@ -79,8 +79,8 @@ const ServicesArea = () => {
             start: 'bottom bottom',
             end: 'bottom+=1 bottom',
             onEnterBack: () => {
-                gsap.to(bgOverlay, { opacity: 1, backgroundColor: '#06171D' });
-                gsap.to('.bg-change-anim', { backgroundColor: '#06171D' });
+                gsap.to(bgOverlay, { opacity: 1, backgroundColor: '#111' });
+                gsap.to('.bg-change-anim', { backgroundColor: '#111' });
             },
             onLeave: () => {
                 gsap.to(bgOverlay, { opacity: 0, backgroundColor: 'white' });

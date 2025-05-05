@@ -95,7 +95,7 @@ function Footer() {
       gsap.set(bg, {
         scaleX: 0,
         transformOrigin: "center center",
-        backgroundColor: "#111"
+        backgroundColor: "#09e5e5"
       });
       gsap.set(scrollingText, { opacity: 0, x: 0 });
       gsap.set(staticText, { opacity: 1 });

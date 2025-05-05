@@ -1,13 +1,13 @@
 'use client'
 import Navbar from '@/components/Shared/Navbar/Navbar';
 import React, { useEffect, useRef } from 'react';
-import AboutUsVideo from '../AboutUs/AboutUsVideo';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ServicesArea from './ServicesArea';
 import Footer from '@/components/Shared/Footer/Footer';
 import IndustryServices from './IndustryServices';
 import TechStack from './TechStack';
+import ServiceVideo from './ServiceVideo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,8 +78,8 @@ const ServicesHome = () => {
             </div>
 
 
-            {/* about us video */}
-            <AboutUsVideo />
+            {/* service video */}
+            <ServiceVideo />
 
             {/* services area */}
             <ServicesArea />

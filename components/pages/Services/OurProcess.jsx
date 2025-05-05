@@ -157,26 +157,26 @@ const OurProcess = () => {
   return (
     <div className="relative mt-40 lg:mt-70 px-5 md:px-10 lg:px-10 xl:max-w-screen-xl xl:mx-auto min-h-screen">
       <div ref={processRef} className="flex flex-col justify-center items-center  z-0">
-        <p className="bg-cyan-900 p-9 h-20 w-20 flex justify-center items-center text-gray-200 border border-cyan-300 rounded-full overflow-hidden">
+        <p className="bg-[#09e5e5] p-9 h-20 w-20 flex justify-center items-center text-gray-200 border border-[#09e5e5] rounded-full overflow-hidden">
           <span
             ref={numberRef}
-            className="text-2xl font-bold relative w-full h-full flex items-center justify-center"
+            className="text-2xl font-bold text-black relative w-full h-full flex items-center justify-center"
           >
             <span ref={numberInnerRef} className="inline-block">1</span>
           </span>
         </p>
-        <p className="text-2xl md:text-3xl font-extrabold font-helvetica leading-[1] text-cyan-300">Our Process</p>
+        <p className="text-2xl md:text-3xl font-extrabold font-helvetica leading-[1] text-[#09e5e5]">Our Process</p>
         <h2 ref={titleRef} style={ { letterSpacing: "-0.05em" }} className="text-5xl md:text-8xl 2xl:text-[220px] font-helvetica font-extrabold text-gray-300"></h2>
       </div>
 
       {/* 1st Process */}
       <div className="relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 mt-40">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-cyan-300" src="/images/services/process/services-process-1.webp" alt="" />
+          <img className="bg-[#09e5e5]" src="/images/services/process/services-process-1.webp" alt="" />
         </div>
 
         <div className="flex-1">
-          <ul className="bg-yellow-200 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
+          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Workshop sessions</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">User personas</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Sitemapping</li>
@@ -201,7 +201,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-yellow-200" src="/images/services/process/services-process-2.webp" alt="" />
+          <img className="bg-[#a8ff57]" src="/images/services/process/services-process-2.webp" alt="" />
         </div>
       </div>
 
@@ -212,7 +212,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex-1">
-          <ul className="bg-yellow-200 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
+          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Frontend development</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Backend development</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">CMS integration</li>
@@ -233,7 +233,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-yellow-200" src="/images/services/process/services-process-4.webp" alt="" />
+          <img className="bg-[#a8ff57]" src="/images/services/process/services-process-4.webp" alt="" />
         </div>
       </div>
     </div>

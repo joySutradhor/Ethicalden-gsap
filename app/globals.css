@@ -44,6 +44,10 @@ body {
   }
 }
 
+/* Hide default cursor */
+body {
+  cursor: none; 
+}
 
 
 /* floating img */

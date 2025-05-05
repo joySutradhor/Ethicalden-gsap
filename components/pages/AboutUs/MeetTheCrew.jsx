@@ -29,14 +29,14 @@ const MeetTheCrew = () => {
     const crewMembers = [
         { id: 1, name: 'Fardeen', profession: 'Founder & CEO', imageUrl: '/images/about-us/crew/Fardeen.png' },
         { id: 2, name: 'Arihant', profession: 'Co-Founder & CEO', imageUrl: '/images/about-us/crew/Arihant.png' },
-        { id: 3, name: 'Nazmul', profession: 'Manager', imageUrl: '/images/about-us/crew/Nazmul.png' },
+        { id: 3, name: 'Nazmul', profession: 'Creative Director and Country Head', imageUrl: '/images/about-us/crew/Nazmul.png' },
         { id: 4, name: 'Ayushi', profession: 'Content Executive', imageUrl: '/images/about-us/crew/Ayushi.png' },
         { id: 5, name: 'Samrat', profession: 'Senior Software Developer', imageUrl: '/images/about-us/crew/Samrat.png' },
         { id: 6, name: 'Khokon', profession: 'Cyber Security Expert', imageUrl: '/images/about-us/crew/khokon.jpg' },
         { id: 7, name: 'Yathish', profession: 'Chief Data Scientist', imageUrl: '/images/about-us/crew/Yathish.jpg' },
         { id: 8, name: 'Shad', profession: 'Graphics Designer', imageUrl: '/images/about-us/crew/shad.png' },
         { id: 9, name: 'Alvira', profession: 'HR officer India', imageUrl: '/images/about-us/crew/Alvira.jpg' },
-        { id: 10, name: 'Shagnik', profession: 'Business Development Expert', imageUrl: '/images/about-us/crew/Shagnik.jpg' },
+        { id: 10, name: 'Sagnik', profession: 'Business Development Expert', imageUrl: '/images/about-us/crew/Shagnik.jpg' },
         { id: 11, name: 'Tahamid', profession: 'Wordpress Developer', imageUrl: '/images/about-us/crew/Tahamid.jpg' },
         { id: 12, name: 'Rakib', profession: 'Junior Frontend Developer', imageUrl: '/images/about-us/crew/Rakib.jpg' },
         { id: 13, name: 'Jewel', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/Mafuzur.jpg' },
@@ -101,7 +101,7 @@ const MeetTheCrew = () => {
                 </p>
             </div>
 
-            <div className="md:flex text-start  md:justify-center mb-12">
+            {/* <div className="md:flex text-start  md:justify-center mb-12">
                 <div className="flex flex-col md:flex-row gap-4 font-helvetica font-bold">
                     {['All', 'Creatives', 'Developers', 'Interns'].map((filter) => (
                         <button
@@ -119,7 +119,7 @@ const MeetTheCrew = () => {
                         </button>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-4 xl:gap-8">
                 {crewMembers.map((member, index) => {
@@ -135,7 +135,7 @@ const MeetTheCrew = () => {
                             onMouseEnter={() => !isMobile && setHoveredMember(index)}
                             onMouseLeave={() => !isMobile && setHoveredMember(null)}
                         >
-                            <div className="relative h-60 md:h-90 lg:h-80 overflow-hidden z-10">
+                            <div className="relative h-60 md:h-90 lg:h-80 2xl:h-100 overflow-hidden z-10">
                                 <div
                                     className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-900 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-7"
                                     style={{

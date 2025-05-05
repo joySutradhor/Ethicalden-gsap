@@ -126,7 +126,7 @@ const Recognition = () => {
                             margin: 'auto auto',
                         }}
                     >
-                        <source src="https://html.hixstudio.net/videos/liko/liko.mp4" type="video/mp4" />
+                        <source src="https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/logo%202.mp4?updatedAt=1746359939690" type="video/mp4" />
                     </video>
                 </div>
             </div>

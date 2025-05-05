@@ -67,7 +67,7 @@ const AboutUsArea = () => {
     }).to(
       '.bg-change-anim',
       {
-        backgroundColor: '#06171D',
+        backgroundColor: '#111',
         ease: 'none',
       },
       0
@@ -78,8 +78,8 @@ const AboutUsArea = () => {
       start: 'bottom bottom',
       end: 'bottom+=1 bottom',
       onEnterBack: () => {
-        gsap.to(bgOverlay, { opacity: 1, backgroundColor: '#06171D' });
-        gsap.to('.bg-change-anim', { backgroundColor: '#06171D' });
+        gsap.to(bgOverlay, { opacity: 1, backgroundColor: '#111' });
+        gsap.to('.bg-change-anim', { backgroundColor: '#111' });
       },
       onLeave: () => {
         gsap.to(bgOverlay, { opacity: 0, backgroundColor: 'white' });
@@ -272,13 +272,13 @@ const AboutUsArea = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
           {/* 1st text */}
           <div>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl  text-[#9EFCF1] md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl  text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("You know what? We’re gonna tell it like it is. We’re not your typical, everyday, just another run-of the mill agency. We’re more like your digital partners in crime.", 0)}
             </p>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#9EFCF1] md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("Sure, we know our code and design like the back of our screens, but what sets us apart is the human touch we bring to the table.", 1)}
             </p>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#9EFCF1] md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("We’re not afraid to blur the lines between work and play because, let’s face it, the best ideas often emerge over a friendly banter or a pint of beer.", 2)}
             </p>
           </div>
@@ -287,7 +287,7 @@ const AboutUsArea = () => {
           {/* 1st video */}
           <div className=''>
             <video
-              src='/video/about-us/TheAgency1_2.mov'
+              src=' https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/web%20showcase.mp4?updatedAt=1746359933437'
               muted
               autoPlay
               loop
@@ -330,13 +330,13 @@ const AboutUsArea = () => {
 
           {/* 2nd text */}
           <div className=' md:-mt-70 lg:-mt-72 xl:-mt-82'>
-            <p className=' md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#9EFCF1] md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            <p className=' md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("We take our work seriously, but not ourselves, because there’s life beyond all the pixels and code.", 0)}
             </p>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#9EFCF1] md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("When you partner with us, you’re not just getting experts, you’re getting allies who know how to balance the two.", 1)}
             </p>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#9EFCF1] md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("Real connections, real results — that’s the mater way. Let’s build stuff together.", 2)}
             </p>
 

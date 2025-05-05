@@ -51,6 +51,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Urbanist } from "next/font/google"; 
 import "./globals.css";
 import SmoothScroll from "@/components/hooks/smooth-scroll";
+import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 // Define the Geist and Geist_Mono fonts
 const geistSans = Geist({
@@ -81,6 +82,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${urbanist.variable} antialiased`}
       >
+        <CustomCursor />
         <SmoothScroll />
         {children}
       </body>

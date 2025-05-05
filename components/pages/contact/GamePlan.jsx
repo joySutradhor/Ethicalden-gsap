@@ -39,9 +39,9 @@ const GamePlan = () => {
             <button
               key={index}
               onClick={() => handleToggle(service)}
-              className={`text-xl lg:text-2xl font-medium py-2 lg:py-4 px-3 lg:px-6 border border-cyan-900 mr-4 lg:mr-7 rounded-full font-helvetica transition-all duration-300 ${
+              className={`text-xl lg:text-2xl font-medium py-2 lg:py-4 px-3 lg:px-6 border border-[#111] mr-4 lg:mr-7 rounded-full font-helvetica transition-all duration-300 ${
                 selected.includes(service)
-                  ? "bg-cyan-900 text-cyan-200"
+                  ? "bg-[#111] text-white"
                   : "text-gray-700"
               }`}
             >
