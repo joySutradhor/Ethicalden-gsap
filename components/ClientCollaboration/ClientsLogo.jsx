@@ -4,52 +4,57 @@ function ClientsLogo () {
   const items = [
     {
       id: 1,
-      src: '/images/clients-logo/1.png',
+      src: '/images/clients-logo/logo/agarwall.svg',
       line: 'yes'
     },
     {
       id: 2,
-      src: '/images/clients-logo/2.png',
+      src: '/images/clients-logo/logo/brand ghar logo.svg',
       line: 'yes'
     },
     {
       id: 3,
-      src: '/images/clients-logo/3.png',
+      src: '/images/clients-logo/logo/emopract final logo.svg',
       line: 'yes'
     },
     {
       id: 4,
-      src: '/images/clients-logo/4.png',
+      src: '/images/clients-logo/logo/griham.svg',
       line: 'yes'
     },
     {
       id: 5,
-      src: '/images/clients-logo/5.png',
+      src: '/images/clients-logo/logo/Hero_MotoCorp_Logo.svg',
       line: 'no'
     },
     {
       id: 6,
-      src: '/images/clients-logo/6.png',
+      src: '/images/clients-logo/logo/massart.png',
       line: 'yes'
     },
     {
       id: 7,
-      src: '/images/clients-logo/7.png',
+      src: '/images/clients-logo/logo/riddhi siddhi.svg',
       line: 'yes'
     },
     {
       id: 8,
-      src: '/images/clients-logo/8.png',
+      src: '/images/clients-logo/logo/Siliguri_Metropolitan_Police_Logo.png',
       line: 'yes'
     },
     {
       id: 9,
-      src: '/images/clients-logo/9.png',
+      src: '/images/clients-logo/logo/smit-logo-new.svg',
       line: 'yes'
     },
     {
       id: 10,
-      src: '/images/clients-logo/test.png',
+      src: '/images/clients-logo/logo/tala pottay.png',
+      line: 'yes'
+    },
+    {
+      id: 11,
+      src: '/images/clients-logo/logo/UNESCO_logo.svg',
       line: 'yes'
     },
 

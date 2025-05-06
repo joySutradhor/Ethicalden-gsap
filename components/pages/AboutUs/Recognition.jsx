@@ -47,7 +47,7 @@ const Recognition = () => {
 
         if (wrapper && video) {
             gsap.set(video, {
-                width: '40%',
+                width: '60%',
                 margin: '0 auto',
                 transformOrigin: 'center center',
             });
@@ -80,7 +80,7 @@ const Recognition = () => {
     }, []);
 
     return (
-        <section className=" px-5 md:px-10 lg:px-20 xl:px-30 2xl:px-40 my-20 ">
+        <section className=" px-5 md:px-10 lg:px-20 xl:px-30 2xl:px-40 my-20 pt-[50px] md:pt-[100px] lg:pt-[120px] xl:pt-[150px] 2xl:pt-[190px] ">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}

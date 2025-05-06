@@ -16,6 +16,8 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [subMenuOpen, setSubMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
+    const menuItemsRef = useRef([]);
+    const menuIconRef = useRef(null);
 
     const isActive = (href) => {
         if (href === '/') return pathname === href;
@@ -122,14 +124,83 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
         };
     }, []);
 
+    // Mobile menu animations
+    useEffect(() => {
+        if (isMenuOpen) {
+            // Open menu animation
+            gsap.fromTo(mobileMenuRef.current, 
+                { y: '-100%', opacity: 0 },
+                { 
+                    y: '0%', 
+                    opacity: 1, 
+                    duration: 0.6, 
+                    ease: "power3.out" 
+                }
+            );
+            
+            // Menu items animation
+            gsap.fromTo(menuItemsRef.current,
+                { x: 100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    stagger: 0.1,
+                    ease: "back.out(1.7)",
+                    delay: 0.3
+                }
+            );
+            
+            // Menu icon animation
+            gsap.to(menuIconRef.current, {
+                rotate: 180,
+                duration: 0.4,
+                ease: "power2.inOut"
+            });
+        } else {
+            // Close menu animation
+            if (mobileMenuRef.current) {
+                gsap.to(mobileMenuRef.current, {
+                    y: '-100%',
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: "power3.in"
+                });
+            }
+            
+            // Menu icon animation
+            gsap.to(menuIconRef.current, {
+                rotate: 0,
+                duration: 0.4,
+                ease: "power2.inOut"
+            });
+        }
+    }, [isMenuOpen]);
+
     const handleCloseMenu = () => {
-        setIsMenuOpen(false);
+        // Animate menu items out first
+        gsap.to(menuItemsRef.current, {
+            x: 100,
+            opacity: 0,
+            duration: 0.3,
+            stagger: 0.05,
+            ease: "power2.in",
+            onComplete: () => {
+                setIsMenuOpen(false);
+            }
+        });
+    };
+
+    const addMenuItemToRefs = (el) => {
+        if (el && !menuItemsRef.current.includes(el)) {
+            menuItemsRef.current.push(el);
+        }
     };
 
     return (
         <div className="relative z-30 px-6 md:px-10 lg:px-12 xl:px-20 pt-5" style={{ backgroundColor }}>
             <nav className="flex items-center justify-between py-6">
-                <div className="font-bold text-4xl">
+                <div className="font-bold text-4xl z-50">
                     <a href="/">
                         <img src="/images/logo/ethicalden.png" className="w-12 h-auto" alt="Logo" />
                     </a>
@@ -230,6 +301,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                 {/* Mobile Toggle */}
                 <div className="xl:hidden z-50">
                     <button
+                        ref={menuIconRef}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="text-4xl p-2 rounded-md focus:outline-none"
                         aria-label="Toggle Menu"
@@ -242,46 +314,65 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
             {/* Mobile Menu */}
             <div
                 ref={mobileMenuRef}
-                className={`fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col justify-center p-6 space-y-6 xl:hidden transition-opacity duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                className={`fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col justify-center p-6 space-y-6 xl:hidden ${!isMenuOpen ? 'hidden' : ''}`}
+                style={{ transform: 'translateY(-100%)' }}
             >
-                {/* Logo - Positioned a little bit down and bigger */}
-                <div className="absolute top-8 left-8 transform ">
-                    <a href="/" className="text-xl font-bold text-black">
-                        <img src="/images/logo/ethicalden.png" alt="Logo" className="h-12 w-auto" />
+                
+
+                {/* Menu Links */}
+                <div className="flex flex-col items-start space-y-4 pl-6">
+                    <a 
+                        ref={addMenuItemToRefs}
+                        href="/about-den" 
+                        className="text-4xl font-semibold hover:underline opacity-0"
+                    >
+                        About Den
                     </a>
-                </div>
-
-                {/* Close Button - Positioned a little bit down and bigger */}
-                <button
-                    onClick={handleCloseMenu}
-                    className="absolute top-8 right-8 text-black text-4xl font-bold focus:outline-none"
-                    aria-label="Close Menu"
-                >
-                    <HiX />
-                </button>
-
-                {/* Centered Menu Links with left alignment */}
-                <div className="flex flex-col items-start space-y-4">
-                    <a href="/about-den" className="text-4xl font-semibold hover:underline">About Den</a>
-                    <a href="/services" className="text-4xl font-semibold hover:underline">Services</a>
-                    <a href="/products" className="text-4xl font-semibold hover:underline">Products</a>
+                    <a 
+                        ref={addMenuItemToRefs}
+                        href="/services" 
+                        className="text-4xl font-semibold hover:underline opacity-0"
+                    >
+                        Services
+                    </a>
+                    <a 
+                        ref={addMenuItemToRefs}
+                        href="/products" 
+                        className="text-4xl font-semibold hover:underline opacity-0"
+                    >
+                        Products
+                    </a>
                     {/* Sub Brands Title */}
-                    <div className="text-4xl font-semibold hover:underline">
+                    <div 
+                        ref={addMenuItemToRefs}
+                        className="text-4xl font-semibold hover:underline opacity-0"
+                    >
                         Sub Brands
                     </div>
 
-                    {/* Sub-brands (Eduden and Hivyr) with special styling */}
-                    <div className="flex flex-col items-start space-y-4 mt-2">
-                        <a href="https://eduden.example.com" target="_blank" className="text-2xl font-medium text-[#333]  hover:underline">
+                    {/* Sub-brands */}
+                    <div className="flex flex-col items-start space-y-4 mt-2 pl-4">
+                        <a 
+                            ref={addMenuItemToRefs}
+                            href="https://eduden.example.com" 
+                            target="_blank" 
+                            className="text-2xl font-medium text-[#333] hover:underline opacity-0"
+                        >
                             Eduden
                         </a>
-                        <a href="https://hivyr.example.com" target="_blank" className="text-2xl font-medium text-[#333]  hover:underline">
+                        <a 
+                            ref={addMenuItemToRefs}
+                            href="https://hivyr.example.com" 
+                            target="_blank" 
+                            className="text-2xl font-medium text-[#333] hover:underline opacity-0"
+                        >
                             Hivyr
                         </a>
                     </div>
                     <Link
+                        ref={addMenuItemToRefs}
                         href="/contact"
-                        className=" rounded-full text-[#09e5e5] text-4xl font-semibold "
+                        className="rounded-full text-[#09e5e5] text-4xl font-semibold opacity-0"
                     >
                         Let's Talk
                     </Link>

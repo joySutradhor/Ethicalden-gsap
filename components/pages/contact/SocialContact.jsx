@@ -3,7 +3,7 @@ import { FaLinkedinIn,  FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function SocialContact() {
   return (
-    <section className=" mt-15 md:mt-18 lg:mt-24   rounded-lg">
+    <section className=" pt-[100px] md:pt-[150px] lg:pt-[180px] 2xl:pt-[200px]   rounded-lg">
       <div className="">
         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1] xl:max-w-3xl" style={{ letterSpacing: "-0.05em" }}>
           It’s a nice looking web form, but

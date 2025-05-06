@@ -29,7 +29,7 @@ const MeetTheCrew = () => {
     const crewMembers = [
         { id: 1, name: 'Fardeen', profession: 'Founder & CEO', imageUrl: '/images/about-us/crew/Fardeen.png' },
         { id: 2, name: 'Arihant', profession: 'Co-Founder & CEO', imageUrl: '/images/about-us/crew/Arihant.png' },
-        { id: 3, name: 'Nazmul', profession: 'Creative Director \n& Country Head', imageUrl: '/images/about-us/crew/Nazmul.png' },
+        { id: 3, name: 'Nazmul', profession: 'Creative Director &<br/>Country Head', imageUrl: '/images/about-us/crew/Nazmul.png' },
         { id: 4, name: 'Ayushi', profession: 'Content Executive', imageUrl: '/images/about-us/crew/Ayushi.png' },
         { id: 5, name: 'Samrat', profession: 'Senior Software Developer', imageUrl: '/images/about-us/crew/Samrat.png' },
         { id: 6, name: 'Khokon', profession: 'Cyber Security Expert', imageUrl: '/images/about-us/crew/khokon.jpg' },
@@ -43,7 +43,8 @@ const MeetTheCrew = () => {
         { id: 14, name: 'Joy', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/joyy.png' },
         { id: 15, name: 'Nafijur', profession: 'junior Backend Developer', imageUrl: '/images/about-us/crew/Nafijur.jpg' },
         { id: 16, name: 'MD. Shakil', profession: 'Senior Backend Developer', imageUrl: '/images/about-us/crew/shakil.jpg' },
-        { id: 27, name: 'Fatema', profession: 'Mobile App Developer', imageUrl: '/images/about-us/crew/Fatema.png' },
+        { id: 17, name: 'Fatema', profession: 'Mobile App Developer', imageUrl: '/images/about-us/crew/Fatema.png' },
+        { id: 18, name: 'Tanisha', profession: 'Student Counsellor &<br/>Placement Executive', imageUrl: '/images/about-us/crew/Tanisha.jpg' }
     ];
 
     const shouldShowMember = (member) => {
@@ -79,7 +80,7 @@ const MeetTheCrew = () => {
     const title = 'Meet the crew';
 
     return (
-        <section className="px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40  pt-0 md:pt-15 lg:pt-18 pb-12">
+        <section className="px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40  pt-[10px] md:pt-[60px] lg:pt-[120px] xl:pt-[130px] 2xl:pt-[180px]">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
@@ -137,7 +138,7 @@ const MeetTheCrew = () => {
                         >
                             <div className="relative h-60 md:h-90 lg:h-80 2xl:h-100 overflow-hidden z-10">
                                 <div
-                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-900 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-7"
+                                    className="absolute inset-0 bg-gray-200 rounded-b-lg transition-transform duration-900 ease-[cubic-bezier(0.4, 0, 0.2, 1)] group-hover:-translate-y-10"
                                     style={{
                                         backgroundImage: `url(${member.imageUrl})`,
                                         backgroundSize: 'cover',
@@ -154,9 +155,11 @@ const MeetTheCrew = () => {
                                 >
                                     <div className=" xl:flex xl:justify-between xl:items-center h-full px-3">
                                         <div className="font-medium text-black text-sm md:text-lg font-helvetica">{member.name}</div>
-                                        <div className="text-gray-700 text-[10px] md:text-sm uppercase tracking-wider">
-                                            {member.profession}
-                                        </div>
+                                        <div
+                                            className="text-gray-700 text-[10px] md:text-sm uppercase tracking-wider"
+                                            dangerouslySetInnerHTML={{ __html: member.profession }}
+                                        ></div>
+
                                     </div>
                                 </div>
                             )}

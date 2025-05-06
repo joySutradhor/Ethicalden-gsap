@@ -180,7 +180,7 @@ const MoreAboutProject = () => {
 
 
     return (
-        <div className="mt-5 md:mt-15 xl:mt-20  bg-white rounded-lg">
+        <div className="mt-20 md:mt-25 xl:mt-20  bg-white rounded-lg">
             <div className="mb-6 lg:flex gap-20">
                 <div className="flex-1/3">
                     <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={ { letterSpacing: "-0.05em" }}>More about your project.</h2>

@@ -187,7 +187,7 @@ function Footer() {
     charRefs.current = []
 
     return (
-      <section className="text-center px-5 mb-16 mt-[15vh] md:mt-[15vh] lg:mt-[24vh]">
+      <section className="text-center px-5 mb-16 pt-[110px] md:pt-[170px] lg:pt-[200px] 2xl:pt-[250px]">
         <div className='flex justify-center mb-[80px]'>
           {/* Title with character spans */}
           <h1
@@ -216,8 +216,8 @@ function Footer() {
         </div>
 
         {/* button */}
-        <div className='mt-10 flex justify-center'>
-          <div className="relative mt-8 md:mt-3 inline-block">
+        <div className='md:mt-2  flex justify-center'>
+          <div className="relative lg:mt-8 md:mt-3 inline-block">
             <Link
               ref={buttonRef}
               className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full text-black sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"

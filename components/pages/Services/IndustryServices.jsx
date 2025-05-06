@@ -198,7 +198,7 @@ const IndustryServices = () => {
     const titleText = "We adapt to the\nunique demands of\neach industry. ";
 
     return (
-        <div className="bg-white  mt-[6vh] md:mt-[25vh] lg:mt-[30vh]">
+        <div className="bg-white  mt-[16vh] pt-[150px] md:pt-[370px] lg:pt-[360px] xl:pt-[450px] 2xl:pt-[460px] md:mt-[25vh] lg:mt-[30vh]">
             <div className="py-16 px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40 z-10">
                 <div className="max-w-6xl mx-auto">
                     {/* Title */}
@@ -232,7 +232,7 @@ const IndustryServices = () => {
                 </div>
             </div>
             <ServiceGallery />
-            <div className="mt-6 sm:mt-8 relative flex justify-center">
+            <div className=" relative flex justify-center">
                 <Link
                     ref={buttonRef}
                     className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"

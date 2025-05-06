@@ -238,7 +238,7 @@ const AboutUsArea = () => {
 
 
   return (
-    <div className='bg-change-anim pt-0 md:-mt-15 lg:pt-16 xl:pt-20 pb-25  flex items-center'>
+    <div className='bg-change-anim  md:pt-[10px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[160px] pb-25  flex items-center'>
       <div className='mt-20 md:mt-40 lg:mt-30 px-5 md:px-10 lg:px-10 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto'>
         <h2
           ref={titleRef}
@@ -287,7 +287,7 @@ const AboutUsArea = () => {
           {/* 1st video */}
           <div className=''>
             <video
-              src=' https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/web%20showcase.mp4?updatedAt=1746359933437'
+              src='https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/web%20showcase%202.mp4?updatedAt=1746359939707'
               muted
               autoPlay
               loop
@@ -320,7 +320,7 @@ const AboutUsArea = () => {
           {/* 2nd video */}
           <div className='flex justify-end -mt-35 md:mt-3 '>
             <video
-              src='/video/about-us/TheAgency1_2.mov'
+              src='https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/only%20web.mp4?updatedAt=1746359959884'
               muted
               autoPlay
               loop

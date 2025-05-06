@@ -42,7 +42,7 @@ const ContactForm = () => {
 
 
     return (
-        <div className="mt-15 md:mt-18 lg:mt-24 xl:mt-50  bg-white rounded-lg">
+        <div className="pt-[100px] md:pt-[150px] lg:pt-[180px] xl:pt-[200px] 2xl:pt-[230px]  bg-white rounded-lg">
             <div className='mb-6 lg:flex gap-20'>
                 <div className="flex-1/3">
                     <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={{ letterSpacing: "-0.05em" }}>Start with some basic info.</h2>

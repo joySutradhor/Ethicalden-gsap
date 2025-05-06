@@ -107,7 +107,7 @@ const FAQSection = () => {
     ];
 
     return (
-        <div className="mt-15 md:mt-18 lg:mt-24  ">
+        <div className="pt-[100px] md:pt-[150px] lg:pt-[180px] 2xl:pt-[200px]  ">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1] xl:max-w-3xl mb-8" style={{ letterSpacing: "-0.05em" }}>
                 Tackling your frequently asked <br /> questions head-on.
             </h1>
@@ -125,7 +125,7 @@ const FAQSection = () => {
                                         {faq.question}
                                     </h2>
                                 </div>
-                                <div className="flex justify-center items-center h-12 w-12 min-w-12 min-h-12 aspect-square border border-cyan-900 rounded-full text-cyan-900">
+                                <div className="flex justify-center items-center h-12 w-12 min-w-12 min-h-12 aspect-square border border-[#111] rounded-full text-[#111]">
                                     {activeIndex === index ? (
                                         <FiChevronUp className="w-6 h-6" />
                                     ) : (

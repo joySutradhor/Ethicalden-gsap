@@ -286,7 +286,7 @@ const ServicesArea = () => {
     const titleText = 'Skills we bring to the table';
 
     return (
-        <div className='bg-change-anim pt-20 md:pt-35 pb-40'>
+        <div className='bg-change-anim pt-[140px] md:pt-[150px] lg:pt-[160px] xl:pt-[180px] 2xl:pt-[200px]'>
             <div className='px-20 md:px-20 lg:px-30 xl:px-40 2xl:px-50 '>
                 <div className='flex flex-col items-center'>
                     <div className='grid grid-cols-1 sm:grid-cols-2  gap-80 md:gap-40 lg:gap-30 xl:gap-50  justify-center items-center w-full'>
@@ -296,7 +296,7 @@ const ServicesArea = () => {
                             className="xl:max-w-2xl 2xl:max-w-md text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl -ml-12  md:ml-0 font-extrabold mt-0 md:-mt-40 text-black font-helvetica leading-[1] w-full max-w-4xl"
                         >
                             {titleText.split(' ').map((word, wi) => (
-                                <span key={wi} className="inline-block whitespace-nowrap mr-2">
+                                <span key={wi} className="inline-block whitespace-nowrap mr-3 lg:mr-4 xl:mr-5">
                                     {word.split('').map((char, ci) => (
                                         <span
                                             key={ci}
@@ -478,7 +478,7 @@ const ServicesArea = () => {
                 </div>
 
                 {/* button */}
-                <div className='mt-55 md:mt-90 lg:mt-80 flex justify-center'>
+                <div className='mt-75 md:mt-110 lg:mt-100 flex justify-center'>
                     <div className="relative mt-8 md:mt-3 inline-block">
                         <Link
                             ref={buttonRef}

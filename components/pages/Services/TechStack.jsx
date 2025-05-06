@@ -58,7 +58,7 @@ const TechStack = () => {
     const title = 'Our Tech Stack';
 
     return (
-        <section className=" px-5 md:px-10 lg:px-15 xl:px-30 2xl:px-50 py-12 pt-20 md:pt-30 lg:mt-35 xl:pt-25">
+        <section className=" px-5 md:px-10 lg:px-15 xl:px-30 2xl:px-50 py-12 pt-[150px] md:pt-[200px] lg:pt-[230px] xl:pt-[250px] 2xl:pt-[270px]">
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}

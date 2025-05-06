@@ -173,35 +173,35 @@ const OurProducts = () => {
     const projects = [
         {
             id: 1,
-            title: "865 CyberSec",
+            title: "Branding",
             tags: ["UI/UX Design", "Baranding"],
             image: "/images/our-products/products1.jpg",
             isNew: true
         },
         {
             id: 2,
-            title: "Hurom",
+            title: "Digital Marketing",
             tags: ["UI/UX Design", "E-Commerce"],
             image: "/images/our-products/products2.jpg",
             isNew: true
         },
         {
             id: 3,
-            title: "Romans & Partners",
+            title: "SEO",
             tags: ["UI/UX Design", "Property Portal"],
             image: "/images/our-products/products3.jpg",
             isNew: true
         },
         {
             id: 4,
-            title: "Re-Core Pilates",
+            title: "UI/UX Design",
             tags: ["UI/UX Design", "Development"],
             image: "/images/our-products/products5.jpg",
             isNew: true
         },
         {
             id: 5,
-            title: "Alveena Casa",
+            title: "Web Development",
             tags: ["UI/UX Design", "E-commerce"],
             image: "/images/our-products/products6.jpg",
             isNew: true
@@ -211,7 +211,7 @@ const OurProducts = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-full overflow-hidden pt-[60px] lg:pt-[70px] 2xl:pt-[80px] px-5 md:px-10 xl:mb-20"
+            className="relative w-full overflow-hidden pt-[100px] md:pt-[120px] lg:pt-[130px] 2xl:pt-[160px] px-5 md:px-10 xl:mb-20"
         >
             {/* For small and medium screens - static layout */}
             {(screenSize === "small" || screenSize === "medium") && (
@@ -233,7 +233,7 @@ const OurProducts = () => {
                                 className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                             >
                                 <span ref={buttonStaticTextRef} className="static-text">
-                                    Case Studies
+                                    See More
                                 </span>
                                 <span
                                     ref={buttonScrollingTextRef}
@@ -241,7 +241,7 @@ const OurProducts = () => {
                                 >
                                     {Array.from({ length: 20 }).map((_, i) => (
                                         <span key={i} className="inline-block mr-8 font-helvetica">
-                                            Case Studies
+                                            See More
                                         </span>
                                     ))}
                                 </span>
@@ -256,11 +256,11 @@ const OurProducts = () => {
                                 className="relative bg-black rounded-3xl overflow-hidden 
                                     w-full h-[300px] md:h-[350px]"
                             >
-                                {project.isNew && (
+                                {/* {project.isNew && (
                                     <span className="absolute top-4 right-4 bg-[#a8ff57] text-black px-4 py-1 rounded-full text-sm font-medium z-20">
                                         New
                                     </span>
-                                )}
+                                )} */}
                                 <img
                                     src={project.image}
                                     alt={`${project.title} Preview`}
@@ -268,13 +268,13 @@ const OurProducts = () => {
                                 />
                                 <div className="relative z-20 w-full h-full flex flex-col justify-end p-6">
                                     <h3 className="text-white text-xl md:text-2xl font-bold mb-2 md:mb-4">{project.title}</h3>
-                                    <div className="flex gap-2 flex-wrap">
+                                    {/* <div className="flex gap-2 flex-wrap">
                                         {project.tags.map((tag, index) => (
                                             <span key={index} className="bg-black/60 text-white px-3 py-1 rounded-full text-xs md:text-sm">
                                                 {tag}
                                             </span>
                                         ))}
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         ))}
@@ -294,7 +294,7 @@ const OurProducts = () => {
                                 className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                             >
                                 <span ref={buttonStaticTextRef} className="static-text">
-                                    Case Studies
+                                    See More
                                 </span>
                                 <span
                                     ref={buttonScrollingTextRef}
@@ -302,7 +302,7 @@ const OurProducts = () => {
                                 >
                                     {Array.from({ length: 20 }).map((_, i) => (
                                         <span key={i} className="inline-block mr-8 font-helvetica">
-                                            Case Studies
+                                            See More
                                         </span>
                                     ))}
                                 </span>
@@ -339,7 +339,7 @@ const OurProducts = () => {
                                     className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                                 >
                                     <span ref={buttonStaticTextRef} className="static-text">
-                                        Case Studies
+                                        See More
                                     </span>
                                     <span
                                         ref={buttonScrollingTextRef}
@@ -347,7 +347,7 @@ const OurProducts = () => {
                                     >
                                         {Array.from({ length: 20 }).map((_, i) => (
                                             <span key={i} className="inline-block mr-8 font-helvetica">
-                                                Case Studies
+                                                See More
                                             </span>
                                         ))}
                                     </span>
@@ -364,11 +364,11 @@ const OurProducts = () => {
                                 className="relative bg-black rounded-3xl overflow-hidden 
                                     w-[700px] h-[450px] flex items-end justify-start p-6"
                             >
-                                {project.isNew && (
+                                {/* {project.isNew && (
                                     <span className="absolute top-4 right-4 bg-[#a8ff57] text-black px-4 py-1 rounded-full text-sm font-medium z-20">
                                         New
                                     </span>
-                                )}
+                                )} */}
                                 <img
                                     src={project.image}
                                     alt={`${project.title} Preview`}
@@ -376,13 +376,13 @@ const OurProducts = () => {
                                 />
                                 <div className="relative z-20 w-full">
                                     <h3 className="text-white text-2xl font-bold mb-4">{project.title}</h3>
-                                    <div className="flex gap-2 flex-wrap">
+                                    {/* <div className="flex gap-2 flex-wrap">
                                         {project.tags.map((tag, index) => (
                                             <span key={index} className="bg-black/60 text-white px-4 py-1 rounded-full text-sm">
                                                 {tag}
                                             </span>
                                         ))}
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         ))}
@@ -403,7 +403,7 @@ const OurProducts = () => {
                                         className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                                     >
                                         <span ref={buttonStaticTextRef} className="static-text">
-                                            Case Studies
+                                           See More
                                         </span>
                                         <span
                                             ref={buttonScrollingTextRef}
@@ -411,7 +411,7 @@ const OurProducts = () => {
                                         >
                                             {Array.from({ length: 20 }).map((_, i) => (
                                                 <span key={i} className="inline-block mr-8 font-helvetica">
-                                                    Case Studies
+                                                   See More
                                                 </span>
                                             ))}
                                         </span>
