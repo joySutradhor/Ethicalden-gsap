@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-
 function NewProjects() {
   gsap.registerPlugin(ScrollTrigger)
 
@@ -23,11 +22,14 @@ function NewProjects() {
     bgOverlay.style.pointerEvents = 'none';
     document.body.appendChild(bgOverlay);
 
+    // Get all text elements that need color change
+    const textElements = document.querySelectorAll('.bg-change-anim, .bg-change-anim *');
+
     // Main timeline for entry background change
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.bg-change-anim',
-        start: 'top 60%',
+        start: 'top 80%',
         end: 'bottom bottom',
         toggleActions: 'play none none reverse',
       }
@@ -38,16 +40,27 @@ function NewProjects() {
       ease: 'none'
     }, 0);
 
-    // Reset background when leaving section
+    // Instead of directly setting color
+tl.to(textElements, {
+  '--text-color': '#ffffff', // Set CSS variable
+  ease: 'none'
+}, 0);
+
+// And in the onLeave/onEnterBack
+gsap.to(textElements, { '--text-color': '#000000' });
+
+    // Reset background and text color when leaving section
     ScrollTrigger.create({
       trigger: '.bg-change-anim',
       start: 'bottom bottom',
       end: 'bottom+=1 bottom',
       onEnterBack: () => {
         gsap.to(bgOverlay, { opacity: 1 });
+        gsap.to(textElements, { color: '#ffffff' });
       },
       onLeave: () => {
         gsap.to(bgOverlay, { opacity: 0 });
+        gsap.to(textElements, { color: '#000000' }); // Change to black when background is white
       }
     });
 
@@ -153,7 +166,7 @@ function NewProjects() {
               alt='Project 1'
             />
 
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
               Prakrithi Study Center
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -172,7 +185,7 @@ function NewProjects() {
             loop
             className='h-full w-full object-cover'
           ></video>
-          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Vogue Adria</h3>
+          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Vogue Adria</h3>
           <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
             site /Branding
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -190,7 +203,7 @@ function NewProjects() {
               className='object-cover h-full w-full'
               alt='NetTV'
             />
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
               Marzii
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -211,7 +224,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
                 Nordeus Unleashed
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -229,7 +242,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Green Tree Villas Website</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Green Tree Villas Website</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -250,7 +263,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}> Honor 9 – The Light Catcher</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Honor 9 – The Light Catcher</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -269,7 +282,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Led Elektronika</h3>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Led Elektronika</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               site /Branding
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -288,7 +301,7 @@ function NewProjects() {
               className='object-cover h-full w-full'
               alt='AZ Pension Fund'
             />
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
               Dream Health
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -308,7 +321,7 @@ function NewProjects() {
                 className='h-full w-full object-cover'
                 alt='RBA'
               />
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
                 e-laj
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -325,7 +338,7 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Telenor Bank</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Telenor Bank</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -346,7 +359,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
               Journey into the world of wild animals called Zvjerići
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">

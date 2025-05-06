@@ -74,5 +74,14 @@ body {
 }
 
 
+.text-color-change {
+  color: var(--text-color, black); /* Default to black */
+}
+
+.text-color-change:hover {
+  color: #09e5e5 !important; /* Hover overrides everything */
+}
+
+
 
 
