@@ -63,27 +63,33 @@ function ClientsLogo () {
 
   return (
     <div className='px-5 xl:px-20 2xl:px-50'>
-      <div className='grid grid-cols-3 lg:grid-cols-6  gap-4'>
-        {items.map(item => (
-          <div
-            key={item.id}
-            className=' flex items-center rounded bg-white text-center'
-          >
-            <Image
-              width={500}
-              height={500}
-              src={item.src}
-              alt={`Item ${item.id}`}
-              unoptimized
-              className='w-[80%] h-auto mb-2 '
-            />
-            {item.line === 'yes' && (
-              <div className='h-[70px] w-[1px] bg-black/20 text-green-400 rotate-12 ml-5'></div>
-            )}
-          </div>
-        ))}
+  <div className='grid grid-cols-3 lg:grid-cols-6 gap-4'>
+    {items.map(item => (
+      <div
+        key={item.id}
+        className='flex items-center justify-center rounded bg-white p-2 h-full'
+      >
+        <div className='relative w-full aspect-square flex items-center justify-center'> {/* Fixed aspect ratio container */}
+          <Image
+            src={item.src}
+            alt={`Item ${item.id}`}
+            width={100} // Set explicit width
+            height={100} // Set explicit height
+            unoptimized
+            className='object-contain w-full h-full max-w-[80%] max-h-[80%]' // Constrained size
+            style={{
+              width: 'auto',
+              height: 'auto'
+            }}
+          />
+        </div>
+        {item.line === 'yes' && (
+          <div className='h-[70px] w-[1px] bg-black/20 rotate-12 ml-5'></div>
+        )}
       </div>
-    </div>
+    ))}
+  </div>
+</div>
   )
 }
 

@@ -287,7 +287,7 @@ const ServicesArea = () => {
 
     return (
         <div className='bg-change-anim pt-[140px] md:pt-[150px] lg:pt-[160px] xl:pt-[180px] 2xl:pt-[200px]'>
-            <div className='px-20 md:px-20 lg:px-30 xl:px-40 2xl:px-50 '>
+            <div className='px-20 md:px-25 lg:px-30 xl:px-40 2xl:px-50 '>
                 <div className='flex flex-col items-center'>
                     <div className='grid grid-cols-1 sm:grid-cols-2  gap-80 md:gap-40 lg:gap-30 xl:gap-50  justify-center items-center w-full'>
                         {/* left title */}
@@ -330,7 +330,7 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         01 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica mt-4">
                                         Strategy
                                     </p>
                                 </div>
@@ -368,7 +368,7 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         02 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-helvetica font-extrabold mt-4">
                                         Digital <br />Marketing
                                     </p>
                                 </div>
@@ -410,7 +410,7 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         03 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-helvetica font-extrabold mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-helvetica font-extrabold mt-4">
                                         Brand <br />& Identity
                                     </p>
                                 </div>
@@ -433,7 +433,7 @@ const ServicesArea = () => {
                         </div>
 
                         {/* 4th video */}
-                        <div className="mt-20 md:-mt-[110px] lg:-mt-[100px]" ref={el => videoContainerRefs.current[3] = el}>
+                        <div className="mt-20 md:-mt-[60px] lg:-mt-[80px]" ref={el => videoContainerRefs.current[3] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video4Ref}>
                                 <video
                                     src="/video/services/service4.mp4"
@@ -451,14 +451,14 @@ const ServicesArea = () => {
                                     <p className="text-xl font-bold font-ethosnova text-[#9EFCF1]">
                                         04 / <span className='text-gray-500'>04</span>
                                     </p>
-                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-6xl lg:text-6xl font-extrabold font-helvetica mt-4">
+                                    <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica mt-4">
                                         UI/UX <br />Design
                                     </p>
                                 </div>
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute -bottom-64 md:-bottom-100 lg:-bottom-75 left-0 text-white pointer-events-none'
+                                    className='absolute -bottom-64 md:-bottom-110 lg:-bottom-75 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[3] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -478,7 +478,7 @@ const ServicesArea = () => {
                 </div>
 
                 {/* button */}
-                <div className='mt-75 md:mt-110 lg:mt-100 flex justify-center'>
+                <div className='mt-75 md:mt-120 lg:mt-100 xl:mt-70 flex justify-center'>
                     <div className="relative mt-8 md:mt-3 inline-block">
                         <Link
                             ref={buttonRef}

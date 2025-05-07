@@ -85,27 +85,27 @@ const ContactHome = () => {
                 </div>
 
                 {/* Cards */}
-                <div className='grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10 mt-20'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10 mt-20'>
                     <div
-                        className={`cursor-pointer px-8 lg:px-6 xl:px-12 py-10 rounded-2xl ${selectedCard === 'project' ? 'bg-[#06caca]' : 'bg-[#09e5e5]'}`}
+                        className={`cursor-pointer px-4 py-8 md:px-8 lg:px-6 xl:px-12 md:py-10 rounded-2xl ${selectedCard === 'project' ? 'bg-[#06caca]' : 'bg-[#09e5e5]'}`}
                         onClick={() => handleCardClick('project')}
                     >
                         <p className='text-xl'>01/ <span className='text-gray-400'>03</span></p>
-                        <h3 className='font-bold text-lg md:text-2xl mt-10 font-helvetica'>I have a project in mind.</h3>
+                        <h3 className='font-bold text-xl md:text-2xl mt-10 font-helvetica'>I have a project in mind.</h3>
                     </div>
                     <div
-                        className={`cursor-pointer px-8 lg:px-6 xl:px-12 py-6 rounded-2xl ${selectedCard === 'tell' ? 'bg-[#90e344]' : 'bg-[#a8ff57]'}`}
+                        className={`cursor-pointer px-4 py-8 md:px-8 lg:px-6 xl:px-12 md:py-6 rounded-2xl ${selectedCard === 'tell' ? 'bg-[#90e344]' : 'bg-[#a8ff57]'}`}
                         onClick={() => handleCardClick('tell')}
                     >
                         <p className='text-xl text-black'>02/ <span className='text-gray-400'>03</span></p>
-                        <h3 className='font-bold text-lg md:text-2xl mt-10 font-helvetica text-black'>I have something to tell you.</h3>
+                        <h3 className='font-bold text-xl md:text-2xl mt-10 font-helvetica text-black'>I have something to tell you.</h3>
                     </div>
                     <div
-                        className={`cursor-pointer px-8 lg:px-6 xl:px-12 py-6 rounded-2xl ${selectedCard === 'business' ? 'bg-[#333]' : 'bg-[#111]'}`}
+                        className={`cursor-pointer px-4 py-8 md:px-8 lg:px-6 xl:px-12 md:py-6 rounded-2xl ${selectedCard === 'business' ? 'bg-[#333]' : 'bg-[#111]'}`}
                         onClick={() => handleCardClick('business')}
                     >
                         <p className='text-xl text-white'>03/ <span className='text-gray-400'>03</span></p>
-                        <h3 className='font-bold text-lg md:text-2xl mt-10 font-helvetica text-white'>I have a business proposal.</h3>
+                        <h3 className='font-bold text-xl md:text-2xl mt-10 font-helvetica text-white'>I have a business proposal.</h3>
                     </div>
                 </div>
 

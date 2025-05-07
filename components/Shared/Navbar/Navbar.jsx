@@ -303,10 +303,10 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     <button
                         ref={menuIconRef}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="text-4xl p-2 rounded-md focus:outline-none"
+                        className="text-4xl p-2 rounded-md focus:outline-none "
                         aria-label="Toggle Menu"
                     >
-                        {isMenuOpen ? <HiX /> : <HiMenu />}
+                        {isMenuOpen ? <HiX className="text-black"/> : <HiMenu />}
                     </button>
                 </div>
             </nav>
@@ -314,7 +314,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
             {/* Mobile Menu */}
             <div
                 ref={mobileMenuRef}
-                className={`fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col justify-center p-6 space-y-6 xl:hidden ${!isMenuOpen ? 'hidden' : ''}`}
+                className={`fixed top-0 left-0 w-full h-screen bg-white text-black z-40 flex flex-col justify-center p-6 space-y-6 xl:hidden ${!isMenuOpen ? 'hidden' : ''}`}
                 style={{ transform: 'translateY(-100%)' }}
             >
                 

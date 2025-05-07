@@ -307,7 +307,7 @@ const AboutUsArea = () => {
           </div>
 
           {/* 2nd image */}
-          <div className='-mt-10'>
+          <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2'>
             <Image
               src='https://mater.agency/wp-content/uploads/2024/05/Rectangle-16-41-524x524.jpg'
               height={1000}
