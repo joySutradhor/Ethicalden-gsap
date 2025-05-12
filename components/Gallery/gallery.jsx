@@ -13,6 +13,159 @@ const GalleryMain = () => {
   const col2Ref = useRef(null)
   const col4Ref = useRef(null)
   const col5Ref = useRef(null)
+  const imgContainerRef1 = useRef(null)
+  const imgContainerRef2 = useRef(null)
+
+  // left Images for the slideshow
+  const leftImages = [
+    '/images/gallery/g-5.jpg',
+    '/images/gallery/g-6.jpg',
+    '/images/gallery/g-7.jpg'
+  ]
+
+
+// Animation for the left image slideshow
+useEffect(() => {
+  if (!imgContainerRef1.current) return;
+
+  const imgElements = imgContainerRef1.current.querySelectorAll('img');
+  let currentIndex = 0;
+
+  // Initialize all images
+  gsap.set(imgElements, {
+    x: '0%',
+    opacity: 0,
+    display: 'none'
+  });
+
+  // Show first image
+  gsap.set(imgElements[0], {
+    x: '0%',
+    opacity: 1,
+    display: 'block'
+  });
+
+  const animateImages = () => {
+    const nextIndex = (currentIndex + 1) % leftImages.length;
+    const currentImg = imgElements[currentIndex];
+    const nextImg = imgElements[nextIndex];
+
+    gsap.set(nextImg, {
+      x: '100%',
+      opacity: 0,
+      display: 'block'
+    });
+
+    const tl = gsap.timeline();
+
+    // fade out
+    tl.to(currentImg, {
+      x: '-100%',
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    }, 0);
+
+    // fade in
+    tl.to(nextImg, {
+      x: '0%',
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    }, 0);
+
+    // hide the current image
+    tl.call(() => {
+      gsap.set(currentImg, { display: 'none' });
+    });
+
+    currentIndex = nextIndex;
+  };
+
+  // Start the animation after initial delay
+  const interval = setInterval(animateImages, 3000);
+
+  return () => {
+    clearInterval(interval);
+    gsap.killTweensOf(imgElements);
+  };
+}, [leftImages.length]);
+
+
+  // right Images for the slideshow
+  const RightImages = [
+    '/images/gallery/gallery-1.jpg',
+    '/images/gallery/gallery-2.jpg',
+    '/images/gallery/g-4.jpg'
+  ]
+
+ // Animation for the left image slideshow
+useEffect(() => {
+  if (!imgContainerRef2.current) return;
+
+  const imgElements = imgContainerRef2.current.querySelectorAll('img');
+  let currentIndex = 0;
+
+  // Initialize all images
+  gsap.set(imgElements, {
+    x: '0%',
+    opacity: 0,
+    display: 'none'
+  });
+
+  // Show first image
+  gsap.set(imgElements[0], {
+    x: '0%',
+    opacity: 1,
+    display: 'block'
+  });
+
+  const animateImages = () => {
+    const nextIndex = (currentIndex + 1) % RightImages.length;
+    const currentImg = imgElements[currentIndex];
+    const nextImg = imgElements[nextIndex];
+
+    gsap.set(nextImg, {
+      x: '100%',
+      opacity: 0,
+      display: 'block'
+    });
+
+    const tl = gsap.timeline();
+
+    // fade out
+    tl.to(currentImg, {
+      x: '-100%',
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    }, 0);
+
+    // fade in
+    tl.to(nextImg, {
+      x: '0%',
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    }, 0);
+
+    // hide the current image
+    tl.call(() => {
+      gsap.set(currentImg, { display: 'none' });
+    });
+
+    currentIndex = nextIndex;
+  };
+
+  // Start the animation after initial delay
+  const interval = setInterval(animateImages, 3000);
+
+  return () => {
+    clearInterval(interval);
+    gsap.killTweensOf(imgElements);
+  };
+}, [RightImages.length]);
+
 
   useEffect(() => {
     const video = videoRef.current
@@ -57,7 +210,6 @@ const GalleryMain = () => {
             pinSpacing: true,
             markers: false
           },
-
           defaults: {
             ease: 'none'
           }
@@ -157,13 +309,11 @@ const GalleryMain = () => {
   const amPm = hours >= 12 ? "PM" : "AM";
   const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
 
-
-
   return (
     <>
       <section
         ref={sectionRef}
-        className='min-h-screen  pt-[100px] md:pt-[150px] lg:pt-[150px] 2xl:pt-[160px]  px-[20px]  md:px-10 lg:px-[50px]  xl:px-[80px] 2xl:px-[90px]   relative'
+        className='min-h-screen pt-[100px] md:pt-[150px] lg:pt-[150px] 2xl:pt-[160px] px-[20px] md:px-10 lg:px-[50px] xl:px-[80px] 2xl:px-[90px] relative'
       >
         <div className='flex justify-center items-center'>
           <div className='grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 w-full relative'>
@@ -173,30 +323,37 @@ const GalleryMain = () => {
                 <p className='text-base md:text-xl'>
                   01 / <span className='text-gray-500'>06</span>
                 </p>
-                <h2 className='text-xl md:text-3xl lg:text-3xl  xl:text-4xl 2xl:text-7xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5'>
+                <h2 className='text-xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-7xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5'>
                   14,372+
                 </h2>
-                <p className='text-sm md:text-base '>
-                  {' '}
+                <p className='text-sm md:text-base'>
                   lines of code written this week.
                 </p>
                 <p className='mt-[5vh] italic'>
                   Probably 3 bugs. Maybe 4. We're honest like that.
                 </p>
               </div>
-              <img
-                src='/images/gallery/gallery-1.jpg'
-                alt='Award'
-                className='rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full'
-              />
+              <div 
+                ref={imgContainerRef1}
+                className='relative rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
+              >
+                {leftImages.map((src, index) => (
+                  <img
+                    key={index}
+                    src={src}
+                    alt={`Gallery image ${index + 1}`}
+                    className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl'
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Second Column (animated up) */}
             <div
               ref={col2Ref}
-              className='space-y-6 flex flex-col mt-30 lg:mt-30 xl:mt-40 '
+              className='space-y-6 flex flex-col mt-30 lg:mt-30 xl:mt-40'
             >
-              <div className='bg-[#111] text-white h-[35vh] p-4 md:p-6 rounded-2xl  w-full md:h-[50vh] lg:h-[38vh] xl:h-[44vh]'>
+              <div className='bg-[#111] text-white h-[35vh] p-4 md:p-6 rounded-2xl w-full md:h-[50vh] lg:h-[38vh] xl:h-[44vh]'>
                 <p className='text-base md:text-xl'>
                   02 / <span className='text-gray-500'>06</span>
                 </p>
@@ -204,13 +361,12 @@ const GalleryMain = () => {
                   17 +
                 </h2>
                 <p className='text-sm md:text-base'>
-                  clients used the word "wizard" in feedback last month.{' '}
+                  clients used the word "wizard" in feedback last month.
                 </p>
               </div>
               <div className='bg-[#a8ff57] text-black h-[35vh] md:h-[50vh] p-4 md:p-6 rounded-2xl w-full lg:h-[38vh] xl:h-[44vh]'>
                 <p className='text-base md:text-xl'>
-                  DST /{' '}
-                  <span className='text-gray-500'>DEN STANDARD TIME</span>
+                  DST / <span className='text-gray-500'>DEN STANDARD TIME</span>
                 </p>
                 <h2 className='text-4xl md:text-6xl lg:text-4xl xl:text-8xl font-extrabold pt-12 md:pt-24 lg:pt-8 xl:pt-28 pb-4 md:pb-5'>
                   {formattedHours}:{formattedMinutes}{' '}
@@ -223,7 +379,7 @@ const GalleryMain = () => {
             {/* Third Column (video) */}
             <div
               ref={wrapperRef}
-              className='hidden xl:flex tp-hero-bottom-img-wrap space-y-6 flex-col  justify-end min-h-screen mx-auto w-full relative'
+              className='hidden xl:flex tp-hero-bottom-img-wrap space-y-6 flex-col justify-end min-h-screen mx-auto w-full relative'
             >
               <div
                 ref={videoRef}
@@ -258,12 +414,11 @@ const GalleryMain = () => {
                 <p className='text-base md:text-xl'>
                   04 / <span className='text-gray-500'>06</span>
                 </p>
-                <h3 className='text-xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-7xl font-semibold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5'> 3 cities
-
+                <h3 className='text-xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-7xl font-semibold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5'>
+                  3 cities
                 </h3>
                 <p className='text-sm md:text-base'>
                   Kolkata crafts. Bangalore codes. Dhaka fuels us.
-                  
                 </p>
               </div>
               <div className='bg-[#a8ff57] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
@@ -280,14 +435,23 @@ const GalleryMain = () => {
             {/* Fifth Column (animated up) */}
             <div
               ref={col5Ref}
-              className='space-y-6 flex flex-col  lg:mt-20 xl:mt-40'
+              className='space-y-6 flex flex-col lg:mt-20 xl:mt-40'
             >
-              <img
-                src='/images/gallery/gallery-2.jpg'
-                alt='Team'
-                className='rounded-2xl w-full h-[20vh] md:h-[35vh]  lg:h-[38vh] xl:h-[44vh]'
-              />
-              <div className='bg-[#09e5e5] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full '>
+               <div 
+                ref={imgContainerRef2}
+                className='relative rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
+              >
+                {RightImages.map((src, index) => (
+                  <img
+                    key={index}
+                    src={src}
+                    alt={`Gallery image ${index + 1}`}
+                    className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl'
+                  />
+                ))}
+              </div>
+
+              <div className='bg-[#09e5e5] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>
                   06 / <span className='text-gray-500'>06</span>
                 </p>
