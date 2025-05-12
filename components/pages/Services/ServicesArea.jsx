@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import Link from 'next/link';
 import OurProcess from './OurProcess';
 
@@ -12,8 +11,6 @@ const ServicesArea = () => {
     const titleRef = useRef(null);
     const charRefs = useRef([]);
 
-    const img1 = '/images/about-us/2nd.jpg'
-    const img2 = '/images/about-us/1st.jpg'
 
     useEffect(() => {
         // Animate character-by-character title
@@ -57,7 +54,7 @@ const ServicesArea = () => {
             scrollTrigger: {
                 trigger: '.bg-change-anim',
                 start: 'top 60%',
-                end: 'top+=30%',
+                end: 'top+=60%',
                 toggleActions: 'play none none reverse',
             },
         });
