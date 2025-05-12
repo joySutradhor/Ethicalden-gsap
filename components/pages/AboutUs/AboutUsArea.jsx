@@ -234,7 +234,7 @@ const AboutUsArea = () => {
 
 
 
-  const titleText = 'Where digital __NEWLINE__ expertise meets a __NEWLINE__ personal touch.';
+  const titleText = 'We’re Here __NEWLINE__ Because __NEWLINE__ We Love This.   ';
 
 
   return (
@@ -273,21 +273,21 @@ const AboutUsArea = () => {
           {/* 1st text */}
           <div>
             <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl  text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
-              {splitWords("You know what? We’re gonna tell it like it is. We’re not your typical, everyday, just another run-of the mill agency. We’re more like your digital partners in crime.", 0)}
+              {splitWords("We didn’t choose the digital life. The digital life chose us, and we ran with it like caffeinated cheetahs in a code jungle. What started as a ragtag crew of designers, devs, and motion wizards is now Ethical Den, your creative tech pit crew working at full throttle. From brainstorming in Notion to battling bugs at 2AM, we thrive in beautiful chaos, crafting solutions that don’t just work but actually wow.", 0)}
             </p>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
-              {splitWords("Sure, we know our code and design like the back of our screens, but what sets us apart is the human touch we bring to the table.", 1)}
-            </p>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            {/* <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+              {splitWords("We’re equal parts strategy, pixels, and keyboard shortcuts. When we’re not designing scroll-stopping UI or shipping SaaS builds, we’re probably arguing over fonts or debugging something that shouldn’t even exist. That’s the thrill. That’s the grind. That’s us.", 1)}
+            </p> */}
+            {/* <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("We’re not afraid to blur the lines between work and play because, let’s face it, the best ideas often emerge over a friendly banter or a pint of beer.", 2)}
-            </p>
+            </p> */}
           </div>
 
 
           {/* 1st video */}
           <div className=''>
             <video
-              src='https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/web%20showcase%202.mp4?updatedAt=1746359939707'
+              src='https://ik.imagekit.io/ethicalden/from%20fardeen%20sir/VID-20250512-WA0001.mp4?updatedAt=1747073978879'
               muted
               autoPlay
               loop
@@ -298,7 +298,7 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end'>
             <Image
-              src='https://mater.agency/wp-content/uploads/2024/05/Rectangle-39-524x524.jpg'
+              src='https://ik.imagekit.io/ethicalden/new%20office%20picture/IMG_0208.jpg?updatedAt=1747078714340'
               height={1000}
               width={1000}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
@@ -309,7 +309,7 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2'>
             <Image
-              src='https://mater.agency/wp-content/uploads/2024/05/Rectangle-16-41-524x524.jpg'
+              src='https://ik.imagekit.io/ethicalden/from%20fardeen%20sir/IMG-20250512-WA0003.jpg?updatedAt=1747073978304'
               height={1000}
               width={1000}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
@@ -320,7 +320,7 @@ const AboutUsArea = () => {
           {/* 2nd video */}
           <div className='flex justify-end -mt-35 md:mt-3 '>
             <video
-              src='https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/only%20web.mp4?updatedAt=1746359959884'
+              src='https://ik.imagekit.io/ethicalden/from%20fardeen%20sir/VID-20250512-WA0005.mp4?updatedAt=1747073979029'
               muted
               autoPlay
               loop
@@ -331,21 +331,21 @@ const AboutUsArea = () => {
           {/* 2nd text */}
           <div className=' md:-mt-70 lg:-mt-72 xl:-mt-82'>
             <p className=' md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
-              {splitWords("We take our work seriously, but not ourselves, because there’s life beyond all the pixels and code.", 0)}
+              {splitWords("We’re equal parts strategy, pixels, and keyboard shortcuts. When we’re not designing scroll-stopping UI or shipping SaaS builds, we’re probably arguing over fonts or debugging something that shouldn’t even exist. That’s the thrill. That’s the grind. That’s us.", 0)}
             </p>
-            <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
+            {/* <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("When you partner with us, you’re not just getting experts, you’re getting allies who know how to balance the two.", 1)}
             </p>
             <p className='md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-400 md:my-5 lg:my-6 xl:my-10 font-ethosnova'>
               {splitWords("Real connections, real results — that’s the mater way. Let’s build stuff together.", 2)}
-            </p>
+            </p> */}
 
             {/* button */}
             <div className=" relative mt-8 md:mt-3 inline-block">
             <Link
                 ref={buttonRef}
                 className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
-                href={"#"}
+                href="/services"
                 style={{ opacity: 1 }}
               >
                 <span ref={buttonBgRef} className="absolute inset-0 z-0" />
@@ -354,7 +354,7 @@ const AboutUsArea = () => {
                   className="relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center"
                 >
                   <span ref={buttonStaticTextRef} className="static-text font-helvetica">
-                    Stories
+                    Services
                   </span>
                   <span
                     ref={buttonScrollingTextRef}
@@ -362,7 +362,7 @@ const AboutUsArea = () => {
                   >
                     {Array.from({ length: 20 }).map((_, i) => (
                       <span key={i} className="inline-block mr-8 font-helvetica">
-                        Stories
+                        Services
                       </span>
                     ))}
                   </span>

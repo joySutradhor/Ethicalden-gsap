@@ -328,7 +328,7 @@ const ServicesArea = () => {
                                         01 / <span className='text-gray-500'>04</span>
                                     </p>
                                     <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica mt-4">
-                                        Strategy
+                                        Branding
                                     </p>
                                 </div>
 
@@ -338,9 +338,9 @@ const ServicesArea = () => {
                                     ref={el => serviceListRefs.current[0] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
-                                        <li>Digital strategy</li>
-                                        <li>Growth strategy</li>
-                                        <li>Brand strategy</li>
+                                        <li>Brand Strategy Development</li>
+                                        <li>Logo Design and Identity Development</li>
+                                        <li> Brand Audit and Refresh</li>
                                     </ul>
                                 </div>
                             </div>
@@ -376,13 +376,12 @@ const ServicesArea = () => {
                                     ref={el => serviceListRefs.current[1] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
-                                        <li>User research</li>
-                                        <li>User experience</li>
-                                        <li>Web development</li>
-                                        <li>Web applications</li>
-                                        <li>E-commerce</li>
-                                        <li>Mobile App development</li>
-                                        <li>Product design</li>
+                                        <li>Pay-Per-Click (PPC) Advertising</li>
+                                        <li>Social Media Marketing</li>
+                                        <li>Content Marketing</li>
+                                        <li>Email Marketing</li>
+                                        <li>Influencer Marketing</li>
+                                        <li>Integrated Marketing Campaigns</li>
                                     </ul>
                                 </div>
                             </div>
@@ -408,7 +407,7 @@ const ServicesArea = () => {
                                         03 / <span className='text-gray-500'>04</span>
                                     </p>
                                     <p style={{ letterSpacing: "-0.05em" }} className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-helvetica font-extrabold mt-4">
-                                        Brand <br />& Identity
+                                        SEO
                                     </p>
                                 </div>
 
@@ -418,12 +417,12 @@ const ServicesArea = () => {
                                     ref={el => serviceListRefs.current[2] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
-                                        <li>Visual identity</li>
-                                        <li>Branding</li>
-                                        <li>Art direction</li>
-                                        <li>Campaign development</li>
-                                        <li>Packaging</li>
-                                        <li>Video & content production</li>
+                                        <li>Keyword Research & Strategy</li>
+                                        <li>On-Page & Off-Page SEO Optimization</li>
+                                        <li>Technical SEO</li>
+                                        <li>Link Building</li>
+                                        <li>Guest Posting</li>
+                                        <li>Google analytics report</li>
                                     </ul>
                                 </div>
                             </div>
@@ -459,7 +458,7 @@ const ServicesArea = () => {
                                     ref={el => serviceListRefs.current[3] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
-                                        <li>User research & anlysis</li>
+                                        <li>User Research and Analysis</li>
                                         <li>Mobile UI/UX design</li>
                                         <li>Desktop UI/UX design</li>
                                         <li>Usability testing</li>

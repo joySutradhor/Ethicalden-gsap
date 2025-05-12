@@ -33,7 +33,7 @@ const Recognition = () => {
         );
     }, []);
 
-    const title = 'Always grateful for the recognition';
+    const title = 'What We Brag About When No One’s Looking.';
 
     // video animation
     const wrapperRef = useRef(null);
@@ -125,7 +125,7 @@ const Recognition = () => {
                     ))}
                 </h2>
 
-                <p className="text-black text-xl md:text-2xl font-helvetica">We're not in it for the shiny trophies, but they do make a killer shelf display.</p>
+                <p className="text-black text-xl md:text-2xl font-helvetica">Who needs shiny trophies when you’ve got chaos, craft, and coffee-fueled wins that actually count?</p>
             </div>
             <div
                 ref={wrapperRef}

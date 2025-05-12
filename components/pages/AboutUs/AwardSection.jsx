@@ -1,12 +1,26 @@
+import { RiBearSmileLine } from "react-icons/ri";
+import { FaFire } from "react-icons/fa";
+import { GrProjects } from "react-icons/gr";
+import { FaTeamspeak } from "react-icons/fa";
+import { SiCaffeine } from "react-icons/si";
+import { IoBugSharp } from "react-icons/io5";
+import { FaHatWizard } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+
+
+
+
+
+
 const awards = [
-    { name: "Awwwards", count: "07", icon: "/images/awards/awwwards.png" },
-    { name: "CSS Design Awards", count: "02", icon: "/images/awards/css_design_awards.webp" },
-    { name: "CSS Winner", count: "04", icon: "/images/awards/css_winner.webp" },
-    { name: "Communicator", count: "06", icon: "/images/awards/awwwards.png" },
-    { name: "Davey Awards", count: "05", icon: "/images/awards/css_design_awards.webp" },
-    { name: "W3 Awards", count: "05", icon: "/images/awards/css_winner.webp" },
-    { name: "iab Mixx", count: "03", icon: "/images/awards/awwwards.png" },
-    { name: "Telly Awards", count: "02", icon: "/images/awards/css_winner.webp" },
+    { name: "Internal Meme Wars Won", count: "09", icon: <RiBearSmileLine/> , cta : "Meme" },
+    { name: "Best client Feedback (Actual Fire Emoji )", count: "07", icon: <FaFire/> , cta : "clients" },
+    { name: "Projects Launched At 2AM", count: "11", icon: <GrProjects/> , cta : "Projects"},
+    { name: "Font Debates Survived", count: "13", icon: <FaTeamspeak/> , cta : "Debates" },
+    { name: "Caffeine- Driven Breakthroughs", count: "16", icon: <SiCaffeine/> , cta : "Breakthroughs"},
+    { name: "Bugs Squashed on a Friday Night", count: "08", icon: <IoBugSharp/> , cta: "Bugs" },
+    { name: "Clients Who Called Us 'Wizards' ", count: "05", icon: <FaHatWizard/> , cta : "Clients"},
+    { name: "Websites That Made Someone Cry", count: "03", icon: <FaCode/>, cta : "Websites" },
   ];
   
   const AwardsSection = () => {
@@ -16,14 +30,14 @@ const awards = [
             {awards.map((award, index) => (
               <div key={index} className="flex items-center justify-between pb-4 ">
                 <div className="flex items-center gap-4 w-full">
-                  <img src={award.icon} alt={award.name} className="w-10 h-10 object-contain" />
+                  <p className="text-3xl font-bold">{award.icon}</p>
                   <div className="flex-1 border-b border-gray-300">
                     <span className="font-bold text-2xl md:text-3xl text-[#00263a]  font-helvetica">{award.name}</span>
                   </div>
                 </div>
                 <div className="text-right">
                   <p className="text-xl md:text-2xl font-bold text-black leading-none font-helvetica">{award.count}</p>
-                  <p className="text-xl md:text-2xl text-black font-helvetica">Awards</p>
+                  <p className="text-xl md:text-2xl text-black font-helvetica">{award.cta}</p>
                 </div>
               </div>
             ))}

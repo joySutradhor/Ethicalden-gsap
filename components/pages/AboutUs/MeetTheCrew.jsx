@@ -77,7 +77,7 @@ const MeetTheCrew = () => {
         );
     }, []);
 
-    const title = 'Meet the crew';
+    const title = 'Meet the Chaos Creators';
 
     return (
         <section className="px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40  pt-[10px] md:pt-[60px] lg:pt-[120px] xl:pt-[130px] 2xl:pt-[180px]">
@@ -91,14 +91,14 @@ const MeetTheCrew = () => {
                             key={i}
                             ref={(el) => (charRefs.current[i] = el)}
                             className={`inline-block ${char === ' ' ? 'w-2 md:w-3 ' : ''}`}
-                            style={char !== " " ? { letterSpacing: "-0.13em" } : {}}
+                            style={char !== " " ? { letterSpacing: "-0.10em" } : {}}
                         >
                             {char}
                         </span>
                     ))}
                 </h2>
                 <p className="text-xl lg:text-2xl text-black font-helvetica ">
-                    The determination behind your next project
+                    The team turning chaos into craft.
                 </p>
             </div>
 

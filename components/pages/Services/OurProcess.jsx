@@ -177,12 +177,11 @@ const OurProcess = () => {
 
         <div className="flex-1">
           <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Workshop sessions</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">User personas</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Sitemapping</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Competetive benchmarks</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Moodboards</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Best practices</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Spark of Interest</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Courtship of Consultation</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Thrill of the Project Kickoff</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Moment of First Results</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Everlasting Afterparty</li>
           </ul>
         </div>
       </div>

@@ -159,7 +159,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
 
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
             <Image
-              src='https://i.ibb.co/9k6J9vgY/proj-1.png' 
+              src='https://ik.imagekit.io/ethicalden/projects/p5.png?updatedAt=1747074110219' 
               height={1000}
               width={1000}
               className='object-cover w-full h-full'
@@ -167,10 +167,10 @@ gsap.to(textElements, { '--text-color': '#000000' });
             />
 
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-              Prakrithi Study Center
+              Mr Cafe
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              Social Media Marketing
+              Restaurant
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 
@@ -179,15 +179,15 @@ gsap.to(textElements, { '--text-color': '#000000' });
 
         <div className='h-[23vh] mt-5 md:mt-[0vh] lg:mt-0 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
           <video
-            src='https://mater.agency/wp-content/uploads/2024/02/vogue-1.mp4'
+            src='https://ik.imagekit.io/ethicalden/projects/marzii.mp4?updatedAt=1747079535549'
             muted
             autoPlay
             loop
             className='h-full w-full object-cover'
           ></video>
-          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Vogue Adria</h3>
+          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Marzii </h3>
           <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-            site /Branding
+            E-commerce / Branding
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </p>
 
@@ -197,17 +197,17 @@ gsap.to(textElements, { '--text-color': '#000000' });
         <div className=' md:mt-[15vh] lg:mt-[25vh] '>
           <div className='h-[23vh] md:h-[50vh] lg:h-[75vh]'>
             <Image
-              src='https://i.ibb.co/Td3tk5f/proj-3.png'
+              src='https://ik.imagekit.io/ethicalden/projects/p1.png?updatedAt=1747074109969'
               width={1000}
               height={1000}
               className='object-cover h-full w-full'
-              alt='NetTV'
+              alt='E-laz'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-              Marzii
+              E-laj
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              Branding / Social Media Marketing
+              Medical Healthcare
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 
@@ -218,14 +218,14 @@ gsap.to(textElements, { '--text-color': '#000000' });
           <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[16vh] md:mt-0'>
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
               <video
-                src='https://mater.agency/wp-content/uploads/2024/03/nordeus.mp4'
+                src='https://ik.imagekit.io/ethicalden/projects/makcommunity.mp4?updatedAt=1747079300877'
                 muted
                 autoPlay
                 loop
                 className='h-full w-full object-cover'
               ></video>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-                Nordeus Unleashed
+                Mak Community
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
@@ -235,14 +235,14 @@ gsap.to(textElements, { '--text-color': '#000000' });
             </div>
 
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh]'>
-              <video
-                src='https://mater.agency/wp-content/uploads/2024/02/green_tree.mp4'
-                muted
-                autoPlay
-                loop
+              <Image
+              width={500}
+              height={100}
+              alt='wonderlite'
+                src='https://ik.imagekit.io/ethicalden/projects/image.png?updatedAt=1747080116801'
                 className='h-full w-full object-cover'
-              ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Green Tree Villas Website</h3>
+              ></Image>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Wonderlite</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -256,16 +256,16 @@ gsap.to(textElements, { '--text-color': '#000000' });
         <div className='-mt-[10vh] md:mt-[30vh] lg:mt-[60vh] '>
           <div className='h-[40vh] md:w-[60%]'>
             <div>
-              <video
-                src='https://mater.agency/wp-content/uploads/2024/02/led_elektronika.mp4'
-                muted
-                autoPlay
-                loop
+              <Image
+                src='https://ik.imagekit.io/ethicalden/projects/p4.png?updatedAt=1747074110129'
+                height={100}
+                width={500}
+                alt='eduden'
                 className='h-full w-full object-cover'
-              ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Honor 9 – The Light Catcher</h3>
+              ></Image>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Eduden</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                site /Branding
+                Edtech
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 
@@ -276,13 +276,13 @@ gsap.to(textElements, { '--text-color': '#000000' });
         <div className='mt-[20vh] md:mt-0'>
           <div>
             <video
-              src='https://mater.agency/wp-content/uploads/2024/02/honor9.mp4'
+              src='https://ik.imagekit.io/ethicalden/projects/SAFL.mp4?updatedAt=1747079652879'
               muted
               autoPlay
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Led Elektronika</h3>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Sandeep autolines</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               site /Branding
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -295,14 +295,14 @@ gsap.to(textElements, { '--text-color': '#000000' });
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
           <div className='h-[23vh] md:h-[50vh] lg:h-[70vh]'>
             <Image
-              src='https://i.ibb.co/Gvbk0Znv/proj-5.png'
+              src='https://ik.imagekit.io/ethicalden/projects/p3.png?updatedAt=1747074110433'
               height={1000}
               width={1000}
               className='object-cover h-full w-full'
-              alt='AZ Pension Fund'
+              alt='Divine'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-              Dream Health
+              Divine
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               UI/Ux /Website Development
@@ -317,12 +317,12 @@ gsap.to(textElements, { '--text-color': '#000000' });
               <Image
                 height={1000}
                 width={1000}
-                src='https://i.ibb.co/9Hdzy63W/proj-7.jpg'
+                src='https://ik.imagekit.io/ethicalden/projects/p2.png?updatedAt=1747074109978'
                 className='h-full w-full object-cover'
                 alt='RBA'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-                e-laj
+               Insider Feed
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 App Development
@@ -349,7 +349,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
         </div>
 
         {/* fifth row */}
-        <div className='hidden md:block'></div>
+        {/* <div className='hidden md:block'></div>
         <div className='-mt-[55vh] md:mt-[5vh] '>
           <div>
             <video
@@ -368,7 +368,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
             </p>
 
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -42,7 +42,7 @@ function ClientCollaboration() {
   }, [])
 
   // Split title into words and characters
-  const titleText = "Relationships this intimate are illegal in some countries."
+  const titleText = "Great ideas deserve great execution. These folks agreed."
   const words = titleText.split(" ")
 
   return (

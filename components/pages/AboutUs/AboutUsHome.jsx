@@ -58,7 +58,7 @@ const AboutUsHome = () => {
                         ref={titleRef}
                         className="text-left w-full  text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06]"
                     >
-                        {"Digital agency with a human touch.".split(" ").map((word, wi) => (
+                        {"A Team That Feels Like Yours.".split(" ").map((word, wi) => (
                             <span
                                 key={wi}
                                 className="inline-block whitespace-nowrap mr-[0.2em] lg:mr-[0.3]" 
@@ -79,7 +79,7 @@ const AboutUsHome = () => {
 
 
                     <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed font-helvetica text-black'>
-                        We believe in forging real-talk, fist-bump relationships with our clients and shaping their brands and products into amazing digital experiences.
+                        From design-first thinking to code-level execution, we help startups build smarter and move faster. Based in Kolkata and Bangalore, driven everywhere.
                     </p>
                 </div>
             </div>
