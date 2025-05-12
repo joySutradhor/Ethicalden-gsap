@@ -14,10 +14,6 @@ const GalleryMain = () => {
     const col4Ref = useRef(null);
     const col5Ref = useRef(null);
 
-
-
-
-
     useEffect(() => {
         const video = videoRef.current;
         const section = sectionRef.current;
@@ -61,7 +57,6 @@ const GalleryMain = () => {
                         pinSpacing: true,
                         markers: false,
                     },
-
                     defaults: {
                         ease: 'none'
                     }
@@ -138,17 +133,90 @@ const GalleryMain = () => {
         };
     }, []);
 
+
+    // left img slider animation 
+     const sliderRef = useRef(null);
+
+  useEffect(() => {
+    if (!sliderRef.current) return;
+
+    const container = sliderRef.current;
+    const slides = container.children;
+    const slideCount = slides.length;
+
+    // Duplicate all slides for smooth infinite scroll
+    for (let i = 0; i < slideCount; i++) {
+      const clone = slides[i].cloneNode(true);
+      container.appendChild(clone);
+    }
+
+    // Get total width of all slides
+    const totalWidth = container.scrollWidth / 2; 
+
+    gsap.set(container, { x: 0 });
+
+   const tl = gsap.to(container, {
+  x: `+=${totalWidth}`, 
+  duration: 60,
+  ease: "none",
+  repeat: -1,
+  modifiers: {
+    x: gsap.utils.unitize(x => parseFloat(x) % totalWidth - totalWidth)
+  }
+});
+
+
+    return () => tl.kill();
+  }, []);
+
+
+
+    // right img slider animation 
+     const sliderRef2 = useRef(null);
+
+  useEffect(() => {
+    if (!sliderRef.current) return;
+
+    const container = sliderRef2.current;
+    const slides = container.children;
+    const slideCount = slides.length;
+
+    // Duplicate all slides  for smooth infinite scroll
+    for (let i = 0; i < slideCount; i++) {
+      const clone = slides[i].cloneNode(true);
+      container.appendChild(clone);
+    }
+
+    // Get total width of all slides
+    const totalWidth = container.scrollWidth / 2; 
+
+    gsap.set(container, { x: 0 });
+
+    const tl = gsap.to(container, {
+      x: `-=${totalWidth}`, 
+      duration: 60,          
+      ease: "none",
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % totalWidth) 
+      }
+    });
+
+    return () => tl.kill();
+  }, []);
+
+
     // card time show
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
-      const timer = setInterval(() => {
-        setTime(new Date());
-      }, 1000);
-  
-      return () => clearInterval(timer); // Cleanup on unmount
+        const timer = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(timer); 
     }, []);
-  
+
     // Convert to MST (UTC-7 without daylight saving)
     const mstTime = new Date(time.toLocaleString("en-US", { timeZone: "America/Phoenix" }));
     const hours = mstTime.getHours();
@@ -156,7 +224,6 @@ const GalleryMain = () => {
     const formattedHours = hours % 12 || 12;
     const amPm = hours >= 12 ? "PM" : "AM";
     const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-
 
     return (
         <>
@@ -171,7 +238,13 @@ const GalleryMain = () => {
                                 <h2 className="text-5xl md:text-7xl lg:text-5xl  xl:text-7xl 2xl:text-9xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5">10+</h2>
                                 <p className="text-sm md:text-base">Awards winning company. <a className="underline" href="#">Take a look.</a></p>
                             </div>
-                            <img src="/images/gallery/gallery-1.jpg" alt="Award" className="rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full" />
+                            <div className="relative overflow-hidden rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full">
+                                <div ref={sliderRef} className="flex w-[300%] h-full">
+                                    <img src="/images/gallery/g-5.jpg" className="w-[100%] h-full object-cover" alt="img1" />
+                                    <img src="/images/gallery/g-6.jpg" className="w-[100%] h-full object-cover" alt="img2" />
+                                    <img src="/images/gallery/g-7.jpg" className="w-[100%] h-full object-cover" alt="img3" />
+                                </div>
+                            </div>
                         </div>
 
                         {/* Second Column (animated up) */}
@@ -234,7 +307,13 @@ const GalleryMain = () => {
 
                         {/* Fifth Column (animated up) */}
                         <div ref={col5Ref} className="space-y-6 flex flex-col  lg:mt-20 xl:mt-40">
-                            <img src="/images/gallery/gallery-2.jpg" alt="Team" className="rounded-2xl w-full h-[20vh] md:h-[35vh]  lg:h-[38vh] xl:h-[44vh]" />
+                            <div className="relative overflow-hidden rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full">
+                                <div ref={sliderRef2} className="flex w-[300%] h-full">
+                                    <img src="/images/gallery/g-5.jpg" className="w-[100%] h-full object-cover" alt="img1" />
+                                    <img src="/images/gallery/g-6.jpg" className="w-[100%] h-full object-cover" alt="img2" />
+                                    <img src="/images/gallery/g-7.jpg" className="w-[100%] h-full object-cover" alt="img3" />
+                                </div>
+                            </div>
                             <div className="bg-[#09e5e5] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full ">
                                 <p className="text-base md:text-xl">06 / <span className='text-gray-500'>06</span></p>
                                 <h3 className="text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-semibold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5">5 Star Reviews</h3>

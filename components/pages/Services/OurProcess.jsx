@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const OurProcess = () => {
   const processRef = useRef(null);
   const numberRef = useRef(null);
-  const numberInnerRef = useRef(null); // for animating number movement
+  const numberInnerRef = useRef(null); 
   const titleRef = useRef(null);
   const charRefs = useRef([]);
 
