@@ -57,6 +57,7 @@ export default function Home() {
       <NewBanner />
       <Gallery />
       <NewLattestProjects />
+      <section></section>
       <OurProducts />
       <ClientsCollaboration />
       <Footer />
