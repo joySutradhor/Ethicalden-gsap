@@ -10,7 +10,7 @@ function NewProjects() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const bgOverlay = document.createElement('div');
+    const bgOverlay = document.createElement('section');
     bgOverlay.style.position = 'fixed';
     bgOverlay.style.top = '0';
     bgOverlay.style.left = '0';

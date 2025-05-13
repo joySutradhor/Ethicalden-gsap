@@ -51,7 +51,7 @@ const OurProducts = () => {
           end: () => `+=${scrollDistance + viewportWidth}`,
           pin: true,
           scrub: 0.01,
-          markers: false,
+          markers: true,
           anticipatePin: 1,
           ease: 'sine.inOut'
         }
