@@ -79,7 +79,7 @@ const AboutUsHome = () => {
 
 
                     <p className='text-left text-lg sm:text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed font-helvetica text-black'>
-                        From design-first thinking to code-level execution, we help startups build smarter and move faster. Based in Kolkata and Bangalore, driven everywhere.
+                        From design-first thinking to code-level execution, we help startups build smarter and move faster. Based in Kolkata and Bangalore, driven is everywhere.
                     </p>
                 </div>
             </div>
