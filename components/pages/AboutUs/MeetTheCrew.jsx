@@ -143,7 +143,7 @@ const MeetTheCrew = () => {
                                         backgroundImage: `url(${member.imageUrl})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'top center',
-                                        transform: isRevealed && isMobile ? 'translateY(-2.5rem)' : 'translateY(0)',
+                                        transform: isRevealed && isMobile ? 'translateY(-3.2rem)' : 'translateY(0)',
                                     }}
                                 />
                             </div>

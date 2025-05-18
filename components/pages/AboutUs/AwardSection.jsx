@@ -32,7 +32,7 @@ const awards = [
                 <div className="flex items-center gap-4 w-full">
                   <p className="text-3xl font-bold">{award.icon}</p>
                   <div className="flex-1 border-b border-gray-300">
-                    <span className="font-bold text-2xl md:text-3xl text-[#00263a]  font-helvetica">{award.name}</span>
+                    <span className="font-bold text-xl md:text-3xl text-[#00263a]  font-helvetica">{award.name}</span>
                   </div>
                 </div>
                 <div className="text-right">
