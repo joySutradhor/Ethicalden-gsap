@@ -194,7 +194,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
         </div>
 
         {/* second row start */}
-        <div className=' md:mt-[15vh] lg:mt-[25vh] '>
+        <div className='mt-[10vh] md:mt-[15vh] lg:mt-[25vh] '>
           <div className='h-[23vh] md:h-[50vh] lg:h-[75vh]'>
             <Image
               src='https://ik.imagekit.io/ethicalden/projects/p1.png?updatedAt=1747074109969'
@@ -215,7 +215,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
         </div>
 
         <div className=''>
-          <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[16vh] md:mt-0'>
+          <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[6vh] md:mt-0'>
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
               <video
                 src='https://ik.imagekit.io/ethicalden/projects/makcommunity.mp4?updatedAt=1747079300877'
@@ -253,7 +253,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
         </div>
 
         {/* third row start */}
-        <div className='-mt-[10vh] md:mt-[30vh] lg:mt-[60vh] '>
+        <div className='-mt-[8vh] md:mt-[30vh] lg:mt-[60vh] '>
           <div className='h-[40vh] md:w-[60%]'>
             <div>
               <Image

@@ -23,74 +23,69 @@ const GalleryMain = () => {
     '/images/gallery/g-7.jpg'
   ]
 
+  // Animation for the left image slideshow
+  useEffect(() => {
+    if (!imgContainerRef1.current) return;
 
-// Animation for the left image slideshow
-useEffect(() => {
-  if (!imgContainerRef1.current) return;
+    const imgElements = imgContainerRef1.current.querySelectorAll('img');
+    let currentIndex = 0;
 
-  const imgElements = imgContainerRef1.current.querySelectorAll('img');
-  let currentIndex = 0;
-
-  // Initialize all images
-  gsap.set(imgElements, {
-    x: '0%',
-    opacity: 0,
-    display: 'none'
-  });
-
-  // Show first image
-  gsap.set(imgElements[0], {
-    x: '0%',
-    opacity: 1,
-    display: 'block'
-  });
-
-  const animateImages = () => {
-    const nextIndex = (currentIndex + 1) % leftImages.length;
-    const currentImg = imgElements[currentIndex];
-    const nextImg = imgElements[nextIndex];
-
-    gsap.set(nextImg, {
-      x: '100%',
+    // Initialize all images except first
+    gsap.set(imgElements, {
       opacity: 0,
+      display: 'none'
+    });
+
+    // Show first image
+    gsap.set(imgElements[0], {
+      opacity: 1,
       display: 'block'
     });
 
-    const tl = gsap.timeline();
+    const animateImages = () => {
+      const nextIndex = (currentIndex + 1) % leftImages.length;
+      const currentImg = imgElements[currentIndex];
+      const nextImg = imgElements[nextIndex];
 
-    // fade out
-    tl.to(currentImg, {
-      x: '-100%',
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power2.inOut'
-    }, 0);
+      // Prepare next image
+      gsap.set(nextImg, {
+        opacity: 0,
+        display: 'block'
+      });
 
-    // fade in
-    tl.to(nextImg, {
-      x: '0%',
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power2.inOut'
-    }, 0);
+      // Create timeline with smoother easing
+      const tl = gsap.timeline({
+        defaults: {
+          ease: "power2.inOut",
+          duration: 1.5
+        },
+        onComplete: () => {
+          // Hide current image after animation completes
+          gsap.set(currentImg, { display: 'none' });
+        }
+      });
 
-    // hide the current image
-    tl.call(() => {
-      gsap.set(currentImg, { display: 'none' });
-    });
+      // Crossfade animation
+      tl.to(currentImg, {
+        opacity: 0,
+        duration: 1.5
+      }, 0)
+      .to(nextImg, {
+        opacity: 1,
+        duration: 1.5
+      }, 0);
 
-    currentIndex = nextIndex;
-  };
+      currentIndex = nextIndex;
+    };
 
-  // Start the animation after initial delay
-  const interval = setInterval(animateImages, 3000);
+    // Start the animation with delay
+    const interval = setInterval(animateImages, 3000);
 
-  return () => {
-    clearInterval(interval);
-    gsap.killTweensOf(imgElements);
-  };
-}, [leftImages.length]);
-
+    return () => {
+      clearInterval(interval);
+      gsap.killTweensOf(imgElements);
+    };
+  }, [leftImages.length]);
 
   // right Images for the slideshow
   const RightImages = [
@@ -99,74 +94,71 @@ useEffect(() => {
     '/images/gallery/g-4.jpg'
   ]
 
- // Animation for the left image slideshow
-useEffect(() => {
-  if (!imgContainerRef2.current) return;
+  // Animation for the right image slideshow
+  useEffect(() => {
+    if (!imgContainerRef2.current) return;
 
-  const imgElements = imgContainerRef2.current.querySelectorAll('img');
-  let currentIndex = 0;
+    const imgElements = imgContainerRef2.current.querySelectorAll('img');
+    let currentIndex = 0;
 
-  // Initialize all images
-  gsap.set(imgElements, {
-    x: '0%',
-    opacity: 0,
-    display: 'none'
-  });
-
-  // Show first image
-  gsap.set(imgElements[0], {
-    x: '0%',
-    opacity: 1,
-    display: 'block'
-  });
-
-  const animateImages = () => {
-    const nextIndex = (currentIndex + 1) % RightImages.length;
-    const currentImg = imgElements[currentIndex];
-    const nextImg = imgElements[nextIndex];
-
-    gsap.set(nextImg, {
-      x: '100%',
+    // Initialize all images except first
+    gsap.set(imgElements, {
       opacity: 0,
+      display: 'none'
+    });
+
+    // Show first image
+    gsap.set(imgElements[0], {
+      opacity: 1,
       display: 'block'
     });
 
-    const tl = gsap.timeline();
+    const animateImages = () => {
+      const nextIndex = (currentIndex + 1) % RightImages.length;
+      const currentImg = imgElements[currentIndex];
+      const nextImg = imgElements[nextIndex];
 
-    // fade out
-    tl.to(currentImg, {
-      x: '-100%',
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power2.inOut'
-    }, 0);
+      // Prepare next image
+      gsap.set(nextImg, {
+        opacity: 0,
+        display: 'block'
+      });
 
-    // fade in
-    tl.to(nextImg, {
-      x: '0%',
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power2.inOut'
-    }, 0);
+      // Create timeline with smoother easing
+      const tl = gsap.timeline({
+        defaults: {
+          ease: "power2.inOut",
+          duration: 1.5
+        },
+        onComplete: () => {
+          // Hide current image after animation completes
+          gsap.set(currentImg, { display: 'none' });
+        }
+      });
 
-    // hide the current image
-    tl.call(() => {
-      gsap.set(currentImg, { display: 'none' });
-    });
+      // Crossfade animation
+      tl.to(currentImg, {
+        opacity: 0,
+        duration: 1.5
+      }, 0)
+      .to(nextImg, {
+        opacity: 1,
+        duration: 1.5
+      }, 0);
 
-    currentIndex = nextIndex;
-  };
+      currentIndex = nextIndex;
+    };
 
-  // Start the animation after initial delay
-  const interval = setInterval(animateImages, 3000);
+    // Start the animation with delay
+    const interval = setInterval(animateImages, 3000);
 
-  return () => {
-    clearInterval(interval);
-    gsap.killTweensOf(imgElements);
-  };
-}, [RightImages.length]);
+    return () => {
+      clearInterval(interval);
+      gsap.killTweensOf(imgElements);
+    };
+  }, [RightImages.length]);
 
-
+  // Rest of your component remains the same...
   useEffect(() => {
     const video = videoRef.current
     const section = sectionRef.current
@@ -329,7 +321,7 @@ useEffect(() => {
                 <p className='text-sm md:text-base'>
                   lines of code written this week.
                 </p>
-                <p className='mt-[5vh] italic'>
+                <p className='mt-[1vh] md:mt-[5vh] italic'>
                   Probably 3 bugs. Maybe 4. We're honest like that.
                 </p>
               </div>
@@ -368,7 +360,7 @@ useEffect(() => {
                 <p className='text-base md:text-xl'>
                   DST / <span className='text-gray-500'>DEN STANDARD TIME</span>
                 </p>
-                <h2 className='text-4xl md:text-6xl lg:text-4xl xl:text-8xl font-extrabold pt-12 md:pt-24 lg:pt-8 xl:pt-28 pb-4 md:pb-5'>
+                <h2 className='text-4xl md:text-6xl lg:text-4xl xl:text-6xl 2xl:text-7xl font-extrabold pt-12 md:pt-24 lg:pt-8 xl:pt-28 pb-4 md:pb-5'>
                   {formattedHours}:{formattedMinutes}{' '}
                   <span className='text-sm'>{amPm}</span>
                 </h2>
