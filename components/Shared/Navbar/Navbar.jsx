@@ -330,6 +330,14 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     </a>
                     <a 
                         ref={addMenuItemToRefs}
+                        href="https://www.behance.net/Realethicalden" 
+                        target="_blank" 
+                        className="text-4xl font-semibold hover:underline opacity-0"
+                    >
+                        Our Works
+                    </a>
+                    <a 
+                        ref={addMenuItemToRefs}
                         href="/services" 
                         className="text-4xl font-semibold hover:underline opacity-0"
                     >
