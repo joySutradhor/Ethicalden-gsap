@@ -233,7 +233,7 @@ const NewBanner = () => {
             ref={statsRef}
             className='flex-1 text-center flex gap-5 md:gap-8 items-center overflow-hidden pb-[30px]'
           >
-            <p className='text-sm md:text-2xl font-bold text-white bg-black w-10 md:w-14 h-10 md:h-14 lg:w-20 lg:h-20  flex items-center justify-center rounded-full'>
+            <p className='text-sm md:text-[16px] lg:text-2xl font-bold text-white bg-black w-14 md:w-16 h-14 md:h-16 lg:w-24 lg:h-24  flex items-center justify-center rounded-full'>
               <span ref={numberRef}>{stats[currentIndex].number}</span>
             </p>
             <p

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import axios from 'axios'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -18,9 +19,9 @@ const GalleryMain = () => {
 
   // left Images for the slideshow
   const leftImages = [
-    '/images/gallery/g-5.jpg',
-    '/images/gallery/g-6.jpg',
-    '/images/gallery/g-7.jpg'
+    '/images/gallery/g-8.jpg',
+    '/images/gallery/g-9.jpg',
+    '/images/gallery/g-10.jpg'
   ]
 
   // Animation for the left image slideshow
@@ -70,10 +71,10 @@ const GalleryMain = () => {
         opacity: 0,
         duration: 1.5
       }, 0)
-      .to(nextImg, {
-        opacity: 1,
-        duration: 1.5
-      }, 0);
+        .to(nextImg, {
+          opacity: 1,
+          duration: 1.5
+        }, 0);
 
       currentIndex = nextIndex;
     };
@@ -141,10 +142,10 @@ const GalleryMain = () => {
         opacity: 0,
         duration: 1.5
       }, 0)
-      .to(nextImg, {
-        opacity: 1,
-        duration: 1.5
-      }, 0);
+        .to(nextImg, {
+          opacity: 1,
+          duration: 1.5
+        }, 0);
 
       currentIndex = nextIndex;
     };
@@ -290,7 +291,7 @@ const GalleryMain = () => {
       setTime(new Date())
     }, 1000)
 
-    return () => clearInterval(timer) 
+    return () => clearInterval(timer)
   }, [])
 
   // Convert to MST (UTC-7 without daylight saving)
@@ -300,6 +301,60 @@ const GalleryMain = () => {
   const formattedHours = hours % 12 || 12;
   const amPm = hours >= 12 ? "PM" : "AM";
   const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+
+
+  // weeks lines of code
+  const [codeLines, setCodeLines] = useState(14372);
+  useEffect(() => {
+    const storedCount = localStorage.getItem('codeLines');
+    const storedTime = localStorage.getItem('lastUpdate');
+
+    const now = new Date().getTime();
+    const oneWeek = 7 * 24 * 60 * 60 * 1000;
+
+    let count = storedCount ? parseInt(storedCount, 10) : 14372;
+
+    if (!storedTime || now - parseInt(storedTime, 10) > oneWeek) {
+      const increment = Math.floor(Math.random() * (800 - 500 + 1)) + 500;
+      count += increment;
+      localStorage.setItem('codeLines', count.toString());
+      localStorage.setItem('lastUpdate', now.toString());
+    }
+
+    setCodeLines(count);
+  }, []);
+
+
+  // weather 
+   const [temperature, setTemperature] = useState(null);
+  const [description, setDescription] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  // open weather map api key
+  const API_KEY = 'f76b01bbff55b25a891cd38d5f081834';
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        try {
+          const res = await axios.get(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`
+          );
+          setTemperature(Math.round(res.data.main.temp));
+          setDescription(res.data.weather[0].description);
+        } catch (error) {
+          console.error('Weather fetch error:', error);
+        } finally {
+          setLoading(false);
+        }
+      },
+      (error) => {
+        console.error('Location error:', error);
+        setLoading(false);
+      }
+    );
+  }, []);
 
   return (
     <>
@@ -316,7 +371,7 @@ const GalleryMain = () => {
                   01 / <span className='text-gray-500'>06</span>
                 </p>
                 <h2 className='text-xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-7xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5'>
-                  14,372+
+                  {codeLines.toLocaleString()}+
                 </h2>
                 <p className='text-sm md:text-base'>
                   lines of code written this week.
@@ -325,7 +380,7 @@ const GalleryMain = () => {
                   Probably 3 bugs. Maybe 4. We're honest like that.
                 </p>
               </div>
-              <div 
+              <div
                 ref={imgContainerRef1}
                 className='relative rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
               >
@@ -416,10 +471,10 @@ const GalleryMain = () => {
               <div className='bg-[#a8ff57] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>HOT OR NOT</p>
                 <h2 className='text-5xl md:text-7xl lg:text-5xl xl:text-7xl 2xl:text-9xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5'>
-                  14°
+                  {loading ? 'Loading...' : `${temperature}°`}
                 </h2>
-                <p className='text-sm md:text-base'>
-                  Perfect weather for allergies.
+                <p className='text-sm md:text-base capitalize'>
+                  {loading ? 'Getting weather...' : description}
                 </p>
               </div>
             </div>
@@ -429,7 +484,7 @@ const GalleryMain = () => {
               ref={col5Ref}
               className='space-y-6 flex flex-col lg:mt-20 xl:mt-40'
             >
-               <div 
+              <div
                 ref={imgContainerRef2}
                 className='relative rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
               >
