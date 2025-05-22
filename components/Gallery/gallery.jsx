@@ -19,9 +19,9 @@ const GalleryMain = () => {
 
   // left Images for the slideshow
   const leftImages = [
-    '/images/gallery/g-8.jpg',
-    '/images/gallery/g-9.jpg',
-    '/images/gallery/g-10.jpg'
+    '/images/gallery/g-12.jpg',
+    '/images/gallery/g-13.jpg',
+    '/images/gallery/g-14.jpg'
   ]
 
   // Animation for the left image slideshow
@@ -92,7 +92,7 @@ const GalleryMain = () => {
   const RightImages = [
     '/images/gallery/gallery-1.jpg',
     '/images/gallery/gallery-2.jpg',
-    '/images/gallery/g-4.jpg'
+    '/images/gallery/g-11.jpg'
   ]
 
   // Animation for the right image slideshow
@@ -326,7 +326,7 @@ const GalleryMain = () => {
 
 
   // weather 
-   const [temperature, setTemperature] = useState(null);
+  const [temperature, setTemperature] = useState(null);
   const [description, setDescription] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -389,6 +389,7 @@ const GalleryMain = () => {
                     key={index}
                     src={src}
                     alt={`Gallery image ${index + 1}`}
+                    loading="lazy"
                     className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl'
                   />
                 ))}
@@ -493,10 +494,12 @@ const GalleryMain = () => {
                     key={index}
                     src={src}
                     alt={`Gallery image ${index + 1}`}
+                    loading="lazy"
                     className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl'
                   />
                 ))}
               </div>
+
 
               <div className='bg-[#09e5e5] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>
