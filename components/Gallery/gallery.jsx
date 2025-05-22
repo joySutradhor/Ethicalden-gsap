@@ -471,9 +471,15 @@ const GalleryMain = () => {
               </div>
               <div className='bg-[#a8ff57] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>HOT OR NOT</p>
-                <h2 className='text-5xl md:text-7xl lg:text-5xl xl:text-7xl 2xl:text-9xl font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5'>
+                <h2
+                  className={`${loading
+                      ? 'text-2xl md:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl'
+                      : 'text-5xl md:text-7xl lg:text-5xl xl:text-7xl 2xl:text-9xl'
+                    } font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5`}
+                >
                   {loading ? 'Loading...' : `${temperature}°`}
                 </h2>
+
                 <p className='text-sm md:text-base capitalize'>
                   {loading ? 'Getting weather...' : description}
                 </p>
