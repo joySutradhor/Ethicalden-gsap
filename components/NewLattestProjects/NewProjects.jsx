@@ -101,7 +101,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
 
 
   return (
-    <section className='bg-change-anim px-[20px]  md:px-10 lg:px-[50px] xl:px-39 2xl:px-50 pt-[100px] md:pt-[150px] lg:pt-[250px] xl:pt-[300px] 2xl:pt-[300px]  py-[10vh] md:py-[10vh] 2xl:mb-[20vh] text-white'>
+    <section className='bg-change-anim px-[20px]  md:px-10 lg:px-[50px] xl:px-39 2xl:px-50 pt-[100px] md:pt-[150px] lg:pt-[250px] xl:pt-[300px] 2xl:pt-[300px]  py-[10vh] md:py-[10vh]  text-white'>
       <div className='grid grid-cols-2 gap-[4vh] md:gap-x-[5vw] xl:gap-x-[6vw]'>
         {/* first row start */}
         <div className=''>
