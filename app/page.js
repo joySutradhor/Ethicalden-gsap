@@ -52,12 +52,11 @@ export default function Home() {
   }
 
   return (
-    <div className="">
+    <section className="">
       <Navbar />
       <NewBanner />
       <Gallery />
       <NewLattestProjects />
-      <section></section>
       <OurProducts />
       <ClientsCollaboration />
       <Footer />
@@ -76,6 +75,6 @@ export default function Home() {
           <SiWhatsapp size={28} />
         </a>
       </div>
-    </div>
+    </section>
   );
 }
