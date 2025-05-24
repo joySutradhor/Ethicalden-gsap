@@ -30,6 +30,20 @@ const OurProducts = () => {
     return () => window.removeEventListener('resize', checkScreenSize)
   }, [])
 
+
+  const [isReady, setIsReady] = useState(false)
+
+useEffect(() => {
+  // Wait for images and layout to settle
+  const timer = setTimeout(() => {
+    setIsReady(true)
+    ScrollTrigger.refresh()
+  }, 1000)
+
+  return () => clearTimeout(timer)
+}, [])
+
+
   useEffect(() => {
     if (screenSize !== 'large') return
 
@@ -174,6 +188,15 @@ const OurProducts = () => {
       if (scrollTween) scrollTween.kill()
     }
   }, [])
+
+  useEffect(() => {
+  // Delay or wait for the layout to stabilize
+  const timer = setTimeout(() => {
+    ScrollTrigger.refresh(); // Important!
+  }, 500); // adjust as needed
+
+  return () => clearTimeout(timer);
+}, []);
 
   const projects = [
     {
