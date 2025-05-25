@@ -208,7 +208,9 @@ function NewProjects() {
               alt='E-laz'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-              E-laj
+              <a href="https://www.behance.net/gallery/226693839/e-laj-project-Branding-UiUx-Design-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                E-laj
+              </a>
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               Medical Healthcare

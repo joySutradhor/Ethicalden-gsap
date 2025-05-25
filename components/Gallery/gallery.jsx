@@ -19,9 +19,9 @@ const GalleryMain = () => {
 
   // left Images for the slideshow
   const leftImages = [
-    '/images/gallery/g-12.jpg',
-    '/images/gallery/g-13.jpg',
-    '/images/gallery/g-14.jpg'
+    '/images/gallery/gal-1.webp',
+    '/images/gallery/gal-2.webp',
+    '/images/gallery/gal-3.webp'
   ]
 
   // Animation for the left image slideshow
@@ -90,9 +90,9 @@ const GalleryMain = () => {
 
   // right Images for the slideshow
   const RightImages = [
-    '/images/gallery/gallery-1.jpg',
-    '/images/gallery/gallery-2.jpg',
-    '/images/gallery/g-11.jpg'
+    '/images/gallery/gal-4.webp',
+    '/images/gallery/gal-5.webp',
+    '/images/gallery/gal-6.webp'
   ]
 
   // Animation for the right image slideshow
