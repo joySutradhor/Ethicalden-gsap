@@ -9,10 +9,51 @@ const CustomCursor = () => {
   const mouse = useRef({ x: 0, y: 0 });
   const pos = useRef({ x: 0, y: 0 });
   const [isButtonHover, setIsButtonHover] = useState(false);
+  const [isDarkBg, setIsDarkBg] = useState(false);
   const observerRef = useRef(null);
 
   const handleMouseEnter = () => setIsButtonHover(true);
   const handleMouseLeave = () => setIsButtonHover(false);
+
+  const isDark = (bgColor) => {
+    if (!bgColor) return false;
+    const rgb = bgColor.match(/\d+/g);
+    if (!rgb || rgb.length < 3) return false;
+    const [r, g, b] = rgb.map(Number);
+    // Perceived brightness formula
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    return brightness < 150; // Slightly higher threshold to catch dark #111
+  };
+
+
+
+
+
+  const getEffectiveBackgroundColor = (el) => {
+    let current = el;
+    while (current && current !== document.documentElement) {
+      const bg = window.getComputedStyle(current).backgroundColor;
+      // Skip if transparent or no color
+      if (
+        bg &&
+        bg !== 'rgba(0, 0, 0, 0)' &&
+        bg !== 'transparent' &&
+        bg !== 'inherit'
+      ) {
+        return bg;
+      }
+      current = current.parentElement;
+    }
+    // Fallback to body or white
+    const bodyBg = window.getComputedStyle(document.body).backgroundColor;
+    return bodyBg && bodyBg !== 'rgba(0, 0, 0, 0)' && bodyBg !== 'transparent'
+      ? bodyBg
+      : 'rgb(255, 255, 255)';
+  };
+
+
+
+
 
   useEffect(() => {
     const dot = dotRef.current;
@@ -22,13 +63,26 @@ const CustomCursor = () => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
 
-      gsap.to(dot, {
+      gsap.to(dotRef.current, {
         x: mouse.current.x,
         y: mouse.current.y,
         duration: 0.1,
         ease: 'power2.out',
       });
+
+      const el = document.elementFromPoint(e.clientX, e.clientY);
+      if (el instanceof HTMLElement) {
+        if (el.closest('[data-cursor-dark]')) {
+          setIsDarkBg(true);
+        } else if (el.closest('[data-cursor-light]')) {
+          setIsDarkBg(false);
+        } else {
+          const effectiveBg = getEffectiveBackgroundColor(el);
+          setIsDarkBg(isDark(effectiveBg));
+        }
+      }
     };
+
 
     const follow = () => {
       pos.current.x += (mouse.current.x - pos.current.x) * 0.1;
@@ -44,7 +98,6 @@ const CustomCursor = () => {
 
     document.addEventListener('mousemove', updateMouse);
 
-    // Function to add event listeners to all interactive elements
     const addEventListeners = () => {
       const interactiveElements = document.querySelectorAll(
         'button, a, [role="button"], .cursor-pointer, [data-cursor-hover]'
@@ -56,10 +109,8 @@ const CustomCursor = () => {
       });
     };
 
-    // Initial setup
     addEventListeners();
 
-    // Set up MutationObserver to watch for DOM changes
     observerRef.current = new MutationObserver((mutations) => {
       let needsUpdate = false;
       mutations.forEach((mutation) => {
@@ -81,8 +132,7 @@ const CustomCursor = () => {
 
     return () => {
       document.removeEventListener('mousemove', updateMouse);
-      
-      // Clean up event listeners
+
       const interactiveElements = document.querySelectorAll(
         'button, a, [role="button"], .cursor-pointer, [data-cursor-hover]'
       );
@@ -91,7 +141,6 @@ const CustomCursor = () => {
         el.removeEventListener('mouseleave', handleMouseLeave);
       });
 
-      // Disconnect the observer
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
@@ -100,25 +149,26 @@ const CustomCursor = () => {
 
   return (
     <>
-      {/* Circle outline */}
-      <div
-        ref={circleRef}
-        className="pointer-events-none fixed top-0 left-0 w-16 h-16 border border-[#111] rounded-full -translate-x-1/2 -translate-y-1/2"
-        style={{ zIndex: 999999 }}
-      ></div>
+      <section data-cursor-dark>
+        {/* Circle Outline */}
+        <div
+          ref={circleRef}
+          className={`pointer-events-none fixed top-0 left-0 w-16 h-16 rounded-full -translate-x-1/2 -translate-y-1/2 border transition-colors duration-150 ${isDarkBg ? 'border-white' : 'border-black'
+            }`}
+          style={{ zIndex: 999999 }}
+        ></div>
 
-      {/* Dot OR Button icon */}
-      <div
-        ref={dotRef}
-        className={`pointer-events-none fixed top-0 left-0 rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center ${
-          isButtonHover
-            ? 'text-xl text-[#111] px-1 py-1'
-            : 'w-3 h-3 bg-[#111]'
-        }`}
-        style={{ zIndex: 999999 }}
-      >
-        {isButtonHover ? <MdArrowOutward /> : null}
-      </div>
+        <div
+          ref={dotRef}
+          className={`pointer-events-none fixed top-0 left-0 rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-colors duration-150 ${isButtonHover
+              ? `${isDarkBg ? 'text-white' : 'text-black'} text-xl px-1 py-1`
+              : `w-3 h-3 ${isDarkBg ? 'bg-white' : 'bg-black'}`
+            }`}
+          style={{ zIndex: 999999 }}
+        >
+          {isButtonHover ? <MdArrowOutward /> : null}
+        </div>
+      </section>
     </>
   );
 };

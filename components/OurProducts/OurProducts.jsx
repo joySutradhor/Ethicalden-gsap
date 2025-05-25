@@ -310,10 +310,10 @@ useEffect(() => {
                 <img
                   src={project.image}
                   alt={`${project.title} Preview`}
-                  className='absolute inset-0 w-full h-full object-cover opacity-80 z-10'
+                  className='absolute inset-0 w-full h-full object-cover  z-10'
                 />
                 <div className='relative z-20 w-full h-full flex flex-col justify-end p-6'>
-                  <h3 className='text-white text-xl md:text-2xl font-bold mb-2 md:mb-4'>
+                  <h3 className='text-black text-xl md:text-2xl font-bold mb-2 md:mb-4'>
                     {project.title}
                   </h3>
                   {/* <div className="flex gap-2 flex-wrap">
@@ -432,10 +432,10 @@ useEffect(() => {
                 <img
                   src={project.image}
                   alt={`${project.title} Preview`}
-                  className='absolute inset-0 w-full h-full object-cover opacity-80 z-10'
+                  className='absolute inset-0 w-full h-full object-cover  z-10'
                 />
                 <div className='relative z-20 w-full'>
-                  <h3 className='text-white text-2xl font-bold mb-4'>
+                  <h3 className='text-black text-2xl font-bold mb-4'>
                     {project.title}
                   </h3>
                   {/* <div className="flex gap-2 flex-wrap">
