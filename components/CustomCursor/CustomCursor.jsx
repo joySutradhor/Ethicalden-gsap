@@ -15,14 +15,12 @@ const CustomCursor = () => {
   const handleMouseEnter = () => setIsButtonHover(true);
   const handleMouseLeave = () => setIsButtonHover(false);
 
-  const isDark = (bgColor) => {
+  const isSpecificDark = (bgColor) => {
     if (!bgColor) return false;
     const rgb = bgColor.match(/\d+/g);
     if (!rgb || rgb.length < 3) return false;
     const [r, g, b] = rgb.map(Number);
-    // Perceived brightness formula
-    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-    return brightness < 150; // Slightly higher threshold to catch dark #111
+    return r === 17 && g === 17 && b === 17;
   };
 
 
@@ -78,7 +76,7 @@ const CustomCursor = () => {
           setIsDarkBg(false);
         } else {
           const effectiveBg = getEffectiveBackgroundColor(el);
-          setIsDarkBg(isDark(effectiveBg));
+          setIsDarkBg(isSpecificDark(effectiveBg));
         }
       }
     };
@@ -161,8 +159,8 @@ const CustomCursor = () => {
         <div
           ref={dotRef}
           className={`pointer-events-none fixed top-0 left-0 rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-colors duration-150 ${isButtonHover
-              ? `${isDarkBg ? 'text-white' : 'text-black'} text-xl px-1 py-1`
-              : `w-3 h-3 ${isDarkBg ? 'bg-white' : 'bg-black'}`
+            ? `${isDarkBg ? 'text-white' : 'text-black'} text-xl px-1 py-1`
+            : `w-3 h-3 ${isDarkBg ? 'bg-white' : 'bg-black'}`
             }`}
           style={{ zIndex: 999999 }}
         >

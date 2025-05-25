@@ -122,8 +122,8 @@ const ContactHome = () => {
                 {/* Social & FAQ */}
                 <SocialContact />
                 <FAQSection />
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 };

@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import {
+  FaBehance,
   FaDribbble,
   FaFacebook,
   FaInstagram,
@@ -15,7 +16,7 @@ import Link from 'next/link'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function Footer () {
+function Footer() {
   const footerRef = useRef(null)
   const [darkBackground, setDarkBackground] = useState(false)
   const [isReady, setIsReady] = useState(false)
@@ -35,7 +36,7 @@ function Footer () {
     }
   }, [])
 
-  function CTAArea ({ darkMode }) {
+  function CTAArea({ darkMode }) {
     const titleRef = useRef(null)
     const charRefs = useRef([])
     const animationRef = useRef(null)
@@ -321,28 +322,39 @@ function Footer () {
         ref={footerRef}
         className='edn__f__container transition-all  duration-500'
       >
-        <div className='edn__f__wrapper'>
-          <div>
-            <h3 className='text-3xl font-black font-helvetica'>Ethical Den</h3>
-          </div>
+        <div className=''>
+          {/* first column */}
+
+
+          {/* second column */}
           <div className='edn__f__menu__parent'>
             <div>
-              <h3 className='edn__f__title font-helvetica'>
-                Follow Ethical Den
+              <h3 className='text-xl font-black font-helvetica'>
+                <img className='w-60 h-auto' src="/images/logo/footer-logo.png" alt="" />
               </h3>
-              <div className='flex gap-3 mt-4 flex-wrap'>
-                <span className='edn__f___socail___icons'>
-                  <FaLinkedin />
-                </span>
-                <span className='edn__f___socail___icons'>
-                  <FaFacebook />
-                </span>
-                <span className='edn__f___socail___icons'>
-                  <FaYoutube />
-                </span>
-                <span className='edn__f___socail___icons'>
-                  <FaInstagram />
-                </span>
+              <div>
+                <div className='flex gap-3 mt-4 lg:mt-10 flex-wrap'>
+                  <span className='edn__f___socail___icons '>
+                    <FaLinkedin />
+                  </span>
+                  <span className='edn__f___socail___icons'>
+                    <FaFacebook />
+                  </span>
+                  <span className='edn__f___socail___icons'>
+                    <FaBehance />
+                  </span>
+                  <span className='edn__f___socail___icons'>
+                    <FaInstagram />
+                  </span>
+                </div>
+              </div>
+              <div className='hidden md:block'>
+                <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
+                  Nokia Care Building, South Dumdum, Kolkata , India .
+                </p>
+                <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
+                  PHone - 91 9547578920
+                </p>
               </div>
             </div>
 
@@ -359,25 +371,38 @@ function Footer () {
               <Link href='/services'>
                 <h3 className='edn__f__title font-helvetica'>Services</h3>
               </Link>
-              <Link href="/contact">
+              <Link href="/contact" className='block md:hidden'>
                 <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
               </Link>
+              <div className='hidden md:block'>
+                <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
+                  Mahakavi Kuvempu Road, Rajajinar, Bangalore, India
+                </p>
+                <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
+                  PHone - 91 9547578920
+                </p>
+              </div>
             </div>
 
             <div>
+              <Link href="/contact" className='hidden md:block'>
+                <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
+              </Link>
               <h3 className='edn__f__title font-helvetica'>
                 connect@ethicalden.com
               </h3>
               <p className='edn__f___socail___icons inline-block'>
                 <FaLocationDot />
               </p>
-              <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
-                Nokia Care Building, South Dumdum, Kolkata , India . <br /> <br /> Mahakavi
-                Kuvempu Road, Rajajinar, Bangalore, India .
-              </p>
-              <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
-                PHone - 91 9547578920
-              </p>
+              <div className="block md:hidden">
+                <p className="text-lg font-bold mt-5 lg:mt-10 font-helvetica">
+                  Nokia Care Building, South Dumdum, Kolkata , India . <br /> <br /> Mahakavi
+                  Kuvempu Road, Rajajinar, Bangalore, India .
+                </p>
+                <p className="text-lg font-bold mt-1 lg:mt-1 font-helvetica">
+                  PHone - 91 9547578920
+                </p>
+              </div>
               <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
                 bd - 24/A, Road-06, Nabinagar Housing, Mohammadpur, Dhaka.
               </p>
@@ -387,6 +412,10 @@ function Footer () {
             </div>
           </div>
         </div>
+        <hr className="w-full border-gray-500 my-8" />
+        <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica flex justify-center'>
+          @ Copyright 2025 - Ethical Den All Rights Reserved
+        </p>
       </section>
     </>
   )
