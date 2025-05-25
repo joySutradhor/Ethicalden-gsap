@@ -267,7 +267,7 @@ function NewProjects() {
           <div className='h-[40vh] md:w-[60%]'>
             <div>
               <Image
-                src='/images/lattest-projects/emopract.jpg'
+                src='https://i.ibb.co/gbynLb3t/emopract.jpg'
                 height={100}
                 width={500}
                 alt='emopract'
@@ -352,7 +352,7 @@ function NewProjects() {
               <Image
                 height={1000}
                 width={1000}
-                src='/images/lattest-projects/massart.png'
+                src='https://i.ibb.co/q3nPZVhS/massart.png'
                 className='h-full w-full object-cover'
                 alt='massArt'
               />
