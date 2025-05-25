@@ -359,21 +359,32 @@ function Footer() {
             </div>
 
             <div>
-              <Link
-                href='https://www.behance.net/Realethicalden'
-                target='_blank'
-              >
-                <h3 className='edn__f__title font-helvetica'>Work</h3>
-              </Link>
-              <Link href='/about-den'>
-                <h3 className='edn__f__title font-helvetica'>The Agency</h3>
-              </Link>
-              <Link href='/services'>
-                <h3 className='edn__f__title font-helvetica'>Services</h3>
-              </Link>
-              <Link href="/contact" className='block md:hidden'>
-                <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
-              </Link>
+              <div>
+                <Link
+                  href='https://www.behance.net/Realethicalden'
+                  target='_blank'
+                  className=''
+                >
+                  <h3 className='edn__f__title font-helvetica m-0 p-0'>Work</h3>
+                </Link>
+              </div>
+
+
+              <div>
+                <Link href='/about-den'>
+                  <h3 className='edn__f__title font-helvetica '>The Agency</h3>
+                </Link>
+              </div>
+              <div>
+                <Link href='/services'>
+                  <h3 className='edn__f__title font-helvetica'>Services</h3>
+                </Link>
+              </div>
+              <div>
+                <Link href="/contact" className='block md:hidden'>
+                  <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
+                </Link>
+              </div>
               <div className='hidden md:block'>
                 <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
                   Mahakavi Kuvempu Road, Rajajinar, Bangalore, India
@@ -385,9 +396,11 @@ function Footer() {
             </div>
 
             <div>
-              <Link href="/contact" className='hidden md:block'>
-                <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
-              </Link>
+              <div>
+                <Link href="/contact" className='hidden md:block'>
+                  <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
+                </Link>
+              </div>
               <h3 className='edn__f__title font-helvetica'>
                 connect@ethicalden.com
               </h3>

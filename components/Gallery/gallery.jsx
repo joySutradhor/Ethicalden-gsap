@@ -91,7 +91,7 @@ const GalleryMain = () => {
   // right Images for the slideshow
   const RightImages = [
     '/images/gallery/gal-4.webp',
-    '/images/gallery/gal-5.webp',
+    '/images/gallery/gal-7.jpg',
     '/images/gallery/gal-6.webp'
   ]
 
