@@ -45,7 +45,7 @@ const ContactHome = () => {
         setSelectedCard(card);
         setTimeout(() => {
             formRef.current?.scrollIntoView({ behavior: 'smooth' });
-        }, 100); // slight delay to ensure UI updates first
+        }, 100); 
     };
 
 

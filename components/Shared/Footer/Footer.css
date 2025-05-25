@@ -10,14 +10,14 @@
     }
 
     .edn__f__menu__parent{
-        @apply grid gap-y-[5vh] lg:gap-y-0 md:grid-cols-3 lg:grid-cols-3 md:gap-10 justify-between
+        @apply grid gap-y-[5vh] lg:gap-y-0 md:grid-cols-3 lg:grid-cols-3 md:gap-14 lg:gap-14 xl:gap-26 2xl:gap-10 justify-between
     }
     
     .edn__f__title{
         @apply  text-xl md:text-2xl lg:text-2xl 2xl:text-3xl font-bold mb-4 inline-block w-fit
     }
     .edn__f___socail___icons {
-        @apply text-base xl:text-xl 2xl:text-xl rounded-full border p-3 hover:bg-white hover:text-black
+        @apply text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl pr-3
     }
 
 }
