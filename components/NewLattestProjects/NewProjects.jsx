@@ -359,7 +359,7 @@ function NewProjects() {
                 alt='massArt'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/226677045/massArt-Procect-UIUX-Design-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                <a href="https://www.behance.net/gallery/226695785/Massart-Branding-Web-Design-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 massArt
               </a>
                 </h3>
