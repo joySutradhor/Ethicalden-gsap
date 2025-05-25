@@ -204,7 +204,7 @@ useEffect(() => {
       title: 'Branding',
       tags: ['UI/UX Design', 'Baranding'],
       image:
-        'https://ik.imagekit.io/ethicalden/updated%20picture/IMG_0091.jpg?updatedAt=1747076555868',
+        '/images/our-products/branding.png',
       isNew: true
     },
     {
@@ -212,7 +212,7 @@ useEffect(() => {
       title: 'Digital Marketing',
       tags: ['UI/UX Design', 'E-Commerce'],
       image:
-        'https://ik.imagekit.io/ethicalden/updated%20picture/IMG_0089.jpg?updatedAt=1747076555807',
+        '/images/our-products/2.jpg',
       isNew: true
     },
     {
@@ -220,7 +220,7 @@ useEffect(() => {
       title: 'SEO',
       tags: ['UI/UX Design', 'Property Portal'],
       image:
-        'https://ik.imagekit.io/ethicalden/service%20picture/DSC01610.JPG?updatedAt=1747076168717',
+        '/images/our-products/3.jpg',
       isNew: true
     },
     {
@@ -228,7 +228,7 @@ useEffect(() => {
       title: 'UI/UX Design',
       tags: ['UI/UX Design', 'Development'],
       image:
-        'https://ik.imagekit.io/ethicalden/updated%20picture/IMG_0091.jpg?updatedAt=1747076555868',
+        '/images/our-products/4.jpg',
       isNew: true
     },
     {
@@ -236,7 +236,7 @@ useEffect(() => {
       title: 'Web Development',
       tags: ['UI/UX Design', 'E-commerce'],
       image:
-        'https://ik.imagekit.io/ethicalden/updated%20picture/IMG_0092.jpg?updatedAt=1747076555659',
+        '/images/our-products/5.jpg',
       isNew: true
     }
   ]
