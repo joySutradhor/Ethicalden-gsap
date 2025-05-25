@@ -397,8 +397,8 @@ function Footer() {
 
             <div>
               <div>
-                <Link href="/contact" className='hidden md:block'>
-                  <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
+                <Link href="/contact" className='hidden md:inline-block md:w-fit '>
+                  <h3 className='edn__f__title font-helvetica '>Let's Talk</h3>
                 </Link>
               </div>
               <h3 className='edn__f__title font-helvetica'>
