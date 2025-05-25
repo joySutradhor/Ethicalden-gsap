@@ -155,6 +155,7 @@ function NewProjects() {
               ))}
             </span>
           </h2>
+          
 
 
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
@@ -166,8 +167,8 @@ function NewProjects() {
               alt='Project 1'
             />
 
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-              <a href="https://www.behance.net/gallery/195872957/MR-Cafe-Logo-Design-Branding-Project" target='_blank' className="no-underline text-inherit">
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 ' style={{ letterSpacing: "-0.05em" }}>
+              <a href="https://www.behance.net/gallery/195872957/MR-Cafe-Logo-Design-Branding-Project" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 Mr Cafe
               </a>
             </h3>
@@ -188,7 +189,7 @@ function NewProjects() {
             loop
             className='h-full w-full object-cover'
           ></video>
-          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Marzii </h3>
+          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}> Marzii </h3>
           <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
             E-commerce / Branding
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -206,7 +207,7 @@ function NewProjects() {
               className='object-cover h-full w-full'
               alt='E-laz'
             />
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
               E-laj
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -227,8 +228,8 @@ function NewProjects() {
                 loop
                 className='h-full w-full object-cover'
               ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/196542915/MAK-Community-Branding-UIUX-and-Web-Development" target='_blank' className="no-underline text-inherit">
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+                <a href="https://www.behance.net/gallery/196542915/MAK-Community-Branding-UIUX-and-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 Mak Community
               </a>
               </h3>
@@ -247,8 +248,8 @@ function NewProjects() {
                 src='https://ik.imagekit.io/ethicalden/projects/image.png?updatedAt=1747080116801'
                 className='h-full w-full object-cover'
               ></Image>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/195879275/Wonderlite-Branding-Social-Media-Stationary-UXUI" target='_blank' className="no-underline text-inherit">
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+                <a href="https://www.behance.net/gallery/195879275/Wonderlite-Branding-Social-Media-Stationary-UXUI" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 Wonderlite
               </a>
                 </h3>
@@ -269,14 +270,16 @@ function NewProjects() {
                 src='/images/lattest-projects/emopract.jpg'
                 height={100}
                 width={500}
-                alt='eduden'
+                alt='emopract'
                 className='h-full w-full object-cover'
               ></Image>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> 
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}> 
+                <a href="https://www.behance.net/gallery/226680185/Emopract-Project-UIUX-Design-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 Emopract
+              </a>
                 </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                site / Marketing
+                UI/UX / site
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 
@@ -293,7 +296,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Sandeep autolines</h3>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>Sandeep autolines</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               site /Branding
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -312,8 +315,8 @@ function NewProjects() {
               className='object-cover h-full w-full'
               alt='Divine'
             />
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-              <a href="https://www.behance.net/gallery/195704103/Devine-Branding-and-App-Development" target='_blank' className="no-underline text-inherit">
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+              <a href="https://www.behance.net/gallery/195704103/Devine-Branding-and-App-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 Divine
               </a>
             </h3>
@@ -334,8 +337,8 @@ function NewProjects() {
                 className='h-full w-full object-cover'
                 alt='RBA'
               />
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/195703857/Branding-and-Web-Developnment-Insiderfeed" target='_blank' className="no-underline text-inherit">
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+                <a href="https://www.behance.net/gallery/195703857/Branding-and-Web-Developnment-Insiderfeed" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 Insider Feed
               </a>
               </h3>
@@ -349,13 +352,13 @@ function NewProjects() {
               <Image
                 height={1000}
                 width={1000}
-                src='/images/lattest-projects/roaderr.png'
+                src='/images/lattest-projects/massart.png'
                 className='h-full w-full object-cover'
-                alt='Roaderr'
+                alt='massArt'
               />
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/141814293/Roaderrcom" target='_blank' className="no-underline text-inherit">
-                Roaderr
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+                <a href="https://www.behance.net/gallery/226677045/massArt-Procect-UIUX-Design-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                massArt
               </a>
                 </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -378,7 +381,7 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
               Journey into the world of wild animals called Zvjerići
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
