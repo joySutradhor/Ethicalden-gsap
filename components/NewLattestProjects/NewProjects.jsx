@@ -266,13 +266,15 @@ function NewProjects() {
           <div className='h-[40vh] md:w-[60%]'>
             <div>
               <Image
-                src='https://ik.imagekit.io/ethicalden/projects/p4.png?updatedAt=1747074110129'
+                src='/images/lattest-projects/emopract.jpg'
                 height={100}
                 width={500}
                 alt='eduden'
                 className='h-full w-full object-cover'
               ></Image>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Emopract</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> 
+                Emopract
+                </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site / Marketing
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
