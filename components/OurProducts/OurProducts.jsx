@@ -204,7 +204,7 @@ useEffect(() => {
       title: 'Branding',
       tags: ['UI/UX Design', 'Baranding'],
       image:
-        '/images/our-products/branding.png',
+        '/images/our-products/1.jpg',
       isNew: true
     },
     {

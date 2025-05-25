@@ -41,13 +41,13 @@ function NewProjects() {
     }, 0);
 
     // Instead of directly setting color
-tl.to(textElements, {
-  '--text-color': '#ffffff', // Set CSS variable
-  ease: 'none'
-}, 0);
+    tl.to(textElements, {
+      '--text-color': '#ffffff', // Set CSS variable
+      ease: 'none'
+    }, 0);
 
-// And in the onLeave/onEnterBack
-gsap.to(textElements, { '--text-color': '#000000' });
+    // And in the onLeave/onEnterBack
+    gsap.to(textElements, { '--text-color': '#000000' });
 
     // Reset background and text color when leaving section
     ScrollTrigger.create({
@@ -159,7 +159,7 @@ gsap.to(textElements, { '--text-color': '#000000' });
 
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
             <Image
-              src='https://ik.imagekit.io/ethicalden/projects/p5.png?updatedAt=1747074110219' 
+              src='https://ik.imagekit.io/ethicalden/projects/p5.png?updatedAt=1747074110219'
               height={1000}
               width={1000}
               className='object-cover w-full h-full'
@@ -167,8 +167,11 @@ gsap.to(textElements, { '--text-color': '#000000' });
             />
 
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-              Mr Cafe
+              <a href="https://www.behance.net/gallery/195872957/MR-Cafe-Logo-Design-Branding-Project" target='_blank' className="no-underline text-inherit">
+                Mr Cafe
+              </a>
             </h3>
+
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               Restaurant
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -225,7 +228,9 @@ gsap.to(textElements, { '--text-color': '#000000' });
                 className='h-full w-full object-cover'
               ></video>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
+                <a href="https://www.behance.net/gallery/196542915/MAK-Community-Branding-UIUX-and-Web-Development" target='_blank' className="no-underline text-inherit">
                 Mak Community
+              </a>
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
@@ -236,13 +241,17 @@ gsap.to(textElements, { '--text-color': '#000000' });
 
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh]'>
               <Image
-              width={500}
-              height={100}
-              alt='wonderlite'
+                width={500}
+                height={100}
+                alt='wonderlite'
                 src='https://ik.imagekit.io/ethicalden/projects/image.png?updatedAt=1747080116801'
                 className='h-full w-full object-cover'
               ></Image>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Wonderlite</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
+                <a href="https://www.behance.net/gallery/195879275/Wonderlite-Branding-Social-Media-Stationary-UXUI" target='_blank' className="no-underline text-inherit">
+                Wonderlite
+              </a>
+                </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -263,9 +272,9 @@ gsap.to(textElements, { '--text-color': '#000000' });
                 alt='eduden'
                 className='h-full w-full object-cover'
               ></Image>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Eduden</h3>
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}> Emopract</h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                Edtech
+                site / Marketing
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 
@@ -302,7 +311,9 @@ gsap.to(textElements, { '--text-color': '#000000' });
               alt='Divine'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-              Divine
+              <a href="https://www.behance.net/gallery/195704103/Devine-Branding-and-App-Development" target='_blank' className="no-underline text-inherit">
+                Divine
+              </a>
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               UI/Ux /Website Development
@@ -322,7 +333,9 @@ gsap.to(textElements, { '--text-color': '#000000' });
                 alt='RBA'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
-               Insider Feed
+                <a href="https://www.behance.net/gallery/195703857/Branding-and-Web-Developnment-Insiderfeed" target='_blank' className="no-underline text-inherit">
+                Insider Feed
+              </a>
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 App Development
@@ -331,16 +344,20 @@ gsap.to(textElements, { '--text-color': '#000000' });
 
             </div>
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
-              <video
-                src='https://mater.agency/wp-content/uploads/2024/02/telenor-2.mp4'
-                muted
-                autoPlay
-                loop
+              <Image
+                height={1000}
+                width={1000}
+                src='/images/lattest-projects/roaderr.png'
                 className='h-full w-full object-cover'
-              ></video>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>Telenor Bank</h3>
+                alt='Roaderr'
+              />
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica cursor-pointer text-color-change' style={{ letterSpacing: "-0.05em" }}>
+                <a href="https://www.behance.net/gallery/141814293/Roaderrcom" target='_blank' className="no-underline text-inherit">
+                Roaderr
+              </a>
+                </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                site /Branding
+                UI/UX / site
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 
