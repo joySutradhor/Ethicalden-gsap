@@ -118,17 +118,17 @@ function ProductsArea() {
 
             <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%]'>
               <Image
-                src='https://mater.agency/wp-content/uploads/2024/02/hns.jpg'
+                src='/images/products/stockogen.jpg'
                 height={1000}
                 width={1000}
                 className='object-cover w-full h-full'
                 alt='Project 1'
               />
               <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
-                Blog image HNS
+                Stockogen
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                site /Branding
+                Stock Managment
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 

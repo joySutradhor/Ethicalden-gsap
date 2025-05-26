@@ -298,9 +298,13 @@ function NewProjects() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>Sandeep autolines</h3>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+            <a href="https://www.behance.net/gallery/226736453/Sandeep-Auto-Line-Branding-social-Media-Marketing" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                Sandeep Autolines
+              </a>
+            </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              site /Branding
+              Marketing /Branding
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 
