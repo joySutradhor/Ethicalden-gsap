@@ -118,7 +118,7 @@ function ProductsArea() {
 
             <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%]'>
               <Image
-                src='/images/products/stockogen.jpg'
+                src='https://i.ibb.co/qFLtpx2G/stockogen.jpg'
                 height={1000}
                 width={1000}
                 className='object-cover w-full h-full'
