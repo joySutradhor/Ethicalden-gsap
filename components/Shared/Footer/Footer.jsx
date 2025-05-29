@@ -338,7 +338,7 @@ function Footer() {
                   Nokia Care Building, South Dumdum, Kolkata , India .
                 </p>
                 <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
-                  PHone - 91 9547578920
+                  Phone - +91 9547578920
                 </p>
               </div>
             </div>
@@ -370,24 +370,20 @@ function Footer() {
                   <h3 className='edn__f__title font-helvetica'>Privacy Policy</h3>
                 </Link>
               </div>
-              <div>
-                <Link href="/contact" className='block md:hidden'>
-                  <h3 className='edn__f__title font-helvetica'>Let's Talk</h3>
-                </Link>
-              </div>
+
               <div className='hidden md:block md:pt-10 lg:pt-10 xl:pt-18'>
                 <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
                   Mahakavi Kuvempu Road, Rajajinar, Bangalore, India .
                 </p>
                 <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
-                  PHone - 91 9547578920
+                  Phone - +91 9547578920
                 </p>
               </div>
             </div>
 
             <div>
               <div>
-                <Link href="/contact" className='hidden md:inline-block md:w-fit '>
+                <Link href="/contact" className='inline-block w-fit '>
                   <h3 className='edn__f__title font-helvetica '>Let's Talk</h3>
                 </Link>
               </div>
@@ -401,14 +397,14 @@ function Footer() {
                   Kuvempu Road, Rajajinar, Bangalore, India .
                 </p>
                 <p className="text-lg font-bold mt-1 lg:mt-1 font-helvetica">
-                  PHone - 91 9547578920
+                  Phone - +91 9547578920
                 </p>
               </div>
               <p className='text-lg font-bold mt-5 md:mt-20 lg:mt-10 font-helvetica md:pt-20 lg:pt-34 xl:pt-42 2xl:pt-46'>
                 BD - 24/A, Road-06, Nabinagar Housing, Mohammadpur, Dhaka.
               </p>
               <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
-                phone- 880 17941-81603
+                Phone- +880 17941-81603
               </p>
             </div>
           </div>

@@ -331,7 +331,7 @@ function NewProjects() {
               </a>
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              UI/Ux /Website Development
+              UI/Ux /site
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 
@@ -349,11 +349,11 @@ function NewProjects() {
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
                 <a href="https://www.behance.net/gallery/195703857/Branding-and-Web-Developnment-Insiderfeed" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
-                Insider Feed
+                InsiderFeed
               </a>
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                App Development
+                site / Branding  / UI/Ux Design   
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 

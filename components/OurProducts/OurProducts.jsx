@@ -209,14 +209,31 @@ useEffect(() => {
     },
     {
       id: 2,
-      title: 'Digital Marketing',
-      tags: ['UI/UX Design', 'E-Commerce'],
+      title: 'UI/UX Design',
+      tags: ['UI/UX Design', 'Development'],
       image:
-        '/images/our-products/2.jpg',
+        '/images/our-products/ui-ux.jpg',
       isNew: true
     },
     {
       id: 3,
+      title: 'Web Development',
+      tags: ['UI/UX Design', 'E-commerce'],
+      image:
+        '/images/our-products/web-development.jpg',
+      isNew: true
+    },
+    {
+      id: 4,
+      title: 'App Development',
+      tags: ['UI/UX Design', 'E-commerce'],
+      image:
+        '/images/our-products/app-development.jpg',
+      isNew: true
+    },
+    
+    {
+      id: 5,
       title: 'SEO',
       tags: ['UI/UX Design', 'Property Portal'],
       image:
@@ -224,21 +241,15 @@ useEffect(() => {
       isNew: true
     },
     {
-      id: 4,
-      title: 'UI/UX Design',
-      tags: ['UI/UX Design', 'Development'],
+      id: 6,
+      title: 'Digital Marketing',
+      tags: ['UI/UX Design', 'E-Commerce'],
       image:
-        '/images/our-products/4.jpg',
+        '/images/our-products/2.jpg',
       isNew: true
     },
-    {
-      id: 5,
-      title: 'Web Development',
-      tags: ['UI/UX Design', 'E-commerce'],
-      image:
-        '/images/our-products/5.jpg',
-      isNew: true
-    }
+    
+    
   ]
 
   return (
@@ -313,7 +324,7 @@ useEffect(() => {
                   className='absolute inset-0 w-full h-full object-cover  z-10'
                 />
                 <div className='relative z-20 w-full h-full flex flex-col justify-end p-6'>
-                  <h3 className='text-black text-xl md:text-2xl font-bold mb-2 md:mb-4'>
+                  <h3 className='text-black text-xl md:text-2xl font-bold  '>
                     {project.title}
                   </h3>
                   {/* <div className="flex gap-2 flex-wrap">

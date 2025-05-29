@@ -61,7 +61,7 @@ const AboutUsHome = () => {
                         {"A Team That Feels Like Yours.".split(" ").map((word, wi) => (
                             <span
                                 key={wi}
-                                className="inline-block whitespace-nowrap mr-[0.2em] lg:mr-[0.3]" 
+                                className="inline-block whitespace-nowrap mr-1 md:mr-2 lg:mr-3 xl:mr-5" 
                             >
                                 {word.split("").map((char, ci) => (
                                     <span
