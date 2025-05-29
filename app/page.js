@@ -68,7 +68,7 @@ export default function Home() {
         className="fixed bottom-4 right-4 md:bottom-10 md:right-10 lg:bottom-5 lg:right-5 xl:bottom-10 xl:right-10 p-4 rounded-full shadow-lg z-50 transition cursor-pointer"
       >
         <a
-          href="https://wa.me/919239425164"
+          href="https://wa.me/919547578920"
           target="_blank"
           rel="noopener noreferrer"
           className="text-black"
