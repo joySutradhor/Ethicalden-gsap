@@ -330,7 +330,7 @@ function Footer() {
           <div className='edn__f__menu__parent'>
             <div>
               <h3 className='text-xl font-black font-helvetica'>
-                <img className='w-80 h-auto' src="/images/logo/footer-logo.png" alt="" />
+                <img className='w-50 md:w-80 h-auto' src="/images/logo/footer-logo.png" alt="" />
               </h3>
 
               <div className='hidden md:block md:pt-37 lg:pt-37 xl:pt-40'>
@@ -386,7 +386,7 @@ function Footer() {
                   <h3 className='edn__f__title font-helvetica '>Let's Talk</h3>
                 </Link>
               </div>
-              <h3 className='edn__f__title font-helvetica'>
+              <h3 className='text-xl md:text-[18px] lg:text-2xl xl:text-2xl font-bold mb-4 inline-block w-fit font-helvetica'>
                 connect@ethicalden.com
               </h3>
 
@@ -412,16 +412,16 @@ function Footer() {
         <div className='md:flex justify-between'>
           <div className='flex gap-3 mt-4 lg:mt-10 flex-wrap'>
             <span className='edn__f___socail___icons '>
-              <FaLinkedin />
+              <a target='_blank' href="https://www.linkedin.com/company/ethicalden/?originalSubdomain=in"><FaLinkedin /></a>
             </span>
             <span className='edn__f___socail___icons'>
-              <FaFacebook />
+              <a target='_blank' href="https://www.facebook.com/ethicalden/"><FaFacebook /></a>
             </span>
             <span className='edn__f___socail___icons'>
-              <FaBehance />
+              <a href="https://www.behance.net/Realethicalden" target='_blank'><FaBehance /></a>
             </span>
             <span className='edn__f___socail___icons'>
-              <FaInstagram />
+              <a href="https://www.instagram.com/ethical.den/" target='_blank'><FaInstagram /></a>
             </span>
           </div>
           <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica '>
