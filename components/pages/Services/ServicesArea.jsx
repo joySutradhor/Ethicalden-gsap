@@ -284,13 +284,13 @@ const ServicesArea = () => {
 
     return (
         <div className='bg-change-anim pt-[140px] md:pt-[150px] lg:pt-[160px] xl:pt-[180px] 2xl:pt-[200px]'>
-            <div className='px-20 md:px-25 lg:px-30 xl:px-40 2xl:px-50 '>
+            <div className='padding-div px-20 md:px-25 lg:px-30 xl:px-40 2xl:px-50 '>
                 <div className='flex flex-col items-center'>
                     <div className='grid grid-cols-1 sm:grid-cols-2  gap-80 md:gap-40 lg:gap-30 xl:gap-50  justify-center items-center w-full'>
                         {/* left title */}
                         <h2
                             ref={titleRef}
-                            className="xl:max-w-2xl 2xl:max-w-md text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl -ml-12  md:ml-0 font-extrabold mt-0 md:-mt-40 text-black font-helvetica leading-[1] w-full max-w-4xl"
+                            className="xl:max-w-2xl 2xl:max-w-md text-left text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl -ml-12  md:ml-0 font-extrabold mt-0 md:-mt-40 text-black font-helvetica leading-[1] w-full "
                         >
                             {titleText.split(' ').map((word, wi) => (
                                 <span key={wi} className="inline-block whitespace-nowrap mr-3 lg:mr-4 xl:mr-5">
@@ -334,7 +334,7 @@ const ServicesArea = () => {
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute max-[320px]:bg-red-500 -bottom-52 md:-bottom-85 lg:-bottom-55 left-0 text-white pointer-events-none'
+                                    className='absolute  -bottom-50 md:-bottom-85 lg:-bottom-55 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[0] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
