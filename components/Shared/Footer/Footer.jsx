@@ -333,7 +333,7 @@ function Footer() {
                 <img className='w-50 md:w-80 h-auto' src="/images/logo/footer-logo.png" alt="" />
               </h3>
 
-              <div className='hidden md:block md:pt-37 lg:pt-37 xl:pt-40'>
+              <div className='hidden md:block md:pt-48 lg:pt-49 xl:pt-49 2xl:pt-53'>
                 <p className='text-lg font-bold mt-5 xl:mt-10 font-helvetica'>
                   Nokia Care Building, South Dumdum, Kolkata , India .
                 </p>
@@ -363,6 +363,11 @@ function Footer() {
               <div>
                 <Link href='/services'>
                   <h3 className='edn__f__title font-helvetica'>Services</h3>
+                </Link>
+              </div>
+              <div>
+                <Link href='/privacy-policy'>
+                  <h3 className='edn__f__title font-helvetica'>Privacy Policy</h3>
                 </Link>
               </div>
               <div>
@@ -399,7 +404,7 @@ function Footer() {
                   PHone - 91 9547578920
                 </p>
               </div>
-              <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica md:pt-20 lg:pt-21 xl:pt-30'>
+              <p className='text-lg font-bold mt-5 md:mt-20 lg:mt-10 font-helvetica md:pt-20 lg:pt-34 xl:pt-42 2xl:pt-46'>
                 BD - 24/A, Road-06, Nabinagar Housing, Mohammadpur, Dhaka.
               </p>
               <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
