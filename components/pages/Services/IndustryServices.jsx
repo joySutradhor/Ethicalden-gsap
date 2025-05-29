@@ -34,22 +34,29 @@ const IndustryServices = () => {
 
     const splitTextIntoWords = (text, index) => {
         return text.split(" ").map((word, wordIndex) => (
-            <span key={`${index}-${wordIndex}`} ref={addToWordRefs} className="inline-block">
-                {word}&nbsp;
+            <span key={`${index}-${wordIndex}`} ref={addToWordRefs} className="inline-block mr-1">
+                {word}
             </span>
         ));
     };
 
-    const splitTextIntoChars = (text) => {
+    const splitTextIntoLines = (text) => {
         return text.split('\n').map((line, lineIndex) => (
             <div key={lineIndex} className="block leading-tight">
-                {line.split('').map((char, charIndex) => (
-                    <span
-                        key={`${lineIndex}-${charIndex}`}
-                        ref={addToCharRefs}
-                        className="char inline-block text-gray-400"
+                {line.split(' ').map((word, wordIndex) => (
+                    <span 
+                        key={`${lineIndex}-${wordIndex}`}
+                        className="inline-block mr-1 md:mr-2 lg:mr-3 xl:mr-5  whitespace-nowrap"
                     >
-                        {char === ' ' ? '\u00A0' : char}
+                        {word.split('').map((char, charIndex) => (
+                            <span
+                                key={`${lineIndex}-${wordIndex}-${charIndex}`}
+                                ref={addToCharRefs}
+                                className="char inline-block text-gray-400"
+                            >
+                                {char === ' ' ? ' ' : char}
+                            </span>
+                        ))}
                     </span>
                 ))}
             </div>
@@ -95,7 +102,6 @@ const IndustryServices = () => {
                 }
             );
         });
-
 
         // Button animation setup
         const button = buttonRef.current;
@@ -192,18 +198,22 @@ const IndustryServices = () => {
     }, []);
 
     const paragraphs = [
-        "From the fast-moving world of Fintech to the dynamic landscapes of telecommunications, from fuelling the spark of startups to navigating the corridors of corporate giants and the ever-evolving world of SaaS — we’ve left our mark in every digital frontier. Everything we do is a reflection of our deep understanding of industries we serve."
+        "From the fast-moving world of Fintech to the dynamic landscapes of telecommunications, from fuelling the spark of startups to navigating the corridors of corporate giants and the ever-evolving world of SaaS — we've left our mark in every digital frontier. Everything we do is a reflection of our deep understanding of industries we serve."
     ];
 
-    const titleText = "We adapt to the\nunique demands of\neach industry. ";
+    const titleText = "We adapt to the unique demands of each industry. ";
 
     return (
-        <div className="bg-white  mt-[16vh] pt-[150px] md:pt-[370px] lg:pt-[360px] xl:pt-[450px] 2xl:pt-[460px] md:mt-[25vh] lg:mt-[30vh]">
+         <div className="bg-white mt-[16vh] pt-[150px] md:pt-[370px] lg:pt-[360px] xl:pt-[450px] 2xl:pt-[460px] md:mt-[25vh] lg:mt-[30vh]">
             <div className="py-16 px-5 md:px-10 lg:px-10 xl:px-20 2xl:px-40 z-10">
                 <div className="max-w-6xl mx-auto">
                     {/* Title */}
-                    <h2 style={{ letterSpacing: "-0.05em" }} ref={titleRef} className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-8">
-                        {splitTextIntoChars(titleText)}
+                    <h2 
+                        ref={titleRef} 
+                        className="text-[38px] md:text-[50px] lg:text-[60px] xl:text-[80px] 2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-8 md:max-w-lg xl:max-w-4xl"
+                        style={{ letterSpacing: "-0.05em" }}
+                    >
+                        {splitTextIntoLines(titleText)}
                     </h2>
 
                     <div className="flex flex-col sm:flex-row pt-8 gap-6 sm:gap-10">
@@ -225,14 +235,12 @@ const IndustryServices = () => {
                                     {splitTextIntoWords(text, index)}
                                 </p>
                             ))}
-
                         </div>
                     </div>
-
                 </div>
             </div>
             <ServiceGallery />
-            <div className=" relative flex justify-center">
+            <div className="relative flex justify-center">
                 <Link
                     ref={buttonRef}
                     className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"

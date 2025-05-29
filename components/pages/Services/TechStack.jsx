@@ -62,20 +62,24 @@ const TechStack = () => {
             <div className="text-center mb-12">
                 <h2
                     ref={titleRef}
-                    className="text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-4 flex flex-wrap justify-center gap-x-1 gap-y-2"
+                    className="text-[32px] sm:text-[36px] md:text-[50px] lg:text-[60px] xl:text-[80px] 2xl:text-[90px] font-urbanist font-black leading-[1.06] mb-4 flex flex-wrap justify-center gap-x-2 gap-y-3"
                 >
-                    {title.split('').map((char, i) => (
-                        <span
-                            key={i}
-                            ref={(el) => (charRefs.current[i] = el)}
-                            style={char !== " " ? { letterSpacing: "-0.12em" } : {}}
-                            className={`inline-block ${char === ' ' ? 'w-2 md:w-4 lg:w-5' : ''
-                                }`}
-                        >
-                            {char}
+                    {title.split(' ').map((word, wordIndex) => (
+                        <span key={wordIndex} className="whitespace-nowrap flex mr-1 md:mr-3 lg:mr-4 xl:mr-5">
+                            {word.split('').map((char, charIndex) => (
+                                <span
+                                    key={charIndex}
+                                    ref={(el) => (charRefs.current[wordIndex * 100 + charIndex] = el)} 
+                                    style={{ letterSpacing: '-0.05em' }}
+                                    className="inline-block"
+                                >
+                                    {char}
+                                </span>
+                            ))}
                         </span>
                     ))}
                 </h2>
+
                 <p className="font-helvetica text-black text-xl md:text-2xl ">All the wizardry behind our work</p>
             </div>
 
