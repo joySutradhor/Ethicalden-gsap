@@ -15,7 +15,7 @@ export default function SocialContact() {
             Jump into a quick chat
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 w-fit gap-4 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 w-fit gap-4 lg:gap-8">
             {/* facebook */}
             <a
               target="_blank"

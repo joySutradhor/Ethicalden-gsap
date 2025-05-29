@@ -212,7 +212,7 @@ const MoreAboutProject = ({ onSubmit, nameRef, companyRef, emailRef, phoneRef })
                     <div className="relative font-helvetica">
                         <label
                             htmlFor="budget"
-                            className={`absolute left-6 ${budget ? 'top-2 text-sm' : 'top-6 text-xl'} pt-3 pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
+                            className={`absolute text-[18px] left-6 ${budget ? 'top-2 text-sm' : 'top-6 text-xl'} pt-3 pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
                         >
                             What is your estimated budget?
                         </label>
@@ -246,7 +246,7 @@ const MoreAboutProject = ({ onSubmit, nameRef, companyRef, emailRef, phoneRef })
                     <div className="relative font-helvetica">
                         <label
                             htmlFor="projectAbout"
-                            className={`absolute left-6 ${projectAboutRef.current?.value ? 'top-2 text-sm' : 'top-6 text-xl'} py-3 pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
+                            className={`absolute left-6 ${projectAboutRef.current?.value ? 'top-2 text-sm' : 'top-6 text-xl'} pr-4 py-3 pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
                         >
                             What is your project about?
                         </label>

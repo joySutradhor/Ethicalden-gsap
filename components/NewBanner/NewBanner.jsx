@@ -206,7 +206,7 @@ const NewBanner = () => {
         <div className='mb-[60px] lg:mb-[10px]'>
           <h1
             ref={titleRef}
-            className='text-[40px] md:text-[70px] lg:text-[85px] xl:text-[100px] 2xl:text-[130px] font-urbanist font-extrabold leading-[1.1]'
+            className='text-[38px] md:text-[70px] lg:text-[85px] xl:text-[100px] 2xl:text-[130px] font-urbanist font-extrabold leading-[1.1]'
           >
             {titleText.split('').map((char, index) =>
               char === '\n' ? (

@@ -334,7 +334,7 @@ const ServicesArea = () => {
 
                                 {/* Fixed service list */}
                                 <div
-                                    className='absolute -bottom-52 md:-bottom-85 lg:-bottom-55 left-0 text-white pointer-events-none'
+                                    className='absolute max-[320px]:bg-red-500 -bottom-52 md:-bottom-85 lg:-bottom-55 left-0 text-white pointer-events-none'
                                     ref={el => serviceListRefs.current[0] = el}
                                 >
                                     <ul className='text-xl md:text-2xl leading-relaxed font-helvetica space-y-1 md:space-y-3'>
@@ -479,7 +479,8 @@ const ServicesArea = () => {
                         <Link
                             ref={buttonRef}
                             className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
-                            href={"#"}
+                            href={"https://www.behance.net/Realethicalden"}
+                            target='_blank'
                             style={{ opacity: 1 }}
                         >
                             <span ref={buttonBgRef} className="absolute inset-0 z-0" />

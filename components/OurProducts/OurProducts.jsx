@@ -266,7 +266,7 @@ useEffect(() => {
             <Link
               ref={buttonRef}
               className='relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group'
-              href={'/contact'}
+              href={'/services'}
               style={{ opacity: 1 }}
             >
               <span ref={buttonBgRef} className='absolute inset-0 z-0' />
@@ -333,7 +333,7 @@ useEffect(() => {
             <Link
               ref={buttonRef}
               className='relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group'
-              href={'/contact'}
+              href={'/services'}
               style={{ opacity: 1 }}
             >
               <span ref={buttonBgRef} className='absolute inset-0 z-0' />

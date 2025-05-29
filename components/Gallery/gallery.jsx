@@ -363,10 +363,10 @@ const GalleryMain = () => {
         className='min-h-screen pt-[100px] md:pt-[150px] lg:pt-[150px] 2xl:pt-[160px] px-[20px] md:px-10 lg:px-[50px] xl:px-[80px] 2xl:px-[90px] relative'
       >
         <div className='flex justify-center items-center'>
-          <div className='grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 w-full relative'>
+          <div className='grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 w-full h-full relative'>
             {/* First Column */}
             <div ref={col1Ref} className='space-y-6'>
-              <div className='bg-[#09e5e5] text-black lg:mt-22 2xl:mt-12 h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
+              <div className='bg-[#09e5e5] text-black lg:mt-22 2xl:mt-12 min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>
                   01 / <span className='text-gray-500'>06</span>
                 </p>
@@ -376,13 +376,13 @@ const GalleryMain = () => {
                 <p className='text-sm md:text-base'>
                   lines of code written this week.
                 </p>
-                <p className='mt-[1vh] md:mt-[5vh] italic'>
+                <p className='text-sm mt-[1vh] md:mt-[5vh] italic'>
                   Probably 3 bugs. Maybe 4. We're honest like that.
                 </p>
               </div>
               <div
                 ref={imgContainerRef1}
-                className='relative rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
+                className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
               >
                 {leftImages.map((src, index) => (
                   <img
@@ -401,7 +401,7 @@ const GalleryMain = () => {
               ref={col2Ref}
               className='space-y-6 flex flex-col mt-30 lg:mt-30 xl:mt-40'
             >
-              <div className='bg-[#111] text-white h-[35vh] p-4 md:p-6 rounded-2xl w-full md:h-[50vh] lg:h-[38vh] xl:h-[44vh]'>
+              <div className='bg-[#111] text-white min-h-[35vh] p-4 md:p-6 rounded-2xl w-full md:h-[50vh] lg:h-[38vh] xl:h-[44vh]'>
                 <p className='text-base md:text-xl'>
                   02 / <span className='text-gray-500'>06</span>
                 </p>
@@ -412,7 +412,7 @@ const GalleryMain = () => {
                   clients used the word "wizard" in feedback last month.
                 </p>
               </div>
-              <div className='bg-[#a8ff57] text-black h-[35vh] md:h-[50vh] p-4 md:p-6 rounded-2xl w-full lg:h-[38vh] xl:h-[44vh]'>
+              <div className='bg-[#a8ff57] text-black min-h-[35vh] md:h-[50vh] p-4 md:p-6 rounded-2xl w-full lg:h-[38vh] xl:h-[44vh]'>
                 <p className='text-base md:text-xl'>
                   DST / <span className='text-gray-500'>DEN STANDARD TIME</span>
                 </p>
@@ -458,7 +458,7 @@ const GalleryMain = () => {
               ref={col4Ref}
               className='space-y-6 -mt-28 md:-mt-28 lg:mt-30 2xl:mt-20'
             >
-              <div className='bg-[#111] text-white h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
+              <div className='bg-[#111] text-white min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>
                   04 / <span className='text-gray-500'>06</span>
                 </p>
@@ -469,7 +469,7 @@ const GalleryMain = () => {
                   Kolkata crafts. Bangalore codes. Dhaka fuels us.
                 </p>
               </div>
-              <div className='bg-[#a8ff57] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
+              <div className='bg-[#a8ff57] text-black min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>HOT OR NOT</p>
                 <h2
                   className={`${loading
@@ -493,7 +493,7 @@ const GalleryMain = () => {
             >
               <div
                 ref={imgContainerRef2}
-                className='relative rounded-2xl h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
+                className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
               >
                 {RightImages.map((src, index) => (
                   <img
@@ -507,7 +507,7 @@ const GalleryMain = () => {
               </div>
 
 
-              <div className='bg-[#09e5e5] text-black h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
+              <div className='bg-[#09e5e5] text-black min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
                 <p className='text-base md:text-xl'>
                   06 / <span className='text-gray-500'>06</span>
                 </p>

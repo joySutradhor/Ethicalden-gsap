@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import Link from 'next/link';
 
 const ContactForm = ({  onSubmit, nameRef, companyRef, emailRef, phoneRef  }) => {
 

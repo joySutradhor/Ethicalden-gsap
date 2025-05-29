@@ -58,8 +58,8 @@ const ContactHome = () => {
     const handleSubmit = async (formData, formType) => {
         const templateId = {
             'project': 'template_tq7iwpf',
-            'tell': 'YOUR_TELL_TEMPLATE_ID',
-            'business': 'YOUR_BUSINESS_TEMPLATE_ID'
+            'tell': 'template_tq7iwpf',
+            'business': 'template_tq7iwpf'
         }[formType];
 
         const result = await sendEmail(templateId, formData);
@@ -88,7 +88,7 @@ const ContactHome = () => {
                         className="text-left w-full  text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06]"
                     >
                         {"Things are about to get real.".split(" ").map((word, wi) => (
-                            <span key={wi} className="whitespace-nowrap inline-block mr-2">
+                            <span key={wi} className="whitespace-nowrap inline-block mr-2 md:mr-3 lg:mr-4 xl:mr-5">
                                 {word.split("").map((char, ci) => (
                                     <span
                                         key={ci}
@@ -136,19 +136,32 @@ const ContactHome = () => {
 
                 {/* Contact Form */}
                 <div ref={formRef}>
-                    <ContactForm nameRef={nameRef}
+                    <ContactForm
+                        nameRef={nameRef}
                         companyRef={companyRef}
                         emailRef={emailRef}
                         phoneRef={phoneRef} onSubmit={(data) => handleSubmit(data, selectedCard)} />
                 </div>
 
                 {/* Conditional Sections */}
-                {selectedCard === 'project' && <MoreAboutProject nameRef={nameRef}
+                {selectedCard === 'project' && <MoreAboutProject
+                    nameRef={nameRef}
                     companyRef={companyRef}
                     emailRef={emailRef}
                     phoneRef={phoneRef} onSubmit={(data) => handleSubmit(data, 'project')} />}
-                {selectedCard === 'tell' && <WeAreAllEars onSubmit={(data) => handleSubmit(data, 'tell')} />}
-                {selectedCard === 'business' && <LayItOnUs onSubmit={(data) => handleSubmit(data, 'business')} />}
+
+
+                {selectedCard === 'tell' && <WeAreAllEars
+                    nameRef={nameRef}
+                    companyRef={companyRef}
+                    emailRef={emailRef}
+                    phoneRef={phoneRef} onSubmit={(data) => handleSubmit(data, 'tell')} />}
+
+                    
+                {selectedCard === 'business' && <LayItOnUs nameRef={nameRef}
+                    companyRef={companyRef}
+                    emailRef={emailRef}
+                    phoneRef={phoneRef} onSubmit={(data) => handleSubmit(data, 'business')} />}
 
                 {/* Social & FAQ */}
                 <SocialContact />
