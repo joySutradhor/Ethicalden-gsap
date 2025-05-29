@@ -137,15 +137,15 @@ function ProductsArea() {
 
           <div className='h-[23vh] mt-5 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
             <video
-              src='https://mater.agency/wp-content/uploads/2024/02/vogue-1.mp4'
+              src='/video/product/staffsynk.mp4'
               muted
               autoPlay
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>Vogue Adria</h3>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>Staffsynk</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-              site /Branding
+              HR Managment Software
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </p>
 

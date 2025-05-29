@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 
-const MoreAboutProject = () => {
+const MoreAboutProject = ({ onSubmit, nameRef, companyRef, emailRef, phoneRef }) => {
     const projectAboutRef = useRef(null);
     const budgetRef = useRef(null);
     const findUsRef = useRef(null);
@@ -25,6 +25,23 @@ const MoreAboutProject = () => {
         'Linkdin',
         'other'
     ];
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = {
+           name: nameRef?.current?.value || '',
+            company: companyRef?.current?.value || '',
+            email: emailRef?.current?.value || '',
+            phone: phoneRef?.current?.value || '',
+            budget: budgetRef.current.value,
+            projectAbout: projectAboutRef.current.value,
+            findUs: findUsRef.current.value,
+            privacyPolicy
+        };
+        onSubmit(formData);
+    };
+
 
     const handleFocus = (e) => {
         const placeholder = e.target.previousElementSibling;
@@ -181,6 +198,7 @@ const MoreAboutProject = () => {
 
     return (
         <div className="mt-20 md:mt-25 xl:mt-20  bg-white rounded-lg">
+            <form onSubmit={handleSubmit}>
             <div className="mb-6 lg:flex gap-20">
                 <div className="flex-1/3">
                     <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={ { letterSpacing: "-0.05em" }}>More about your project.</h2>
@@ -194,7 +212,7 @@ const MoreAboutProject = () => {
                     <div className="relative font-helvetica">
                         <label
                             htmlFor="budget"
-                            className={`absolute left-6 ${budget ? 'top-2 text-sm' : 'top-6 text-xl'} pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
+                            className={`absolute left-6 ${budget ? 'top-2 text-sm' : 'top-6 text-xl'} pt-3 pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
                         >
                             What is your estimated budget?
                         </label>
@@ -221,19 +239,14 @@ const MoreAboutProject = () => {
                             </svg>
                         </div>
 
-                        {/* Show Selected Budget Text */}
-                        {budget && (
-                            <div className="mt-3 text-[#111] text-lg font-semibold">
-                                {budget}
-                            </div>
-                        )}
+                        
                     </div>
 
                     {/* Project About Field */}
                     <div className="relative font-helvetica">
                         <label
                             htmlFor="projectAbout"
-                            className={`absolute left-6 ${projectAboutRef.current?.value ? 'top-2 text-sm' : 'top-6 text-xl'} pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
+                            className={`absolute left-6 ${projectAboutRef.current?.value ? 'top-2 text-sm' : 'top-6 text-xl'} py-3 pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
                         >
                             What is your project about?
                         </label>
@@ -250,7 +263,7 @@ const MoreAboutProject = () => {
                     <div className="relative font-helvetica">
                         <label
                             htmlFor="findUs"
-                            className={`absolute left-6 ${findUs ? 'top-2 text-sm' : 'top-6 text-xl'} pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
+                            className={`absolute left-6 ${findUs ? 'top-2 text-sm' : 'top-6 text-xl'} pt-3 pointer-events-none text-gray-300 font-bold font-helvetica transition-all`}
                         >
                             How did you find us?
                         </label>
@@ -276,13 +289,6 @@ const MoreAboutProject = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
-
-                        {/* Show Selected FindUs Text */}
-                        {findUs && (
-                            <div className="mt-3 text-[#111] text-lg font-semibold">
-                                {findUs}
-                            </div>
-                        )}
                     </div>
 
                     {/* Privacy Policy */}
@@ -302,10 +308,10 @@ const MoreAboutProject = () => {
                     {/* Send Inquiry Button */}
                     <div className='flex justify-center'>
                         <div className="my-6 sm:mt-8 relative inline-block">
-                        <Link
+                        <button
+                            type="submit"
                             ref={buttonRef}
                             className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
-                            href={"#"}
                             style={{ opacity: 1 }}
                         >
                             <span ref={buttonBgRef} className="absolute inset-0 z-0" />
@@ -327,11 +333,12 @@ const MoreAboutProject = () => {
                                     ))}
                                 </span>
                             </span>
-                        </Link>
+                        </button>
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     );
 };

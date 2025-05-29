@@ -10,6 +10,8 @@ import SocialContact from './SocialContact';
 import FAQSection from './FAQSection';
 import WeAreAllEars from './WeAreAllEars';
 import LayItOnUs from './LayItOnUs';
+import { sendEmail } from '@/components/utils/emailjs';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +20,10 @@ const ContactHome = () => {
     const charRefs = useRef([]);
     const formRef = useRef(null);
     const [selectedCard, setSelectedCard] = useState('project');
+    const nameRef = useRef(null);
+    const companyRef = useRef(null);
+    const emailRef = useRef(null);
+    const phoneRef = useRef(null);
 
     useEffect(() => {
         if (!charRefs.current.length) return;
@@ -45,7 +51,26 @@ const ContactHome = () => {
         setSelectedCard(card);
         setTimeout(() => {
             formRef.current?.scrollIntoView({ behavior: 'smooth' });
-        }); 
+        });
+    };
+
+
+    const handleSubmit = async (formData, formType) => {
+        const templateId = {
+            'project': 'template_tq7iwpf',
+            'tell': 'YOUR_TELL_TEMPLATE_ID',
+            'business': 'YOUR_BUSINESS_TEMPLATE_ID'
+        }[formType];
+
+        const result = await sendEmail(templateId, formData);
+
+        if (result.success) {
+            // Show success message
+            console.log('Email sent successfully!');
+        } else {
+            // Show error message
+            console.error('Failed to send email');
+        }
     };
 
 
@@ -111,13 +136,19 @@ const ContactHome = () => {
 
                 {/* Contact Form */}
                 <div ref={formRef}>
-                    <ContactForm />
+                    <ContactForm nameRef={nameRef}
+                        companyRef={companyRef}
+                        emailRef={emailRef}
+                        phoneRef={phoneRef} onSubmit={(data) => handleSubmit(data, selectedCard)} />
                 </div>
 
                 {/* Conditional Sections */}
-                {selectedCard === 'project' && <MoreAboutProject />}
-                {selectedCard === 'tell' && <WeAreAllEars />}
-                {selectedCard === 'business' && <LayItOnUs />}
+                {selectedCard === 'project' && <MoreAboutProject nameRef={nameRef}
+                    companyRef={companyRef}
+                    emailRef={emailRef}
+                    phoneRef={phoneRef} onSubmit={(data) => handleSubmit(data, 'project')} />}
+                {selectedCard === 'tell' && <WeAreAllEars onSubmit={(data) => handleSubmit(data, 'tell')} />}
+                {selectedCard === 'business' && <LayItOnUs onSubmit={(data) => handleSubmit(data, 'business')} />}
 
                 {/* Social & FAQ */}
                 <SocialContact />

@@ -1,4 +1,4 @@
-import { FaLinkedinIn,  FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebook, FaInstagram } from "react-icons/fa";
 
 
 export default function SocialContact() {
@@ -18,7 +18,8 @@ export default function SocialContact() {
           <div className="grid grid-cols-2 md:grid-cols-3 w-fit gap-4 lg:gap-8">
             {/* facebook */}
             <a
-              href="#"
+              target="_blank"
+              href="https://www.facebook.com/ethicalden/"
               className="flex items-center gap-2 px-6 py-3 text-gray-900 hover:bg-gray-200 transition"
             >
               <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 aspect-square border border-gray-400 rounded-full">
@@ -29,7 +30,8 @@ export default function SocialContact() {
 
             {/* LinkedIn */}
             <a
-              href="#"
+              target="_blank"
+              href="https://www.linkedin.com/company/ethicalden/?originalSubdomain=in"
               className="flex items-center gap-2 px-6 py-3 text-gray-900 hover:bg-gray-200 transition"
             >
               <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 aspect-square border border-gray-400 rounded-full">
@@ -40,7 +42,8 @@ export default function SocialContact() {
 
             {/* Instagram */}
             <a
-              href="#"
+              target="_blank"
+              href="https://www.instagram.com/ethical.den/"
               className="flex items-center gap-2 px-6 py-3 text-gray-900 hover:bg-gray-200 transition"
             >
               <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 aspect-square border border-gray-400 rounded-full">

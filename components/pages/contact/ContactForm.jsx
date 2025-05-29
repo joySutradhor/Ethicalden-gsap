@@ -3,12 +3,20 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 
-const ContactForm = () => {
-    // Refs for each input field
-    const nameRef = useRef(null);
-    const companyRef = useRef(null);
-    const emailRef = useRef(null);
-    const phoneRef = useRef(null);
+const ContactForm = ({  onSubmit, nameRef, companyRef, emailRef, phoneRef  }) => {
+
+
+
+        const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = {
+            name: nameRef.current.value,
+            company: companyRef.current.value,
+            email: emailRef.current.value,
+            phone: phoneRef.current.value
+        };
+        onSubmit(formData);
+    };
 
     // Handle focus event
     const handleFocus = (e) => {
@@ -43,6 +51,7 @@ const ContactForm = () => {
 
     return (
         <div className="pt-[100px] md:pt-[150px] lg:pt-[180px] xl:pt-[200px] 2xl:pt-[230px]  bg-white rounded-lg">
+            <form onSubmit={handleSubmit}>
             <div className='mb-6 lg:flex gap-20'>
                 <div className="flex-1/3">
                     <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={{ letterSpacing: "-0.05em" }}>Start with some basic info.</h2>
@@ -129,7 +138,7 @@ const ContactForm = () => {
             </div>
 
 
-
+        </form>
         </div>
     );
 };
