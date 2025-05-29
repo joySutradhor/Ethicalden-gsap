@@ -267,7 +267,7 @@ useEffect(() => {
             >
               What We Do
             </h1>
-            <p className='text-3xl font-light my-3'>(and Do Damn Well)</p>
+            <p className='text-3xl font-light my-3'>(And Do Damn Well)</p>
             <p className='text-gray-600 mb-5'>
               From bold brands to smart stacks, we craft everything your startup
               needs to launch, grow, and stand out. Whether it's design, code,
@@ -381,12 +381,12 @@ useEffect(() => {
           <div className='shrink-0 w-[400px] flex flex-col justify-between h-[450px] sticky left-0 top-0'>
             <div>
               <h1
-                className='text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-7xl font-urbanist font-extrabold leading-[1.06] mb-4'
+                className='text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-7xl font-urbanist font-extrabold leading-[1.06] mb-4 '
                 style={{ letterSpacing: '-0.01em' }}
               >
-                What We Do{' '}
+                What <br />We Do{' '}
               </h1>
-              <p className='text-3xl font-light my-5'>(and Do Damn Well)</p>
+              <p className='text-3xl font-light my-5'>(And Do Damn Well)</p>
               <p className='text-gray-600 mb-6'>
                 From bold brands to smart stacks, we craft everything your
                 startup needs to launch, grow, and stand out. Whether it's

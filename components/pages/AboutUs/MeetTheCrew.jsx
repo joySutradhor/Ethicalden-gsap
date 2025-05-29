@@ -37,7 +37,7 @@ const MeetTheCrew = () => {
         { id: 8, name: 'Shad', profession: 'Graphics Designer', imageUrl: '/images/about-us/crew/shad.png' },
         { id: 9, name: 'Alvira', profession: 'HR officer India', imageUrl: '/images/about-us/crew/Alvira.jpg' },
         { id: 10, name: 'Sagnik', profession: 'Business Development Expert', imageUrl: '/images/about-us/crew/Shagnik.jpg' },
-        { id: 11, name: 'Tahamid', profession: 'Wordpress Developer', imageUrl: '/images/about-us/crew/Tahamid.jpg' },
+        { id: 11, name: 'Tahamid', profession: 'Wordpress Developer', imageUrl: '/images/about-us/crew/tahamid-2.jpg' },
         { id: 13, name: 'Jewel', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/Mafuzur.jpg' },
         { id: 14, name: 'Joy', profession: 'Frontend Developer', imageUrl: '/images/about-us/crew/joyy.png' },
         { id: 15, name: 'Nafijur', profession: 'junior Backend Developer', imageUrl: '/images/about-us/crew/Nafijur.jpg' },
