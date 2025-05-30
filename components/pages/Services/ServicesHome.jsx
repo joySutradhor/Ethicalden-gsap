@@ -16,6 +16,11 @@ const ServicesHome = () => {
     const titleRef = useRef(null);
     const charRefs = useRef([]);
 
+    // for start scrollling top of the page
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
 
     // Title animation
     useEffect(() => {
@@ -44,7 +49,7 @@ const ServicesHome = () => {
     return (
         <div>
             {/* navbar */}
-            <Navbar backgroundColor="white" textColor="black"  />
+            <Navbar backgroundColor="white" textColor="black" />
 
 
             {/* banner */}
@@ -55,7 +60,7 @@ const ServicesHome = () => {
                         className="text-left w-full  text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06]"
                     >
                         {"The art of bringing it all together".split(" ").map((word, wi) => (
-                            <span key={wi} className="whitespace-nowrap inline-block mr-[0.2em] lg:mr-[0.3]">
+                            <span key={wi} className="whitespace-nowrap inline-block mr-2 md:mr-3 lg:mr-4 xl:mr-5">
                                 {word.split("").map((char, ci) => (
                                     <span
                                         key={ci}
@@ -72,7 +77,7 @@ const ServicesHome = () => {
 
 
                     <p className='text-left text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-black'>
-                    Anyone can design or code something and call it a project, but it’s the artistry of bringing your story to life, and the expertise that comes with experience, that sets us apart.
+                        Anyone can design or code something and call it a project, but it’s the artistry of bringing your story to life, and the expertise that comes with experience, that sets us apart.
                     </p>
                 </div>
             </div>
@@ -86,11 +91,11 @@ const ServicesHome = () => {
 
             {/* Industry services */}
             <IndustryServices />
-            
+
 
             {/* techstack */}
             <TechStack />
-            
+
 
             {/* footer */}
             <Footer />

@@ -72,9 +72,9 @@ function ProductsArea() {
             >
 
               <span className="inline-block">
-                {"Latest".split("").map((char, ci) => (
+                {"Our".split("").map((char, ci) => (
                   <span
-                    key={`Latest-${ci}`}
+                    key={`Our-${ci}`}
                     ref={(el) => (charRefs.current[ci] = el)}
                     className="inline-block"
                   >
@@ -88,9 +88,9 @@ function ProductsArea() {
                 >
                   &nbsp;
                 </span>
-                {"works".split("").map((char, ci) => (
+                {"Products".split("").map((char, ci) => (
                   <span
-                    key={`works-${ci}`}
+                    key={`Products-${ci}`}
                     ref={(el) => (charRefs.current[101 + ci] = el)}
                     className="inline-block"
                   >
@@ -99,21 +99,7 @@ function ProductsArea() {
                 ))}
               </span>
 
-              {/* Line Break */}
-              <br />
-
-
-              <span className="inline-block">
-                {"& crafts".split("").map((char, ci) => (
-                  <span
-                    key={`& crafts-${ci}`}
-                    ref={(el) => (charRefs.current[200 + ci] = el)}
-                    className="inline-block"
-                  >
-                    {char}
-                  </span>
-                ))}
-              </span>
+              
             </h2>
 
             <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%]'>

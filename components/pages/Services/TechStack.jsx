@@ -69,7 +69,7 @@ const TechStack = () => {
                             {word.split('').map((char, charIndex) => (
                                 <span
                                     key={charIndex}
-                                    ref={(el) => (charRefs.current[wordIndex * 100 + charIndex] = el)} 
+                                    ref={(el) => (charRefs.current[wordIndex * 100 + charIndex] = el)}
                                     style={{ letterSpacing: '-0.05em' }}
                                     className="inline-block"
                                 >
@@ -106,23 +106,24 @@ const TechStack = () => {
                             key={`${tech.id}-${tech.imageUrl}`}
                             className={`relative group overflow-hidden rounded-xl transition-all duration-300 ${isActive ? 'grayscale-0' : 'grayscale pointer-events-none'}`}
                         >
-                            <div className="relative aspect-square w-full">
-                                <div
-                                    className="absolute inset-0 bg-gray-100 rounded-xl flex items-center justify-center p-8"
-                                    style={{
-                                        backgroundImage: `url(${tech.imageUrl})`,
-                                        backgroundSize: 'contain',
-                                        backgroundPosition: 'center',
-                                        backgroundRepeat: 'no-repeat'
-                                    }}
-                                />
-                                {isActive && (
-                                    <div className="absolute bottom-0 left-0 right-0  p-4">
-                                        <div className="flex flex-col items-center text-center">
-                                            <span className="font-bold font-helvetica text-black text-lg whitespace-nowrap">{tech.name}</span>
+                            <div
+                                key={`${tech.id}-${tech.imageUrl}`}
+                                className={`relative group overflow-hidden rounded-xl transition-all duration-300 ${isActive ? 'grayscale-0' : 'grayscale pointer-events-none'}`}
+                            >
+                                <div className="relative aspect-square w-full flex items-center justify-center bg-gray-100 rounded-xl p-8">
+                                    <img
+                                        src={tech.imageUrl}
+                                        alt={tech.name}
+                                        className="h-[80%] w-[80%] object-contain md:h-[85%] md:w-[85%] 2xl:h-[95%] 2xl:w-[95%]"
+                                    />
+                                    {isActive && (
+                                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                                            <div className="flex flex-col items-center text-center">
+                                                <span className="font-bold font-helvetica text-black text-lg whitespace-nowrap">{tech.name}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                )}
+                                    )}
+                                </div>
                             </div>
                         </div>
                     );

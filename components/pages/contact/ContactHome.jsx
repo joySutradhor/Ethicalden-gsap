@@ -25,6 +25,14 @@ const ContactHome = () => {
     const emailRef = useRef(null);
     const phoneRef = useRef(null);
 
+
+
+    // for start scrollling top of the page
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
     useEffect(() => {
         if (!charRefs.current.length) return;
 
@@ -157,7 +165,7 @@ const ContactHome = () => {
                     emailRef={emailRef}
                     phoneRef={phoneRef} onSubmit={(data) => handleSubmit(data, 'tell')} />}
 
-                    
+
                 {selectedCard === 'business' && <LayItOnUs nameRef={nameRef}
                     companyRef={companyRef}
                     emailRef={emailRef}
