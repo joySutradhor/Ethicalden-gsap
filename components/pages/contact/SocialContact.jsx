@@ -19,14 +19,14 @@ export default function SocialContact() {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/ethicalden/"
-              className="group flex items-center gap-4 px-6 py-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100 hover:bg-blue-50"
+              className="group flex items-center gap-4 px-6 py-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#111] hover:bg-[#111]"
             >
-              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-[#111] group-hover:bg-blue-700 rounded-full text-white transition-colors duration-300">
-                <FaFacebook className="w-6 h-6" />
+              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-[#111] group-hover:bg-white group-hover:text-black rounded-full text-white transition-colors duration-300">
+                <FaFacebook className="w-7 md:w-9 h-7 md:h-9" />
               </div>
               <div>
-                <span className="font-semibold text-lg md:text-xl text-gray-800">Facebook</span>
-                <p className="text-sm text-gray-500 mt-1">Message us</p>
+                <span className="font-semibold text-lg md:text-xl text-gray-800 group-hover:text-white">Facebook</span>
+                <p className="text-sm text-gray-500 mt-1 group-hover:text-white">Message us</p>
               </div>
             </a>
 
@@ -35,14 +35,14 @@ export default function SocialContact() {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/company/ethicalden/?originalSubdomain=in"
-              className="group flex items-center gap-4 px-6 py-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100 hover:bg-blue-50"
+              className="group flex items-center gap-4 px-6 py-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#111] hover:bg-[#111]"
             >
-              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-blue-500 group-hover:bg-blue-600 rounded-full text-white transition-colors duration-300">
-                <FaLinkedinIn className="w-6 h-6" />
+              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-[#111] group-hover:bg-white group-hover:text-black rounded-full text-white transition-colors duration-300">
+                <FaLinkedinIn className="w-7 md:w-9 h-7 md:h-9" />
               </div>
               <div>
-                <span className="font-semibold text-lg md:text-xl text-gray-800">LinkedIn</span>
-                <p className="text-sm text-gray-500 mt-1">Connect with us</p>
+                <span className="font-semibold text-lg md:text-xl text-gray-800 group-hover:text-white">LinkedIn</span>
+                <p className="text-sm text-gray-500 mt-1 group-hover:text-white">Connect with us</p>
               </div>
             </a>
 
@@ -51,16 +51,17 @@ export default function SocialContact() {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.instagram.com/ethical.den/"
-              className="group flex items-center gap-4 px-6 py-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-pink-100 hover:bg-pink-50"
+              className="group flex items-center gap-4 px-6 py-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#111] hover:bg-[#111]"
             >
-              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-600 group-hover:to-pink-600 rounded-full text-white transition-colors duration-300">
-                <FaInstagram className="w-6 h-6" />
+              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-[#111] group-hover:bg-white group-hover:text-black rounded-full text-white transition-colors duration-300">
+                <FaInstagram className="w-7 md:w-9 h-7 md:h-9" />
               </div>
               <div>
-                <span className="font-semibold text-lg md:text-xl text-gray-800">Instagram</span>
-                <p className="text-sm text-gray-500 mt-1">DM us</p>
+                <span className="font-semibold text-lg md:text-xl text-gray-800 group-hover:text-white">Instagram</span>
+                <p className="text-sm text-gray-500 mt-1 group-hover:text-white">DM us</p>
               </div>
             </a>
+
           </div>
         </div>
       </div>
