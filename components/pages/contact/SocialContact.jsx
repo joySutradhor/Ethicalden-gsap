@@ -21,7 +21,7 @@ export default function SocialContact() {
               href="https://www.facebook.com/ethicalden/"
               className="group flex items-center gap-4 px-6 py-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100 hover:bg-blue-50"
             >
-              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-blue-600 group-hover:bg-blue-700 rounded-full text-white transition-colors duration-300">
+              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 aspect-square bg-[#111] group-hover:bg-blue-700 rounded-full text-white transition-colors duration-300">
                 <FaFacebook className="w-6 h-6" />
               </div>
               <div>
