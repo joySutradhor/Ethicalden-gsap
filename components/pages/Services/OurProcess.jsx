@@ -204,7 +204,7 @@ const OurProcess = () => {
           <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We turn ideas into wireframes that are more blueprint than guesswork.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We craft UI designs that are as beautiful as they are intuitive.</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We obsess over the little details — colors, fonts, micro-interactions — because they matter.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We obsess over the little details colors, fonts, micro-interactions because they matter.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We prototype the experience to get real user feedback before you build.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We iterate fast, refining designs until they’re ready to shine</li>
           </ul>
