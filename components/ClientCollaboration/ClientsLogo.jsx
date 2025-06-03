@@ -25,7 +25,7 @@ function ClientsLogo() {
     {
       id: 5,
       src: 'https://ik.imagekit.io/ethicalden/logo/hero.webp?updatedAt=1747073870371',
-      line: 'no'
+      line: 'yes'
     },
     {
       id: 6,
