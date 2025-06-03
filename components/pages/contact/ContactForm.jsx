@@ -55,7 +55,7 @@ const ContactForm = ({  onSubmit, nameRef, companyRef, emailRef, phoneRef  }) =>
                 <div className="flex-1/3">
                     <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1]" style={{ letterSpacing: "-0.05em" }}>Start with some basic info.</h2>
                     <p className="mt-5 mb-5 lg:mb-0 text-xl text-gray-700 font-helvetica">
-                        The name and e-mail address are mandatory, the rest would be nice but we can live without it.
+                        No red tape. No complicated forms. Just real people who love building bold things.
                     </p>
                 </div>
 

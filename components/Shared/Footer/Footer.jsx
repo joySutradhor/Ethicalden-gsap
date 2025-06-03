@@ -401,10 +401,10 @@ function Footer() {
                 </p>
               </div>
               <p className='text-lg font-bold mt-5 md:mt-20 lg:mt-10 font-helvetica md:pt-20 lg:pt-34 xl:pt-42 2xl:pt-46'>
-                BD - 24/A, Road-06, Nabinagar Housing, Mohammadpur, Dhaka.
+                24/A, Road-06, Mohammadpur, Dhaka.
               </p>
               <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
-                Phone : +880 17941-81603
+                Phone : +880 1710636221
               </p>
             </div>
           </div>

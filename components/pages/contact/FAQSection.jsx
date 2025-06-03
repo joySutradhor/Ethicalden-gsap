@@ -10,96 +10,62 @@ const FAQSection = () => {
 
     const faqs = [
         {
-            question: "How do we start working together?",
+            question: "What services do you offer?",
             answer: (
                 <>
                     <p className="mb-3">
-                        The first step is simple. Contact us via e-mail or our contact form and tell us about your next project.
-                        We will then set up an introductory call to dive into more details about the goals and requirements.
-                    </p>
-                    <p className="mb-3">
-                        This information helps us understand your project and results in our cost estimate and general timeline.
-                    </p>
-                    <p>
-                        Once we reach agreement, we're ready to jump in and create some digital magic together!
+                        We do the digital hustle: design, development, branding, marketing, motion graphics, SaaS builds, AI integrations. If it involves pixels and code, we’ve got it covered.
                     </p>
                 </>
             )
         },
         {
-            question: "What does the process look like?",
+            question: "How long does a typical project take?",
             answer: (
                 <>
                     <p className="mb-3">
-                        With the paperwork signed and boring stuff agreed on, it’s time to get creative. We will assign a project lead from our side who will guide you through the process and be your point of contact for any and all questions and issues you might have.
-                    </p>
-                    <p className="mb-3">
-                        At this point we usually set up a discovery workshop with all the shareholders so our design and development team can get a clear picture of the project, iron out all the necessary details and get all the potential roadblocks or issues out of the way.
-                    </p>
-                    <p className="mb-3">
-                        After that it’s time to pull up our sleeves and get to work. Through design iterations and with your helpful feedback we work together towards the final product and launch. Depending on the size and structure of the project and its specific needs, we can set up weekly workshops/meetings, to discuss the work done and next steps.
-                    </p>
-                    <p className="mb-3">
-                        For web and mobile projects that include front-end and back-end development, we will usually require a confirmation of design before moving to the next step.
-                    </p>
-                    <p>
-                        Once the project is launched, we have your back. We provide support to get you through the early stages, educate your employees and, depending on the retainer contract, offer long-term maintenance support for any issues and further updates.
+                        Every project is different, but we work fast and smart. A small website might take a few weeks, while a complex SaaS product could take a couple of months. We’ll always give you a realistic timeline upfront.
                     </p>
                 </>
             )
         },
         {
-            question: "How much will it cost me?",
+            question: "Do you work with startups?",
             answer: (
                 <>
                     <p className="mb-3">
-                        No two projects are the same and cost estimates will always depend on the scale of the project and its requirements. Depending on your specific needs we offer various billing structures, such as fixed project fees or monthly retainers, and we are open to finding the best billing structure that works for you and your company.
+                        Absolutely. Startups are our jam. We love turning ideas into MVPs and helping founders bring their visions to life. Whether you’re at seed stage or scaling up, we’re in.
                     </p>
+                </>
+            )
+        },
+        {
+            question: "Can you work with our in-house team?",
+            answer: (
+                <>
                     <p className="mb-3">
-                        Our general hourly rate is €45 and it’s mostly used for retainer purposes. A typical branding project could cost anywhere between €3.000 - €13.000, UX/UI design projects between €5.000 and €15.000, while development projects vary between €10.000 and €50.000.
+                        Definitely. We love collaborating with internal teams. Think of us as your creative tech pit crew. We slot in wherever you need us, bringing extra firepower and fresh ideas.
+                    </p>
+                </>
+            )
+        },
+        {
+            question: "What makes you different from other agencies?",
+            answer: (
+                <>
+                    <p className="mb-3">
+                        We blend creativity with code, strategy with design. We don’t just build things that look good; we make sure they work, scale, and actually solve problems. Plus, we’re fun to work with.
+                    </p>
+                </>
+            )
+        },
+        {
+            question: "How do we get started?",
+            answer: (
+                <>
+                    <p className="mb-3">
+                         Simple. Hit the Let’s Talk button, tell us a bit about what you need, and we’ll get right back to you. No long forms or red tape. Just a conversation that gets the ball rolling.
 
-                    </p>
-                    <p>
-                        The exact price of your project will usually be determined after our introductory meeting, where we will get our first proper look at its scope and requirements.
-                    </p>
-                </>
-            )
-        },
-        {
-            question: "When can you start?",
-            answer: (
-                <>
-                    <p className="mb-3">
-                        We pride ourselves at being a well tuned machine, which means in most cases we can take on new projects as they come. For most projects it takes a couple of weeks from the initial contact to set up the first introductory meeting and take it from there.
-                    </p>
-                    <p>
-                        The actual design kick-off will also depend on details outside of our influence, such as the dynamics of delivering all necessary documentation, specifications and brand materials from the client’s side.
-                    </p>
-                </>
-            )
-        },
-        {
-            question: "What technologies and tools do you use?",
-            answer: (
-                <>
-                    <p className="mb-3">
-                        When it comes to UX/UI design, our primary tool of choice for all wireframing, design and prototyping purposes is Figma. For all other design purposes (print design, branding, video production etc.) we rely on the proven set of Adobe Creative Cloud tools.
-                    </p>
-                    <p>
-                        Our development tech stack supports a wide variety of tools and technologies which can adapt to any industry and all project sizes. You can find more details on our Services page.
-                    </p>
-                </>
-            )
-        },
-        {
-            question: "How soon can you deliver?",
-            answer: (
-                <>
-                    <p className="mb-3">
-                        The delivery of the final product is the pinnacle of each project, yet the answer to this question highly depends on the type and scale of each project. While typical branding projects can take up to several weeks, a medium sized website up to five or six weeks, more extensive projects such as fintech solutions can last up to six months and more.
-                    </p>
-                    <p>
-                        The timeline of each project (together with its cost estimate) is determined after the introductory meeting, once we have gathered enough information about the project’s scope and its base requirements.
                     </p>
                 </>
             )
@@ -109,7 +75,7 @@ const FAQSection = () => {
     return (
         <div className="pt-[100px] md:pt-[150px] lg:pt-[180px] 2xl:pt-[200px]  ">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-helvetica leading-[1] xl:max-w-3xl mb-8" style={{ letterSpacing: "-0.05em" }}>
-                Tackling your frequently asked <br /> questions head-on.
+                No Nonsense. Just Answers.
             </h1>
 
             <div className="flex justify-center">

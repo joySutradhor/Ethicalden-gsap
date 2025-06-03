@@ -280,7 +280,7 @@ const ServicesArea = () => {
         return () => ScrollTrigger.getAll().forEach(t => t.kill());
     }, []);
 
-    const titleText = 'Skills we bring to the table';
+    const titleText = 'The Services That Make It Happen';
 
     return (
         <div className='bg-change-anim pt-[140px] md:pt-[150px] lg:pt-[160px] xl:pt-[180px] 2xl:pt-[200px]'>

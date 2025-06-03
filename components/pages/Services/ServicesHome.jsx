@@ -59,7 +59,7 @@ const ServicesHome = () => {
                         ref={titleRef}
                         className="text-left w-full  text-[42px] md:text-[50px] lg:text-[60px] xl:text-[80px]  2xl:text-[90px] font-urbanist font-black leading-[1.06]"
                     >
-                        {"The art of bringing it all together".split(" ").map((word, wi) => (
+                        {"Creative Chaos, Controlled.".split(" ").map((word, wi) => (
                             <span key={wi} className="whitespace-nowrap inline-block mr-2 md:mr-3 lg:mr-4 xl:mr-5">
                                 {word.split("").map((char, ci) => (
                                     <span
@@ -77,7 +77,7 @@ const ServicesHome = () => {
 
 
                     <p className='text-left text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-black'>
-                        Anyone can design or code something and call it a project, but it’s the artistry of bringing your story to life, and the expertise that comes with experience, that sets us apart.
+                        Design. Code. Motion. Marketing. We bring the firepower that startups and scale-ups need to build, grow, and own their space in the digital jungle. Whatever you’re building, we’ve got your back.
                     </p>
                 </div>
             </div>

@@ -85,6 +85,7 @@ export default function RootLayout({ children }) {
       >
         <CustomCursor />
         <SmoothScroll />
+        
         {children}
       </body>
     </html>

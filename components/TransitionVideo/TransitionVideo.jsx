@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 
 const transitionVideos = {
-  '/about-den': '/video/transition-videos/transition-4.mp4',
-  '/products': '/video/transition-videos/transition-4.mp4',
-  '/services': '/video/transition-videos/transition-4.mp4',
-  '/contact': '/video/transition-videos/transition-4.mp4',
+  '/about-den': '/video/transition-videos/transition-5.mp4',
+  '/products': '/video/transition-videos/transition-5.mp4',
+  '/services': '/video/transition-videos/transition-5.mp4',
+  '/contact': '/video/transition-videos/transition-5.mp4',
 }
 
 export default function PageTransitionVideo() {

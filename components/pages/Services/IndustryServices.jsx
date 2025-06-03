@@ -198,10 +198,10 @@ const IndustryServices = () => {
     }, []);
 
     const paragraphs = [
-        "From the fast-moving world of Fintech to the dynamic landscapes of telecommunications, from fuelling the spark of startups to navigating the corridors of corporate giants and the ever-evolving world of SaaS — we've left our mark in every digital frontier. Everything we do is a reflection of our deep understanding of industries we serve."
+        "From fast-moving startups to bold brands, we’ve built, designed, and launched across industries that thrive on innovation. Here’s a snapshot of where our work has made an impact."
     ];
 
-    const titleText = "We adapt to the unique demands of each industry. ";
+    const titleText = "Industries We’ve Rocked.";
 
     return (
          <div className="bg-white mt-[16vh] pt-[150px] md:pt-[370px] lg:pt-[360px] xl:pt-[450px] 2xl:pt-[460px] md:mt-[25vh] lg:mt-[30vh]">

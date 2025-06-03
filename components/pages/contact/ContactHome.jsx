@@ -113,7 +113,7 @@ const ContactHome = () => {
 
 
                     <p className='text-left text-xl md:text-2xl flex-1 lg:flex-2/3 font-ethosnova leading-relaxed text-black'>
-                        Whether you’re sketching the blueprint for a groundbreaking project or just want to shoot the breeze about digital possibilities, this is your backstage pass to make it happen. Let’s turn the blank page into your next chapter.
+                        Ready to turn that spark of an idea into a full-fledged digital experience? Whether you’re launching a new product, redesigning your brand, or just want to talk tech over coffee, we’re here for it.
                     </p>
                 </div>
 

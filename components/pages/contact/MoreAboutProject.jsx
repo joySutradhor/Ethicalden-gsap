@@ -306,7 +306,7 @@ const MoreAboutProject = ({ onSubmit, nameRef, companyRef, emailRef, phoneRef })
                     </div>
 
                     {/* Send Inquiry Button */}
-                    <div className='flex justify-center'>
+                    <div className='flex justify-start'>
                         <div className="my-6 sm:mt-8 relative inline-block">
                         <button
                             type="submit"

@@ -138,7 +138,7 @@ function ProductsArea() {
           </div>
 
           {/* second row start */}
-          <div className=' md:mt-[15vh] lg:mt-[25vh]'>
+          {/* <div className=' md:mt-[15vh] lg:mt-[25vh]'>
             <div>
               <Image
                 src='https://mater.agency/wp-content/uploads/2024/02/NetTV.jpg'
@@ -156,9 +156,9 @@ function ProductsArea() {
               </p>
 
             </div>
-          </div>
+          </div> */}
 
-          <div className=''>
+          {/* <div className=''>
             <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[10vh] md:mt-0'>
               <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
                 <video
@@ -194,10 +194,10 @@ function ProductsArea() {
 
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* third row start */}
-          <div className='-mt-[10vh] md:mt-[30vh] lg:mt-[50vh] '>
+          {/* <div className='-mt-[10vh] md:mt-[30vh] lg:mt-[50vh] '>
             <div className='h-[40vh] md:w-[60%]'>
               <div>
                 <video
@@ -215,9 +215,9 @@ function ProductsArea() {
 
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className='mt-[20vh] md:mt-0'>
+          {/* <div className='mt-[20vh] md:mt-0'>
             <div>
               <video
                 src='https://mater.agency/wp-content/uploads/2024/02/honor9.mp4'
@@ -233,10 +233,10 @@ function ProductsArea() {
               </p>
 
             </div>
-          </div>
+          </div> */}
 
           {/* fourth row start */}
-          <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
+          {/* <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
             <div>
               <Image
                 src='https://mater.agency/wp-content/uploads/2024/01/AZ-pension-fund.jpg'
@@ -290,10 +290,10 @@ function ProductsArea() {
 
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* fifth row */}
-          <div className='hidden md:block'></div>
+          {/* <div className='hidden md:block'></div>
           <div className='-mt-[55vh] md:mt-[5vh] '>
             <div>
               <video
@@ -312,29 +312,29 @@ function ProductsArea() {
               </p>
 
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
 
       {/* Fixed bottom button */}
-      <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#1a1a1a] border-none px-4 md:px-8 py-3 md:py-6 rounded-full flex items-center gap-4 border shadow-lg transition-all duration-300 ${buttonVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}>
+      {/* <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#1a1a1a] border-none px-4 md:px-8 py-3 md:py-6 rounded-full flex items-center gap-4 border shadow-lg transition-all duration-300 ${buttonVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}> */}
         {/* Services */}
-        <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
+        {/* <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
           <span className="w-2 h-2 rounded-full bg-gray-400"></span>
           <span>Services: All</span>
-        </div>
+        </div> */}
 
         {/* Divider */}
-        <div className="w-px h-5 bg-gray-600" />
+        {/* <div className="w-px h-5 bg-gray-600" /> */}
 
         {/* Industry */}
-        <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
+        {/* <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
           <span className="w-2 h-2 rounded-full bg-gray-400"></span>
           <span>Industry: All</span>
         </div>
-      </div>
+      </div> */}
 
     </>
   )

@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const OurProcess = () => {
   const processRef = useRef(null);
   const numberRef = useRef(null);
-  const numberInnerRef = useRef(null); 
+  const numberInnerRef = useRef(null);
   const titleRef = useRef(null);
   const charRefs = useRef([]);
 
@@ -15,8 +15,20 @@ const OurProcess = () => {
     const element = processRef.current;
 
     const getEndValue = () => {
-      return window.innerWidth < 1220 ? '+=4000' : '+=4500';
-    };
+  if (window.innerWidth < 325) {
+    return '+=6800';
+  } else if (window.innerWidth < 380) {
+    return '+=6200';
+  } else if (window.innerWidth < 450) {
+    return '+=5700';
+  } else if (window.innerWidth < 1220) {
+    return '+=5000';
+  } else {
+    return '+=5500';
+  }
+};
+
+
 
     ScrollTrigger.create({
       trigger: element,
@@ -95,21 +107,21 @@ const OurProcess = () => {
       return direction;
     };
 
-    animateTitle('Discover');
+    animateTitle('Dream It');
 
     gsap.timeline({
       scrollTrigger: {
         trigger: element,
         start: 'top top',
         end: '+=1',
-        onEnterBack: () => changeProcess('1', 'Discover', 'up'),
+        onEnterBack: () => changeProcess('1', 'Dream It', 'up'),
       },
     });
 
     const processes = [
-      { class: '.second-process', number: '2', title: 'Design', previous: '1', previousTitle: 'Discover' },
-      { class: '.third-process', number: '3', title: 'Develop', previous: '2', previousTitle: 'Design' },
-      { class: '.fourth-process', number: '4', title: 'Deliver', previous: '3', previousTitle: 'Develop' },
+      { class: '.second-process', number: '2', title: 'Design It', previous: '1', previousTitle: 'Dream It' },
+      { class: '.third-process', number: '3', title: 'Build It', previous: '2', previousTitle: 'Design It' },
+      { class: '.fourth-process', number: '4', title: 'Launch It', previous: '3', previousTitle: 'Build It' },
     ];
 
     processes.forEach(({ class: triggerClass, number, title, previous, previousTitle }) => {
@@ -166,7 +178,7 @@ const OurProcess = () => {
           </span>
         </p>
         <p className="text-2xl md:text-3xl font-extrabold font-helvetica leading-[1] text-[#09e5e5]">Our Process</p>
-        <h2 ref={titleRef} style={ { letterSpacing: "-0.05em" }} className="text-5xl md:text-8xl 2xl:text-[220px] font-helvetica font-extrabold text-gray-300"></h2>
+        <h2 ref={titleRef} style={{ letterSpacing: "-0.05em" }} className="text-5xl md:text-8xl 2xl:text-[220px] font-helvetica font-extrabold text-gray-300"></h2>
       </div>
 
       {/* 1st Process */}
@@ -177,11 +189,11 @@ const OurProcess = () => {
 
         <div className="flex-1">
           <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Spark of Interest</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Courtship of Consultation</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Thrill of the Project Kickoff</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Moment of First Results</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">The Everlasting Afterparty</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We start by diving deep into your vision, goals, and what keeps you up at night.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We ask the uncomfortable questions that shape stronger ideas.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We map out user needs, pain points, and opportunities for magic.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We explore different creative directions without fear of wild ideas.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We create a plan that balances creativity, strategy, and ambition.</li>
           </ul>
         </div>
       </div>
@@ -190,12 +202,11 @@ const OurProcess = () => {
       <div className="second-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96">
         <div className="flex-1">
           <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Low-fidelity wireframes</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">High-fidelity wireframes</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Prototyping</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">UX/UI design</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Interactions</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Copywriting</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We turn ideas into wireframes that are more blueprint than guesswork.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We craft UI designs that are as beautiful as they are intuitive.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We obsess over the little details — colors, fonts, micro-interactions — because they matter.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We prototype the experience to get real user feedback before you build.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We iterate fast, refining designs until they’re ready to shine</li>
           </ul>
         </div>
 
@@ -212,9 +223,11 @@ const OurProcess = () => {
 
         <div className="flex-1">
           <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Frontend development</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Backend development</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">CMS integration</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We bring designs to life with clean, scalable, and lightning-fast code.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We pick the right stack for your project, not just the trendiest one.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We integrate third-party tools and APIs seamlessly.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We test across devices and browsers to make sure everything just works.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We collaborate closely, sharing progress and keeping surprises to a minimum.</li>
           </ul>
         </div>
       </div>
@@ -223,11 +236,11 @@ const OurProcess = () => {
       <div className="fourth-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-24 md:mb-28 lg:mb-40 pt-96">
         <div className="flex-1">
           <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Test, Measure, Improve</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Optimize processes</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Automate workflows</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Monitor tools integration</li>
-            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">Optimizing user experiences</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We deploy your project on secure, scalable infrastructure.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We fine-tune performance so it loads fast and stays stable.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We monitor for bugs, fix issues on the fly, and keep things smooth.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We set up analytics and feedback loops so you can measure what matters.</li>
+            <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We stay on as your creative tech partner, helping you grow and evolve.</li>
           </ul>
         </div>
 
