@@ -184,7 +184,7 @@ const OurProcess = () => {
       {/* 1st Process */}
       <div className="relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 mt-40">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#09e5e5] object-cover" src="/images/services/process/services-process-1.webp" alt="" />
+          <img className="bg-[#09e5e5] object-cover" src="/images/services/process/im-1.jpg" alt="" />
         </div>
 
         <div className="flex-1">
@@ -211,14 +211,14 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/services-process-2.webp" alt="" />
+          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/im-2.jpg" alt="" />
         </div>
       </div>
 
       {/* 3rd Process */}
       <div className="third-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-cyan-300 object-cover" src="/images/services/process/services-process-3.webp" alt="" />
+          <img className="bg-cyan-300 object-cover" src="/images/services/process/im-3.jpg" alt="" />
         </div>
 
         <div className="flex-1">
@@ -245,7 +245,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/services-process-4.webp" alt="" />
+          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/im-4.jpg" alt="" />
         </div>
       </div>
     </div>
