@@ -317,11 +317,10 @@ const ServicesArea = () => {
                         {/* 1st video */}
                         <div className="-mt-[300px] md:-mt-0" ref={el => videoContainerRefs.current[0] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video1Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service1.mp4?updatedAt=1749639717784"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWt0cmM3YzYyYXhwMDYxOGVrdGNxNXcxMXlrYXdjYnd0bnY5dnJhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/I5ZcIgIK49mSSRshFJ/giphy.gif"
+                                    alt="Branding "
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -396,11 +395,10 @@ const ServicesArea = () => {
                         {/* 3rd video */}
                         <div className="mt-30 md:mt-[320px] lg:mt-[200px] xl:mt-[400px]" ref={el => videoContainerRefs.current[2] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video3Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service3.mp4?updatedAt=1749639732043"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDZ2bXFycGF4c3kwZjBqaDh5ZTd0M3kyMG04aXEzY2lsbHE2ajRoayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8lERIT7SGJSec/giphy.gif"
+                                    alt="SEO "
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -592,7 +590,7 @@ const ServicesArea = () => {
 
                         {/* 8th video */}
                         <div className="mt-34 md:mt-120 lg:-mt-[90px] xl:-mt-[580px]" ref={el => videoContainerRefs.current[7] = el}>
-                            <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video8Ref}>
+                            <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video8Ref}>
                                 <img
                                     src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDYxazhuZnNxc2J2cXd1cWJ6M24yMzNpNXloOWxmdnp3dHJubWppdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQCCNezRpb9Hq/giphy.gif"
                                     alt="Cyber Security "
@@ -671,7 +669,7 @@ const ServicesArea = () => {
 
                         {/* 10th video */}
                         <div className="mt-30 md:mt-140 lg:mt-40 xl:-mt-[300px]" ref={el => videoContainerRefs.current[9] = el}>
-                            <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video10Ref}>
+                            <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video10Ref}>
                                 <img
                                     src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnRlbjUxYWQ2bXlrenY0NnZ3aXdpNzB3anY3bmoxZnZqOXZ0NzltaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/21NNklvgakNNrWOqkq/giphy.gif"
                                     alt="Video Editing"

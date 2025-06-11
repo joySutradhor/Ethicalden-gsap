@@ -188,7 +188,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex-1">
-          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
+          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc list-inside">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We start by diving deep into your vision, goals, and what keeps you up at night.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We ask the uncomfortable questions that shape stronger ideas.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We map out user needs, pain points, and opportunities for magic.</li>
@@ -201,7 +201,7 @@ const OurProcess = () => {
       {/* 2nd Process */}
       <div className="second-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96 ">
         <div className="flex-1">
-          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
+          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc list-inside">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We turn ideas into wireframes that are more blueprint than guesswork.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We craft UI designs that are as beautiful as they are intuitive.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We obsess over the little details colors, fonts, micro-interactions because they matter.</li>
@@ -222,7 +222,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex-1">
-          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
+          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc list-inside">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We bring designs to life with clean, scalable, and lightning-fast code.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We pick the right stack for your project, not just the trendiest one.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We integrate third-party tools and APIs seamlessly.</li>
@@ -235,7 +235,7 @@ const OurProcess = () => {
       {/* 4th Process */}
       <div className="fourth-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-24 md:mb-28 lg:mb-40 pt-96">
         <div className="flex-1">
-          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
+          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc list-inside">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We deploy your project on secure, scalable infrastructure.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We fine-tune performance so it loads fast and stays stable.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We monitor for bugs, fix issues on the fly, and keep things smooth.</li>
