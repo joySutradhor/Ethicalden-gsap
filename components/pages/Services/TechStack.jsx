@@ -113,13 +113,14 @@ const TechStack = () => {
                             >
                                 <div className="relative aspect-square w-full flex items-center justify-center bg-gray-100 rounded-xl p-8">
                                     <Image
-                                        placeholder='blur'
-                                        blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                                        
                                         src={tech.imageUrl}
                                         alt={tech.name}
                                         loading='lazy'
                                         width={100}
                                         height={100}
+                                        placeholder='blur'
+                                        blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                                         className="h-[80%] w-[80%] object-contain md:h-[85%] md:w-[85%] 2xl:h-[95%] 2xl:w-[95%]"
                                     />
                                     {isActive && (

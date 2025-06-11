@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,18 +16,18 @@ const OurProcess = () => {
     const element = processRef.current;
 
     const getEndValue = () => {
-  if (window.innerWidth < 325) {
-    return '+=6800';
-  } else if (window.innerWidth < 380) {
-    return '+=6200';
-  } else if (window.innerWidth < 450) {
-    return '+=5700';
-  } else if (window.innerWidth < 1220) {
-    return '+=5000';
-  } else {
-    return '+=5500';
-  }
-};
+      if (window.innerWidth < 325) {
+        return '+=6800';
+      } else if (window.innerWidth < 380) {
+        return '+=6200';
+      } else if (window.innerWidth < 450) {
+        return '+=5700';
+      } else if (window.innerWidth < 1220) {
+        return '+=5000';
+      } else {
+        return '+=5500';
+      }
+    };
 
 
 
@@ -184,7 +185,14 @@ const OurProcess = () => {
       {/* 1st Process */}
       <div className="relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 mt-40">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#09e5e5] object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-1.jpg?updatedAt=1749638489598" alt="" />
+          <Image
+            width={450}
+            height={450}
+            placeholder='blur'
+            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            className="bg-[#09e5e5] object-cover"
+            loading='lazy'
+            src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-1.jpg?updatedAt=1749638489598" alt="" />
         </div>
 
         <div className="flex-1">
@@ -211,14 +219,30 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-2.jpg?updatedAt=1749638518345" alt="" />
+          <Image
+            width={450}
+            height={450}
+            placeholder='blur'
+            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            className="bg-[#a8ff57] object-cover"
+            loading='lazy'
+            src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-2.jpg?updatedAt=1749638518345"
+            alt="" />
         </div>
       </div>
 
       {/* 3rd Process */}
       <div className="third-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-cyan-300 object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-3.jpg?updatedAt=1749638523213" alt="" />
+          <Image
+            width={450}
+            height={450}
+            placeholder='blur'
+            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            className="bg-cyan-300 object-cover"
+            loading='lazy'
+            src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-3.jpg?updatedAt=1749638523213"
+            alt="" />
         </div>
 
         <div className="flex-1">
@@ -245,7 +269,15 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-4.jpg?updatedAt=1749638529892" alt="" />
+          <Image
+            width={450}
+            height={450}
+            placeholder='blur'
+            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            className="bg-[#a8ff57] object-cover"
+            loading='lazy'
+            src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-4.jpg?updatedAt=1749638529892"
+            alt="" />
         </div>
       </div>
     </div>
