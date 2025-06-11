@@ -144,7 +144,7 @@ const ServicesArea = () => {
                 if (!scrollTween) {
                     const contentWidth = scrollingText.scrollWidth;
                     const buttonWidth = button.offsetWidth;
-                    const duration = contentWidth / 50; 
+                    const duration = contentWidth / 50;
 
                     scrollTween = gsap.to(scrollingText, {
                         x: `-=${contentWidth - buttonWidth}`,
@@ -356,11 +356,10 @@ const ServicesArea = () => {
                         {/* 2nd video */}
                         <div className="-mt-1 md:-mt-[700px]" ref={el => videoContainerRefs.current[1] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video2Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service2.mp4?updatedAt=1749639727412"
-                                    muted
-                                    autoPlay
-                                    loop
+                               <img
+                                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2xyY2c3NGhxNTExOW1uNjB1NGg2dDZkODV2dXRubXEwOW5qeXZzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gHiRWOaXGGHOY5w6f3/giphy.gif"
+                                    alt="Digital Marketing "
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -436,13 +435,13 @@ const ServicesArea = () => {
                         {/* 4th video */}
                         <div className="mt-20 md:-mt-[300px] lg:-mt-[500px] xl:-mt-[750px]" ref={el => videoContainerRefs.current[3] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video4Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service4.mp4?updatedAt=1749639737323"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWR0Y2RyODhtZmVhcjBnejV1M3RsMHRycmszemswaDc1Zzd2cXdpNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ekpxga8QRJVFUBxQeL/giphy.gif"
+                                    alt="UI/UX"
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
+
 
                                 {/* Fixed overlay text on video */}
                                 <div
@@ -477,11 +476,10 @@ const ServicesArea = () => {
                         {/* 5th video */}
                         <div className="mt-30 md:mt-80 lg:mt-50 xl:mt-100" ref={el => videoContainerRefs.current[4] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video5Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service1.mp4?updatedAt=1749639717784"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3VpenZnZW03eDR1OTB3dWd6eWw1OWw0MjQ1aHVtZzkxbms2aHk2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rJsMvyk7AHHiW9qKLM/giphy.gif"
+                                    alt="Software Development"
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -517,11 +515,10 @@ const ServicesArea = () => {
                         {/* 6th video */}
                         <div className="mt-24 md:-mt-[100px] lg:-mt-[450px] xl:-mt-[700px]" ref={el => videoContainerRefs.current[5] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video6Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service2.mp4?updatedAt=1749639727412"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDRrNmprNW44NmEyNXg4dDJwd3hmaDV1b3BsZ2c5Z2ZweTE5Z2FiZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bGgsc5mWoryfgKBx1u/giphy.gif"
+                                    alt="Web Development"
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -557,11 +554,10 @@ const ServicesArea = () => {
                         {/* 7th video */}
                         <div className="mt-64 md:mt-[320px] lg:mt-[300px] xl:mt-[400px]" ref={el => videoContainerRefs.current[6] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video7Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service3.mp4?updatedAt=1749639732043"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWk4dWtnNXhxMHMyZHV2bTVpbGFlcGpjd2kzejhhYjVoN29tYTNqNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif"
+                                    alt="App Development"
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -597,11 +593,10 @@ const ServicesArea = () => {
                         {/* 8th video */}
                         <div className="mt-34 md:mt-120 lg:-mt-[90px] xl:-mt-[580px]" ref={el => videoContainerRefs.current[7] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video8Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service4.mp4?updatedAt=1749639737323"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDYxazhuZnNxc2J2cXd1cWJ6M24yMzNpNXloOWxmdnp3dHJubWppdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQCCNezRpb9Hq/giphy.gif"
+                                    alt="Cyber Security "
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -638,11 +633,10 @@ const ServicesArea = () => {
                         {/* 9th video */}
                         <div className="mt-70 lg:mt-80" ref={el => videoContainerRefs.current[8] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video9Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service1.mp4?updatedAt=1749639717784"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa21zZ2poNThtaTNsNGk2dmt6ODJsZDZmOGowOHJuNzYxMHhzN2JtZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nZ4T2TB5L5ucKVwJWF/giphy.gif"
+                                    alt="AI Services "
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
@@ -678,11 +672,10 @@ const ServicesArea = () => {
                         {/* 10th video */}
                         <div className="mt-30 md:mt-140 lg:mt-40 xl:-mt-[300px]" ref={el => videoContainerRefs.current[9] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video10Ref}>
-                                <video
-                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service2.mp4?updatedAt=1749639727412"
-                                    muted
-                                    autoPlay
-                                    loop
+                                <img
+                                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnRlbjUxYWQ2bXlrenY0NnZ3aXdpNzB3anY3bmoxZnZqOXZ0NzltaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/21NNklvgakNNrWOqkq/giphy.gif"
+                                    alt="Video Editing"
+                                    loading='lazy'
                                     className="object-cover h-full w-full"
                                 />
 
