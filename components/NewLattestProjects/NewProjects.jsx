@@ -190,7 +190,7 @@ function NewProjects() {
             className='h-full w-full object-cover'
           ></video>
           <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}> 
-            <a href="https://www.behance.net/gallery/226916111/Marzii-Logo-Design-Branding-Design" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+            <a href="/project-marzii"  className="no-underline text-inherit cursor-pointer text-color-change">
                 Marzii
               </a> 
             </h3>
