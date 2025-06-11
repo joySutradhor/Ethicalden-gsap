@@ -107,8 +107,10 @@ function ProductsArea() {
                 src='https://i.ibb.co/qFLtpx2G/stockogen.jpg'
                 height={1000}
                 width={1000}
+                placeholder='blur'
+                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 className='object-cover w-full h-full'
-                alt='Project 1'
+                alt='Stockogen'
               />
               <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
                 Stockogen
