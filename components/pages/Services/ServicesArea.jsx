@@ -478,7 +478,7 @@ const ServicesArea = () => {
                         <div className="mt-30 md:mt-80 lg:mt-50 xl:mt-100" ref={el => videoContainerRefs.current[4] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video5Ref}>
                                 <video
-                                    src="/video/services/service1.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service1.mp4?updatedAt=1749639717784"
                                     muted
                                     autoPlay
                                     loop
@@ -518,7 +518,7 @@ const ServicesArea = () => {
                         <div className="mt-24 md:-mt-[100px] lg:-mt-[450px] xl:-mt-[700px]" ref={el => videoContainerRefs.current[5] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video6Ref}>
                                 <video
-                                    src="/video/services/service2.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service2.mp4?updatedAt=1749639727412"
                                     muted
                                     autoPlay
                                     loop
@@ -558,7 +558,7 @@ const ServicesArea = () => {
                         <div className="mt-64 md:mt-[320px] lg:mt-[300px] xl:mt-[400px]" ref={el => videoContainerRefs.current[6] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video7Ref}>
                                 <video
-                                    src="/video/services/service3.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service3.mp4?updatedAt=1749639732043"
                                     muted
                                     autoPlay
                                     loop
@@ -598,7 +598,7 @@ const ServicesArea = () => {
                         <div className="mt-34 md:mt-120 lg:-mt-[90px] xl:-mt-[580px]" ref={el => videoContainerRefs.current[7] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video8Ref}>
                                 <video
-                                    src="/video/services/service4.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service4.mp4?updatedAt=1749639737323"
                                     muted
                                     autoPlay
                                     loop
@@ -639,7 +639,7 @@ const ServicesArea = () => {
                         <div className="mt-70 lg:mt-80" ref={el => videoContainerRefs.current[8] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video9Ref}>
                                 <video
-                                    src="/video/services/service1.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service1.mp4?updatedAt=1749639717784"
                                     muted
                                     autoPlay
                                     loop
@@ -679,7 +679,7 @@ const ServicesArea = () => {
                         <div className="mt-30 md:mt-140 lg:mt-40 xl:-mt-[300px]" ref={el => videoContainerRefs.current[9] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video10Ref}>
                                 <video
-                                    src="/video/services/service2.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service2.mp4?updatedAt=1749639727412"
                                     muted
                                     autoPlay
                                     loop
