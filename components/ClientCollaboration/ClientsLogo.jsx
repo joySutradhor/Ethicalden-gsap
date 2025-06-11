@@ -81,6 +81,8 @@ function ClientsLogo() {
                 alt={`Item ${item.id}`}
                 width={100}
                 height={100}
+                placeholder='blur'
+                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 className='object-cover w-full h-[120px] md:h-[180px] '
               />
             </div>

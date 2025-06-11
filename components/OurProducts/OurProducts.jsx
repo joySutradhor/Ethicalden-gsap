@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,15 +34,15 @@ const OurProducts = () => {
 
   const [isReady, setIsReady] = useState(false)
 
-useEffect(() => {
-  // Wait for images and layout to settle
-  const timer = setTimeout(() => {
-    setIsReady(true)
-    ScrollTrigger.refresh()
-  }, 1000)
+  useEffect(() => {
+    // Wait for images and layout to settle
+    const timer = setTimeout(() => {
+      setIsReady(true)
+      ScrollTrigger.refresh()
+    }, 1000)
 
-  return () => clearTimeout(timer)
-}, [])
+    return () => clearTimeout(timer)
+  }, [])
 
 
   useEffect(() => {
@@ -190,13 +191,13 @@ useEffect(() => {
   }, [])
 
   useEffect(() => {
-  // Delay or wait for the layout to stabilize
-  const timer = setTimeout(() => {
-    ScrollTrigger.refresh(); // Important!
-  }, 500); // adjust as needed
+    // Delay or wait for the layout to stabilize
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh(); // Important!
+    }, 500); // adjust as needed
 
-  return () => clearTimeout(timer);
-}, []);
+    return () => clearTimeout(timer);
+  }, []);
 
   const projects = [
     {
@@ -231,7 +232,7 @@ useEffect(() => {
         'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/app-development.jpg?updatedAt=1749635868632',
       isNew: true
     },
-    
+
     {
       id: 5,
       title: 'SEO',
@@ -248,8 +249,8 @@ useEffect(() => {
         'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/2.jpg?updatedAt=1749635891328',
       isNew: true
     },
-    
-    
+
+
   ]
 
   return (
@@ -303,9 +304,8 @@ useEffect(() => {
           </div>
 
           <div
-            className={`grid ${
-              screenSize === 'medium' ? 'grid-cols-2' : 'grid-cols-1'
-            } gap-6`}
+            className={`grid ${screenSize === 'medium' ? 'grid-cols-2' : 'grid-cols-1'
+              } gap-6`}
           >
             {projects.map(project => (
               <div
@@ -318,12 +318,17 @@ useEffect(() => {
                                         New
                                     </span>
                                 )} */}
-                <img
+                <Image
                   src={project.image}
                   alt={`${project.title} Preview`}
-                  loading='lazy'
-                  className='absolute inset-0 w-full h-full object-cover  z-10'
+                  layout="fill"
+                  placeholder='blur'
+                  blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                  objectFit="cover"
+                  className="z-10"
+                  priority={false}
                 />
+
                 <div className='relative z-20 w-full h-full flex flex-col justify-end p-6'>
                   <h3 className='text-black text-xl md:text-2xl font-bold  '>
                     {project.title}
@@ -441,11 +446,14 @@ useEffect(() => {
                                         New
                                     </span>
                                 )} */}
-                <img
+                <Image
                   src={project.image}
-                  loading='lazy'
                   alt={`${project.title} Preview`}
-                  className='absolute inset-0 w-full h-full object-cover  z-10'
+                  layout="fill"
+                  placeholder='blur'
+                  blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                  objectFit="cover"
+                  className="z-10"
                 />
                 <div className='relative z-20 w-full'>
                   <h3 className='text-black text-2xl font-bold mb-4'>

@@ -155,7 +155,7 @@ function NewProjects() {
               ))}
             </span>
           </h2>
-          
+
 
 
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
@@ -164,6 +164,8 @@ function NewProjects() {
               loading='lazy'
               height={1000}
               width={1000}
+              placeholder='blur'
+              blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
               className='object-cover w-full h-full'
               alt='Mr Cafe'
             />
@@ -191,11 +193,11 @@ function NewProjects() {
             loop
             className='h-full w-full object-cover'
           ></video>
-          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}> 
-            <a href="https://www.behance.net/gallery/226916111/Marzii-Logo-Design-Branding-Design" target='_blank'  className="no-underline text-inherit cursor-pointer text-color-change">
-                Marzii
-              </a> 
-            </h3>
+          <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+            <a href="https://www.behance.net/gallery/226916111/Marzii-Logo-Design-Branding-Design" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+              Marzii
+            </a>
+          </h3>
           <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
             E-commerce / Branding
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -210,6 +212,8 @@ function NewProjects() {
               src='https://ik.imagekit.io/ethicalden/projects/p1.png?updatedAt=1747074109969'
               width={1000}
               height={1000}
+              placeholder='blur'
+              blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
               className='object-cover h-full w-full'
               loading='lazy'
               alt='E-laz'
@@ -239,8 +243,8 @@ function NewProjects() {
               ></video>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
                 <a href="https://www.behance.net/gallery/196542915/MAK-Community-Branding-UIUX-and-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
-                Mak Community
-              </a>
+                  Mak Community
+                </a>
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
@@ -253,6 +257,8 @@ function NewProjects() {
               <Image
                 width={500}
                 height={100}
+                placeholder='blur'
+                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 alt='Wonderlite'
                 src='https://ik.imagekit.io/ethicalden/projects/image.png?updatedAt=1747080116801'
                 loading='lazy'
@@ -260,9 +266,9 @@ function NewProjects() {
               ></Image>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
                 <a href="https://www.behance.net/gallery/195879275/Wonderlite-Branding-Social-Media-Stationary-UXUI" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
-                Wonderlite
-              </a>
-                </h3>
+                  Wonderlite
+                </a>
+              </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 site /Branding
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -280,15 +286,17 @@ function NewProjects() {
                 src='https://i.ibb.co/gbynLb3t/emopract.jpg'
                 height={100}
                 width={500}
+                placeholder='blur'
+                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 alt='Emopract'
                 loading='lazy'
                 className='h-full w-full object-cover'
               ></Image>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}> 
+              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
                 <a href="https://www.behance.net/gallery/226680185/Emopract-Project-UIUX-Design-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
-                Emopract
-              </a>
-                </h3>
+                  Emopract
+                </a>
+              </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 UI/UX / site
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -308,7 +316,7 @@ function NewProjects() {
               className='h-full w-full object-cover'
             ></video>
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-            <a href="https://www.behance.net/gallery/226736453/Sandeep-Auto-Line-Branding-social-Media-Marketing" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+              <a href="https://www.behance.net/gallery/226736453/Sandeep-Auto-Line-Branding-social-Media-Marketing" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
                 Sandeep Autolines
               </a>
             </h3>
@@ -327,6 +335,8 @@ function NewProjects() {
               src='https://ik.imagekit.io/ethicalden/projects/p3.png?updatedAt=1747074110433'
               height={1000}
               width={1000}
+              placeholder='blur'
+              blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
               className='object-cover h-full w-full'
               loading='lazy'
               alt='Divine'
@@ -349,6 +359,8 @@ function NewProjects() {
               <Image
                 height={1000}
                 width={1000}
+                placeholder='blur'
+                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 src='https://ik.imagekit.io/ethicalden/projects/p2.png?updatedAt=1747074109978'
                 className='h-full w-full object-cover'
                 loading='lazy'
@@ -356,11 +368,11 @@ function NewProjects() {
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
                 <a href="https://www.behance.net/gallery/195703857/Branding-and-Web-Developnment-Insiderfeed" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
-                InsiderFeed
-              </a>
+                  InsiderFeed
+                </a>
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                site / Branding  / UI/Ux Design   
+                site / Branding  / UI/Ux Design
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 
@@ -369,6 +381,8 @@ function NewProjects() {
               <Image
                 height={1000}
                 width={1000}
+                placeholder='blur'
+                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 src='https://i.ibb.co/q3nPZVhS/massart.png'
                 className='h-full w-full object-cover'
                 loading='lazy'
@@ -376,9 +390,9 @@ function NewProjects() {
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
                 <a href="https://www.behance.net/gallery/226695785/Massart-Branding-Web-Design-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
-                massArt
-              </a>
-                </h3>
+                  massArt
+                </a>
+              </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 UI/UX / site
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -380,20 +381,24 @@ const GalleryMain = () => {
                   Probably 3 bugs. Maybe 4. We're honest like that.
                 </p>
               </div>
+
               <div
                 ref={imgContainerRef1}
                 className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
               >
                 {leftImages.map((src, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={src}
                     alt={`Gallery image ${index + 1}`}
-                    loading="lazy"
-                    className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl'
+                    fill
+                    className='object-cover rounded-2xl'
+                    placeholder='blur'
+                    blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                   />
                 ))}
               </div>
+
             </div>
 
             {/* Second Column (animated up) */}
@@ -473,8 +478,8 @@ const GalleryMain = () => {
                 <p className='text-base md:text-xl'>HOT OR NOT</p>
                 <h2
                   className={`${loading
-                      ? 'text-2xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl'
-                      : 'text-5xl md:text-7xl lg:text-5xl xl:text-7xl 2xl:text-9xl'
+                    ? 'text-2xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl'
+                    : 'text-5xl md:text-7xl lg:text-5xl xl:text-7xl 2xl:text-9xl'
                     } font-bold pt-12 md:pt-24 lg:pt-8 xl:pt-20 2xl:pt-28 pb-4 md:pb-5`}
                 >
                   {loading ? 'Loading...' : `${temperature}°`}
@@ -496,15 +501,18 @@ const GalleryMain = () => {
                 className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
               >
                 {RightImages.map((src, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={src}
                     alt={`Gallery image ${index + 1}`}
-                    loading="lazy"
-                    className='absolute top-0 left-0 w-full h-full object-cover rounded-2xl'
+                    fill
+                    className='object-cover rounded-2xl'
+                    placeholder='blur'
+                    blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                   />
                 ))}
               </div>
+
 
 
               <div className='bg-[#09e5e5] text-black min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] p-4 md:p-6 rounded-2xl w-full'>
