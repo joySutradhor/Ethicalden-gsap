@@ -67,20 +67,16 @@ function ClientsLogo() {
         {items.map(item => (
           <div
             key={item.id}
-            className='flex items-center justify-center rounded bg-white p-2 h-full'
+            className='flex items-center justify-center rounded bg-white p-2 h-[150px]'
           >
-            <div className='relative w-full aspect-square flex items-center justify-center'>
+            <div className='relative w-full flex items-center justify-center '>
               <Image
                 src={item.src}
                 alt={`Item ${item.id}`}
                 width={100}
                 height={100}
                 unoptimized
-                className='object-contain w-full h-full '
-                style={{
-                  width: 'auto',
-                  height: 'auto'
-                }}
+                className='object-cover w-auto h-[120px] '
               />
             </div>
             {item.line === 'yes' && (

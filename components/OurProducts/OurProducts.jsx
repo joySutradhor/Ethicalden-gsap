@@ -204,7 +204,7 @@ useEffect(() => {
       title: 'Branding',
       tags: ['UI/UX Design', 'Baranding'],
       image:
-        '/images/our-products/1.jpg',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/1.jpg?updatedAt=1749635818905',
       isNew: true
     },
     {
@@ -212,7 +212,7 @@ useEffect(() => {
       title: 'UI/UX Design',
       tags: ['UI/UX Design', 'Development'],
       image:
-        '/images/our-products/ui-ux.jpg',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/ui-ux.jpg?updatedAt=1749635838433',
       isNew: true
     },
     {
@@ -220,7 +220,7 @@ useEffect(() => {
       title: 'Web Development',
       tags: ['UI/UX Design', 'E-commerce'],
       image:
-        '/images/our-products/web-development.jpg',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/web-development.jpg?updatedAt=1749635855170',
       isNew: true
     },
     {
@@ -228,7 +228,7 @@ useEffect(() => {
       title: 'App Development',
       tags: ['UI/UX Design', 'E-commerce'],
       image:
-        '/images/our-products/app-development.jpg',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/app-development.jpg?updatedAt=1749635868632',
       isNew: true
     },
     
@@ -237,7 +237,7 @@ useEffect(() => {
       title: 'SEO',
       tags: ['UI/UX Design', 'Property Portal'],
       image:
-        '/images/our-products/3.jpg',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/3.jpg?updatedAt=1749635883607',
       isNew: true
     },
     {
@@ -245,7 +245,7 @@ useEffect(() => {
       title: 'Digital Marketing',
       tags: ['UI/UX Design', 'E-Commerce'],
       image:
-        '/images/our-products/2.jpg',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/2.jpg?updatedAt=1749635891328',
       isNew: true
     },
     
@@ -321,6 +321,7 @@ useEffect(() => {
                 <img
                   src={project.image}
                   alt={`${project.title} Preview`}
+                  loading='lazy'
                   className='absolute inset-0 w-full h-full object-cover  z-10'
                 />
                 <div className='relative z-20 w-full h-full flex flex-col justify-end p-6'>
@@ -442,6 +443,7 @@ useEffect(() => {
                                 )} */}
                 <img
                   src={project.image}
+                  loading='lazy'
                   alt={`${project.title} Preview`}
                   className='absolute inset-0 w-full h-full object-cover  z-10'
                 />

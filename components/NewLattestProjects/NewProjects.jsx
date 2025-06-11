@@ -161,10 +161,11 @@ function NewProjects() {
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
             <Image
               src='https://ik.imagekit.io/ethicalden/projects/p5.png?updatedAt=1747074110219'
+              loading='lazy'
               height={1000}
               width={1000}
               className='object-cover w-full h-full'
-              alt='Project 1'
+              alt='Mr Cafe'
             />
 
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 ' style={{ letterSpacing: "-0.05em" }}>
@@ -184,13 +185,14 @@ function NewProjects() {
         <div className='h-[23vh] mt-5 md:mt-[0vh] lg:mt-0 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
           <video
             src='https://ik.imagekit.io/ethicalden/projects/marzii.mp4?updatedAt=1747079535549'
+            loading='lazy'
             muted
             autoPlay
             loop
             className='h-full w-full object-cover'
           ></video>
           <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}> 
-            <a href="/project-marzii"  className="no-underline text-inherit cursor-pointer text-color-change">
+            <a href="https://www.behance.net/gallery/226916111/Marzii-Logo-Design-Branding-Design" target='_blank'  className="no-underline text-inherit cursor-pointer text-color-change">
                 Marzii
               </a> 
             </h3>
@@ -209,6 +211,7 @@ function NewProjects() {
               width={1000}
               height={1000}
               className='object-cover h-full w-full'
+              loading='lazy'
               alt='E-laz'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
@@ -250,8 +253,9 @@ function NewProjects() {
               <Image
                 width={500}
                 height={100}
-                alt='wonderlite'
+                alt='Wonderlite'
                 src='https://ik.imagekit.io/ethicalden/projects/image.png?updatedAt=1747080116801'
+                loading='lazy'
                 className='h-full w-full object-cover'
               ></Image>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
@@ -276,7 +280,8 @@ function NewProjects() {
                 src='https://i.ibb.co/gbynLb3t/emopract.jpg'
                 height={100}
                 width={500}
-                alt='emopract'
+                alt='Emopract'
+                loading='lazy'
                 className='h-full w-full object-cover'
               ></Image>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}> 
@@ -323,6 +328,7 @@ function NewProjects() {
               height={1000}
               width={1000}
               className='object-cover h-full w-full'
+              loading='lazy'
               alt='Divine'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
@@ -345,7 +351,8 @@ function NewProjects() {
                 width={1000}
                 src='https://ik.imagekit.io/ethicalden/projects/p2.png?updatedAt=1747074109978'
                 className='h-full w-full object-cover'
-                alt='RBA'
+                loading='lazy'
+                alt='InsiderFeed'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
                 <a href="https://www.behance.net/gallery/195703857/Branding-and-Web-Developnment-Insiderfeed" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
@@ -364,6 +371,7 @@ function NewProjects() {
                 width={1000}
                 src='https://i.ibb.co/q3nPZVhS/massart.png'
                 className='h-full w-full object-cover'
+                loading='lazy'
                 alt='massArt'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
