@@ -107,21 +107,21 @@ const OurProcess = () => {
       return direction;
     };
 
-    animateTitle('Dream It');
+    animateTitle('Dream - It');
 
     gsap.timeline({
       scrollTrigger: {
         trigger: element,
         start: 'top top',
         end: '+=1',
-        onEnterBack: () => changeProcess('1', 'Dream It', 'up'),
+        onEnterBack: () => changeProcess('1', 'Dream - It', 'up'),
       },
     });
 
     const processes = [
-      { class: '.second-process', number: '2', title: 'Design It', previous: '1', previousTitle: 'Dream It' },
-      { class: '.third-process', number: '3', title: 'Build It', previous: '2', previousTitle: 'Design It' },
-      { class: '.fourth-process', number: '4', title: 'Launch It', previous: '3', previousTitle: 'Build It' },
+      { class: '.second-process', number: '2', title: 'Design - It', previous: '1', previousTitle: 'Dream - It' },
+      { class: '.third-process', number: '3', title: 'Build - It', previous: '2', previousTitle: 'Design - It' },
+      { class: '.fourth-process', number: '4', title: 'Launch - It', previous: '3', previousTitle: 'Build - It' },
     ];
 
     processes.forEach(({ class: triggerClass, number, title, previous, previousTitle }) => {
@@ -178,17 +178,17 @@ const OurProcess = () => {
           </span>
         </p>
         <p className="text-2xl md:text-3xl font-extrabold font-helvetica leading-[1] text-[#09e5e5]">Our Process</p>
-        <h2 ref={titleRef} style={{ letterSpacing: "-0.05em" }} className="text-5xl md:text-8xl 2xl:text-[220px] font-helvetica font-extrabold text-gray-300"></h2>
+        <h2 ref={titleRef} style={{ letterSpacing: "-.05em" }} className="text-5xl md:text-8xl 2xl:text-[220px] font-helvetica font-extrabold text-gray-300"></h2>
       </div>
 
       {/* 1st Process */}
       <div className="relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 mt-40">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#09e5e5] object-cover" src="/images/services/process/services-process-1.webp" alt="" />
+          <img className="bg-[#09e5e5] object-cover" src="/images/services/process/im-1.jpg" alt="" />
         </div>
 
         <div className="flex-1">
-          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
+          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We start by diving deep into your vision, goals, and what keeps you up at night.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We ask the uncomfortable questions that shape stronger ideas.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We map out user needs, pain points, and opportunities for magic.</li>
@@ -199,9 +199,9 @@ const OurProcess = () => {
       </div>
 
       {/* 2nd Process */}
-      <div className="second-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96">
+      <div className="second-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96 ">
         <div className="flex-1">
-          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
+          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We turn ideas into wireframes that are more blueprint than guesswork.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We craft UI designs that are as beautiful as they are intuitive.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We obsess over the little details colors, fonts, micro-interactions because they matter.</li>
@@ -211,18 +211,18 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/services-process-2.webp" alt="" />
+          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/im-2.jpg" alt="" />
         </div>
       </div>
 
       {/* 3rd Process */}
       <div className="third-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-cyan-300 object-cover" src="/images/services/process/services-process-3.webp" alt="" />
+          <img className="bg-cyan-300 object-cover" src="/images/services/process/im-3.jpg" alt="" />
         </div>
 
         <div className="flex-1">
-          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
+          <ul className="bg-[#a8ff57] p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We bring designs to life with clean, scalable, and lightning-fast code.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We pick the right stack for your project, not just the trendiest one.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We integrate third-party tools and APIs seamlessly.</li>
@@ -235,7 +235,7 @@ const OurProcess = () => {
       {/* 4th Process */}
       <div className="fourth-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-24 md:mb-28 lg:mb-40 pt-96">
         <div className="flex-1">
-          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center">
+          <ul className="bg-cyan-300 p-3 md:p-5 lg:p-8 xl:p-16 h-full flex flex-col justify-center list-disc">
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We deploy your project on secure, scalable infrastructure.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We fine-tune performance so it loads fast and stays stable.</li>
             <li className="text-xl xl:text-2xl font-helvetica font-medium py-2">We monitor for bugs, fix issues on the fly, and keep things smooth.</li>
@@ -245,7 +245,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/services-process-4.webp" alt="" />
+          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/im-4.jpg" alt="" />
         </div>
       </div>
     </div>

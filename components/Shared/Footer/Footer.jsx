@@ -16,7 +16,7 @@ import Link from 'next/link'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function Footer() {
+function Footer () {
   const footerRef = useRef(null)
   const [darkBackground, setDarkBackground] = useState(false)
   const [isReady, setIsReady] = useState(false)
@@ -36,7 +36,7 @@ function Footer() {
     }
   }, [])
 
-  function CTAArea({ darkMode }) {
+  function CTAArea ({ darkMode }) {
     const titleRef = useRef(null)
     const charRefs = useRef([])
     const animationRef = useRef(null)
@@ -185,7 +185,7 @@ function Footer() {
       }
     }, [])
 
-    const titleText = "Bring Us In Early. Thank Us Later."
+    const titleText = 'Bring Us In Early. Thank Us Later.'
     const words = titleText.split(' ')
 
     // Clear charRefs before render
@@ -323,24 +323,21 @@ function Footer() {
         className='edn__f__container transition-all  duration-500'
       >
         <div className=''>
-          {/* first column */}
-
-
           {/* second column */}
           <div className='edn__f__menu__parent'>
             <div>
-              <h3 className='text-xl font-black font-helvetica'>
-                <img className='w-50 md:w-80 h-auto' src="/images/logo/footer-logo.png" alt="" />
-              </h3>
-
-              <div className='hidden md:block md:pt-48 lg:pt-49 xl:pt-49 2xl:pt-53'>
-                <p className='text-lg font-bold mt-5 xl:mt-10 font-helvetica'>
-                  Nokia Care Building, South Dumdum, Kolkata , India .
-                </p>
-                <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
-                  Phone : +91 9547578920
-                </p>
+              <div>
+                <img
+                  className='w-50 md:w-80 h-auto'
+                  src='/images/logo/footer-logo.png'
+                  alt=''
+                />
               </div>
+              <p className='mt-[4vh] font-helvetica text-lg pr-[4vw] font-bold'>
+                At Ethical Den, we turn your brand vision into captivating web,
+                graphic, and video experiences that captivate prospective
+                clients
+              </p>
             </div>
 
             <div>
@@ -354,7 +351,6 @@ function Footer() {
                 </Link>
               </div>
 
-
               <div>
                 <Link href='/about-den'>
                   <h3 className='edn__f__title font-helvetica '>The Agency</h3>
@@ -367,40 +363,108 @@ function Footer() {
               </div>
               <div>
                 <Link href='/privacy-policy'>
-                  <h3 className='edn__f__title font-helvetica'>Privacy Policy</h3>
+                  <h3 className='edn__f__title font-helvetica'>
+                    Privacy Policy
+                  </h3>
                 </Link>
-              </div>
-
-              <div className='hidden md:block md:pt-10 lg:pt-10 xl:pt-18'>
-                <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
-                  Mahakavi Kuvempu Road, Rajajinar, Bangalore, India .
-                </p>
-                <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
-                  Phone : +91 9547578920
-                </p>
               </div>
             </div>
 
             <div>
               <div>
-                <Link href="/contact" className='inline-block w-fit '>
-                  <h3 className='edn__f__title font-helvetica '>Let's Talk</h3>
-                </Link>
-              </div>
-              <h3 className='text-xl md:text-[18px] lg:text-2xl xl:text-2xl font-bold mb-4 inline-block w-fit font-helvetica'>
-                connect@ethicalden.com
-              </h3>
+                <div className='mb-5'>
+                  <div>
+                    <Link href='/contact' className='inline-block w-fit '>
+                      <h3 className='edn__f__title font-helvetica '>
+                        Let's Talk
+                      </h3>
+                    </Link>
+                  </div>
+                  <h3 className='text-xl md:text-[18px] lg:text-2xl xl:text-2xl font-bold mb-4 inline-block w-fit font-helvetica'>
+                    connect@ethicalden.com
+                  </h3>
+                </div>
 
-              <div className="block md:hidden ">
-                <p className="text-lg font-bold mt-5 lg:mt-10 font-helvetica">
-                  Nokia Care Building, South Dumdum, Kolkata , India . <br /> <br /> Mahakavi
-                  Kuvempu Road, Rajajinar, Bangalore, India .
-                </p>
-                <p className="text-lg font-bold mt-1 lg:mt-1 font-helvetica">
-                  Phone : +91 9547578920
-                </p>
+                {/* partners */}
+                <div className='grid grid-cols-2 lg:grid-cols-3 gap-2.5 xl:gap-5 h-full mt-[2vh] mb-10 lg:mb-0 '>
+                  <div>
+                    <img
+                      className='h-12 2xl:object-cover w-full rounded-md '
+                      src='/images/logo/google ads.png'
+                      alt=''
+                    />
+                  </div>
+                  <div>
+                    <img
+                      className='h-12 2xl:object-cover w-full rounded-md '
+                      src='/images/logo/shopify.jpg'
+                      alt=''
+                    />
+                  </div>
+                  <div>
+                    <img
+                      className='h-12 2xl:object-cover w-full rounded-md '
+                      src='/images/logo/partner.jpg'
+                      alt=''
+                    />
+                  </div>
+                  <div>
+                    <img
+                      className='h-12 2xl:object-cover w-full rounded-md '
+                      src='/images/logo/meta.jpg'
+                      alt=''
+                    />
+                  </div>
+                  <div>
+                    <img
+                      className='h-12 2xl:object-cover w-full rounded-md '
+                      src='/images/logo/iso.jpg'
+                      alt=''
+                    />
+                  </div>
+                  <div>
+                    <img
+                      className='h-12 2xl:object-cover w-full rounded-md '
+                      src='/images/logo/amazon.jpg'
+                      alt=''
+                    />
+                  </div>
+                </div>
               </div>
-              <p className='text-lg font-bold mt-5 md:mt-20 lg:mt-10 font-helvetica md:pt-20 lg:pt-34 xl:pt-42 2xl:pt-46'>
+            </div>
+          </div>
+          {/* address and location  */}
+          <div className='xl:mt-16 md:mt-10 edn__f__menu__parent'>
+            <div className=''>
+              <p className='text-lg font-bold  font-helvetica'>
+                Nokia Care Building, South Dumdum, Kolkata , India .
+              </p>
+              <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
+                Phone : +91 9547578920
+              </p>
+            </div>
+
+            <div className=''>
+              <p className='text-lg font-bold  font-helvetica'>
+                Mahakavi Kuvempu Road, Rajajinar, Bangalore, India .
+              </p>
+              <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
+                Phone : +91 9547578920
+              </p>
+            </div>
+
+            {/* <div className='block md:hidden '>
+              <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica'>
+                Nokia Care Building, South Dumdum, Kolkata , India . <br />{' '}
+                <br /> Mahakavi Kuvempu Road, Rajajinar, Bangalore, India .
+              </p>
+              <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
+                Phone : +91 9547578920
+              </p>
+            </div> */}
+
+            <div>
+              <p className='text-lg font-bold '>
                 24/A, Road-06, Mohammadpur, Dhaka.
               </p>
               <p className='text-lg font-bold mt-1 lg:mt-1 font-helvetica'>
@@ -409,20 +473,33 @@ function Footer() {
             </div>
           </div>
         </div>
-        <hr className="w-full border-gray-500 my-8" />
+
+        {/* socail icons */}
+        <hr className='w-full border-gray-500 my-8' />
         <div className='md:flex justify-between'>
           <div className='flex gap-3 mt-4 lg:mt-10 flex-wrap'>
             <span className='edn__f___socail___icons '>
-              <a target='_blank' href="https://www.linkedin.com/company/ethicalden/?originalSubdomain=in"><FaLinkedin /></a>
+              <a
+                target='_blank'
+                href='https://www.linkedin.com/company/ethicalden/?originalSubdomain=in'
+              >
+                <FaLinkedin />
+              </a>
             </span>
             <span className='edn__f___socail___icons'>
-              <a target='_blank' href="https://www.facebook.com/ethicalden/"><FaFacebook /></a>
+              <a target='_blank' href='https://www.facebook.com/ethicalden/'>
+                <FaFacebook />
+              </a>
             </span>
             <span className='edn__f___socail___icons'>
-              <a href="https://www.behance.net/Realethicalden" target='_blank'><FaBehance /></a>
+              <a href='https://www.behance.net/Realethicalden' target='_blank'>
+                <FaBehance />
+              </a>
             </span>
             <span className='edn__f___socail___icons'>
-              <a href="https://www.instagram.com/ethical.den/" target='_blank'><FaInstagram /></a>
+              <a href='https://www.instagram.com/ethical.den/' target='_blank'>
+                <FaInstagram />
+              </a>
             </span>
           </div>
           <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica '>
