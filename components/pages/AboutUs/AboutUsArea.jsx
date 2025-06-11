@@ -302,6 +302,7 @@ const AboutUsArea = () => {
               height={1000}
               width={1000}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
+              loading='lazy'
               alt='Project 1'
             />
           </div>
@@ -313,6 +314,7 @@ const AboutUsArea = () => {
               height={1000}
               width={1000}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
+              loading='lazy'
               alt='Project 2'
             />
           </div>
