@@ -301,6 +301,8 @@ const AboutUsArea = () => {
               src='https://ik.imagekit.io/ethicalden/new%20office%20picture/IMG_0208.jpg?updatedAt=1747078714340'
               height={1000}
               width={1000}
+              placeholder='blur'
+              blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
               loading='lazy'
               alt='Project 1'
@@ -313,6 +315,8 @@ const AboutUsArea = () => {
               src='https://ik.imagekit.io/ethicalden/from%20fardeen%20sir/IMG-20250512-WA0003.jpg?updatedAt=1747073978304'
               height={1000}
               width={1000}
+              placeholder='blur'
+              blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
               loading='lazy'
               alt='Project 2'
@@ -344,7 +348,7 @@ const AboutUsArea = () => {
 
             {/* button */}
             <div className=" relative mt-8 md:mt-3 inline-block">
-            <Link
+              <Link
                 ref={buttonRef}
                 className="relative px-6 py-2 sm:px-8 sm:py-3 rounded-full border-none text-base sm:text-lg bg-[#a8ff57] overflow-hidden inline-flex items-center justify-center group"
                 href="/services"
