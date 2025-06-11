@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,18 +10,18 @@ const TechStack = () => {
     const [activeFilter, setActiveFilter] = useState('All');
 
     const techs = [
-        { id: 1, name: 'Adobe', profession: 'Creative', imageUrl: '/images/services/tech/service-item-acc.svg' },
-        { id: 2, name: 'AWS', profession: 'Develop', imageUrl: '/images/services/tech/service-item-aws.svg' },
-        { id: 3, name: 'Cloud Flare', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-cloud-flare.svg' },
-        { id: 4, name: 'Firebase', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-firebase.svg' },
-        { id: 5, name: 'Github', profession: 'Deliver', imageUrl: '/images/services/tech/service-item-github.svg' },
-        { id: 5, name: 'React JS', profession: 'Develop', imageUrl: '/images/services/tech/react-icon_svg_.webp' },
-        { id: 5, name: 'Next JS', profession: 'Develop', imageUrl: '/images/services/tech/next-js.png' },
-        { id: 5, name: 'HTML', profession: 'Develop', imageUrl: '/images/services/tech/html.png' },
-        { id: 5, name: 'CSS', profession: 'Develop', imageUrl: '/images/services/tech/CSS.png' },
-        { id: 5, name: 'React Native', profession: 'Develop', imageUrl: '/images/services/tech/react-native-1.png' },
-        { id: 5, name: 'Python', profession: 'Develop', imageUrl: '/images/services/tech/pythoned.png' },
-        { id: 5, name: 'DJango', profession: 'Develop', imageUrl: '/images/services/tech/django.webp' },
+        { id: 1, name: 'Adobe', profession: 'Creative', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service-item-acc.svg?updatedAt=1749639120923' },
+        { id: 2, name: 'AWS', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service-item-aws.svg?updatedAt=1749639136612' },
+        { id: 3, name: 'Cloud Flare', profession: 'Deliver', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service-item-cloud-flare.svg?updatedAt=1749639145548' },
+        { id: 4, name: 'Firebase', profession: 'Deliver', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service-item-firebase.svg?updatedAt=1749639161963' },
+        { id: 5, name: 'Github', profession: 'Deliver', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service-item-github.svg?updatedAt=1749639172141' },
+        { id: 5, name: 'React JS', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/react-icon_svg_.webp?updatedAt=1749639180468' },
+        { id: 5, name: 'Next JS', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/next-js.png?updatedAt=1749639195340' },
+        { id: 5, name: 'HTML', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/html.png?updatedAt=1749639200299' },
+        { id: 5, name: 'CSS', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/CSS.png?updatedAt=1749639207046' },
+        { id: 5, name: 'React Native', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/react-native-1.png?updatedAt=1749639219788' },
+        { id: 5, name: 'Python', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/pythoned.png?updatedAt=1749639226217' },
+        { id: 5, name: 'DJango', profession: 'Develop', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/django.webp?updatedAt=1749639231709' },
 
     ];
 
@@ -111,9 +112,12 @@ const TechStack = () => {
                                 className={`relative group overflow-hidden rounded-xl transition-all duration-300 ${isActive ? 'grayscale-0' : 'grayscale pointer-events-none'}`}
                             >
                                 <div className="relative aspect-square w-full flex items-center justify-center bg-gray-100 rounded-xl p-8">
-                                    <img
+                                    <Image
                                         src={tech.imageUrl}
                                         alt={tech.name}
+                                        loading='lazy'
+                                        width={100}
+                                        height={100}
                                         className="h-[80%] w-[80%] object-contain md:h-[85%] md:w-[85%] 2xl:h-[95%] 2xl:w-[95%]"
                                     />
                                     {isActive && (

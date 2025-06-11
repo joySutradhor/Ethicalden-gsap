@@ -318,7 +318,7 @@ const ServicesArea = () => {
                         <div className="-mt-[300px] md:-mt-0" ref={el => videoContainerRefs.current[0] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video1Ref}>
                                 <video
-                                    src="/video/services/service1.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service1.mp4?updatedAt=1749639717784"
                                     muted
                                     autoPlay
                                     loop
@@ -357,7 +357,7 @@ const ServicesArea = () => {
                         <div className="-mt-1 md:-mt-[700px]" ref={el => videoContainerRefs.current[1] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video2Ref}>
                                 <video
-                                    src="/video/services/service2.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service2.mp4?updatedAt=1749639727412"
                                     muted
                                     autoPlay
                                     loop
@@ -398,7 +398,7 @@ const ServicesArea = () => {
                         <div className="mt-30 md:mt-[320px] lg:mt-[200px] xl:mt-[400px]" ref={el => videoContainerRefs.current[2] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video3Ref}>
                                 <video
-                                    src="/video/services/service3.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service3.mp4?updatedAt=1749639732043"
                                     muted
                                     autoPlay
                                     loop
@@ -437,7 +437,7 @@ const ServicesArea = () => {
                         <div className="mt-20 md:-mt-[300px] lg:-mt-[500px] xl:-mt-[750px]" ref={el => videoContainerRefs.current[3] = el}>
                             <div className="relative md:h-[40vh] lg:h-[60vh] w-full" ref={video4Ref}>
                                 <video
-                                    src="/video/services/service4.mp4"
+                                    src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service4.mp4?updatedAt=1749639737323"
                                     muted
                                     autoPlay
                                     loop

@@ -184,7 +184,7 @@ const OurProcess = () => {
       {/* 1st Process */}
       <div className="relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 mt-40">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#09e5e5] object-cover" src="/images/services/process/im-1.jpg" alt="" />
+          <img className="bg-[#09e5e5] object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-1.jpg?updatedAt=1749638489598" alt="" />
         </div>
 
         <div className="flex-1">
@@ -211,14 +211,14 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/im-2.jpg" alt="" />
+          <img className="bg-[#a8ff57] object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-2.jpg?updatedAt=1749638518345" alt="" />
         </div>
       </div>
 
       {/* 3rd Process */}
       <div className="third-process relative z-10 flex gap-3 md:gap-30 lg:gap-60 items-center mb-96 pt-96">
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-cyan-300 object-cover" src="/images/services/process/im-3.jpg" alt="" />
+          <img className="bg-cyan-300 object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-3.jpg?updatedAt=1749638523213" alt="" />
         </div>
 
         <div className="flex-1">
@@ -245,7 +245,7 @@ const OurProcess = () => {
         </div>
 
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px]">
-          <img className="bg-[#a8ff57] object-cover" src="/images/services/process/im-4.jpg" alt="" />
+          <img className="bg-[#a8ff57] object-cover" loading='lazy' src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-4.jpg?updatedAt=1749638529892" alt="" />
         </div>
       </div>
     </div>

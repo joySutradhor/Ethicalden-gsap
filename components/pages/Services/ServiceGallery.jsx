@@ -105,12 +105,12 @@ const ServiceGallery = () => {
                             <h2 className="text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold pt-10 md:pt-24 lg:pt-20 xl:pt-28 2xl:pt-38 pb-4 md:pb-5">Tech Startups</h2>
                             <p className="text-[12px] md:text-base">Fueling growth with design-driven development.</p>
                         </div>
-                        <img src="/images/services/services-card-1.webp" alt="service-1" className="flex-1 w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] rounded-2xl  bg-yellow-200" />
+                        <img src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-1.webp?updatedAt=1749638774064" loading='lazy'  alt="service-1" className="flex-1 w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] rounded-2xl  bg-[#a8ff57]" />
                     </div>
 
                     {/* Second Column */}
                     <div ref={col2Ref} className="space-y-6 flex gap-4 md:gap-6 lg:gap-8  flex-row xl:block 2xl:block xl:mt-8">
-                        <img src="/images/services/services-card-2.webp" alt="service-2" className="flex-1 rounded-2xl w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] bg-cyan-200 " />
+                        <img src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-2.webp?updatedAt=1749638783500" loading='lazy'  alt="service-2" className="flex-1 rounded-2xl w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] bg-[#09e5e5] " />
                         <div className="flex-1 bg-[#071f2b] text-white p-4 md:p-6 rounded-2xl w-[28vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh]">
                             <p className="text-base md:text-xl">02 / <span className='text-gray-500'>05</span></p>
                             <h2 className="text-xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-5xl  font-bold pt-10 md:pt-20 lg:pt-20 xl:pt-28 pb-2 md:pb-5">E-Commerce & Retail</h2>
@@ -135,12 +135,12 @@ const ServiceGallery = () => {
                             <h3 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl font-semibold pt-12 md:pt-24 lg:pt-20 xl:pt-30 2xl:pt-38 pb-4 md:pb-5">FinTech</h3>
                             <p className="text-[12px] md:text-base">Designing trust in every transaction.</p>
                         </div>
-                        <img src="/images/services/services-card-3.webp" alt="service-3" className="flex-1 w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] rounded-2xl  bg-cyan-200" />
+                        <img src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-3.webp?updatedAt=1749638789268" loading='lazy'  alt="service-3" className="flex-1 w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] rounded-2xl  bg-[#09e5e5]" />
                     </div>
 
                     {/* Fifth Column */}
                     <div className="space-y-6 flex gap-4 md:gap-6 lg:gap-8 flex-row xl:block 2xl:block ">
-                        <img src="/images/services/services-card-4.webp" alt="services-4" className="flex-1 rounded-2xl w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] bg-yellow-200 " />
+                        <img src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-4.webp?updatedAt=1749638795103" loading='lazy' alt="services-4" className="flex-1 rounded-2xl w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] bg-[#a8ff57] " />
                         <div className="flex-1 bg-[#012d3d] text-white p-4 md:p-6 rounded-2xl w-[28vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh]">
                             <p className="text-base md:text-xl">05 / <span className='text-gray-500'>05</span></p>
                             <h3 className="text-xl md:text-3xl lg:text-3xl 2xl:text-4xl font-semibold pt-10 md:pt-20 lg:pt-20 xl:pt-28 pb-4 md:pb-5">

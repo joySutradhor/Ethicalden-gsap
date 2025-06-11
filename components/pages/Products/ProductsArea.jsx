@@ -123,7 +123,7 @@ function ProductsArea() {
 
           <div className='h-[23vh] mt-5 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
             <video
-              src='/video/product/staffsynk.mp4'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Product%20Page/staffsynk.mp4?updatedAt=1749639902264'
               muted
               autoPlay
               loop
