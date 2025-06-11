@@ -329,7 +329,8 @@ function Footer () {
               <div>
                 <img
                   className='w-50 md:w-80 h-auto'
-                  src='/images/logo/footer-logo.png'
+                  loading='lazy'
+                  src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/footer-logo.png?updatedAt=1749640266509'
                   alt=''
                 />
               </div>
@@ -390,42 +391,48 @@ function Footer () {
                   <div>
                     <img
                       className='h-12 2xl:object-cover w-full rounded-md '
-                      src='/images/logo/google ads.png'
+                      loading='lazy'
+                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/google%20ads.png?updatedAt=1749640342315'
                       alt=''
                     />
                   </div>
                   <div>
                     <img
                       className='h-12 2xl:object-cover w-full rounded-md '
-                      src='/images/logo/shopify.jpg'
+                      loading='lazy'
+                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/shopify.jpg?updatedAt=1749640372104'
                       alt=''
                     />
                   </div>
                   <div>
                     <img
                       className='h-12 2xl:object-cover w-full rounded-md '
-                      src='/images/logo/partner.jpg'
+                      loading='lazy'
+                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/partner.jpg?updatedAt=1749640357671'
                       alt=''
                     />
                   </div>
                   <div>
                     <img
                       className='h-12 2xl:object-cover w-full rounded-md '
-                      src='/images/logo/meta.jpg'
+                      loading='lazy'
+                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/meta.jpg?updatedAt=1749640352347'
                       alt=''
                     />
                   </div>
                   <div>
                     <img
                       className='h-12 2xl:object-cover w-full rounded-md '
-                      src='/images/logo/iso.jpg'
+                      loading='lazy'
+                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/iso.jpg?updatedAt=1749640346650'
                       alt=''
                     />
                   </div>
                   <div>
                     <img
                       className='h-12 2xl:object-cover w-full rounded-md '
-                      src='/images/logo/amazon.jpg'
+                      loading='lazy'
+                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/amazon.jpg?updatedAt=1749640377236'
                       alt=''
                     />
                   </div>
