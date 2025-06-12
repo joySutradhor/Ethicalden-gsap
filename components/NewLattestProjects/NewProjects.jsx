@@ -171,7 +171,7 @@ function NewProjects() {
             />
 
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 ' style={{ letterSpacing: "-0.05em" }}>
-              <a href="https://www.behance.net/gallery/195872957/MR-Cafe-Logo-Design-Branding-Project" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+              <a href="/project-mrCafe" className="no-underline text-inherit cursor-pointer text-color-change">
                 Mr Cafe
               </a>
             </h3>
@@ -194,7 +194,7 @@ function NewProjects() {
             className='h-full w-full object-cover'
           ></video>
           <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-            <a href="https://www.behance.net/gallery/226916111/Marzii-Logo-Design-Branding-Design" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+            <a href="/project-marzii" className="no-underline text-inherit cursor-pointer text-color-change">
               Marzii
             </a>
           </h3>
@@ -219,7 +219,7 @@ function NewProjects() {
               alt='E-laz'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-              <a href="https://www.behance.net/gallery/226693839/e-laj-project-Branding-UiUx-Design-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+              <a href="/project-e-laj" className="no-underline text-inherit cursor-pointer text-color-change">
                 E-laj
               </a>
             </h3>
@@ -242,7 +242,7 @@ function NewProjects() {
                 className='h-full w-full object-cover'
               ></video>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/196542915/MAK-Community-Branding-UIUX-and-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                <a href="/project-mak-community" className="no-underline text-inherit cursor-pointer text-color-change">
                   Mak Community
                 </a>
               </h3>
@@ -265,7 +265,7 @@ function NewProjects() {
                 className='h-full w-full object-cover'
               ></Image>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/195879275/Wonderlite-Branding-Social-Media-Stationary-UXUI" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                <a href="/project-wonderlite" className="no-underline text-inherit cursor-pointer text-color-change">
                   Wonderlite
                 </a>
               </h3>
@@ -293,7 +293,7 @@ function NewProjects() {
                 className='h-full w-full object-cover'
               ></Image>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/226680185/Emopract-Project-UIUX-Design-Web-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                <a href="/project-emopract" className="no-underline text-inherit cursor-pointer text-color-change">
                   Emopract
                 </a>
               </h3>
@@ -316,7 +316,7 @@ function NewProjects() {
               className='h-full w-full object-cover'
             ></video>
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-              <a href="https://www.behance.net/gallery/226736453/Sandeep-Auto-Line-Branding-social-Media-Marketing" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+              <a href="/project-sandeep-autolines" className="no-underline text-inherit cursor-pointer text-color-change">
                 Sandeep Autolines
               </a>
             </h3>
@@ -342,7 +342,7 @@ function NewProjects() {
               alt='Divine'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-              <a href="https://www.behance.net/gallery/195704103/Devine-Branding-and-App-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+              <a href="/project-divine" className="no-underline text-inherit cursor-pointer text-color-change">
                 Divine
               </a>
             </h3>
@@ -367,7 +367,7 @@ function NewProjects() {
                 alt='InsiderFeed'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/195703857/Branding-and-Web-Developnment-Insiderfeed" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                <a href="/project-insiderfeed" className="no-underline text-inherit cursor-pointer text-color-change">
                   InsiderFeed
                 </a>
               </h3>
@@ -389,7 +389,7 @@ function NewProjects() {
                 alt='massArt'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="https://www.behance.net/gallery/226695785/Massart-Branding-Web-Design-Development" target='_blank' className="no-underline text-inherit cursor-pointer text-color-change">
+                <a href="/project-massArt" className="no-underline text-inherit cursor-pointer text-color-change">
                   massArt
                 </a>
               </h3>
