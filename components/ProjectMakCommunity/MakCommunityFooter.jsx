@@ -1,13 +1,12 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 
 const MakCommunityFooter = () => {
     const sectionRef = useRef(null);
     const hasNavigated = useRef(false);
-    const [isVisible, setIsVisible] = useState(false);
     const router = useRouter();
 
     const handleNavigation = () => {
@@ -24,41 +23,10 @@ const MakCommunityFooter = () => {
         });
     };
 
-    // More reliable visibility detection
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsVisible(entry.isIntersecting);
-            },
-            { threshold: 0.8 }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
-
-    // Handle manual scroll triggers
-    const handleUserScroll = (e) => {
-        if (hasNavigated.current || !isVisible) return;
-
-        // Only proceed if this is a deliberate downward scroll
-        if (e.deltaY > 0) {
-            e.preventDefault();
-            handleNavigation();
-        }
-    };
-
-    // Handle scroll to bottom (only if user actively scrolls)
-    const checkScrollPosition = () => {
-        if (hasNavigated.current || !isVisible) return;
-
+    // Handle scroll to bottom detection
+    const handleScroll = () => {
+        if (hasNavigated.current) return;
+        
         const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
         const atBottom = scrollTop + clientHeight >= scrollHeight - 10;
         
@@ -67,19 +35,33 @@ const MakCommunityFooter = () => {
         }
     };
 
+    // Handle wheel events when section is fully visible
+    const handleWheel = (e) => {
+        if (hasNavigated.current) return;
+        
+        // Check if section is fully visible
+        const rect = sectionRef.current.getBoundingClientRect();
+        const isFullyVisible = (
+            rect.top >= 0 &&
+            rect.bottom <= window.innerHeight
+        );
+        
+        if (isFullyVisible) {
+            handleNavigation();
+        }
+    };
+
     useEffect(() => {
-        // Reset navigation state when component mounts
-        hasNavigated.current = false;
-
-        // Use passive: true for better performance
-        window.addEventListener('scroll', checkScrollPosition, { passive: true });
-        window.addEventListener('wheel', handleUserScroll, { passive: false });
-
+        // Only add scroll event if you want bottom detection
+        window.addEventListener('scroll', handleScroll);
+        // Add wheel event for immediate response when fully visible
+        window.addEventListener('wheel', handleWheel, { passive: false });
+        
         return () => {
-            window.removeEventListener('scroll', checkScrollPosition);
-            window.removeEventListener('wheel', handleUserScroll);
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('wheel', handleWheel);
         };
-    }, [isVisible]); // Re-run effect when visibility changes
+    }, []);
 
     return (
         <div
@@ -91,7 +73,7 @@ const MakCommunityFooter = () => {
             <div className="relative z-10 px-5 md:px-10 lg:px-16 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto text-left">
                 <p className="text-white text-xl font-semibold mb-2">Next Project:</p>
                 <h1 className="text-white text-4xl md:text-6xl font-bold">Wonderlite</h1>
-                <p className="text-white mt-4">Scroll down to continue</p>
+                <p className="text-white mt-4">Scroll up or down to continue</p>
             </div>
         </div>
     );
