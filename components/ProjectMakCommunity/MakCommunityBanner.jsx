@@ -4,7 +4,7 @@ import { FaArrowLeftLong } from 'react-icons/fa6';
 import { gsap } from 'gsap';
 import { useRouter } from 'next/navigation'; 
 
-const MarziiBanner = () => {
+const MakCommunityBanner = () => {
     const router = useRouter(); 
 
     // button animation
@@ -101,7 +101,7 @@ const MarziiBanner = () => {
                         ref={titleRef}
                         className="  text-4xl md:text-5xl lg:text-6xl xl:text-7xl   font-urbanist font-extrabold leading-[1.06]"
                     >
-                        {"Marzii: Creating the Worlds Most Recognizable Sports Identity".split(" ").map((word, wi) => (
+                        {"Mak Community: Creating the Worlds Most Recognizable Sports Identity".split(" ").map((word, wi) => (
                             <span
                                 key={wi}
                                 className="inline-block whitespace-nowrap mr-2 md:mr-3 lg:mr-4 xl:mr-5" 
@@ -137,4 +137,4 @@ const MarziiBanner = () => {
     );
 };
 
-export default MarziiBanner;
+export default MakCommunityBanner;

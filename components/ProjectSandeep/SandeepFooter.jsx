@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 
-const MrCafeFooter = () => {
+const SandeepFooter = () => {
     const sectionRef = useRef(null);
     const hasNavigated = useRef(false);
     const router = useRouter();
@@ -18,7 +18,7 @@ const MrCafeFooter = () => {
             duration: 0.6,
             ease: 'power2.out',
             onComplete: () => {
-                router.push('/project-mrCafe');
+                router.push('/project-insiderfeed');
             }
         });
     };
@@ -72,11 +72,11 @@ const MrCafeFooter = () => {
             <div className="absolute inset-0 bg-black/40 z-0" />
             <div className="relative z-10 px-5 md:px-10 lg:px-16 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto text-left">
                 <p className="text-white text-xl font-semibold mb-2">Next Project:</p>
-                <h1 className="text-white text-4xl md:text-6xl font-bold">mrCafe</h1>
+                <h1 className="text-white text-4xl md:text-6xl font-bold">InsiderFeed</h1>
                 <p className="text-white mt-4">Scroll up or down to continue</p>
             </div>
         </div>
     );
 };
 
-export default MrCafeFooter;
+export default SandeepFooter;

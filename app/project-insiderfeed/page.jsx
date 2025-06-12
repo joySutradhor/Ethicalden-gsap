@@ -1,10 +1,11 @@
-import MarziiHome from '@/components/pages/ProjectDetails/MarziiHome';
+
+import InsiderfeedHome from '@/components/pages/ProjectDetails/InsiderfeedHome';
 import React from 'react';
 
 const InsiderFeedPage = () => {
     return (
         <div>
-            <MarziiHome />
+            <InsiderfeedHome />
         </div>
     );
 };
