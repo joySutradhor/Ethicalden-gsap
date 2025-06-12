@@ -290,9 +290,9 @@ const ServicesArea = () => {
 
     return (
         <div className='bg-change-anim pt-[140px] md:pt-[150px] lg:pt-[160px] xl:pt-[180px] 2xl:pt-[200px]'>
-            <div className='padding-div px-20 md:px-25 lg:px-30 xl:px-40 2xl:px-50 '>
+            <div className='padding-div px-20 md:px-25 lg:px-20 xl:px-40 2xl:px-50 '>
                 <div className='flex flex-col items-center'>
-                    <div className='grid grid-cols-1 sm:grid-cols-2  gap-80 md:gap-40 lg:gap-30 xl:gap-50  justify-center items-center w-full'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2  gap-80 md:gap-40 lg:gap-45 xl:gap-50  justify-center items-center w-full'>
                         {/* left title */}
                         <h2
                             ref={titleRef}
@@ -318,7 +318,7 @@ const ServicesArea = () => {
                         <div className="-mt-[300px] md:-mt-0" ref={el => videoContainerRefs.current[0] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video1Ref}>
                                 <img
-                                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWt0cmM3YzYyYXhwMDYxOGVrdGNxNXcxMXlrYXdjYnd0bnY5dnJhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/I5ZcIgIK49mSSRshFJ/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749712001/branding_osvgie.gif"
                                     alt="Branding "
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -356,7 +356,7 @@ const ServicesArea = () => {
                         <div className="-mt-1 md:-mt-[700px]" ref={el => videoContainerRefs.current[1] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video2Ref}>
                                <img
-                                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2xyY2c3NGhxNTExOW1uNjB1NGg2dDZkODV2dXRubXEwOW5qeXZzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gHiRWOaXGGHOY5w6f3/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711946/digital-marketing_ffm86c.gif"
                                     alt="Digital Marketing "
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -396,7 +396,7 @@ const ServicesArea = () => {
                         <div className="mt-30 md:mt-[320px] lg:mt-[200px] xl:mt-[400px]" ref={el => videoContainerRefs.current[2] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video3Ref}>
                                 <img
-                                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDZ2bXFycGF4c3kwZjBqaDh5ZTd0M3kyMG04aXEzY2lsbHE2ajRoayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8lERIT7SGJSec/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711910/seo_ursfpy.gif"
                                     alt="SEO "
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -434,7 +434,7 @@ const ServicesArea = () => {
                         <div className="mt-20 md:-mt-[300px] lg:-mt-[500px] xl:-mt-[750px]" ref={el => videoContainerRefs.current[3] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video4Ref}>
                                 <img
-                                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWR0Y2RyODhtZmVhcjBnejV1M3RsMHRycmszemswaDc1Zzd2cXdpNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ekpxga8QRJVFUBxQeL/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711885/ui-ux_iyrfpb.gif"
                                     alt="UI/UX"
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -475,7 +475,7 @@ const ServicesArea = () => {
                         <div className="mt-30 md:mt-80 lg:mt-50 xl:mt-100" ref={el => videoContainerRefs.current[4] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video5Ref}>
                                 <img
-                                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3VpenZnZW03eDR1OTB3dWd6eWw1OWw0MjQ1aHVtZzkxbms2aHk2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rJsMvyk7AHHiW9qKLM/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711853/Software-Developer_zmuiy9.gif"
                                     alt="Software Development"
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -514,7 +514,7 @@ const ServicesArea = () => {
                         <div className="mt-24 md:-mt-[100px] lg:-mt-[450px] xl:-mt-[700px]" ref={el => videoContainerRefs.current[5] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video6Ref}>
                                 <img
-                                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDRrNmprNW44NmEyNXg4dDJwd3hmaDV1b3BsZ2c5Z2ZweTE5Z2FiZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bGgsc5mWoryfgKBx1u/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711813/web-development_xmxx90.gif"
                                     alt="Web Development"
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -553,7 +553,7 @@ const ServicesArea = () => {
                         <div className="mt-64 md:mt-[320px] lg:mt-[300px] xl:mt-[400px]" ref={el => videoContainerRefs.current[6] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video7Ref}>
                                 <img
-                                    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWk4dWtnNXhxMHMyZHV2bTVpbGFlcGpjd2kzejhhYjVoN29tYTNqNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711780/app-development_r40w6h.gif"
                                     alt="App Development"
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -592,7 +592,7 @@ const ServicesArea = () => {
                         <div className="mt-34 md:mt-120 lg:-mt-[90px] xl:-mt-[580px]" ref={el => videoContainerRefs.current[7] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video8Ref}>
                                 <img
-                                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDYxazhuZnNxc2J2cXd1cWJ6M24yMzNpNXloOWxmdnp3dHJubWppdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQCCNezRpb9Hq/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711745/cyber-security_akibrg.gif"
                                     alt="Cyber Security "
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -632,7 +632,7 @@ const ServicesArea = () => {
                         <div className="mt-70 lg:mt-80" ref={el => videoContainerRefs.current[8] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video9Ref}>
                                 <img
-                                    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa21zZ2poNThtaTNsNGk2dmt6ODJsZDZmOGowOHJuNzYxMHhzN2JtZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nZ4T2TB5L5ucKVwJWF/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711713/ai-services_kq0zpf.gif"
                                     alt="AI Services "
                                     loading='lazy'
                                     className="object-cover h-full w-full"
@@ -671,7 +671,7 @@ const ServicesArea = () => {
                         <div className="mt-30 md:mt-140 lg:mt-40 xl:-mt-[300px]" ref={el => videoContainerRefs.current[9] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video10Ref}>
                                 <img
-                                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnRlbjUxYWQ2bXlrenY0NnZ3aXdpNzB3anY3bmoxZnZqOXZ0NzltaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/21NNklvgakNNrWOqkq/giphy.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1749711683/video-editing_hwfynz.gif"
                                     alt="Video Editing"
                                     loading='lazy'
                                     className="object-cover h-full w-full"

@@ -2,34 +2,35 @@
 import Image from 'next/image'
 function ClientsLogo() {
   const items = [
+    
     {
       id: 1,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-1.webp?updatedAt=1749636411399',
-      line: 'yes'
-    },
-    {
-      id: 2,
       src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-2.webp?updatedAt=1749636418967',
       line: 'yes'
     },
     {
+      id: 2,
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-11.webp?updatedAt=1749636486824',
+      line: 'yes'
+    },
+    {
       id: 3,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-3.webp?updatedAt=1749636424122',
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-12.webp?updatedAt=1749636493578',
       line: 'yes'
     },
     {
       id: 4,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-4.webp?updatedAt=1749636431592',
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-6.webp?updatedAt=1749636458671',
       line: 'yes'
     },
     {
       id: 5,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-5.webp?updatedAt=1749636439438',
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-8.webp?updatedAt=1749636470191',
       line: 'yes'
     },
     {
       id: 6,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-6.webp?updatedAt=1749636458671',
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-3.webp?updatedAt=1749636424122',
       line: 'yes'
     },
     {
@@ -39,7 +40,7 @@ function ClientsLogo() {
     },
     {
       id: 8,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-8.webp?updatedAt=1749636470191',
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-5.webp?updatedAt=1749636439438',
       line: 'yes'
     },
     {
@@ -54,12 +55,12 @@ function ClientsLogo() {
     },
     {
       id: 11,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-11.webp?updatedAt=1749636486824',
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-4.webp?updatedAt=1749636431592',
       line: 'yes'
     },
     {
       id: 12,
-      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-12.webp?updatedAt=1749636493578',
+      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/logo-1.webp?updatedAt=1749636411399',
       line: 'yes'
     },
 
@@ -79,8 +80,8 @@ function ClientsLogo() {
                 src={item.src}
                 loading='lazy'
                 alt={`Item ${item.id}`}
-                width={100}
-                height={100}
+                width={500}
+                height={500}
                 placeholder='blur'
                 blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 className='object-cover w-full h-[120px] md:h-[180px] '

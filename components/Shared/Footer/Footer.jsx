@@ -510,7 +510,7 @@ function Footer () {
             </span>
           </div>
           <p className='text-lg font-bold mt-5 lg:mt-10 font-helvetica '>
-            @ Copyright 2025 - Ethical Den All Rights Reserved
+            © Copyright 2025 - Ethical Den All Rights Reserved
           </p>
         </div>
       </section>

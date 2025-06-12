@@ -160,7 +160,7 @@ function NewProjects() {
 
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
             <Image
-              src='https://ik.imagekit.io/ethicalden/projects/p5.png?updatedAt=1747074110219'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/mr-cafe.webp?updatedAt=1749702821699'
               loading='lazy'
               height={1000}
               width={1000}
@@ -186,7 +186,7 @@ function NewProjects() {
 
         <div className='h-[23vh] mt-5 md:mt-[0vh] lg:mt-0 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
           <video
-            src='https://ik.imagekit.io/ethicalden/projects/marzii.mp4?updatedAt=1747079535549'
+            src='https://res.cloudinary.com/dztzjmedo/video/upload/v1749708111/marzii_ixl75r.webm'
             loading='lazy'
             muted
             autoPlay
@@ -209,7 +209,7 @@ function NewProjects() {
         <div className='mt-[10vh] md:mt-[15vh] lg:mt-[25vh] '>
           <div className='h-[23vh] md:h-[50vh] lg:h-[75vh]'>
             <Image
-              src='https://ik.imagekit.io/ethicalden/projects/p1.png?updatedAt=1747074109969'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/e-laj.webp?updatedAt=1749702842765'
               width={1000}
               height={1000}
               placeholder='blur'
@@ -235,7 +235,7 @@ function NewProjects() {
           <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[25vh] md:gap-y-0 -mt-[6vh] md:mt-0'>
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
               <video
-                src='https://ik.imagekit.io/ethicalden/projects/makcommunity.mp4?updatedAt=1747079300877'
+                src='https://res.cloudinary.com/dztzjmedo/video/upload/v1749708062/makcommunity_sglza5.webm'
                 muted
                 autoPlay
                 loop
@@ -260,7 +260,7 @@ function NewProjects() {
                 placeholder='blur'
                 blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
                 alt='Wonderlite'
-                src='https://ik.imagekit.io/ethicalden/projects/image.png?updatedAt=1747080116801'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/wonderlite.webp?updatedAt=1749702893012'
                 loading='lazy'
                 className='h-full w-full object-cover'
               ></Image>
@@ -283,7 +283,7 @@ function NewProjects() {
           <div className='h-[40vh] md:w-[60%]'>
             <div>
               <Image
-                src='https://i.ibb.co/gbynLb3t/emopract.jpg'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/emopract.jpg?updatedAt=1749702849547'
                 height={100}
                 width={500}
                 placeholder='blur'
@@ -309,7 +309,7 @@ function NewProjects() {
         <div className='mt-[20vh] md:mt-0'>
           <div>
             <video
-              src='https://ik.imagekit.io/ethicalden/projects/SAFL.mp4?updatedAt=1747079652879'
+              src='https://res.cloudinary.com/dztzjmedo/video/upload/v1749708152/SAFL_xpax75.mp4'
               muted
               autoPlay
               loop
@@ -332,7 +332,7 @@ function NewProjects() {
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
           <div className='h-[23vh] md:h-[50vh] lg:h-[70vh]'>
             <Image
-              src='https://ik.imagekit.io/ethicalden/projects/p3.png?updatedAt=1747074110433'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/divine.webp?updatedAt=1749702832648'
               height={1000}
               width={1000}
               placeholder='blur'
@@ -361,7 +361,7 @@ function NewProjects() {
                 width={1000}
                 placeholder='blur'
                 blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
-                src='https://ik.imagekit.io/ethicalden/projects/p2.png?updatedAt=1747074109978'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/insiderFeed.webp?updatedAt=1749702857222'
                 className='h-full w-full object-cover'
                 loading='lazy'
                 alt='InsiderFeed'
@@ -383,7 +383,7 @@ function NewProjects() {
                 width={1000}
                 placeholder='blur'
                 blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
-                src='https://i.ibb.co/q3nPZVhS/massart.png'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/massart.png?updatedAt=1749702878941'
                 className='h-full w-full object-cover'
                 loading='lazy'
                 alt='massArt'

@@ -12,7 +12,7 @@ const AboutUsVideo = () => {
                     lg:h-[80vh]    
                     2xl:max-h-screen
                 " 
-                src="https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/HR2.mp4?updatedAt=1746359944107" 
+                src="https://res.cloudinary.com/dztzjmedo/video/upload/v1749708434/about-us-banner_qm5cak.webm" 
                 autoPlay 
                 muted 
                 loop 

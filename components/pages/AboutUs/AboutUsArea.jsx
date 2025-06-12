@@ -287,7 +287,7 @@ const AboutUsArea = () => {
           {/* 1st video */}
           <div className=''>
             <video
-              src='https://ik.imagekit.io/ethicalden/from%20fardeen%20sir/VID-20250512-WA0001.mp4?updatedAt=1747073978879'
+              src='https://res.cloudinary.com/dztzjmedo/video/upload/v1749708584/video-1_idjl0q.webm'
               muted
               autoPlay
               loop
@@ -298,7 +298,7 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end'>
             <Image
-              src='https://ik.imagekit.io/ethicalden/new%20office%20picture/IMG_0208.jpg?updatedAt=1747078714340'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/about-img.webp?updatedAt=1749708796072'
               height={1000}
               width={1000}
               placeholder='blur'
@@ -312,7 +312,7 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2'>
             <Image
-              src='https://ik.imagekit.io/ethicalden/from%20fardeen%20sir/IMG-20250512-WA0003.jpg?updatedAt=1747073978304'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/about-img-2.webp?updatedAt=1749708804519'
               height={1000}
               width={1000}
               placeholder='blur'
@@ -326,7 +326,7 @@ const AboutUsArea = () => {
           {/* 2nd video */}
           <div className='flex justify-end -mt-35 md:mt-3 '>
             <video
-              src='https://ik.imagekit.io/ethicalden/from%20fardeen%20sir/VID-20250512-WA0005.mp4?updatedAt=1747073979029'
+              src='https://res.cloudinary.com/dztzjmedo/video/upload/v1749708743/video-2_pkojz3.webm'
               muted
               autoPlay
               loop

@@ -6,6 +6,7 @@ import MarziiArea5 from '@/components/ProjectMarzii/MarziiArea5';
 import MarziiArea6 from '@/components/ProjectMarzii/MarziiArea6';
 import MarziiBanner from '@/components/ProjectMarzii/MarziiBanner';
 import MarziiBannerImg from '@/components/ProjectMarzii/MarziiBannerImg';
+import MarziiFooter from '@/components/ProjectMarzii/MarziiFooter';
 import Navbar from '@/components/Shared/Navbar/Navbar';
 import React from 'react';
 
@@ -28,6 +29,7 @@ const MarziiHome = () => {
             <MarziiArea4 />
             <MarziiArea5 />
             <MarziiArea6 />
+            <MarziiFooter />
         </div>
     );
 };

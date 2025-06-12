@@ -12,7 +12,7 @@ const ServiceVideo = () => {
                     lg:h-[80vh]    
                     2xl:max-h-screen
                 " 
-                src="https://ik.imagekit.io/0lnr4mwox/Ethical%20den%20-%20gsap/web%20showcase%202.mp4?updatedAt=1746359939707" 
+                src="https://res.cloudinary.com/dztzjmedo/video/upload/v1749709027/recognition_tfyblh.webm" 
                 autoPlay 
                 muted 
                 loop 

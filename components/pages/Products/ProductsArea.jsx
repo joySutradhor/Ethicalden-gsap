@@ -104,7 +104,7 @@ function ProductsArea() {
 
             <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%]'>
               <Image
-                src='https://i.ibb.co/qFLtpx2G/stockogen.jpg'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Product%20Page/stockogen.jpg?updatedAt=1749712253696'
                 height={1000}
                 width={1000}
                 placeholder='blur'
