@@ -1,43 +1,53 @@
-import Navbar from '@/components/Shared/Navbar/Navbar';
+'use client';
 import React from 'react';
+import Navbar from '@/components/Shared/Navbar/Navbar';
 
 const privacySections = [
     {
-        title: 'Introduction',
+        title: 'Last updated: 2025',
         content:
-            'We value your privacy and are committed to protecting your personal information. This privacy policy explains what information we collect, how we use it, and your rights.',
+            'At Ethical Den, your privacy matters. We believe in transparency, security, and keeping things simple. This page outlines what we collect, how we use it, and how we protect your information. No legal fluff, just the facts.',
     },
     {
-        title: 'Information We Collect',
-        content: `We collect information to provide better services. This includes:
-- Personal Data: Name, email address, contact details.
-- Usage Data: How you interact with our website.
-- Cookies: Small files stored on your device to improve experience.`,
+        title: '1. What We Collect',
+        content: `- Your name, email address, and contact details
+- Information you share when you message us or submit a form
+- Project details or files you send directly
+- Basic technical information if you visit our website
+
+We only collect the essentials needed to respond, collaborate, and deliver our services effectively.`,
     },
     {
-        title: 'How We Use Your Information',
-        content:
-            'Your information helps us provide, maintain, and improve our services, communicate with you, and ensure security.',
+        title: '2. How We Use Your Information',
+        content: `- Respond to your inquiries or project requests
+- Collaborate on work you’ve hired us for
+- Improve communication and support
+- Keep our internal operations smooth and secure
+
+We do not sell, rent, or misuse your data. Ever.`,
     },
     {
-        title: 'Data Security',
+        title: '3. Who Has Access',
         content:
-            'We implement strict security measures to protect your data from unauthorized access, alteration, or destruction.',
+            'Only trusted team members and secure service providers have access to your information. Everyone handling your data understands the responsibility and follows strict confidentiality practices.',
     },
     {
-        title: 'Your Rights',
-        content:
-            'You have the right to access, update, or delete your personal data. Contact us anytime for privacy concerns.',
+        title: '4. Your Rights',
+        content: `- Ask what information we have on you
+- Request updates or corrections
+- Ask us to delete your data completely
+
+Email us anytime at support@ethicalden.com and we’ll sort it out promptly.`,
     },
     {
-        title: 'Changes to This Policy',
+        title: '5. Updates to This Policy',
         content:
-            'We may update this privacy policy occasionally. We encourage you to review it periodically.',
+            'If anything changes, we’ll update this page. No surprises, just clear communication.',
     },
     {
-        title: 'Contact Us',
+        title: 'Need Help?',
         content:
-            'For any questions regarding this policy, please contact our support team at support@example.com.',
+            'Questions or concerns? Contact us at support@ethicalden.com and we’ll get back to you with real answers from real people.',
     },
 ];
 
@@ -81,6 +91,13 @@ const PrivacyPolicyHome = () => {
                                     .map((line, idx) => (
                                         <li key={idx}>{line.replace(/^- /, '')}</li>
                                     ))}
+                                <p className="mt-4 text-gray-800">
+                                    {content
+                                        .split('\n')
+                                        .filter((line) => !line.trim().startsWith('-'))
+                                        .join(' ')
+                                        .trim()}
+                                </p>
                             </ul>
                         ) : (
                             <p className="text-gray-800 leading-relaxed">{content}</p>
