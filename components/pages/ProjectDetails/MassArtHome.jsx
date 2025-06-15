@@ -29,7 +29,6 @@ const MassArtHome = () => {
             <MassArtArea3 />
             <MassArtArea4 />
             <MassArtArea5 />
-            <MassArtArea6 />
             <MassArtFooter />
         </div>
     );

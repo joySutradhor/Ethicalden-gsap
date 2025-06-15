@@ -64,7 +64,7 @@ const SandeepArea5 = () => {
                 <div className='lg:mr-10'>
                     <img
                     ref={imageRef}
-                        src="/images/project-details/image-4.jpg"
+                        src="/images/project-details/sandeep-autolines/ph-4.jpg"
                         alt="Croatian Football Team"
                         className="w-full shadow-md mb-6"
                         style={{ marginLeft: 'auto', marginRight: '0' }}
@@ -87,6 +87,15 @@ const SandeepArea5 = () => {
                         </p>
                         <p ref={addToRefs} className='text-xl lg:text-2xl mb-8 text-gray-800 lg:pr-12'>
                            Even though most of our work was done, our collaboration with HNS continues to this day. In 2024 we hooked up again for International Women’s Day, for purposes of the “Women have a place in football” campaign, promoting women’s role in today’s football.
+                        </p>
+                        <h2 ref={addToRefs} className='text-3xl font-extrabold mb-5 text-black'>
+                           Prologue
+                        </h2>
+                        <p ref={addToRefs} className='text-xl lg:text-2xl mb-8 text-gray-800 lg:pr-12'>
+                            Although at times it looked like we would never get it done on time, we are incredibly proud to have shared and been part of this incredible journey, to create a website that will follow this great football team through its challenges in the next decade.
+                        </p>
+                        <p ref={addToRefs} className='text-xl lg:text-2xl mb-8 text-gray-800 lg:pr-12'>
+                           And who knows, if the opportunity knocks the third time, we might just take it again. Sorry, Eminem…
                         </p>
 
                     </div>

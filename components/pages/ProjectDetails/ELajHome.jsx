@@ -29,7 +29,6 @@ const ELajHome = () => {
             <ELajArea3 />
             <ELajArea4 />
             <ELajArea5 />
-            <ELajArea6 />
             <ELajFooter />
         </div>
     );

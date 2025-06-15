@@ -29,7 +29,6 @@ const MakCommunityHome = () => {
             <MakCommunityArea3 />
             <MakCommunityArea4 />
             <MakCommunityArea5 />
-            <MakCommunityArea6 />
             <MakCommunityFooter />
         </div>
     );

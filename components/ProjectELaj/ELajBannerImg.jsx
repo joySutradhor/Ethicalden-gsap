@@ -4,7 +4,7 @@ const ELajBannerImg = () => {
     return (
         <div className="w-full xl:h-screen">
             <img
-                src="/images/project-details/hns-1.jpg"
+                src="/images/project-details/e-laj/banner-image.jpg"
                 alt="Banner"
                 className=""
             />

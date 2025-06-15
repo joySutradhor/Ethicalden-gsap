@@ -29,7 +29,6 @@ const EmopractHome = () => {
             <EmopractArea3 />
             <EmopractArea4 />
             <EmopractArea5 />
-            <EmopractArea6 />
             <EmopractFooter />
         </div>
     );

@@ -29,7 +29,6 @@ const SandeepHome = () => {
             <SandeepArea3 />
             <SandeepArea4 />
             <SandeepArea5 />
-            <SandeepArea6 />
             <SandeepFooter />
         </div>
     );

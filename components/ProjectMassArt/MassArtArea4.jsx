@@ -64,7 +64,7 @@ const MassArtArea4 = () => {
                 <div className='lg:mr-10'>
                     <img
                     ref={imageRef}
-                        src="/images/project-details/hns_showcase_mockup.jpg"
+                        src="/images/project-details/massArt/ph-3.jpg"
                         alt="Croatian Football Team"
                         className="w-full shadow-md mb-6"
                         style={{ marginLeft: 'auto', marginRight: '0' }}

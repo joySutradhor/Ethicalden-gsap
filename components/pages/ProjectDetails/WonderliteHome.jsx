@@ -29,7 +29,6 @@ const WonderliteHome = () => {
             <WonderliteArea3 />
             <WonderliteArea4 />
             <WonderliteArea5 />
-            <WonderliteArea6 />
             <WonderliteFooter />
         </div>
     );

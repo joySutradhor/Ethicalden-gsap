@@ -28,7 +28,6 @@ const DivineHome = () => {
             <DivineArea3 />
             <DivineArea4 />
             <DivineArea5 />
-            <DivineArea6 />
         </div>
     );
 };

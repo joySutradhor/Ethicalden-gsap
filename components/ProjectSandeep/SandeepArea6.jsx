@@ -78,15 +78,7 @@ const SandeepArea6 = () => {
 
                     {/* descroption */}
                     <div className='lg:w-3/4 mt-10'>
-                        <h2 ref={addToRefs} className='text-3xl font-extrabold mb-5 text-black'>
-                           Prologue
-                        </h2>
-                        <p ref={addToRefs} className='text-xl lg:text-2xl mb-8 text-gray-800 lg:pr-12'>
-                            Although at times it looked like we would never get it done on time, we are incredibly proud to have shared and been part of this incredible journey, to create a website that will follow this great football team through its challenges in the next decade.
-                        </p>
-                        <p ref={addToRefs} className='text-xl lg:text-2xl mb-8 text-gray-800 lg:pr-12'>
-                           And who knows, if the opportunity knocks the third time, we might just take it again. Sorry, Eminem…
-                        </p>
+                        
 
                     </div>
 

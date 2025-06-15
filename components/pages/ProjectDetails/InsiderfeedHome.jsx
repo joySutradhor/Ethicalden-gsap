@@ -29,7 +29,6 @@ const InsiderfeedHome = () => {
             <InsiderfeedArea3 />
             <InsiderfeedArea4 />
             <InsiderfeedArea5 />
-            <InsiderfeedArea6 />
             <InsiderfeedFooter />
         </div>
     );

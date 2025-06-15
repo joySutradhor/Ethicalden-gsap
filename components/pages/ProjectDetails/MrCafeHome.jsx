@@ -29,7 +29,6 @@ const MrCafeHome = () => {
             <MrCafeArea3 />
             <MrCafeArea4 />
             <MrCafeArea5 />
-            <MrCafeArea6 />
             <MrCafeFooter />
         </div>
     );

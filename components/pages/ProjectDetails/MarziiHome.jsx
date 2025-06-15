@@ -28,7 +28,6 @@ const MarziiHome = () => {
             <MarziiArea3 />
             <MarziiArea4 />
             <MarziiArea5 />
-            <MarziiArea6 />
             <MarziiFooter />
         </div>
     );
