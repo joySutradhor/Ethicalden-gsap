@@ -62,7 +62,7 @@ const MakCommunityArea3 = () => {
                 <div className='lg:mr-10'>
                     <img
                         ref={imageRef}
-                        src="/images/project-details/HNS_oldweb.jpg"
+                        src="/images/project-details/mak-community/2.jpg"
                         alt="Croatian Football Team"
                         className="w-full shadow-md mb-6"
                         style={{ marginLeft: 'auto', marginRight: '0' }}

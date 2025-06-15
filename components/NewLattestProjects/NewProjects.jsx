@@ -259,14 +259,14 @@ function NewProjects() {
                 height={100}
                 placeholder='blur'
                 blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
-                alt='Wonderlite'
-                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/wonderlite.webp?updatedAt=1749702893012'
+                alt='Agarwal Tibrewal Co'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner.jpg?updatedAt=1749989885091'
                 loading='lazy'
                 className='h-full w-full object-cover'
               ></Image>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="/project-wonderlite" className="no-underline text-inherit cursor-pointer text-color-change">
-                  Wonderlite
+                <a href="/project-agarwal-tibrewal" className="no-underline text-inherit cursor-pointer text-color-change">
+                  Agarwal Tibrewal Co
                 </a>
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -332,18 +332,18 @@ function NewProjects() {
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
           <div className='h-[23vh] md:h-[50vh] lg:h-[70vh]'>
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/divine.webp?updatedAt=1749702832648'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner(1).jpg?updatedAt=1749990018743'
               height={1000}
               width={1000}
               placeholder='blur'
               blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
               className='object-cover h-full w-full'
               loading='lazy'
-              alt='Divine'
+              alt='Laljhal'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-              <a href="/project-divine" className="no-underline text-inherit cursor-pointer text-color-change">
-                Divine
+              <a href="/project-laljhal" className="no-underline text-inherit cursor-pointer text-color-change">
+                Laljhal
               </a>
             </h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -361,14 +361,14 @@ function NewProjects() {
                 width={1000}
                 placeholder='blur'
                 blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
-                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/insiderFeed.webp?updatedAt=1749702857222'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner(2).jpg?updatedAt=1749990036128'
                 className='h-full w-full object-cover'
                 loading='lazy'
-                alt='InsiderFeed'
+                alt='Healing Home '
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="/project-insiderfeed" className="no-underline text-inherit cursor-pointer text-color-change">
-                  InsiderFeed
+                <a href="/project-healing-home" className="no-underline text-inherit cursor-pointer text-color-change">
+                  Healing Home Healthcare LLC
                 </a>
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
