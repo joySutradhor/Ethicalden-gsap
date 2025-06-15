@@ -354,6 +354,13 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     </a>
                     <a
                         ref={addMenuItemToRefs}
+                        href="/make-request"
+                        className="text-4xl font-semibold hover:underline opacity-0"
+                    >
+                        Make a Request
+                    </a>
+                    <a
+                        ref={addMenuItemToRefs}
                         href="/products"
                         className="text-4xl font-semibold hover:underline opacity-0"
                     >
