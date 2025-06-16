@@ -385,7 +385,7 @@ const GalleryMain = () => {
 
               <div
                 ref={imgContainerRef1}
-                className="relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg"
+                className="relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden "
               >
                 {leftImages.map((src, index) => (
                   <Image
@@ -395,7 +395,6 @@ const GalleryMain = () => {
                     fill
                     className="object-cover rounded-2xl"
                     placeholder="blur"
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
                   />
                 ))}
               </div>
@@ -500,7 +499,7 @@ const GalleryMain = () => {
             >
               <div
                 ref={imgContainerRef2}
-                className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg'
+                className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden '
               >
                 {RightImages.map((src, index) => (
                   <Image
@@ -510,7 +509,6 @@ const GalleryMain = () => {
                     fill
                     className='object-cover rounded-2xl'
                     placeholder='blur'
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
                   />
                 ))}
               </div>
