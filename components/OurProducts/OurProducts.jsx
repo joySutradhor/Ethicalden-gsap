@@ -323,7 +323,7 @@ const OurProducts = () => {
                   alt={`${project.title} Preview`}
                   layout="fill"
                   placeholder='blur'
-                  blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
                   objectFit="cover"
                   className="z-10"
                   priority={false}
@@ -451,7 +451,7 @@ const OurProducts = () => {
                   alt={`${project.title} Preview`}
                   layout="fill"
                   placeholder='blur'
-                  blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
                   objectFit="cover"
                   className="z-10"
                 />

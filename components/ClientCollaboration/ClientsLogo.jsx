@@ -83,7 +83,7 @@ function ClientsLogo() {
                 width={500}
                 height={500}
                 placeholder='blur'
-                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
                 className='object-cover w-full h-[120px] md:h-[180px] '
               />
             </div>

@@ -13,10 +13,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Footer.css'
 import Link from 'next/link'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function Footer () {
+function Footer() {
   const footerRef = useRef(null)
   const [darkBackground, setDarkBackground] = useState(false)
   const [isReady, setIsReady] = useState(false)
@@ -36,7 +37,7 @@ function Footer () {
     }
   }, [])
 
-  function CTAArea ({ darkMode }) {
+  function CTAArea({ darkMode }) {
     const titleRef = useRef(null)
     const charRefs = useRef([])
     const animationRef = useRef(null)
@@ -386,57 +387,50 @@ function Footer () {
                   </h3>
                 </div>
 
+
                 {/* partners */}
-                <div className='grid grid-cols-2 lg:grid-cols-3 gap-2.5 xl:gap-5 h-full mt-[2vh] mb-10 lg:mb-0 '>
-                  <div>
-                    <img
-                      className='h-12 2xl:object-cover w-full rounded-md '
-                      loading='lazy'
-                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/google%20ads.png?updatedAt=1749640342315'
-                      alt=''
-                    />
-                  </div>
-                  <div>
-                    <img
-                      className='h-12 2xl:object-cover w-full rounded-md '
-                      loading='lazy'
-                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/shopify.jpg?updatedAt=1749640372104'
-                      alt=''
-                    />
-                  </div>
-                  <div>
-                    <img
-                      className='h-12 2xl:object-cover w-full rounded-md '
-                      loading='lazy'
-                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/partner.jpg?updatedAt=1749640357671'
-                      alt=''
-                    />
-                  </div>
-                  <div>
-                    <img
-                      className='h-12 2xl:object-cover w-full rounded-md '
-                      loading='lazy'
-                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/meta.jpg?updatedAt=1749640352347'
-                      alt=''
-                    />
-                  </div>
-                  <div>
-                    <img
-                      className='h-12 2xl:object-cover w-full rounded-md '
-                      loading='lazy'
-                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/iso.jpg?updatedAt=1749640346650'
-                      alt=''
-                    />
-                  </div>
-                  <div>
-                    <img
-                      className='h-12 2xl:object-cover w-full rounded-md '
-                      loading='lazy'
-                      src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/amazon.jpg?updatedAt=1749640377236'
-                      alt=''
-                    />
-                  </div>
+                <div className='grid grid-cols-2 lg:grid-cols-3 gap-2.5 xl:gap-5 h-full mt-[2vh] mb-10 lg:mb-0'>
+                  {[
+                    {
+                      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/google%20ads.png?updatedAt=1749640342315',
+                      alt: 'Google Ads',
+                    },
+                    {
+                      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/shopify.jpg?updatedAt=1749640372104',
+                      alt: 'Shopify',
+                    },
+                    {
+                      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/partner.jpg?updatedAt=1749640357671',
+                      alt: 'Partner',
+                    },
+                    {
+                      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/meta.jpg?updatedAt=1749640352347',
+                      alt: 'Meta',
+                    },
+                    {
+                      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/iso.jpg?updatedAt=1749640346650',
+                      alt: 'ISO',
+                    },
+                    {
+                      src: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/amazon.jpg?updatedAt=1749640377236',
+                      alt: 'Amazon',
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className='relative w-full h-14 md:h-10 xl:h-12 bg-white  p-2 flex items-center justify-center'
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        className='object-contain'
+                        fill
+                        sizes='(max-width: 768px) 100vw, 33vw'
+                      />
+                    </div>
+                  ))}
                 </div>
+
               </div>
             </div>
           </div>
