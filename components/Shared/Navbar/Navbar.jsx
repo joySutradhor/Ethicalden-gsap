@@ -245,16 +245,6 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     >
                         Make a Request
                     </a>
-                    <a
-                        href="/dashboard"
-                        className={`relative font-medium 
-                                ${isActive('/dashboard')
-                                ? 'line-through decoration-2 decoration-current pointer-events-none'
-                                : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
-                            }`}
-                    >
-                        Dashboard
-                    </a>
 
                     <a
                         href="/products"
