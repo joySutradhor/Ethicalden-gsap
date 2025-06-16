@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
+import { blurPlaceholder } from '../../utils/blur-placeholder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,7 +111,7 @@ const ServiceGallery = () => {
                             width={500}
                             height={500}
                             placeholder='blur'
-                            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                            blurDataURL={blurPlaceholder}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-1.webp?updatedAt=1749638774064"
                             loading='lazy'
                             alt="service-1"
@@ -123,7 +124,7 @@ const ServiceGallery = () => {
                             width={500}
                             height={500}
                             placeholder='blur'
-                            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                            blurDataURL={blurPlaceholder}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-2.webp?updatedAt=1749638783500"
                             loading='lazy'
                             alt="service-2"
@@ -157,7 +158,7 @@ const ServiceGallery = () => {
                             width={500}
                             height={500}
                             placeholder='blur'
-                            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                            blurDataURL={blurPlaceholder}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-3.webp?updatedAt=1749638789268"
                             loading='lazy'
                             alt="service-3"
@@ -170,7 +171,7 @@ const ServiceGallery = () => {
                             width={500}
                             height={500}
                             placeholder='blur'
-                            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                            blurDataURL={blurPlaceholder}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-4.webp?updatedAt=1749638795103"
                             loading='lazy'
                             alt="services-4"

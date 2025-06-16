@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { blurPlaceholder } from '../utils/blur-placeholder';
 
 function NewProjects() {
   gsap.registerPlugin(ScrollTrigger)
@@ -165,7 +166,7 @@ function NewProjects() {
               height={1000}
               width={1000}
               placeholder='blur'
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+              blurDataURL={blurPlaceholder}
               className='object-cover w-full h-full'
               alt='Mr Cafe'
             />
@@ -213,7 +214,7 @@ function NewProjects() {
               width={1000}
               height={1000}
               placeholder='blur'
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+              blurDataURL={blurPlaceholder}
               className='object-cover h-full w-full'
               loading='lazy'
               alt='E-laz'
@@ -258,7 +259,7 @@ function NewProjects() {
                 width={500}
                 height={100}
                 placeholder='blur'
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+                blurDataURL={blurPlaceholder}
                 alt='Agarwal Tibrewal Co'
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner.jpg?updatedAt=1749989885091'
                 loading='lazy'
@@ -287,7 +288,7 @@ function NewProjects() {
                 height={100}
                 width={500}
                 placeholder='blur'
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+                blurDataURL={blurPlaceholder}
                 alt='Emopract'
                 loading='lazy'
                 className='h-full w-full object-cover'
@@ -336,7 +337,7 @@ function NewProjects() {
               height={1000}
               width={1000}
               placeholder='blur'
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+              blurDataURL={blurPlaceholder}
               className='object-cover h-full w-full'
               loading='lazy'
               alt='Laljhal'
@@ -360,7 +361,7 @@ function NewProjects() {
                 height={1000}
                 width={1000}
                 placeholder='blur'
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+                blurDataURL={blurPlaceholder}
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner(2).jpg?updatedAt=1749990036128'
                 className='h-full w-full object-cover'
                 loading='lazy'
@@ -382,7 +383,7 @@ function NewProjects() {
                 height={1000}
                 width={1000}
                 placeholder='blur'
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+                blurDataURL={blurPlaceholder}
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/massart.png?updatedAt=1749702878941'
                 className='h-full w-full object-cover'
                 loading='lazy'

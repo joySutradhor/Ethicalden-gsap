@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
 import Image from 'next/image'
+import { blurPlaceholder } from '../utils/blur-placeholder';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -323,7 +324,7 @@ const OurProducts = () => {
                   alt={`${project.title} Preview`}
                   layout="fill"
                   placeholder='blur'
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+                  blurDataURL={blurPlaceholder}
                   objectFit="cover"
                   className="z-10"
                   priority={false}
@@ -451,7 +452,7 @@ const OurProducts = () => {
                   alt={`${project.title} Preview`}
                   layout="fill"
                   placeholder='blur'
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+                  blurDataURL={blurPlaceholder}
                   objectFit="cover"
                   className="z-10"
                 />

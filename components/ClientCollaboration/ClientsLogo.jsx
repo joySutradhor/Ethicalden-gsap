@@ -1,5 +1,7 @@
 'use client'
 import Image from 'next/image'
+import { blurPlaceholder } from '../utils/blur-placeholder';
+
 function ClientsLogo() {
   const items = [
     
@@ -83,7 +85,7 @@ function ClientsLogo() {
                 width={500}
                 height={500}
                 placeholder='blur'
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
+                blurDataURL={blurPlaceholder}
                 className='object-cover w-full h-[120px] md:h-[180px] '
               />
             </div>

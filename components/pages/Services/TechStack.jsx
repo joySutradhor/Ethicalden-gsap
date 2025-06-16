@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
+import { blurPlaceholder } from '../../utils/blur-placeholder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -120,7 +121,7 @@ const TechStack = () => {
                                         width={500}
                                         height={500}
                                         placeholder='blur'
-                                        blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                                        blurDataURL={blurPlaceholder}
                                         className="h-[80%] w-[80%] object-contain md:h-[85%] md:w-[85%] 2xl:h-[95%] 2xl:w-[95%]"
                                     />
                                     {isActive && (

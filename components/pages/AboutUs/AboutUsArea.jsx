@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
+import { blurPlaceholder } from '../../utils/blur-placeholder';
 import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -302,7 +303,7 @@ const AboutUsArea = () => {
               height={1000}
               width={1000}
               placeholder='blur'
-              blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+              blurDataURL={blurPlaceholder}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
               loading='lazy'
               alt='Project 1'
@@ -316,7 +317,7 @@ const AboutUsArea = () => {
               height={1000}
               width={1000}
               placeholder='blur'
-              blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+              blurDataURL={blurPlaceholder}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
               loading='lazy'
               alt='Project 2'

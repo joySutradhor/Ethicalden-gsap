@@ -2,6 +2,7 @@
 import gsap from 'gsap'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import { blurPlaceholder } from '../../utils/blur-placeholder';
 
 
 function ProductsArea() {
@@ -108,7 +109,7 @@ function ProductsArea() {
                 height={1000}
                 width={1000}
                 placeholder='blur'
-                blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+                blurDataURL={blurPlaceholder}
                 className='object-cover w-full h-full'
                 alt='Stockogen'
               />

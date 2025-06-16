@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
+import { blurPlaceholder } from '../../utils/blur-placeholder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -189,7 +190,7 @@ const OurProcess = () => {
             width={450}
             height={450}
             placeholder='blur'
-            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            blurDataURL={blurPlaceholder}
             className="bg-[#09e5e5] object-cover"
             loading='lazy'
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-1.jpg?updatedAt=1749638489598" alt="" />
@@ -223,7 +224,7 @@ const OurProcess = () => {
             width={450}
             height={450}
             placeholder='blur'
-            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            blurDataURL={blurPlaceholder}
             className="bg-[#a8ff57] object-cover"
             loading='lazy'
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-2.jpg?updatedAt=1749638518345"
@@ -238,7 +239,7 @@ const OurProcess = () => {
             width={450}
             height={450}
             placeholder='blur'
-            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            blurDataURL={blurPlaceholder}
             className="bg-cyan-300 object-cover"
             loading='lazy'
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-3.jpg?updatedAt=1749638523213"
@@ -273,7 +274,7 @@ const OurProcess = () => {
             width={450}
             height={450}
             placeholder='blur'
-            blurDataURL='https://user-images.githubusercontent.com/160484/173871463-97e30942-dafe-4b91-b158-1ecf3300c540.png'
+            blurDataURL={blurPlaceholder}
             className="bg-[#a8ff57] object-cover"
             loading='lazy'
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-4.jpg?updatedAt=1749638529892"
