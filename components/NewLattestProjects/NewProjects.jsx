@@ -261,7 +261,7 @@ function NewProjects() {
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
                 alt='Agarwal Tibrewal Co'
-                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner.jpg?updatedAt=1749989885091'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/agarwall.jpg?updatedAt=1750069867837'
                 loading='lazy'
                 className='h-full w-full object-cover'
               ></Image>
@@ -333,7 +333,7 @@ function NewProjects() {
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
           <div className='h-[23vh] md:h-[50vh] lg:h-[70vh]'>
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner(1).jpg?updatedAt=1749990018743'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/laljhal.jpg?updatedAt=1750069847778'
               height={1000}
               width={1000}
               placeholder='blur'
@@ -362,7 +362,7 @@ function NewProjects() {
                 width={1000}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
-                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/banner(2).jpg?updatedAt=1749990036128'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/healing.jpg?updatedAt=1750069858123'
                 className='h-full w-full object-cover'
                 loading='lazy'
                 alt='Healing Home '
