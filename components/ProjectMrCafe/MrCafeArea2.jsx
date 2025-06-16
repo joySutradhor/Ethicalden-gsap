@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
+import { blurPlaceholder } from '../utils/blur-placeholder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,10 +62,14 @@ const MrCafeArea2 = () => {
         <div className=' mb-10 px-5 md:px-10 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto'>
             <div className=''>
                 <div className='lg:mr-10'>
-                    <img
+                    <Image
                         ref={imageRef}
-                        src="/images/project-details/mrCafe/ph-1.jpg"
+                        src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/mrCafe/ph-2.jpg?updatedAt=1750067101738"
                         alt="Croatian Football Team"
+                        width={1270}
+                        height={630}
+                        placeholder='blur'
+                        blurDataURL={blurPlaceholder}
                         className="w-full shadow-md mb-6"
                         style={{ marginLeft: 'auto', marginRight: '0' }}
                     />

@@ -67,7 +67,7 @@ const MakCommunityFooter = () => {
         <div
             ref={sectionRef}
             className="w-full h-screen bg-cover bg-center relative flex items-center justify-start transition-opacity duration-500"
-            style={{ backgroundImage: `url('/images/project-details/agarwal/banner.jpg')` }}
+            style={{ backgroundImage: `url('https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/banner(1).jpg?updatedAt=1750065534439')` }}
         >
             <div className="absolute inset-0 bg-black/40 z-0" />
             <div className="relative z-10 px-5 md:px-10 lg:px-16 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto text-left">

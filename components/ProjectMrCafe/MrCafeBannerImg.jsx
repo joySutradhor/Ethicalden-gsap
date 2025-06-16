@@ -1,12 +1,18 @@
 import React from 'react';
+import { blurPlaceholder } from '../utils/blur-placeholder';
+import Image from 'next/image';
 
 const MrCafeBannerImg = () => {
     return (
         <div className="w-full xl:h-screen">
-            <img
-                src="/images/project-details/mrCafe/banner-image.jpg"
+            <Image
+                src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/banner-image(1).jpg?updatedAt=1750065629009"
                 alt="Banner"
-                className=""
+                width={1920}
+                height={952}
+                className="w-full h-auto"
+                placeholder='blur'
+                blurDataURL={blurPlaceholder}
             />
         </div>
     );
