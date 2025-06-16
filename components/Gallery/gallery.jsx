@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const GalleryMain = async () => {
+const GalleryMain = () => {
   const sectionRef = useRef()
   const wrapperRef = useRef(null)
   const videoRef = useRef(null)
