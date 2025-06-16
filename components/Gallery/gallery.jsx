@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const GalleryMain = () => {
+const GalleryMain = async () => {
   const sectionRef = useRef()
   const wrapperRef = useRef(null)
   const videoRef = useRef(null)
@@ -17,6 +17,7 @@ const GalleryMain = () => {
   const col5Ref = useRef(null)
   const imgContainerRef1 = useRef(null)
   const imgContainerRef2 = useRef(null)
+
 
   // left Images for the slideshow
   const leftImages = [
@@ -384,7 +385,7 @@ const GalleryMain = () => {
 
               <div
                 ref={imgContainerRef1}
-                className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
+                className="relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg"
               >
                 {leftImages.map((src, index) => (
                   <Image
@@ -392,12 +393,13 @@ const GalleryMain = () => {
                     src={src}
                     alt={`Gallery image ${index + 1}`}
                     fill
-                    className='object-cover rounded-2xl'
-                    placeholder='blur'
+                    className="object-cover rounded-2xl"
+                    placeholder="blur"
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAqpDaZQAAAABJRU5ErkJggg=="
                   />
                 ))}
               </div>
+
 
             </div>
 
@@ -498,7 +500,7 @@ const GalleryMain = () => {
             >
               <div
                 ref={imgContainerRef2}
-                className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden'
+                className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg'
               >
                 {RightImages.map((src, index) => (
                   <Image

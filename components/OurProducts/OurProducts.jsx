@@ -310,7 +310,7 @@ const OurProducts = () => {
             {projects.map(project => (
               <div
                 key={project.id}
-                className='relative bg-black rounded-3xl overflow-hidden 
+                className='relative bg-black rounded-2xl overflow-hidden 
                                     w-full h-[300px] md:h-[350px]'
               >
                 {/* {project.isNew && (
@@ -356,7 +356,7 @@ const OurProducts = () => {
               <span ref={buttonBgRef} className='absolute inset-0 z-0' />
               <span
                 ref={buttonTextRef}
-                className='relative z-10 text-[16px] md:text-2xl text-black overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center'
+                className='relative z-10 text-[16px] md:text-2xl text-black  overflow-hidden whitespace-nowrap w-auto h-full flex items-center justify-center'
               >
                 <span ref={buttonStaticTextRef} className='static-text'>
                   See More
@@ -438,7 +438,7 @@ const OurProducts = () => {
             {projects.map(project => (
               <div
                 key={project.id}
-                className='relative bg-black rounded-3xl overflow-hidden 
+                className='relative bg-black rounded-2xl overflow-hidden 
                                     w-[700px] h-[450px] flex items-end justify-start p-6'
               >
                 {/* {project.isNew && (

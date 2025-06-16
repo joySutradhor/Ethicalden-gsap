@@ -418,12 +418,12 @@ function Footer() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className='relative w-full h-14 md:h-10 xl:h-12 bg-white  p-2 flex items-center justify-center'
+                      className='relative w-full h-14 md:h-10 xl:h-12 bg-white  p-2 flex items-center justify-center '
                     >
                       <Image
                         src={item.src}
                         alt={item.alt}
-                        className='object-contain'
+                        className='object-contain '
                         fill
                         sizes='(max-width: 768px) 100vw, 33vw'
                       />
