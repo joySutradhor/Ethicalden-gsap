@@ -356,7 +356,7 @@ function NewProjects() {
         </div>
         <div className='mt-[8vh] md:mt-[10vh] lg:mt-[10vh] xl:mt-[10vh]'>
           <div className='grid md:grid-cols-2 gap-[2vw] gap-y-[20vh] md:gap-y-0'>
-            <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
+            {/* <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
               <Image
                 height={1000}
                 width={1000}
@@ -377,7 +377,7 @@ function NewProjects() {
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 
-            </div>
+            </div> */}
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
               <Image
                 height={1000}

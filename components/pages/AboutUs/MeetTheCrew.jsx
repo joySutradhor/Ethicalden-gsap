@@ -27,23 +27,24 @@ const MeetTheCrew = () => {
     const isMobile = useIsMobile();
 
     const crewMembers = [
-        { id: 1, name: 'Fardeen', profession: 'Founder & CEO', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Fardeen.png?updatedAt=1749637757953' },
-        { id: 2, name: 'Arihant', profession: 'Co-Founder & CEO', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Arihant.png?updatedAt=1749637769966' },
+        { id: 1, name: 'Fardeen', profession: 'Founder & CEO', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Fardeen.webp?updatedAt=1750088729835' },
+        { id: 2, name: 'Arihant', profession: 'Co-Founder & CEO', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/arihant.webp?updatedAt=1750088796096' },
         { id: 3, name: 'Nazmul', profession: 'Creative Director &<br/>Country Head', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Nazmul.png?updatedAt=1749637806216' },
         { id: 4, name: 'Ayushi', profession: 'Content Executive', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Ayushi.png?updatedAt=1749637776888' },
         { id: 5, name: 'Samrat', profession: 'Senior Software Developer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Samrat.png?updatedAt=1749637873473' },
         { id: 6, name: 'Khokon', profession: 'Cyber Security Expert', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/khokon.jpg?updatedAt=1749637832282' },
         { id: 7, name: 'Yathish', profession: 'Chief Data Scientist', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Yathish.jpg?updatedAt=1749637938756' },
         { id: 8, name: 'Shad', profession: 'Graphics Designer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/shad.png?updatedAt=1749637882660' },
-        { id: 9, name: 'Alvira', profession: 'HR officer India', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Alvira.jpg?updatedAt=1749637787201' },
+        { id: 9, name: 'Alvira', profession: 'HR officer India', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Alvira.webp?updatedAt=1750088748117' },
         { id: 10, name: 'Sagnik', profession: 'Business Development Expert', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Shagnik.jpg?updatedAt=1749637888774' },
+        { id: 10, name: 'Partho', profession: 'SEO Expert', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Partho.webp?updatedAt=1750088833365' },
         { id: 11, name: 'Tahamid', profession: 'Wordpress Developer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/tahamid-2.jpg?updatedAt=1749637919654' },
         { id: 13, name: 'Jewel', profession: 'Frontend Developer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Mafuzur.jpg?updatedAt=1749637838930' },
         { id: 14, name: 'Joy', profession: 'Frontend Developer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/joyy.png?updatedAt=1749637823713' },
         { id: 15, name: 'Nafijur', profession: 'junior Backend Developer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Nafijur.jpg?updatedAt=1749637856657' },
         { id: 16, name: 'MD. Shakil', profession: 'Senior Backend Developer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/MD.%20Shakil.jpg?updatedAt=1749637847885' },
         { id: 17, name: 'Fatema', profession: 'Mobile App Developer', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Fatema.png?updatedAt=1749637816109' },
-        { id: 18, name: 'Tanisha', profession: 'Student Counsellor &<br/>Placement Executive', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Tanisha.jpg?updatedAt=1749637927485' }
+        { id: 18, name: 'Tanisha', profession: 'Student Counsellor &<br/>Placement Executive', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/Tanisha.webp?updatedAt=1750088767863' }
     ];
 
     const shouldShowMember = (member) => {

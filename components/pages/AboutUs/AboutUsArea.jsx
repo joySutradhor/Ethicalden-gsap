@@ -299,7 +299,7 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end'>
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/about-img.webp?updatedAt=1749708796072'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard%201.webp?updatedAt=1750087791918'
               height={1000}
               width={1000}
               placeholder='blur'
@@ -313,7 +313,7 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2'>
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/About%20page/about-img-2.webp?updatedAt=1749708804519'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard%202.webp?updatedAt=1750088024584'
               height={1000}
               width={1000}
               placeholder='blur'
