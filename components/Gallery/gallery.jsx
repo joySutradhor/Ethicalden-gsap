@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
 import Image from 'next/image'
+import { blurPlaceholder } from '../utils/blur-placeholder';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -395,6 +396,7 @@ const GalleryMain = () => {
                     fill
                     className="object-cover rounded-2xl"
                     placeholder="blur"
+                    blurDataURL={blurPlaceholder}
                   />
                 ))}
               </div>
@@ -509,6 +511,7 @@ const GalleryMain = () => {
                     fill
                     className='object-cover rounded-2xl'
                     placeholder='blur'
+                    blurDataURL={blurPlaceholder}
                   />
                 ))}
               </div>
