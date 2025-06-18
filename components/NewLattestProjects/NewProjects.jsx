@@ -223,13 +223,22 @@ function NewProjects() {
         {/* second row start */}
         <div className='mt-[10vh] md:mt-[15vh] lg:mt-[25vh] '>
           <div className='h-[23vh] md:h-[50vh] lg:h-[75vh]'>
+
+            {/* Spinner on top */}
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/e-laj.webp?updatedAt=1749702842765'
               width={1000}
               height={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              className='object-cover h-full w-full'
+              onLoadingComplete={() => setIsImageLoaded(true)}
+              className={`object-cover w-full h-full transition-opacity duration-700 ${isImageLoaded ? 'opacity-100' : 'opacity-60'}`}
               loading='lazy'
               alt='E-laz'
             />
