@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutUsArea = () => {
   const titleRef = useRef(null);
   const charRefs = useRef([]);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
 
   useEffect(() => {
@@ -297,13 +298,22 @@ const AboutUsArea = () => {
           </div>
 
           {/* 1st image */}
-          <div className='md:mt-14 -mt-32 flex justify-end'>
+          <div className='md:mt-14 -mt-32 flex justify-end relative'>
+
+            {/* Spinner on top */}
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard%201.webp?updatedAt=1750087791918'
               height={1000}
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
+              onLoadingComplete={() => setIsImageLoaded(true)}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
               loading='lazy'
               alt='Project 1'
@@ -311,13 +321,22 @@ const AboutUsArea = () => {
           </div>
 
           {/* 2nd image */}
-          <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2'>
+          <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2 relative'>
+
+            {/* Spinner on top */}
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard%202.webp?updatedAt=1750088024584'
               height={1000}
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
+              onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
               loading='lazy'
               alt='Project 2'
