@@ -166,8 +166,8 @@ function NewProjects() {
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%] relative'>
 
             {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-10 bg-gray-400">
-                <FaSpinner className="animate-spin text-black text-4xl" />
+              <div className="absolute inset-0 flex items-center justify-center z-90">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
 
