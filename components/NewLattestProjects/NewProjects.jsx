@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { blurPlaceholder } from '../utils/blur-placeholder';
+import { FaSpinner } from 'react-icons/fa'
 
 function NewProjects() {
   gsap.registerPlugin(ScrollTrigger)
@@ -100,6 +101,9 @@ function NewProjects() {
     );
   }, []);
 
+  // image loading spinner
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
 
   return (
     <section data-cursor-light className='bg-change-anim px-[20px]  md:px-10 lg:px-[50px] xl:px-39 2xl:px-50 pt-[100px] md:pt-[150px] lg:pt-[250px] xl:pt-[300px] 2xl:pt-[300px]  py-[10vh] md:py-[10vh]  text-white'>
@@ -159,7 +163,14 @@ function NewProjects() {
 
 
 
-          <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%]'>
+          <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%] relative'>
+
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-10 bg-black/10">
+                <FaSpinner className="animate-spin text-black text-4xl" />
+              </div>
+            )}
+
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/mr-cafe.webp?updatedAt=1749702821699'
               loading='lazy'
@@ -167,11 +178,12 @@ function NewProjects() {
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              className='object-cover w-full h-full'
+              onLoad={() => setIsImageLoaded(true)}
+              className={`object-cover w-full h-full transition-opacity duration-500 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}
               alt='Mr Cafe'
             />
 
-            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3 ' style={{ letterSpacing: "-0.05em" }}>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-helvetica font-bold py-3' style={{ letterSpacing: "-0.05em" }}>
               <a href="/project-mrCafe" className="no-underline text-inherit cursor-pointer text-color-change">
                 Mr Cafe
               </a>
