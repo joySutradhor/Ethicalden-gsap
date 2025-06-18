@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 import Image from 'next/image';
+import { blurPlaceholder } from '../utils/blur-placeholder';
 
 
 const SandeepFooter = () => {
