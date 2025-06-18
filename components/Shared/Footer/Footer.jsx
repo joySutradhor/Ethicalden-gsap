@@ -14,6 +14,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Footer.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import { blurPlaceholder } from '@/components/utils/blur-placeholder'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -433,6 +434,8 @@ function Footer() {
                       <Image
                         src={item.src}
                         alt={item.alt}
+                        placeholder='blur'
+                        blurDataURL={blurPlaceholder}
                         onLoadingComplete={() => setIsImageLoaded(true)}
                         className='object-contain '
                         fill
