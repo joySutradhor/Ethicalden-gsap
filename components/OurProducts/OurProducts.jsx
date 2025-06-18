@@ -330,7 +330,7 @@ const OurProducts = () => {
                 {/* Spinner */}
                 {loadingStates[index] && (
                   <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/20 backdrop-blur-sm">
-                    <div className="w-10 h-10 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-10 h-10 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 )}
 
@@ -456,7 +456,7 @@ const OurProducts = () => {
                 {/* Spinner overlay */}
                 {loadingStates[index] && (
                   <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/30 backdrop-blur-sm">
-                    <div className="w-10 h-10 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-10 h-10 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 )}
 
@@ -474,7 +474,7 @@ const OurProducts = () => {
 
                 {/* Project Title */}
                 <div className="relative z-30 w-full">
-                  <h3 className="text-white text-2xl font-bold mb-4">
+                  <h3 className="text-black text-2xl font-bold mb-4">
                     {project.title}
                   </h3>
                 </div>
