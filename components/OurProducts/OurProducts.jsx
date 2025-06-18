@@ -254,6 +254,19 @@ const OurProducts = () => {
 
   ]
 
+  // image loading spinner
+  const [loadingStates, setLoadingStates] = useState(
+    Array(projects.length).fill(true)
+  );
+
+  const handleImageLoad = (index) => {
+    setLoadingStates((prev) => {
+      const updated = [...prev];
+      updated[index] = false;
+      return updated;
+    });
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -308,39 +321,37 @@ const OurProducts = () => {
             className={`grid ${screenSize === 'medium' ? 'grid-cols-2' : 'grid-cols-1'
               } gap-6`}
           >
-            {projects.map(project => (
+            {projects.map((project, index) => (
               <div
                 key={project.id}
-                className='relative bg-black rounded-2xl overflow-hidden 
-                                    w-full h-[300px] md:h-[350px]'
+                className="relative bg-black rounded-2xl overflow-hidden 
+                     w-full h-[300px] md:h-[350px]"
               >
-                {/* {project.isNew && (
-                                    <span className="absolute top-4 right-4 bg-[#a8ff57] text-black px-4 py-1 rounded-full text-sm font-medium z-20">
-                                        New
-                                    </span>
-                                )} */}
+                {/* Spinner */}
+                {loadingStates[index] && (
+                  <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/20 backdrop-blur-sm">
+                    <div className="w-10 h-10 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+
+                {/* Image */}
                 <Image
                   src={project.image}
                   alt={`${project.title} Preview`}
                   layout="fill"
-                  placeholder='blur'
+                  placeholder="blur"
                   blurDataURL={blurPlaceholder}
                   objectFit="cover"
                   className="z-10"
                   priority={false}
+                  onLoad={() => handleImageLoad(index)}
                 />
 
-                <div className='relative z-20 w-full h-full flex flex-col justify-end p-6'>
-                  <h3 className='text-black text-xl md:text-2xl font-bold  '>
+                {/* Content */}
+                <div className="relative z-30 w-full h-full flex flex-col justify-end p-6">
+                  <h3 className="text-black text-xl md:text-2xl font-bold">
                     {project.title}
                   </h3>
-                  {/* <div className="flex gap-2 flex-wrap">
-                                        {project.tags.map((tag, index) => (
-                                            <span key={index} className="bg-black/60 text-white px-3 py-1 rounded-full text-xs md:text-sm">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div> */}
                 </div>
               </div>
             ))}
@@ -436,37 +447,36 @@ const OurProducts = () => {
 
           {/* Right Cards */}
           <div className='flex gap-10 px-4'>
-            {projects.map(project => (
+            {projects.map((project, index) => (
               <div
                 key={project.id}
-                className='relative bg-black rounded-2xl overflow-hidden 
-                                    w-[700px] h-[450px] flex items-end justify-start p-6'
+                className="relative bg-black rounded-2xl overflow-hidden 
+                     w-[700px] h-[450px] flex items-end justify-start p-6"
               >
-                {/* {project.isNew && (
-                                    <span className="absolute top-4 right-4 bg-[#a8ff57] text-black px-4 py-1 rounded-full text-sm font-medium z-20">
-                                        New
-                                    </span>
-                                )} */}
+                {/* Spinner overlay */}
+                {loadingStates[index] && (
+                  <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/30 backdrop-blur-sm">
+                    <div className="w-10 h-10 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+
+                {/* Project Image */}
                 <Image
                   src={project.image}
                   alt={`${project.title} Preview`}
                   layout="fill"
-                  placeholder='blur'
+                  placeholder="blur"
                   blurDataURL={blurPlaceholder}
                   objectFit="cover"
                   className="z-10"
+                  onLoad={() => handleImageLoad(index)}
                 />
-                <div className='relative z-20 w-full'>
-                  <h3 className='text-black text-2xl font-bold mb-4'>
+
+                {/* Project Title */}
+                <div className="relative z-30 w-full">
+                  <h3 className="text-white text-2xl font-bold mb-4">
                     {project.title}
                   </h3>
-                  {/* <div className="flex gap-2 flex-wrap">
-                                        {project.tags.map((tag, index) => (
-                                            <span key={index} className="bg-black/60 text-white px-4 py-1 rounded-full text-sm">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div> */}
                 </div>
               </div>
             ))}
