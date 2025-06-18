@@ -21,6 +21,8 @@ function Footer() {
   const footerRef = useRef(null)
   const [darkBackground, setDarkBackground] = useState(false)
   const [isReady, setIsReady] = useState(false)
+  // image loading spinner
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   // Wait for layout paint to complete
   useEffect(() => {
@@ -420,9 +422,18 @@ function Footer() {
                       key={index}
                       className='relative w-full h-14 md:h-10 xl:h-12 bg-white  p-2 flex items-center justify-center '
                     >
+
+                      {/* Spinner on top */}
+                      {!isImageLoaded && (
+                        <div className="absolute inset-0 flex items-center justify-center z-20">
+                          <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+                      )}
+
                       <Image
                         src={item.src}
                         alt={item.alt}
+                        onLoadingComplete={() => setIsImageLoaded(true)}
                         className='object-contain '
                         fill
                         sizes='(max-width: 768px) 100vw, 33vw'

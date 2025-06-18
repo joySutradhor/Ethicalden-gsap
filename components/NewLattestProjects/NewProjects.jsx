@@ -162,7 +162,7 @@ function NewProjects() {
           </h2>
 
 
-
+          {/* first row */}
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%] relative'>
 
             {/* Spinner on top */}
@@ -181,7 +181,7 @@ function NewProjects() {
               placeholder='blur'
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
-              className={`object-cover w-full h-full transition-opacity duration-700 ${isImageLoaded ? 'opacity-100' : 'opacity-60'}`}
+              className='object-cover w-full h-full'
               alt='Mr Cafe'
             />
 
@@ -238,7 +238,7 @@ function NewProjects() {
               placeholder='blur'
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
-              className={`object-cover w-full h-full transition-opacity duration-700 ${isImageLoaded ? 'opacity-100' : 'opacity-60'}`}
+              className='object-cover w-full h-full'
               loading='lazy'
               alt='E-laz'
             />
