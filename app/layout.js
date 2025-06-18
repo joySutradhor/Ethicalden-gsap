@@ -1,54 +1,5 @@
-// import { Geist, Geist_Mono } from "next/font/google";
-// import "./globals.css";
-// import SmoothScroll from "@/components/hooks/smooth-scroll";
-
-// // import DelayedContent from "@/components/DelayedContent/DelayedContent";
-// // import PageTransitionVideo from "@/components/TransitionVideo/TransitionVideo";
-// // import { TransitionProvider } from "@/components/Context/TransitionContext";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-// export const metadata = {
-//   title: "Ethical Den",
-//   description: "Best Software Company in India",
-// };
-
-// // export default function RootLayout({ children }) {
-// //   return (
-// //     <html lang="en">
-// //       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-// //         <SmoothScroll />
-// //         <TransitionProvider>
-// //           <PageTransitionVideo />
-// //           <DelayedContent>{children}</DelayedContent>
-// //         </TransitionProvider>
-// //       </body>
-// //     </html>
-// //   );
-// // }
-
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-//         <SmoothScroll />
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
-
-
 import { Geist, Geist_Mono } from "next/font/google";
-import { Urbanist } from "next/font/google"; 
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/hooks/smooth-scroll";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
@@ -72,20 +23,61 @@ const urbanist = Urbanist({
 });
 
 export const metadata = {
-  title: "Ethical Den",
-  description: "Best Software Company in India",
+  title: "Ethical Den | Best Software Company in India",
+  description: "Ethical Den is a top-rated software development company specializing in web, mobile, and AI-powered solutions.",
+  keywords: [
+    "Ethical Den",
+    "Software Company India",
+    "Web Development",
+    "Mobile Apps",
+    "Next.js SEO",
+    "Tech Company",
+    "AI Solutions",
+  ],
+  authors: [{ name: "Ethical Den", url: "https://ethicalden-gsap.netlify.app/" }],
+  creator: "Mafujur Rahman",
+  publisher: "Ethical Den",
+  metadataBase: new URL("https://ethicalden-gsap.netlify.app/"),
+  openGraph: {
+    title: "Ethical Den | Best Software Company in India",
+    description: "Top-rated web and mobile app development company delivering modern digital solutions.",
+    url: "https://ethicalden-gsap.netlify.app/",
+    siteName: "Ethical Den",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/PNG.png?updatedAt=1750244642639",
+        width: 1200,
+        height: 630,
+        alt: "Ethical Den Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ethical Den | Best Software Company in India",
+    description: "Modern software solutions for businesses and startups.",
+    creator: "@ethicalden",
+    images: ["https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/PNG.png?updatedAt=1750244642639"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-arp="">
       <body
-      cz-shortcut-listen="true"
+        cz-shortcut-listen="true"
         className={`${geistSans.variable} ${geistMono.variable} ${urbanist.variable} antialiased`}
       >
         <CustomCursor />
         <SmoothScroll />
-        
+
         {children}
       </body>
     </html>
