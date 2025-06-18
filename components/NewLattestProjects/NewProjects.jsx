@@ -277,12 +277,21 @@ function NewProjects() {
 
             </div>
 
-            <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh]'>
+            <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh] relative'>
+
+              {/* Spinner on top */}
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+
               <Image
                 width={500}
                 height={100}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
+                onLoadingComplete={() => setIsImageLoaded(true)}
                 alt='Agarwal Tibrewal Co'
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/agarwall.jpg?updatedAt=1750069867837'
                 loading='lazy'
@@ -304,14 +313,21 @@ function NewProjects() {
 
         {/* third row start */}
         <div className='-mt-[8vh] md:mt-[30vh] lg:mt-[60vh] '>
-          <div className='h-[40vh] md:w-[60%]'>
-            <div>
+          <div className='h-[40vh] md:w-[60%] relative'>
+
+            {/* Spinner on top */}
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
               <Image
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/emopract.jpg?updatedAt=1749702849547'
                 height={100}
                 width={500}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
+                onLoadingComplete={() => setIsImageLoaded(true)}
                 alt='Emopract'
                 loading='lazy'
                 className='h-full w-full object-cover'
@@ -326,7 +342,6 @@ function NewProjects() {
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </p>
 
-            </div>
           </div>
         </div>
 
@@ -354,13 +369,22 @@ function NewProjects() {
 
         {/* fourth row start */}
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
-          <div className='h-[23vh] md:h-[50vh] lg:h-[70vh]'>
+          <div className='relative h-[23vh] md:h-[50vh] lg:h-[70vh]'>
+
+            {/* Spinner on top */}
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/laljhal.jpg?updatedAt=1750069847778'
               height={1000}
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
+              onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover h-full w-full'
               loading='lazy'
               alt='Laljhal'
@@ -401,12 +425,21 @@ function NewProjects() {
               </p>
 
             </div> */}
-            <div className='h-[23vh] md:h-[20vh] lg:h-[30vh]'>
+            <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] relative'>
+
+              {/* Spinner on top */}
+            {!isImageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+
               <Image
                 height={1000}
                 width={1000}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
+                onLoadingComplete={() => setIsImageLoaded(true)}
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/massart.png?updatedAt=1749702878941'
                 className='h-full w-full object-cover'
                 loading='lazy'
