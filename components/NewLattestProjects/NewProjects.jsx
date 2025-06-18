@@ -222,7 +222,7 @@ function NewProjects() {
 
         {/* second row start */}
         <div className='mt-[10vh] md:mt-[15vh] lg:mt-[25vh] '>
-          <div className='h-[23vh] md:h-[50vh] lg:h-[75vh]'>
+          <div className='relative h-[23vh] md:h-[50vh] lg:h-[75vh]'>
 
             {/* Spinner on top */}
             {!isImageLoaded && (
