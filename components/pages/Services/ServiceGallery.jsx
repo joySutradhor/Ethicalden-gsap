@@ -108,7 +108,7 @@ const ServiceGallery = () => {
                             <h2 className="text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold pt-10 md:pt-24 lg:pt-20 xl:pt-28 2xl:pt-38 pb-4 md:pb-5">Tech Startups</h2>
                             <p className="text-[12px] md:text-base">Fueling growth with design-driven development.</p>
                         </div>
-                        <div className='relative'>
+                        <div className='relative w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh]'>
 
                             {/* Spinner on top */}
                             {!isImageLoaded && (
@@ -126,7 +126,7 @@ const ServiceGallery = () => {
                                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-1.webp?updatedAt=1749638774064"
                                 loading='lazy'
                                 alt="service-1"
-                                className="flex-1 w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] rounded-2xl object-cover bg-[#a8ff57]" />
+                                className="flex-1  rounded-2xl object-cover bg-[#a8ff57]" />
                         </div>
                     </div>
 
@@ -175,7 +175,7 @@ const ServiceGallery = () => {
                             <h3 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl font-semibold pt-12 md:pt-24 lg:pt-20 xl:pt-30 2xl:pt-38 pb-4 md:pb-5">FinTech</h3>
                             <p className="text-[12px] md:text-base">Designing trust in every transaction.</p>
                         </div>
-                        <div className='relative'>
+                        <div className='relative w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh]'>
 
                             {/* Spinner on top */}
                             {!isImageLoaded && (
@@ -193,8 +193,10 @@ const ServiceGallery = () => {
                                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-3.webp?updatedAt=1749638789268"
                                 loading='lazy'
                                 alt="service-3"
-                                className="flex-1 w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] rounded-2xl object-cover bg-[#09e5e5]" />
+                                className="flex-1 w-full h-full rounded-2xl object-cover bg-[#09e5e5]"
+                            />
                         </div>
+
                     </div>
 
                     {/* Fifth Column */}
