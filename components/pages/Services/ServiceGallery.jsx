@@ -126,7 +126,7 @@ const ServiceGallery = () => {
                                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-1.webp?updatedAt=1749638774064"
                                 loading='lazy'
                                 alt="service-1"
-                                className="flex-1  rounded-2xl object-cover bg-[#a8ff57]" />
+                                className="flex-1 h-full w-full  rounded-2xl object-cover bg-[#a8ff57]" />
                         </div>
                     </div>
 
