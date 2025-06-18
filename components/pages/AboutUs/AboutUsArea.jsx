@@ -321,9 +321,9 @@ const AboutUsArea = () => {
           </div>
 
           {/* 2nd image */}
-          <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2 relative'>
+          <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2 relative w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'>
 
-            {/* Spinner on top */}
+            {/* Spinner centered over image */}
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center z-20">
                 <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
@@ -337,11 +337,12 @@ const AboutUsArea = () => {
               placeholder='blur'
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
-              className='object-cover w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'
+              className='object-cover w-full h-full'
               loading='lazy'
               alt='Project 2'
             />
           </div>
+
 
           {/* 2nd video */}
           <div className='flex justify-end -mt-35 md:mt-3 '>
