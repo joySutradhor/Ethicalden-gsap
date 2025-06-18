@@ -9,6 +9,7 @@ function ProductsArea() {
 
   const [buttonVisible, setButtonVisible] = useState(true)
   const productsRef = useRef(null)
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,8 +69,8 @@ function ProductsArea() {
             <h2
               ref={titleRef}
               className="text-left w-full max-w-2xl text-2xl md:text-4xl lg:text-6xl xl:text-6xl text-gray-400 font-helvetica font-extrabold leading-[1]"
-              style={ { letterSpacing: "-0.05em" }}
-              
+              style={{ letterSpacing: "-0.05em" }}
+
             >
 
               <span className="inline-block">
@@ -100,20 +101,29 @@ function ProductsArea() {
                 ))}
               </span>
 
-              
+
             </h2>
 
-            <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%]'>
+            <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[60%] relative'>
+
+              {/* Spinner on top */}
+              {!isImageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+
               <Image
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Product%20Page/stockogen.jpg?updatedAt=1749712253696'
                 height={1000}
                 width={1000}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
+                 onLoadingComplete={() => setIsImageLoaded(true)}
                 className='object-cover w-full h-full'
                 alt='Stockogen'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>
+              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
                 Stockogen
               </h3>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
@@ -132,7 +142,7 @@ function ProductsArea() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={ { letterSpacing: "-0.05em" }}>Staffsynk</h3>
+            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Staffsynk</h3>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               HR Managment Software
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -323,17 +333,17 @@ function ProductsArea() {
       {/* Fixed bottom button */}
       {/* <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#1a1a1a] border-none px-4 md:px-8 py-3 md:py-6 rounded-full flex items-center gap-4 border shadow-lg transition-all duration-300 ${buttonVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}> */}
-        {/* Services */}
-        {/* <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
+      {/* Services */}
+      {/* <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
           <span className="w-2 h-2 rounded-full bg-gray-400"></span>
           <span>Services: All</span>
         </div> */}
 
-        {/* Divider */}
-        {/* <div className="w-px h-5 bg-gray-600" /> */}
+      {/* Divider */}
+      {/* <div className="w-px h-5 bg-gray-600" /> */}
 
-        {/* Industry */}
-        {/* <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
+      {/* Industry */}
+      {/* <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
           <span className="w-2 h-2 rounded-full bg-gray-400"></span>
           <span>Industry: All</span>
         </div>
