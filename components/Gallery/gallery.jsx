@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import React from 'react';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import axios from 'axios'
@@ -359,6 +360,14 @@ const GalleryMain = () => {
     );
   }, []);
 
+
+  // image loading spinner
+  const [loadedImages, setLoadedImages] = useState({});
+
+  const handleImageLoad = (index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
+  };
+
   return (
     <>
       <section
@@ -386,18 +395,28 @@ const GalleryMain = () => {
 
               <div
                 ref={imgContainerRef1}
-                className="relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden "
+                className="relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden"
               >
                 {leftImages.map((src, index) => (
-                  <Image
-                    key={index}
-                    src={src}
-                    alt={`Gallery image ${index + 1}`}
-                    fill
-                    className="object-cover rounded-2xl"
-                    placeholder="blur"
-                    blurDataURL={blurPlaceholder}
-                  />
+                  <React.Fragment key={index}>
+                    {/* Loading spinner overlay - only shows when image hasn't loaded */}
+                    {!loadedImages[index] && (
+                      <div className="absolute inset-0 flex items-center justify-center z-10">
+                        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    )}
+
+                    {/* Image with blur placeholder */}
+                    <Image
+                      src={src}
+                      alt={`Gallery image ${index + 1}`}
+                      fill
+                      className={`object-cover rounded-2xl ${!loadedImages[index] ? 'blur-md' : 'blur-0'}`}
+                      placeholder="blur"
+                      blurDataURL={blurPlaceholder}
+                      onLoadingComplete={() => handleImageLoad(index)}
+                    />
+                  </React.Fragment>
                 ))}
               </div>
 
@@ -504,15 +523,25 @@ const GalleryMain = () => {
                 className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden '
               >
                 {RightImages.map((src, index) => (
-                  <Image
-                    key={index}
-                    src={src}
-                    alt={`Gallery image ${index + 1}`}
-                    fill
-                    className='object-cover rounded-2xl'
-                    placeholder='blur'
-                    blurDataURL={blurPlaceholder}
-                  />
+                  <React.Fragment key={index}>
+                    {/* Loading spinner overlay - only shows when image hasn't loaded */}
+                    {!loadedImages[index] && (
+                      <div className="absolute inset-0 flex items-center justify-center z-10">
+                        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    )}
+
+                    {/* Image with blur placeholder */}
+                    <Image
+                      src={src}
+                      alt={`Gallery image ${index + 1}`}
+                      fill
+                      className={`object-cover rounded-2xl ${!loadedImages[index] ? 'blur-md' : 'blur-0'}`}
+                      placeholder="blur"
+                      blurDataURL={blurPlaceholder}
+                      onLoadingComplete={() => handleImageLoad(index)}
+                    />
+                  </React.Fragment>
                 ))}
               </div>
 
