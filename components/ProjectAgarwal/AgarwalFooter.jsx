@@ -1,14 +1,16 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 import Image from 'next/image';
+import { blurPlaceholder } from '../utils/blur-placeholder';
 
 const AgarwalFooter = () => {
     const sectionRef = useRef(null);
     const hasNavigated = useRef(false);
     const router = useRouter();
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     const handleNavigation = () => {
         if (hasNavigated.current) return;
@@ -63,13 +65,21 @@ const AgarwalFooter = () => {
             window.removeEventListener('wheel', handleWheel);
         };
     }, []);
-    
+
 
     return (
         <div
             ref={sectionRef}
             className="relative w-full xl:min-h-screen transition-opacity duration-500"
         >
+
+            {/* Spinner on top */}
+            {!isImageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                    <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                </div>
+            )}
+
             {/* Background Image */}
             <Image
                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/banner-image.jpg?updatedAt=1750065547644"
@@ -77,6 +87,9 @@ const AgarwalFooter = () => {
                 width={1920}
                 height={952}
                 className="w-full h-auto"
+                placeholder='blur'
+                blurDataURL={blurPlaceholder}
+                onLoadingComplete={() => setIsImageLoaded(true)}
             />
 
             {/* Overlay */}

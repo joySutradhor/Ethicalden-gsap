@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const SandeepArea3 = () => {
     const imageRef = useRef(null);
     const paragraphRefs = useRef([]);
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     useEffect(() => {
         // Animate image
@@ -61,7 +62,15 @@ const SandeepArea3 = () => {
     return (
         <div className=' mb-10 px-5 md:px-10 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto'>
             <div className=''>
-                <div className='lg:mr-10'>
+                <div className='lg:mr-10 relative'>
+
+                    {/* Spinner on top */}
+            {!isImageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                    <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                </div>
+            )}
+
                     <Image
                         ref={imageRef}
                         src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/sandeep-autolines/ph-3.jpg?updatedAt=1750068514595"
@@ -70,6 +79,7 @@ const SandeepArea3 = () => {
                         height={630}
                         placeholder='blur'
                         blurDataURL={blurPlaceholder}
+                        onLoadingComplete={() => setIsImageLoaded(true)}
                         className="w-full shadow-md mb-6"
                         style={{ marginLeft: 'auto', marginRight: '0' }}
                     />
