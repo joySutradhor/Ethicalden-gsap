@@ -165,12 +165,14 @@ function NewProjects() {
 
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%] relative'>
 
+            {/* Spinner on top */}
             {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-90">
+              <div className="absolute inset-0 flex items-center justify-center z-20">
                 <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
 
+            {/* Image with blur placeholder and fade-in effect */}
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/mr-cafe.webp?updatedAt=1749702821699'
               loading='lazy'
@@ -178,8 +180,8 @@ function NewProjects() {
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              onLoad={() => setIsImageLoaded(true)}
-              className={`object-cover w-full h-full transition-opacity duration-500 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              onLoadingComplete={() => setIsImageLoaded(true)}
+              className={`object-cover w-full h-full transition-opacity duration-700 ${isImageLoaded ? 'opacity-100' : 'opacity-60'}`}
               alt='Mr Cafe'
             />
 
