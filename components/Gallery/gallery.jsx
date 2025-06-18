@@ -401,8 +401,8 @@ const GalleryMain = () => {
                   <React.Fragment key={index}>
                     {/* Loading spinner overlay - only shows when image hasn't loaded */}
                     {!loadedImages[index] && (
-                      <div className="absolute inset-0 flex items-center justify-center z-10">
-                        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="absolute inset-0 flex items-center justify-center z-90">
+                        <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
                       </div>
                     )}
 
@@ -526,8 +526,8 @@ const GalleryMain = () => {
                   <React.Fragment key={index}>
                     {/* Loading spinner overlay - only shows when image hasn't loaded */}
                     {!loadedImages[index] && (
-                      <div className="absolute inset-0 flex items-center justify-center z-10">
-                        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="absolute inset-0 flex items-center justify-center z-90">
+                        <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
                       </div>
                     )}
 
