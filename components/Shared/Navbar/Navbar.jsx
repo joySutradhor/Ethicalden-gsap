@@ -236,14 +236,14 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                         Services
                     </a>
                     <a
-                        href="/make-request"
+                        href="/sign-in"
                         className={`relative font-medium 
-                                ${isActive('/make-request')
+                                ${isActive('/sign-in')
                                 ? 'line-through decoration-2 decoration-current pointer-events-none'
                                 : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
                             }`}
                     >
-                        Make a Request
+                        Sign In
                     </a>
 
                     <a
@@ -354,10 +354,10 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     </a>
                     <a
                         ref={addMenuItemToRefs}
-                        href="/make-request"
+                        href="/sign-in"
                         className="text-4xl font-semibold hover:underline opacity-0"
                     >
-                        Make a Request
+                        Sign In
                     </a>
                     <a
                         ref={addMenuItemToRefs}
