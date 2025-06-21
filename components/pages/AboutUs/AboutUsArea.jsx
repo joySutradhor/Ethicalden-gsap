@@ -332,7 +332,7 @@ const AboutUsArea = () => {
             )}
 
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard%202.webp?updatedAt=1750088024584'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard-2.jpg?updatedAt=1750501894872'
               height={1000}
               width={1000}
               placeholder='blur'

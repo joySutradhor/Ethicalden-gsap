@@ -67,11 +67,11 @@ const EmopractArea4 = () => {
                 <div className='lg:mr-10 relative'>
 
                     {/* Spinner on top */}
-            {!isImageLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-                </div>
-            )}
+                    {!isImageLoaded && (
+                        <div className="absolute inset-0 flex items-center justify-center z-20">
+                            <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+                    )}
                     <Image
                         ref={imageRef}
                         src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/emopract/ph2.jpg?updatedAt=1750068267457"
@@ -83,6 +83,8 @@ const EmopractArea4 = () => {
                         onLoadingComplete={() => setIsImageLoaded(true)}
                         className="w-full shadow-md mb-6"
                         style={{ marginLeft: 'auto', marginRight: '0' }}
+                        priority
+                        loading="eager"
                     />
                 </div>
 
