@@ -119,8 +119,10 @@ function ProductsArea() {
                 width={1000}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
-                 onLoadingComplete={() => setIsImageLoaded(true)}
+                onLoadingComplete={() => setIsImageLoaded(true)}
                 className='object-cover w-full h-full'
+                priority
+                loading="eager"
                 alt='Stockogen'
               />
               <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>

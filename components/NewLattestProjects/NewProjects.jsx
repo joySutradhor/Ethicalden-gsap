@@ -168,19 +168,20 @@ function NewProjects() {
             {/* Spinner on top */}
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
 
             {/* Image with blur placeholder and fade-in effect */}
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/mr-cafe.webp?updatedAt=1749702821699'
-              loading='lazy'
               height={1000}
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
+              priority
+              loading="eager"
               className='object-cover w-full h-full'
               alt='Mr Cafe'
             />
@@ -227,7 +228,7 @@ function NewProjects() {
             {/* Spinner on top */}
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
 
@@ -239,7 +240,8 @@ function NewProjects() {
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover w-full h-full'
-              loading='lazy'
+              priority
+              loading="eager"
               alt='E-laz'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
@@ -280,11 +282,11 @@ function NewProjects() {
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh] relative'>
 
               {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
+              {!isImageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
 
               <Image
                 width={500}
@@ -294,7 +296,8 @@ function NewProjects() {
                 onLoadingComplete={() => setIsImageLoaded(true)}
                 alt='Agarwal Tibrewal Co'
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/agarwall.jpg?updatedAt=1750069867837'
-                loading='lazy'
+                priority
+                loading="eager"
                 className='h-full w-full object-cover'
               ></Image>
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
@@ -318,29 +321,30 @@ function NewProjects() {
             {/* Spinner on top */}
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
-              <Image
-                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/emopract.jpg?updatedAt=1749702849547'
-                height={100}
-                width={500}
-                placeholder='blur'
-                blurDataURL={blurPlaceholder}
-                onLoadingComplete={() => setIsImageLoaded(true)}
-                alt='Emopract'
-                loading='lazy'
-                className='h-full w-full object-cover'
-              ></Image>
-              <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
-                <a href="/project-emopract" className="no-underline text-inherit cursor-pointer text-color-change">
-                  Emopract
-                </a>
-              </h3>
-              <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
-                UI/UX / site
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-              </p>
+            <Image
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/emopract.jpg?updatedAt=1749702849547'
+              height={100}
+              width={500}
+              placeholder='blur'
+              blurDataURL={blurPlaceholder}
+              onLoadingComplete={() => setIsImageLoaded(true)}
+              alt='Emopract'
+              priority
+              loading="eager"
+              className='h-full w-full object-cover'
+            ></Image>
+            <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
+              <a href="/project-emopract" className="no-underline text-inherit cursor-pointer text-color-change">
+                Emopract
+              </a>
+            </h3>
+            <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
+              UI/UX / site
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+            </p>
 
           </div>
         </div>
@@ -374,7 +378,7 @@ function NewProjects() {
             {/* Spinner on top */}
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
 
@@ -386,7 +390,8 @@ function NewProjects() {
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover h-full w-full'
-              loading='lazy'
+              priority
+              loading="eager"
               alt='Laljhal'
             />
             <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>
@@ -428,11 +433,11 @@ function NewProjects() {
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] relative'>
 
               {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
+              {!isImageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
 
               <Image
                 height={1000}
@@ -440,9 +445,10 @@ function NewProjects() {
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
                 onLoadingComplete={() => setIsImageLoaded(true)}
+                priority
+                loading="eager"
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/massart.png?updatedAt=1749702878941'
                 className='h-full w-full object-cover'
-                loading='lazy'
                 alt='massArt'
               />
               <h3 className='md:text-xl xl:text-3xl 2xl:text-4xl font-bold py-3 font-helvetica ' style={{ letterSpacing: "-0.05em" }}>

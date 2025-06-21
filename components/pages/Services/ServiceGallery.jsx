@@ -124,7 +124,8 @@ const ServiceGallery = () => {
                                 blurDataURL={blurPlaceholder}
                                 onLoadingComplete={() => setIsImageLoaded(true)}
                                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-1.webp?updatedAt=1749638774064"
-                                loading='lazy'
+                                priority
+                                loading="eager"
                                 alt="service-1"
                                 className="flex-1 h-full w-full  rounded-2xl object-cover bg-[#a8ff57]" />
                         </div>
@@ -147,7 +148,8 @@ const ServiceGallery = () => {
                             blurDataURL={blurPlaceholder}
                             onLoadingComplete={() => setIsImageLoaded(true)}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-2.webp?updatedAt=1749638783500"
-                            loading='lazy'
+                            priority
+                            loading="eager"
                             alt="service-2"
                             className="flex-1 rounded-2xl w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] object-cover bg-[#09e5e5] " />
 
@@ -191,7 +193,8 @@ const ServiceGallery = () => {
                                 blurDataURL={blurPlaceholder}
                                 onLoadingComplete={() => setIsImageLoaded(true)}
                                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-3.webp?updatedAt=1749638789268"
-                                loading='lazy'
+                                priority
+                                loading="eager"
                                 alt="service-3"
                                 className="flex-1 w-full h-full rounded-2xl object-cover bg-[#09e5e5]"
                             />
@@ -216,7 +219,8 @@ const ServiceGallery = () => {
                             blurDataURL={blurPlaceholder}
                             onLoadingComplete={() => setIsImageLoaded(true)}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-4.webp?updatedAt=1749638795103"
-                            loading='lazy'
+                            priority
+                            loading="eager"
                             alt="services-4"
                             className="flex-1 rounded-2xl w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh] object-cover bg-[#a8ff57] " />
 

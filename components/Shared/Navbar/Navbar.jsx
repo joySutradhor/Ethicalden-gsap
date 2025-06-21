@@ -279,7 +279,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                         </div>
                     </div>
 
-                    <a
+                    {/* <a
                         href="/sign-in"
                         className={`relative font-medium 
                                 ${isActive('/sign-in')
@@ -288,7 +288,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                             }`}
                     >
                         Sign In
-                    </a>
+                    </a> */}
 
                     
 
@@ -391,13 +391,13 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                             Hivyr
                         </a>
                     </div>
-                    <a
+                    {/* <a
                         ref={addMenuItemToRefs}
                         href="/sign-in"
                         className="text-4xl font-semibold hover:underline opacity-0"
                     >
                         Sign In
-                    </a>
+                    </a> */}
                     <Link
                         ref={addMenuItemToRefs}
                         href="/contact"

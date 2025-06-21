@@ -315,7 +315,8 @@ const AboutUsArea = () => {
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
-              loading='lazy'
+              priority
+              loading="eager"
               alt='Project 1'
             />
           </div>
@@ -338,7 +339,8 @@ const AboutUsArea = () => {
               blurDataURL={blurPlaceholder}
               onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover w-full h-full'
-              loading='lazy'
+              priority
+              loading="eager"
               alt='Project 2'
             />
           </div>

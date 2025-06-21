@@ -189,11 +189,11 @@ const OurProcess = () => {
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px] relative">
 
           {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
+          {!isImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+              <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
 
           <Image
             width={450}
@@ -202,7 +202,8 @@ const OurProcess = () => {
             blurDataURL={blurPlaceholder}
             onLoadingComplete={() => setIsImageLoaded(true)}
             className="bg-[#09e5e5] object-cover"
-            loading='lazy'
+            priority
+            loading="eager"
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-1.jpg?updatedAt=1749638489598" alt="" />
         </div>
 
@@ -232,11 +233,11 @@ const OurProcess = () => {
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px] relative">
 
           {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
+          {!isImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+              <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
 
           <Image
             width={450}
@@ -245,7 +246,8 @@ const OurProcess = () => {
             blurDataURL={blurPlaceholder}
             onLoadingComplete={() => setIsImageLoaded(true)}
             className="bg-[#a8ff57] object-cover"
-            loading='lazy'
+            priority
+            loading="eager"
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-2.jpg?updatedAt=1749638518345"
             alt="" />
         </div>
@@ -256,11 +258,11 @@ const OurProcess = () => {
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px] relative">
 
           {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
+          {!isImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+              <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
 
           <Image
             width={450}
@@ -269,7 +271,8 @@ const OurProcess = () => {
             blurDataURL={blurPlaceholder}
             onLoadingComplete={() => setIsImageLoaded(true)}
             className="bg-cyan-300 object-cover"
-            loading='lazy'
+            priority
+            loading="eager"
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-3.jpg?updatedAt=1749638523213"
             alt="" />
         </div>
@@ -300,11 +303,11 @@ const OurProcess = () => {
         <div className="flex flex-1 h-full items-center justify-center -mb-[600px] relative">
 
           {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
+          {!isImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+              <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
 
           <Image
             width={450}
@@ -313,7 +316,8 @@ const OurProcess = () => {
             blurDataURL={blurPlaceholder}
             onLoadingComplete={() => setIsImageLoaded(true)}
             className="bg-[#a8ff57] object-cover"
-            loading='lazy'
+            priority
+            loading="eager"
             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/im-4.jpg?updatedAt=1749638529892"
             alt="" />
         </div>
