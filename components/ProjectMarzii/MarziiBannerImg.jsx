@@ -11,7 +11,7 @@ const MarziiBannerImg = () => {
             {/* Spinner on top */}
             {!isImageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
                 </div>
             )}
 
@@ -24,6 +24,8 @@ const MarziiBannerImg = () => {
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
                 onLoadingComplete={() => setIsImageLoaded(true)}
+                priority
+                loading="eager"
             />
         </div>
     );

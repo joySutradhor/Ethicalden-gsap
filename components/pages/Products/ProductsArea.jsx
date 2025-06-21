@@ -125,9 +125,11 @@ function ProductsArea() {
                 loading="eager"
                 alt='Stockogen'
               />
-              <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
-                Stockogen
-              </h3>
+              <div>
+                <a href='https://stockogen.com/' target='_blank' className='md:text-xl xl:text-2xl 2xl:text-3xl font-helvetica font-bold py-3 cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>
+                  Stockogen
+                </a>
+              </div>
               <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
                 Stock Managment
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -144,7 +146,9 @@ function ProductsArea() {
               loop
               className='h-full w-full object-cover'
             ></video>
-            <h3 className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Staffsynk</h3>
+            <div>
+              <a href='https://staffsynk.com/' target='_blank' className='md:text-xl xl:text-2xl 2xl:text-3xl font-bold py-3 font-helvetica cursor-pointer hover:text-[#09e5e5]' style={{ letterSpacing: "-0.05em" }}>Staffsynk</a>
+            </div>
             <p className="relative inline-block text-base font-semibold text-white/70 font-helvetica hover:text-white group">
               HR Managment Software
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
