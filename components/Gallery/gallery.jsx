@@ -413,6 +413,8 @@ const GalleryMain = () => {
                       fill
                       className={`object-cover rounded-2xl ${!loadedImages[index] ? 'blur-md' : 'blur-0'}`}
                       placeholder="blur"
+                      priority
+                      loading="eager"
                       blurDataURL={blurPlaceholder}
                       onLoadingComplete={() => handleImageLoad(index)}
                     />
@@ -537,6 +539,8 @@ const GalleryMain = () => {
                       alt={`Gallery image ${index + 1}`}
                       fill
                       className={`object-cover rounded-2xl ${!loadedImages[index] ? 'blur-md' : 'blur-0'}`}
+                      priority
+                      loading="eager"
                       placeholder="blur"
                       blurDataURL={blurPlaceholder}
                       onLoadingComplete={() => handleImageLoad(index)}

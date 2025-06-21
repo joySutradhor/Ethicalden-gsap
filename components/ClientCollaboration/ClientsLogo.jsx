@@ -99,10 +99,11 @@ function ClientsLogo() {
               {/* Image */}
               <Image
                 src={item.src}
-                loading='lazy'
                 alt={`Item ${item.id}`}
                 width={500}
                 height={500}
+                priority
+                loading="eager"
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
                 className='object-contain w-full h-[120px] md:h-[180px]'

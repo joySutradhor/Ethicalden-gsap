@@ -235,16 +235,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     >
                         Services
                     </a>
-                    <a
-                        href="/sign-in"
-                        className={`relative font-medium 
-                                ${isActive('/sign-in')
-                                ? 'line-through decoration-2 decoration-current pointer-events-none'
-                                : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
-                            }`}
-                    >
-                        Sign In
-                    </a>
+                    
 
                     <a
                         href="/products"
@@ -287,6 +278,19 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                             </a>
                         </div>
                     </div>
+
+                    <a
+                        href="/sign-in"
+                        className={`relative font-medium 
+                                ${isActive('/sign-in')
+                                ? 'line-through decoration-2 decoration-current pointer-events-none'
+                                : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
+                            }`}
+                    >
+                        Sign In
+                    </a>
+
+                    
 
 
 
@@ -352,13 +356,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     >
                         Services
                     </a>
-                    <a
-                        ref={addMenuItemToRefs}
-                        href="/sign-in"
-                        className="text-4xl font-semibold hover:underline opacity-0"
-                    >
-                        Sign In
-                    </a>
+                    
                     <a
                         ref={addMenuItemToRefs}
                         href="/products"
@@ -393,6 +391,13 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                             Hivyr
                         </a>
                     </div>
+                    <a
+                        ref={addMenuItemToRefs}
+                        href="/sign-in"
+                        className="text-4xl font-semibold hover:underline opacity-0"
+                    >
+                        Sign In
+                    </a>
                     <Link
                         ref={addMenuItemToRefs}
                         href="/contact"

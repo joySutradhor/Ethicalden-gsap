@@ -343,7 +343,8 @@ const OurProducts = () => {
                   blurDataURL={blurPlaceholder}
                   objectFit="cover"
                   className="z-10"
-                  priority={false}
+                  priority
+                  loading="eager"
                   onLoad={() => handleImageLoad(index)}
                 />
 
@@ -470,6 +471,8 @@ const OurProducts = () => {
                   objectFit="cover"
                   className="z-10"
                   onLoad={() => handleImageLoad(index)}
+                  priority
+                  loading="eager"
                 />
 
                 {/* Project Title */}

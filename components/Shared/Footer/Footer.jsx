@@ -437,6 +437,8 @@ function Footer() {
                         blurDataURL={blurPlaceholder}
                         onLoadingComplete={() => setIsImageLoaded(true)}
                         className='object-contain '
+                        priority
+                        loading="eager"
                         fill
                         sizes='(max-width: 768px) 100vw, 33vw'
                       />

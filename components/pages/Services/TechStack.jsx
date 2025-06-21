@@ -88,11 +88,10 @@ const TechStack = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 font-rota text-2xl md:text-3xl rounded-4xl transition-colors ${
-                activeFilter === filter
+              className={`px-6 py-2 font-rota text-2xl md:text-3xl rounded-4xl transition-colors ${activeFilter === filter
                   ? 'bg-[#9EFCF1] text-black'
                   : 'bg-white text-black hover:bg-gray-100'
-              }`}
+                }`}
             >
               {filter}
             </button>
@@ -109,9 +108,8 @@ const TechStack = () => {
           return (
             <div
               key={`${tech.id}-${tech.imageUrl}`}
-              className={`relative group overflow-hidden rounded-xl transition-all duration-300 ${
-                isActive ? 'grayscale-0' : 'grayscale pointer-events-none'
-              }`}
+              className={`relative group overflow-hidden rounded-xl transition-all duration-300 ${isActive ? 'grayscale-0' : 'grayscale pointer-events-none'
+                }`}
             >
               <div className="relative aspect-square w-full flex items-center justify-center bg-gray-100 rounded-xl p-8">
                 {/* Spinner */}
@@ -124,11 +122,12 @@ const TechStack = () => {
                 <Image
                   src={tech.imageUrl}
                   alt={tech.name}
-                  loading="lazy"
                   width={500}
                   height={500}
                   placeholder="blur"
                   blurDataURL={blurPlaceholder}
+                  priority
+                  loading="eager"
                   className="h-[80%] w-[80%] object-contain md:h-[85%] md:w-[85%] 2xl:h-[95%] 2xl:w-[95%] z-20"
                   onLoad={() =>
                     setImageLoaded((prev) => ({ ...prev, [tech.id]: true }))
