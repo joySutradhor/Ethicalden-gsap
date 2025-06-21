@@ -356,7 +356,7 @@ const ServicesArea = () => {
                         <div className="-mt-1 md:-mt-[700px]" ref={el => videoContainerRefs.current[1] = el}>
                             <div className="relative h-[35vh] md:h-[40vh] lg:h-[60vh] w-full" ref={video2Ref}>
                                <img
-                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1750497306/digital-marketing_fuyzuf.gif"
+                                    src="https://res.cloudinary.com/dztzjmedo/image/upload/v1750498935/Social_Media_Marketing_GIF_by_Trazoz_vtcdew.gif"
                                     alt="Digital Marketing "
                                     loading='lazy'
                                     className="object-cover h-full w-full"

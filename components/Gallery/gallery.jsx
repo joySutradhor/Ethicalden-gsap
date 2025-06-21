@@ -24,7 +24,7 @@ const GalleryMain = () => {
   // left Images for the slideshow
   const leftImages = [
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-1.webp?updatedAt=1749634191768',
-    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/AlviraTanishaCandid.webp?updatedAt=1750306813309',
+    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/card-3.jpg?updatedAt=1750498012092',
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-3.webp?updatedAt=1749634295522'
   ]
 
