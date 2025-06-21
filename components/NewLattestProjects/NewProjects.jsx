@@ -383,7 +383,7 @@ function NewProjects() {
             )}
 
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/laljhal.jpg?updatedAt=1750069847778'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/2.jpg?updatedAt=1750495904013'
               height={1000}
               width={1000}
               placeholder='blur'
