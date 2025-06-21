@@ -95,7 +95,7 @@ const GalleryMain = () => {
   // right Images for the slideshow
   const RightImages = [
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-4.webp?updatedAt=1749634452088',
-    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/FardeenOffice.webp?updatedAt=1750306796563',
+    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/family%20(1).webp?updatedAt=1750485927580',
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-6.webp?updatedAt=1749634469982'
   ]
 
