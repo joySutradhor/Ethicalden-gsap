@@ -420,7 +420,7 @@ function Footer() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className='relative w-full h-14 md:h-10 xl:h-12 bg-white  p-2 flex items-center justify-center '
+                      className='relative w-full h-14 md:h-10 xl:h-12 bg-white rounded-md p-2 flex items-center justify-center '
                     >
 
                       {/* Spinner on top */}
@@ -436,7 +436,7 @@ function Footer() {
                         placeholder='blur'
                         blurDataURL={blurPlaceholder}
                         onLoadingComplete={() => setIsImageLoaded(true)}
-                        className='object-contain '
+                        className='object-contain rounded-md'
                         priority
                         loading="eager"
                         fill
