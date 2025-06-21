@@ -115,7 +115,7 @@ const TechStack = () => {
                 {/* Spinner */}
                 {!isLoaded && (
                   <div className="absolute inset-0 flex items-center justify-center z-90">
-                    <div className="w-10 h-10 border-4 border-black border-t-transparent rounded-full animate-spin" />
+                    <div className="w-10 h-10 border-4 border-gray-300 border-t-transparent rounded-full animate-spin" />
                   </div>
                 )}
 

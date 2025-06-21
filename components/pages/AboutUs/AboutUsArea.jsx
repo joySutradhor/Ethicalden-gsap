@@ -303,12 +303,12 @@ const AboutUsArea = () => {
             {/* Spinner on top */}
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
 
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard%201.webp?updatedAt=1750087791918'
+              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/1.jpg?updatedAt=1750495874844'
               height={1000}
               width={1000}
               placeholder='blur'
@@ -327,7 +327,7 @@ const AboutUsArea = () => {
             {/* Spinner centered over image */}
             {!isImageLoaded && (
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
 

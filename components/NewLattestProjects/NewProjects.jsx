@@ -295,7 +295,7 @@ function NewProjects() {
                 blurDataURL={blurPlaceholder}
                 onLoadingComplete={() => setIsImageLoaded(true)}
                 alt='Agarwal Tibrewal Co'
-                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/agarwall.jpg?updatedAt=1750069867837'
+                src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/3.jpg?updatedAt=1750496283381'
                 priority
                 loading="eager"
                 className='h-full w-full object-cover'
