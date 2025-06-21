@@ -21,7 +21,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ethicalden-gsap.netlify.app/og-image.jpg",
+        url: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Product%20Page/stockogen.jpg?updatedAt=1749712253696",
         width: 1200,
         height: 630,
         alt: "Ethical Den Products",
@@ -33,7 +33,7 @@ export const metadata = {
     title: "Our Products - Ethical Den",
     description: "Explore premium digital solutions from Ethical Den tailored for business growth.",
     creator: "@ethicalden",
-    images: ["https://ethicalden-gsap.netlify.app/og-image.jpg"],
+    images: ["https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Product%20Page/stockogen.jpg?updatedAt=1749712253696"],
   },
   icons: {
     icon: "/favicon.ico",

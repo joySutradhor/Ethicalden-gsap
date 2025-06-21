@@ -22,7 +22,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ethicalden-gsap.netlify.app/og-image.jpg",
+        url: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/1.jpg?updatedAt=1750495874844",
         width: 1200,
         height: 630,
         alt: "About Ethical Den",
@@ -34,7 +34,7 @@ export const metadata = {
     title: "About Us - Ethical Den",
     description: "Get to know the team and mission behind Ethical Den, where technology meets innovation.",
     creator: "@ethicalden",
-    images: ["https://ethicalden-gsap.netlify.app/og-image.jpg"],
+    images: ["https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/1.jpg?updatedAt=1750495874844"],
   },
   icons: {
     icon: "/favicon.ico",

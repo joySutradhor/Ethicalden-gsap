@@ -47,7 +47,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/PNG.png?updatedAt=1750244642639",
+        url: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-1.webp?updatedAt=1749634191768",
         width: 1200,
         height: 630,
         alt: "Ethical Den Preview",
@@ -59,7 +59,7 @@ export const metadata = {
     title: "Ethical Den | Best Software Company in India",
     description: "Modern software solutions for businesses and startups.",
     creator: "@ethicalden",
-    images: ["https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/PNG.png?updatedAt=1750244642639"],
+    images: ["https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-1.webp?updatedAt=1749634191768"],
   },
   icons: {
     icon: "/favicon.ico",

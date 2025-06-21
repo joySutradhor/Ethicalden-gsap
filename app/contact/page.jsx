@@ -21,7 +21,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ethicalden-gsap.netlify.app/og-image.jpg",
+        url: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-4.webp?updatedAt=1749634452088",
         width: 1200,
         height: 630,
         alt: "Ethical Den Contact",
@@ -33,7 +33,7 @@ export const metadata = {
     title: "Contact Us - Ethical Den",
     description: "Reach out to Ethical Den for project inquiries, support, or collaborations.",
     creator: "@ethicalden",
-    images: ["https://ethicalden-gsap.netlify.app/og-image.jpg"],
+    images: ["https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-4.webp?updatedAt=1749634452088"],
   },
   icons: {
     icon: "/favicon.ico",
