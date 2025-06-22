@@ -219,8 +219,12 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                         About Den
                     </a>
                     <a
-                        href="https://www.behance.net/Realethicalden" target="_blank"
-                        className='after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
+                        href="/our-works"
+                        className={`relative font-medium 
+                                ${isActive('/our-works')
+                                ? 'line-through decoration-2 decoration-current pointer-events-none'
+                                : 'after:content-[""] after:block after:h-[2px] after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100'
+                            }`}
                     >
                         Our Works
                     </a>
@@ -343,8 +347,7 @@ const Navbar = ({ backgroundColor = "white", textColor = "black" }) => {
                     </a>
                     <a
                         ref={addMenuItemToRefs}
-                        href="https://www.behance.net/Realethicalden"
-                        target="_blank"
+                        href="/our-works"
                         className="text-4xl font-semibold hover:underline opacity-0"
                     >
                         Our Works
