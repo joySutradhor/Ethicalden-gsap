@@ -232,8 +232,6 @@ function OurWorksArea() {
       ease: "power3.inOut"
     }, 0)
 
-
-
     // First project content reveal
     masterTimeline.to(projectContentsRef.current[0], {
       opacity: 1,
@@ -295,11 +293,14 @@ function OurWorksArea() {
   }
 
   const setupMobileAnimations = () => {
+    // Set mobile-specific height (shorter than desktop)
+    const mobileImageHeight = "60vh";
+    
     // Reset all project images to mobile-friendly layout
     projectImagesRef.current.forEach((image, index) => {
       gsap.set(image, {
         width: "100vw",
-        height: "100vh",
+        height: mobileImageHeight,
         position: "fixed",
         top: index === 0 ? 0 : "100%",
         left: 0,
@@ -313,17 +314,19 @@ function OurWorksArea() {
     gsap.set(marqueeRef.current, {
       opacity: 0.2,
       position: "fixed",
-      top: "70%",
+      top: "60%", // Adjusted to account for shorter images
       left: 0,
       zIndex: 10,
       width: "100%"
     })
 
-    // Content styling for mobile
+    // Content styling for mobile - positioned lower to account for shorter images
     gsap.set(projectContentsRef.current, {
       opacity: 0,
       y: 20,
-      pointerEvents: 'none'
+      pointerEvents: 'none',
+      top: `calc(${mobileImageHeight} - 20px)`,
+      position: 'fixed'
     })
 
     // Show first content immediately on mobile
@@ -557,7 +560,7 @@ function OurWorksArea() {
         <div className="text-center px-6 relative">
           <h2
             ref={titleRef}
-            className="  text-4xl md:text-5xl lg:text-6xl xl:text-8xl   font-urbanist font-extrabold pb-5 leading-[1.06]"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-urbanist font-extrabold pb-5 leading-[1.06]"
           >
             {"Explore Our Works".split(" ").map((word, wi) => (
               <span
@@ -645,10 +648,14 @@ function OurWorksArea() {
               )}
             </div>
 
-            {/* Project Content */}
+            {/* Project Content - for mobile */}
             <div
               ref={el => addContentToRefs(el, index)}
-              className="absolute z-30 bottom-10 md:bottom-20 left-0 right-0 text-center px-4"
+              className="absolute z-30 bottom-10 md:bottom-50 left-0 right-0 text-center px-4 mt-20 md:mt-0"
+              style={{
+                top: 'unset',
+                bottom: '10%'
+              }}
             >
               <span className="text-xs md:text-sm uppercase tracking-wider text-gray-500 opacity-80">
                 {project.category}
