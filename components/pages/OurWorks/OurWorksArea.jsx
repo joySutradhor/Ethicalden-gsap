@@ -34,7 +34,7 @@ function OurWorksArea() {
       description: "Smart Fashion Interface",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/marzii-w.png?updatedAt=1750575177142",
+        src: "/images/marzi-c-w.jpg",
         alt: "Marzii"
       },
       link: "/project-marzii",
@@ -47,7 +47,7 @@ function OurWorksArea() {
       description: "Digital healthcare appointment and consultation platform",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/e-laj-w.jpg?updatedAt=1750575185502",
+        src: "/images/e-laj-c-w.jpg",
         alt: "E-laj"
       },
       link: "/project-e-laj",
@@ -60,7 +60,7 @@ function OurWorksArea() {
       description: "A vibrant community platform for creators and innovators",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/mak-c-w.jpg?updatedAt=1750611898326",
+        src: "/images/mak-c-w.jpg",
         alt: "Mak Community"
       },
       link: "/project-mak-community",
@@ -73,7 +73,7 @@ function OurWorksArea() {
       description: "Professional corporate website for a consultancy firm",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/3.jpg?updatedAt=1750496283381",
+        src: "/images/agarwal-w-c.jpg",
         alt: "Agarwal Tibrewal Co"
       },
       link: "/project-agarwal-tibrewal",
@@ -86,7 +86,7 @@ function OurWorksArea() {
       description: "A mental wellness support platform with modern UI/UX",
       media: {
         type: "image",
-        src: "/images/B-1.jpg",
+        src: "/images/emopract-final-logoaaa.jpg",
         alt: "Emopract"
       },
       link: "/project-emopract",
@@ -99,7 +99,7 @@ function OurWorksArea() {
       description: "Automotive service platform with strong branding presence",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/sandeep-w.jpg?updatedAt=1750575162117",
+        src: "/images/sandeep-c-w.jpg",
         alt: "Sandeep Autolines"
       },
       link: "/project-sandeep-autolines",
@@ -112,7 +112,7 @@ function OurWorksArea() {
       description: "Creative portfolio site for visual design and experiences",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/2.jpg?updatedAt=1750495904013",
+        src: "/images/lal-jhal-c-w.jpg",
         alt: "Laljhal"
       },
       link: "/project-laljhal",
@@ -651,19 +651,19 @@ function OurWorksArea() {
             {/* Project Content - for mobile */}
             <div
               ref={el => addContentToRefs(el, index)}
-              className="absolute z-30 bottom-10 md:bottom-50 left-0 right-0 text-center px-4 mt-20 md:mt-0"
+              className="absolute z-30 bottom-10 md:bottom-50 left-0 right-0 text-center md:text-left px-4 md:px-10 lg:px-14 xl:px-20 mt-20 md:mt-0"
               style={{
                 top: 'unset',
                 bottom: '10%'
               }}
             >
-              <span className="text-xs md:text-sm uppercase tracking-wider text-gray-500 opacity-80">
+              <span className="text-xs md:text-sm uppercase tracking-wider text-white md:text-gray-800 opacity-80">
                 {project.category}
               </span>
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#09e5e5] to-[#a8ff57] mt-2">
                 {project.title}
               </h2>
-              <p className="text-sm md:text-lg lg:text-xl mt-2 md:mt-4 max-w-md md:max-w-2xl text-gray-500 mx-auto">
+              <p className="text-sm md:text-lg lg:text-xl mt-2 md:mt-4 max-w-md md:max-w-2xl text-center md:text-left text-white md:text-gray-800 ">
                 {project.description}
               </p>
               <Link
