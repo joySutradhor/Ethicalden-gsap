@@ -21,7 +21,7 @@ function OurWorksArea() {
       description: "A modern cafe experience with digital ordering",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/mr-cafe.webp?updatedAt=1749702821699",
+        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/mrCafe-w.jpg?updatedAt=1750611893584",
         alt: "Mr Cafe"
       },
       link: "/project-mrCafe",
@@ -60,7 +60,7 @@ function OurWorksArea() {
       description: "A vibrant community platform for creators and innovators",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/mak-w.jpg?updatedAt=1750575169303",
+        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/mak-c-w.jpg?updatedAt=1750611898326",
         alt: "Mak Community"
       },
       link: "/project-mak-community",
@@ -86,7 +86,7 @@ function OurWorksArea() {
       description: "A mental wellness support platform with modern UI/UX",
       media: {
         type: "image",
-        src: "https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/our-works/emopract-w.jpg?updatedAt=1750575152549",
+        src: "/images/B-1.jpg",
         alt: "Emopract"
       },
       link: "/project-emopract",
