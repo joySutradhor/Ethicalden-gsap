@@ -82,7 +82,7 @@ const OurWorksArea3 = () => {
             description: "A mental wellness support platform with modern UI/UX",
             media: {
                 type: "image",
-                src: "/images/emopract-final-logoaaa.jpg",
+                src: "/images/emopract-mockup.jpg",
                 alt: "Emopract"
             },
             link: "/project-emopract",

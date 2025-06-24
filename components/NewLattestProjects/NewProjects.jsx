@@ -316,7 +316,7 @@ function NewProjects() {
 
         {/* third row start */}
         <div className='-mt-[8vh] md:mt-[30vh] lg:mt-[60vh] '>
-          <div className='h-[40vh] md:w-[60%] relative'>
+          <div className='h-[25vh] md:w-[60%] relative'>
 
             {/* Spinner on top */}
             {!isImageLoaded && (
@@ -325,7 +325,7 @@ function NewProjects() {
               </div>
             )}
             <Image
-              src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/emopract.jpg?updatedAt=1749702849547'
+              src='/images/emopract-h-project.jpg'
               height={100}
               width={500}
               placeholder='blur'

@@ -24,7 +24,7 @@ const GalleryMain = () => {
   // left Images for the slideshow
   const leftImages = [
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-1.webp?updatedAt=1749634191768',
-    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/card-3.jpg?updatedAt=1750498012092',
+    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-16.jpg?updatedAt=1750755309114',
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-3.webp?updatedAt=1749634295522'
   ]
 
@@ -96,7 +96,7 @@ const GalleryMain = () => {
   const RightImages = [
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-4.webp?updatedAt=1749634452088',
     'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/5.jpg?updatedAt=1750497674411',
-    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-6.webp?updatedAt=1749634469982'
+    'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/gal-15.jpg?updatedAt=1750754746870'
   ]
 
   // Animation for the right image slideshow
