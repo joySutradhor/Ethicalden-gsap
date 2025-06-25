@@ -74,7 +74,7 @@ const MakCommunityArea4 = () => {
             )}
                     <Image
                         ref={imageRef}
-                        src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/mak-community/4.jpg?updatedAt=1750067426958"
+                        src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/mak-community/mak-mockup.jpg?updatedAt=1750829112888"
                         alt="Croatian Football Team"
                         width={1270}
                         height={630}
