@@ -49,7 +49,7 @@ export default function Page () {
             }
           }
         )
-        setServiceRequests(serviceRequests.filter(item => item._id !== id))
+        setServiceRequests(serviceRequests.filter(item => item.id !== id))
 
         Swal.fire(
           'Deleted!',
@@ -85,7 +85,7 @@ export default function Page () {
           }
         )
 
-        setServiceRequests(serviceRequests.filter(item => item._id !== id))
+        setServiceRequests(serviceRequests.filter(item => item.id !== id))
 
         Swal.fire(
           'Accepted!',
@@ -123,7 +123,7 @@ export default function Page () {
           }
         )
 
-        setServiceRequests(serviceRequests.filter(item => item._id !== id))
+        setServiceRequests(serviceRequests.filter(item => item.id !== id))
 
         Swal.fire(
           'Rejected!',
