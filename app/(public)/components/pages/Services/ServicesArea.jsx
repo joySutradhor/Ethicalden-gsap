@@ -387,7 +387,7 @@ const ServicesArea = () => {
                     <li>Brand Audit and Refresh</li>
                     <li>Stationary Design</li>
                   </ul>
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className=' flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -446,7 +446,7 @@ const ServicesArea = () => {
                     <li>Influencer Marketing</li>
                     <li>Integrated Marketing Campaigns</li>
                   </ul>
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -503,7 +503,7 @@ const ServicesArea = () => {
                     <li>Link Building</li>
                   </ul>
 
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -562,7 +562,7 @@ const ServicesArea = () => {
                     <li>Wireframing & prototyping</li>
                   </ul>
 
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -620,7 +620,7 @@ const ServicesArea = () => {
                     <li>QA Testing</li>
                   </ul>
 
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -681,7 +681,7 @@ const ServicesArea = () => {
                     <li>Website Maintenance and Support</li>
                   </ul>
 
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -739,7 +739,7 @@ const ServicesArea = () => {
                     <li>Maintenance and Support for Mobile Apps</li>
                   </ul>
 
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -799,7 +799,7 @@ const ServicesArea = () => {
                     <li>Incident Response and Forensics</li>
                     <li>Security Consultancy and Advisory</li>
                   </ul>
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -855,7 +855,7 @@ const ServicesArea = () => {
                     <li>Natural Language Processing (NLP)</li>
                     <li>AI Chatbots and Virtual Assistants</li>
                   </ul>
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
@@ -913,7 +913,7 @@ const ServicesArea = () => {
                     <li>Video Montage</li>
                     <li>Special Effects</li>
                   </ul>
-                  <Link href='/dashboard/client/client-dashboard'>
+                  <Link href='/make-request'>
                     <button className='flex gap-x-1.5 items-center  text-xl md:text-2xl leading-relaxed bg-[#a8ff57] py-1.5 px-6 text-black font-semibold rounded-md  '>
                       Make A Request{' '}
                       <span>
