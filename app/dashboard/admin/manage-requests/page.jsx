@@ -148,7 +148,7 @@ export default function Page () {
       </h2>
 
       {loading ? (
-        <p>Loading...</p>
+        <p className='text-white font-semibold'>Loading...</p>
       ) : (
         <ul className=' grid md:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 gap-4 h-full'>
           {serviceRequests.map((request, i) => (

@@ -8,10 +8,14 @@ import { IoHomeOutline } from 'react-icons/io5'
 import { MdOutlineRemoveDone } from 'react-icons/md'
 import { MdDoneAll } from 'react-icons/md'
 import { MdNotificationsActive } from 'react-icons/md'
+import { GrServices } from "react-icons/gr";
+
+
 
 import { useState } from 'react'
 import Image from 'next/image'
 import logo from '../../assets/ethicalden.png'
+import { FaPlus } from 'react-icons/fa'
 const navLinks = [
   {
     name: 'Dashboard',
@@ -26,9 +30,9 @@ const navLinks = [
     user: 'SuperAdmin'
   },
   {
-    name: 'Pending Request',
-    href: '/dashboard/pending',
-    icon: <MdOutlineRemoveDone size={18} />,
+    name: 'Service Request',
+    href: '/dashboard/admin/service-requests',
+    icon: <GrServices size={18} />,
     user: 'SuperAdmin'
   },
   {
@@ -39,23 +43,24 @@ const navLinks = [
   },
   {
     name: 'My Dashboard',
-    href: '/dashboard/accepted',
-    icon: <MdDoneAll size={18} />,
+    href: '/dashboard/client/client-dashboard',
+    icon: <IoHomeOutline size={18} />,
+    user: 'Client'
+  },
+  {
+    name: 'Manage Service Offer',
+    href: '/dashboard/client/manage-service-offer',
+    icon: <GrServices size={18} />,
     user: 'Client'
   },
 
   {
-    name: 'Make Request',
-    href: '/dashboard/accepted',
-    icon: <MdDoneAll size={18} />,
-    user: 'Client'
-  },
-  {
-    name: 'Manage Request',
-    href: '/dashboard/accepted',
-    icon: <MdDoneAll size={18} />,
+    name: 'Create Service Offer',
+    href: '/dashboard/client/create-service-offer',
+    icon: <FaPlus size={18} />,
     user: 'Client'
   }
+  
 ]
 
 export default function Sidebar ({ token, userType }) {
@@ -76,10 +81,10 @@ export default function Sidebar ({ token, userType }) {
       </div>
 
       {/* Sidebar */}
-      <aside
+      <div 
         className={`${
           open ? 'translate-x-0' : '-translate-x-full'
-        } md:translate-x-0 fixed md:static z-40 top-0 left-0 min-h-screen  bg-[#2222]  shadow-md p-5 transition-transform duration-300 ease-in-out`}
+        } md:translate-x-0 fixed md:static z-40 top-0 left-0 h-full  bg-[#2222]  shadow-md p-5 transition-transform duration-300 ease-in-out`}
         j
       >
         <div className='flex  items-center mb-5 gap-x-2.5 border-b border-white/10 pb-5'>
@@ -114,7 +119,7 @@ export default function Sidebar ({ token, userType }) {
               ))}
           </nav>
         </nav>
-      </aside>
+      </div>
     </>
   )
 }

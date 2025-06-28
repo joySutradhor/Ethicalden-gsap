@@ -129,7 +129,15 @@ const SignInArea = () => {
             <button
               onClick={() => {
                 setIsModalOpen(false)
-                router.push('/dashboard')
+                const userType = localStorage.getItem('user_type')
+
+                if (userType === 'SuperAdmin') {
+                  router.push('/dashboard')
+                } else if (userType === 'Client') {
+                  router.push('dashboard/client/client-dashboard')
+                } else {
+                  router.push('/') // fallback for unknown user type
+                }
               }}
               className='mt-4 px-6 py-2 bg-[#a8ff57] text-black font-semibold rounded-lg hover:bg-[#09e5e5] transition-all'
             >
