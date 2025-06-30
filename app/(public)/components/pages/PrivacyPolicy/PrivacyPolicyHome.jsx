@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import Navbar from '@/components/Shared/Navbar/Navbar';
+import Navbar from '../../Shared/Navbar/Navbar';
+
 
 const privacySections = [
     {

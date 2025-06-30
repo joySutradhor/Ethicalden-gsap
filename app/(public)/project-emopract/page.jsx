@@ -1,5 +1,6 @@
-import EmopractHome from '@/components/pages/ProjectDetails/EmopractHome';
+
 import React from 'react';
+import EmopractHome from '../components/pages/ProjectDetails/EmopractHome';
 
 export const metadata = {
   title: "EmoPract Project - Ethical Den",

@@ -1,5 +1,6 @@
-import AgarwalHome from '@/components/pages/ProjectDetails/AgarwalHome';
+
 import React from 'react';
+import AgarwalHome from '../components/pages/ProjectDetails/AgarwalHome';
 
 export const metadata = {
   title: "Agarwal Tibrewal Project - Ethical Den",

@@ -1,5 +1,6 @@
-import ELajHome from '@/components/pages/ProjectDetails/ELajHome';
+
 import React from 'react';
+import ELajHome from '../components/pages/ProjectDetails/ELajHome';
 
 export const metadata = {
   title: "E-Laj Project - Ethical Den",
