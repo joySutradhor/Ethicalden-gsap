@@ -10,6 +10,11 @@ export default function ClientAllServices () {
       link: '/dashboard/client/branding'
     },
     {
+      title: 'Logo Design',
+      des: 'We help businesses develop a unique identity through logo design, brand voice, and visual consistency to ensure strong market presence and memorable customer experiences.',
+      link: '/dashboard/client/logo-design'
+    },
+    {
       title: 'AI Services',
       des: 'Leverage artificial intelligence to automate tasks, analyze data, and improve decision-making processes with tailored AI models and machine learning solutions for your business.',
       link: '/dashboard/client/ai-services'
