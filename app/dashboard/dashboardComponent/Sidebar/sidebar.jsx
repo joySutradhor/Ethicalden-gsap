@@ -9,6 +9,8 @@ import { MdOutlineRemoveDone } from 'react-icons/md'
 import { MdDoneAll } from 'react-icons/md'
 import { MdNotificationsActive } from 'react-icons/md'
 import { GrServices } from "react-icons/gr";
+import { GrBusinessService } from "react-icons/gr";
+
 
 
 
@@ -59,7 +61,14 @@ const navLinks = [
     href: '/dashboard/client/create-service-offer',
     icon: <FaPlus size={18} />,
     user: 'Client'
+  },
+  {
+    name: 'All Services',
+    href: '/dashboard/client/all-services',
+    icon: <GrBusinessService size={18} />,
+    user: 'Client'
   }
+
   
 ]
 

@@ -24,3 +24,10 @@
 .form-label {
   @apply block text-sm font-medium mb-1 text-black/80;
 }
+
+.inputForm {
+  @apply mt-3 border border-white/10 rounded-md p-2 mb-4 outline-none w-full ;
+}
+.textareaForm {
+  @apply w-full border border-white/10 rounded-md p-2 mb-4 h-24 mt-3 outline-none;
+}
