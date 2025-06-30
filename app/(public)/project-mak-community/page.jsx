@@ -1,5 +1,6 @@
-import MakCommunityHome from '@/components/pages/ProjectDetails/MakCommunityHome';
+
 import React from 'react';
+import MakCommunityHome from '../components/pages/ProjectDetails/MakCommunityHome';
 
 export const metadata = {
   title: "MAK Community Project - Ethical Den",

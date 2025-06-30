@@ -1,5 +1,6 @@
-import TheAgencyMain from '@/components/pages/the-agency/the-agency-main';
+
 import React from 'react';
+import TheAgencyMain from '../components/pages/the-agency/the-agency-main';
 
 const TheAgencyPage = () => {
     return (

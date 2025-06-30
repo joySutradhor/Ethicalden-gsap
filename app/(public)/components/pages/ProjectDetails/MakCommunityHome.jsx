@@ -1,15 +1,14 @@
+import MakCommunityArea from "../../ProjectMakCommunity/MakCommunityArea";
+import MakCommunityArea2 from "../../ProjectMakCommunity/MakCommunityArea2";
+import MakCommunityArea3 from "../../ProjectMakCommunity/MakCommunityArea3";
+import MakCommunityArea4 from "../../ProjectMakCommunity/MakCommunityArea4";
+import MakCommunityArea5 from "../../ProjectMakCommunity/MakCommunityArea5";
+import MakCommunityBanner from "../../ProjectMakCommunity/MakCommunityBanner";
+import MakCommunityBannerImg from "../../ProjectMakCommunity/MakCommunityBannerImg";
+import MakCommunityFooter from "../../ProjectMakCommunity/MakCommunityFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import MakCommunityArea from '@/components/ProjectMakCommunity/MakCommunityArea';
-import MakCommunityArea2 from '@/components/ProjectMakCommunity/MakCommunityArea2';
-import MakCommunityArea3 from '@/components/ProjectMakCommunity/MakCommunityArea3';
-import MakCommunityArea4 from '@/components/ProjectMakCommunity/MakCommunityArea4';
-import MakCommunityArea5 from '@/components/ProjectMakCommunity/MakCommunityArea5';
-import MakCommunityArea6 from '@/components/ProjectMakCommunity/MakCommunityArea6';
-import MakCommunityBanner from '@/components/ProjectMakCommunity/MakCommunityBanner';
-import MakCommunityBannerImg from '@/components/ProjectMakCommunity/MakCommunityBannerImg';
-import MakCommunityFooter from '@/components/ProjectMakCommunity/MakCommunityFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
+
 
 const MakCommunityHome = () => {
     return (

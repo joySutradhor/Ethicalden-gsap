@@ -1,14 +1,14 @@
+import HealingArea from "../../ProjectHealing/HealingArea";
+import HealingArea2 from "../../ProjectHealing/HealingArea2";
+import HealingArea3 from "../../ProjectHealing/HealingArea3";
+import HealingArea4 from "../../ProjectHealing/HealingArea4";
+import HealingArea5 from "../../ProjectHealing/HealingArea5";
+import HealingBanner from "../../ProjectHealing/HealingBanner";
+import HealingBannerImg from "../../ProjectHealing/HealingBannerImg";
+import HealingFooter from "../../ProjectHealing/HealingFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import HealingArea from '@/components/ProjectHealing/HealingArea';
-import HealingArea2 from '@/components/ProjectHealing/HealingArea2';
-import HealingArea3 from '@/components/ProjectHealing/HealingArea3';
-import HealingArea4 from '@/components/ProjectHealing/HealingArea4';
-import HealingArea5 from '@/components/ProjectHealing/HealingArea5';
-import HealingBanner from '@/components/ProjectHealing/HealingBanner';
-import HealingBannerImg from '@/components/ProjectHealing/HealingBannerImg';
-import HealingFooter from '@/components/ProjectHealing/HealingFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
+
 
 const HealingHome = () => {
     return (

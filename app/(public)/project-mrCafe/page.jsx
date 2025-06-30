@@ -1,5 +1,6 @@
-import MrCafeHome from '@/components/pages/ProjectDetails/MrCafeHome';
+
 import React from 'react';
+import MrCafeHome from '../components/pages/ProjectDetails/MrCafeHome';
 
 export const metadata = {
   title: "MrCafe Project - Ethical Den",

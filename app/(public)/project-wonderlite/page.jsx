@@ -1,5 +1,6 @@
-import WonderliteHome from '@/components/pages/ProjectDetails/WonderliteHome';
+
 import React from 'react';
+import WonderliteHome from '../components/pages/ProjectDetails/WonderliteHome';
 
 const WonderlitePage = () => {
     return (

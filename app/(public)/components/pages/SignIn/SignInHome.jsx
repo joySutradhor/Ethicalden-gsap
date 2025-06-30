@@ -1,5 +1,6 @@
 import React from 'react';
 import SignInArea from './SignInArea';
+// import SignInArea from './SignInArea';
 // import Navbar from '@/components/Shared/Navbar/Navbar';
 
 const SignInHome = () => {

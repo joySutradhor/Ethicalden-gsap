@@ -1,5 +1,6 @@
-import MarziiHome from '@/components/pages/ProjectDetails/MarziiHome';
+
 import React from 'react';
+import MarziiHome from '../components/pages/ProjectDetails/MarziiHome';
 
 export const metadata = {
   title: "Marzii Project - Ethical Den",

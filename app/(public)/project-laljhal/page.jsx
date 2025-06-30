@@ -1,5 +1,6 @@
-import LaljhalHome from '@/components/pages/ProjectDetails/LaljhalHome';
+
 import React from 'react';
+import LaljhalHome from '../components/pages/ProjectDetails/LaljhalHome';
 
 export const metadata = {
   title: "Laljhal Project - Ethical Den",

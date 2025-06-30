@@ -1,5 +1,6 @@
-import HealingHome from '@/components/pages/ProjectDetails/HealingHome';
+
 import React from 'react';
+import HealingHome from '../components/pages/ProjectDetails/HealingHome';
 
 export const metadata = {
   title: "Healing Home Healthcare LLC Project - Ethical Den",

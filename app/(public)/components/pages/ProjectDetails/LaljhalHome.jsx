@@ -1,13 +1,13 @@
+import LaljhalArea from "../../Project-Laljhal/LaljhalArea";
+import LaljhalArea2 from "../../Project-Laljhal/LaljhalArea2";
+import LaljhalArea3 from "../../Project-Laljhal/LaljhalArea3";
+import LaljhalArea4 from "../../Project-Laljhal/LaljhalArea4";
+import LaljhalArea5 from "../../Project-Laljhal/LaljhalArea5";
+import LaljhalBanner from "../../Project-Laljhal/LaljhalBanner";
+import LaljhalBannerImg from "../../Project-Laljhal/LaljhalBannerImg";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import LaljhalArea from '@/components/Project-Laljhal/LaljhalArea';
-import LaljhalArea2 from '@/components/Project-Laljhal/LaljhalArea2';
-import LaljhalArea3 from '@/components/Project-Laljhal/LaljhalArea3';
-import LaljhalArea4 from '@/components/Project-Laljhal/LaljhalArea4';
-import LaljhalArea5 from '@/components/Project-Laljhal/LaljhalArea5';
-import LaljhalBanner from '@/components/Project-Laljhal/LaljhalBanner';
-import LaljhalBannerImg from '@/components/Project-Laljhal/LaljhalBannerImg';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
+
 
 const LaljhalHome = () => {
     return (

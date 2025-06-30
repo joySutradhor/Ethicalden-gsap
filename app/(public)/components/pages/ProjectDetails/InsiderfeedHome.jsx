@@ -1,15 +1,14 @@
+import InsiderfeedArea from "../../ProjectInsiderfeed/InsiderfeedArea";
+import InsiderfeedArea2 from "../../ProjectInsiderfeed/InsiderfeedArea2";
+import InsiderfeedArea3 from "../../ProjectInsiderfeed/InsiderfeedArea3";
+import InsiderfeedArea4 from "../../ProjectInsiderfeed/InsiderfeedArea4";
+import InsiderfeedArea5 from "../../ProjectInsiderfeed/InsiderfeedArea5";
+import InsiderfeedBanner from "../../ProjectInsiderfeed/InsiderfeedBanner";
+import InsiderfeedBannerImg from "../../ProjectInsiderfeed/InsiderfeedBannerImg";
+import InsiderfeedFooter from "../../ProjectInsiderfeed/InsiderfeedFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import InsiderfeedArea from '@/components/ProjectInsiderfeed/InsiderfeedArea';
-import InsiderfeedArea2 from '@/components/ProjectInsiderfeed/InsiderfeedArea2';
-import InsiderfeedArea3 from '@/components/ProjectInsiderfeed/InsiderfeedArea3';
-import InsiderfeedArea4 from '@/components/ProjectInsiderfeed/InsiderfeedArea4';
-import InsiderfeedArea5 from '@/components/ProjectInsiderfeed/InsiderfeedArea5';
-import InsiderfeedArea6 from '@/components/ProjectInsiderfeed/InsiderfeedArea6';
-import InsiderfeedBanner from '@/components/ProjectInsiderfeed/InsiderfeedBanner';
-import InsiderfeedBannerImg from '@/components/ProjectInsiderfeed/InsiderfeedBannerImg';
-import InsiderfeedFooter from '@/components/ProjectInsiderfeed/InsiderfeedFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
+
 
 const InsiderfeedHome = () => {
     return (

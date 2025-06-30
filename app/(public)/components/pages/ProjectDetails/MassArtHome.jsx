@@ -1,15 +1,14 @@
+import MassArtArea from "../../ProjectMassArt/MassArtArea";
+import MassArtArea2 from "../../ProjectMassArt/MassArtArea2";
+import MassArtArea3 from "../../ProjectMassArt/MassArtArea3";
+import MassArtArea4 from "../../ProjectMassArt/MassArtArea4";
+import MassArtArea5 from "../../ProjectMassArt/MassArtArea5";
+import MassArtBanner from "../../ProjectMassArt/MassArtBanner";
+import MassArtBannerImg from "../../ProjectMassArt/MassArtBannerImg";
+import MassArtFooter from "../../ProjectMassArt/MassArtFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import MassArtArea from '@/components/ProjectMassArt/MassArtArea';
-import MassArtArea2 from '@/components/ProjectMassArt/MassArtArea2';
-import MassArtArea3 from '@/components/ProjectMassArt/MassArtArea3';
-import MassArtArea4 from '@/components/ProjectMassArt/MassArtArea4';
-import MassArtArea5 from '@/components/ProjectMassArt/MassArtArea5';
-import MassArtArea6 from '@/components/ProjectMassArt/MassArtArea6';
-import MassArtBanner from '@/components/ProjectMassArt/MassArtBanner';
-import MassArtBannerImg from '@/components/ProjectMassArt/MassArtBannerImg';
-import MassArtFooter from '@/components/ProjectMassArt/MassArtFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
+
 
 const MassArtHome = () => {
     return (

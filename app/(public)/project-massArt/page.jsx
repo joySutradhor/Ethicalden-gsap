@@ -1,5 +1,6 @@
-import MassArtHome from '@/components/pages/ProjectDetails/MassArtHome';
+
 import React from 'react';
+import MassArtHome from '../components/pages/ProjectDetails/MassArtHome';
 
 export const metadata = {
   title: "MassArt Project - Ethical Den",

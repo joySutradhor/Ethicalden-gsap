@@ -1,15 +1,14 @@
+import WonderliteArea from "../../ProjectWonderlite/WonderliteArea";
+import WonderliteArea2 from "../../ProjectWonderlite/WonderliteArea2";
+import WonderliteArea3 from "../../ProjectWonderlite/WonderliteArea3";
+import WonderliteArea4 from "../../ProjectWonderlite/WonderliteArea4";
+import WonderliteArea5 from "../../ProjectWonderlite/WonderliteArea5";
+import WonderliteBanner from "../../ProjectWonderlite/WonderliteBanner";
+import WonderliteBannerImg from "../../ProjectWonderlite/WonderliteBannerImg";
+import WonderliteFooter from "../../ProjectWonderlite/WonderliteFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import WonderliteArea from '@/components/ProjectWonderlite/WonderliteArea';
-import WonderliteArea2 from '@/components/ProjectWonderlite/WonderliteArea2';
-import WonderliteArea3 from '@/components/ProjectWonderlite/WonderliteArea3';
-import WonderliteArea4 from '@/components/ProjectWonderlite/WonderliteArea4';
-import WonderliteArea5 from '@/components/ProjectWonderlite/WonderliteArea5';
-import WonderliteArea6 from '@/components/ProjectWonderlite/WonderliteArea6';
-import WonderliteBanner from '@/components/ProjectWonderlite/WonderliteBanner';
-import WonderliteBannerImg from '@/components/ProjectWonderlite/WonderliteBannerImg';
-import WonderliteFooter from '@/components/ProjectWonderlite/WonderliteFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
+
 
 const WonderliteHome = () => {
     return (

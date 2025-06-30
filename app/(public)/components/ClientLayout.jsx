@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 
 
 
-import TransitionOverlay from "@/components/PageTransition/TransitionOverlay";
 import SmoothScroll from "./hooks/smooth-scroll";
 import CustomCursor from "./CustomCursor/CustomCursor";
+import TransitionOverlay from "./PageTransition/TransitionOverlay";
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();

@@ -1,5 +1,6 @@
-import SandeepHome from '@/components/pages/ProjectDetails/SandeepHome';
+
 import React from 'react';
+import SandeepHome from '../components/pages/ProjectDetails/SandeepHome';
 
 export const metadata = {
   title: "Sandeep Autolines Project - Ethical Den",

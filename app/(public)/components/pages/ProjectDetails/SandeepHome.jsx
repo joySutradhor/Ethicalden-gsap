@@ -1,15 +1,13 @@
+import SandeepArea from "../../ProjectSandeep/SandeepArea";
+import SandeepArea2 from "../../ProjectSandeep/SandeepArea2";
+import SandeepArea3 from "../../ProjectSandeep/SandeepArea3";
+import SandeepArea4 from "../../ProjectSandeep/SandeepArea4";
+import SandeepArea5 from "../../ProjectSandeep/SandeepArea5";
+import SandeepBanner from "../../ProjectSandeep/SandeepBanner";
+import SandeepBannerImg from "../../ProjectSandeep/SandeepBannerImg";
+import SandeepFooter from "../../ProjectSandeep/SandeepFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import SandeepArea from '@/components/ProjectSandeep/SandeepArea';
-import SandeepArea2 from '@/components/ProjectSandeep/SandeepArea2';
-import SandeepArea3 from '@/components/ProjectSandeep/SandeepArea3';
-import SandeepArea4 from '@/components/ProjectSandeep/SandeepArea4';
-import SandeepArea5 from '@/components/ProjectSandeep/SandeepArea5';
-import SandeepArea6 from '@/components/ProjectSandeep/SandeepArea6';
-import SandeepBanner from '@/components/ProjectSandeep/SandeepBanner';
-import SandeepBannerImg from '@/components/ProjectSandeep/SandeepBannerImg';
-import SandeepFooter from '@/components/ProjectSandeep/SandeepFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
 
 const SandeepHome = () => {
     return (

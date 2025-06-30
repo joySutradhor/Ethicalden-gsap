@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 
-const insiderfeedFooter = () => {
+const InsiderfeedFooter = () => {
     const sectionRef = useRef(null);
     const hasNavigated = useRef(false);
     const router = useRouter();
@@ -79,4 +79,4 @@ const insiderfeedFooter = () => {
     );
 };
 
-export default insiderfeedFooter;
+export default InsiderfeedFooter;

@@ -1,15 +1,13 @@
+import MrCafeArea from "../../ProjectMrCafe/MrCafeArea";
+import MrCafeArea2 from "../../ProjectMrCafe/MrCafeArea2";
+import MrCafeArea3 from "../../ProjectMrCafe/MrCafeArea3";
+import MrCafeArea4 from "../../ProjectMrCafe/MrCafeArea4";
+import MrCafeArea5 from "../../ProjectMrCafe/MrCafeArea5";
+import MrCafeBanner from "../../ProjectMrCafe/MrCafeBanner";
+import MrCafeBannerImg from "../../ProjectMrCafe/MrCafeBannerImg";
+import MrCafeFooter from "../../ProjectMrCafe/MrCafeFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import MrCafeArea from '@/components/ProjectMrCafe/MrCafeArea';
-import MrCafeArea2 from '@/components/ProjectMrCafe/MrCafeArea2';
-import MrCafeArea3 from '@/components/ProjectMrCafe/MrCafeArea3';
-import MrCafeArea4 from '@/components/ProjectMrCafe/MrCafeArea4';
-import MrCafeArea5 from '@/components/ProjectMrCafe/MrCafeArea5';
-import MrCafeArea6 from '@/components/ProjectMrCafe/MrCafeArea6';
-import MrCafeBanner from '@/components/ProjectMrCafe/MrCafeBanner';
-import MrCafeBannerImg from '@/components/ProjectMrCafe/MrCafeBannerImg';
-import MrCafeFooter from '@/components/ProjectMrCafe/MrCafeFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
 
 const MrCafeHome = () => {
     return (

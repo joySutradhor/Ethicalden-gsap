@@ -1,5 +1,6 @@
-import HeaderBannerMain from '@/components/HeaderBanner/HeaderBannerMain';
+
 import React from 'react';
+import HeaderBannerMain from '../../components/HeaderBanner/HeaderBannerMain';
 
 const HeaderBanner = () => {
     return (

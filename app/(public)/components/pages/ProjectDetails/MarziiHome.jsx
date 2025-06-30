@@ -1,14 +1,13 @@
-import MarziiArea from '@/components/ProjectMarzii/MarziiArea';
-import MarziiArea2 from '@/components/ProjectMarzii/MarziiArea2';
-import MarziiArea3 from '@/components/ProjectMarzii/MarziiArea3';
-import MarziiArea4 from '@/components/ProjectMarzii/MarziiArea4';
-import MarziiArea5 from '@/components/ProjectMarzii/MarziiArea5';
-import MarziiArea6 from '@/components/ProjectMarzii/MarziiArea6';
-import MarziiBanner from '@/components/ProjectMarzii/MarziiBanner';
-import MarziiBannerImg from '@/components/ProjectMarzii/MarziiBannerImg';
-import MarziiFooter from '@/components/ProjectMarzii/MarziiFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
+import MarziiArea from "../../ProjectMarzii/MarziiArea";
+import MarziiArea2 from "../../ProjectMarzii/MarziiArea2";
+import MarziiArea3 from "../../ProjectMarzii/MarziiArea3";
+import MarziiArea4 from "../../ProjectMarzii/MarziiArea4";
+import MarziiArea5 from "../../ProjectMarzii/MarziiArea5";
+import MarziiBanner from "../../ProjectMarzii/MarziiBanner";
+import MarziiBannerImg from "../../ProjectMarzii/MarziiBannerImg";
+import MarziiFooter from "../../ProjectMarzii/MarziiFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
+
 
 const MarziiHome = () => {
     return (
