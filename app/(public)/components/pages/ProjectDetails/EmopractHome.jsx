@@ -1,15 +1,13 @@
+import EmopractArea from "../../ProjectEmopract/EmopractArea";
+import EmopractArea2 from "../../ProjectEmopract/EmopractArea2";
+import EmopractArea3 from "../../ProjectEmopract/EmopractArea3";
+import EmopractArea4 from "../../ProjectEmopract/EmopractArea4";
+import EmopractArea5 from "../../ProjectEmopract/EmopractArea5";
+import EmopractBanner from "../../ProjectEmopract/EmopractBanner";
+import EmopractBannerImg from "../../ProjectEmopract/EmopractBannerImg";
+import EmopractFooter from "../../ProjectEmopract/EmopractFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import EmopractArea from '@/components/ProjectEmopract/EmopractArea';
-import EmopractArea2 from '@/components/ProjectEmopract/EmopractArea2';
-import EmopractArea3 from '@/components/ProjectEmopract/EmopractArea3';
-import EmopractArea4 from '@/components/ProjectEmopract/EmopractArea4';
-import EmopractArea5 from '@/components/ProjectEmopract/EmopractArea5';
-import EmopractArea6 from '@/components/ProjectEmopract/EmopractArea6';
-import EmopractBanner from '@/components/ProjectEmopract/EmopractBanner';
-import EmopractBannerImg from '@/components/ProjectEmopract/EmopractBannerImg';
-import EmopractFooter from '@/components/ProjectEmopract/EmopractFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
 
 const EmopractHome = () => {
     return (

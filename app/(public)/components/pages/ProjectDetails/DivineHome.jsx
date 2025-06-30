@@ -1,14 +1,11 @@
+import DivineArea from "../../ProjectDivine/DivineArea";
+import DivineArea2 from "../../ProjectDivine/DivineArea2";
+import DivineArea3 from "../../ProjectDivine/DivineArea3";
+import DivineArea5 from "../../ProjectDivine/DivineArea5";
+import DivineBanner from "../../ProjectDivine/DivineBanner";
+import DivineBannerImg from "../../ProjectDivine/DivineBannerImg";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import DivineArea from '@/components/ProjectDivine/DivineArea';
-import DivineArea2 from '@/components/ProjectDivine/DivineArea2';
-import DivineArea3 from '@/components/ProjectDivine/DivineArea3';
-import DivineArea4 from '@/components/ProjectDivine/DivineArea4';
-import DivineArea5 from '@/components/ProjectDivine/DivineArea5';
-import DivineArea6 from '@/components/ProjectDivine/DivineArea6';
-import DivineBanner from '@/components/ProjectDivine/DivineBanner';
-import DivineBannerImg from '@/components/ProjectDivine/DivineBannerImg';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
 
 const DivineHome = () => {
     return (

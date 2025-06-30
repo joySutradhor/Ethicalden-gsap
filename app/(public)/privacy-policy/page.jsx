@@ -1,5 +1,6 @@
-import PrivacyPolicyHome from '@/components/pages/PrivacyPolicy/PrivacyPolicyHome';
+
 import React from 'react';
+import PrivacyPolicyHome from '../components/pages/PrivacyPolicy/PrivacyPolicyHome';
 
 export const metadata = {
   title: "Privacy Policy - Ethical Den",

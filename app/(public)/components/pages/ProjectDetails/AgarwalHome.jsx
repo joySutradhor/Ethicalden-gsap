@@ -1,14 +1,14 @@
 
-import AgarwalArea from '@/components/ProjectAgarwal/AgarwalArea';
-import AgarwalArea2 from '@/components/ProjectAgarwal/AgarwalArea2';
-import AgarwalArea3 from '@/components/ProjectAgarwal/AgarwalArea3';
-import AgarwalArea4 from '@/components/ProjectAgarwal/AgarwalArea4';
-import AgarwalArea5 from '@/components/ProjectAgarwal/AgarwalArea5';
-import AgarwalBanner from '@/components/ProjectAgarwal/AgarwalBanner';
-import AgarwalBannerImg from '@/components/ProjectAgarwal/AgarwalBannerImg';
-import AgarwalFooter from '@/components/ProjectAgarwal/AgarwalFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
 import React from 'react';
+import Navbar from '../../Shared/Navbar/Navbar';
+import AgarwalBanner from '../../ProjectAgarwal/AgarwalBanner';
+import AgarwalBannerImg from '../../ProjectAgarwal/AgarwalBannerImg';
+import AgarwalArea from '../../ProjectAgarwal/AgarwalArea';
+import AgarwalArea2 from '../../ProjectAgarwal/AgarwalArea2';
+import AgarwalArea3 from '../../ProjectAgarwal/AgarwalArea3';
+import AgarwalArea4 from '../../ProjectAgarwal/AgarwalArea4';
+import AgarwalArea5 from '../../ProjectAgarwal/AgarwalArea5';
+import AgarwalFooter from '../../ProjectAgarwal/AgarwalFooter';
 
 const AgarwalHome = () => {
     return (

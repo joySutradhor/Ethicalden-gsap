@@ -1,15 +1,13 @@
+import ELajArea from "../../ProjectELaj/ELajArea";
+import ELajArea2 from "../../ProjectELaj/ELajArea2";
+import ELajArea3 from "../../ProjectELaj/ELajArea3";
+import ELajArea4 from "../../ProjectELaj/ELajArea4";
+import ELajArea5 from "../../ProjectELaj/ELajArea5";
+import ELajBanner from "../../ProjectELaj/ELajBanner";
+import ELajBannerImg from "../../ProjectELaj/ELajBannerImg";
+import ELajFooter from "../../ProjectELaj/ELajFooter";
+import Navbar from "../../Shared/Navbar/Navbar";
 
-import ELajArea from '@/components/ProjectELaj/ELajArea';
-import ELajArea2 from '@/components/ProjectELaj/ELajArea2';
-import ELajArea3 from '@/components/ProjectELaj/ELajArea3';
-import ELajArea4 from '@/components/ProjectELaj/ELajArea4';
-import ELajArea5 from '@/components/ProjectELaj/ELajArea5';
-import ELajArea6 from '@/components/ProjectELaj/ELajArea6';
-import ELajBanner from '@/components/ProjectELaj/ELajBanner';
-import ELajBannerImg from '@/components/ProjectELaj/ELajBannerImg';
-import ELajFooter from '@/components/ProjectELaj/ELajFooter';
-import Navbar from '@/components/Shared/Navbar/Navbar';
-import React from 'react';
 
 const ELajHome = () => {
     return (
