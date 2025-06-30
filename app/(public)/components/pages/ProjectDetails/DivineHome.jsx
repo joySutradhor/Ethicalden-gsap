@@ -1,6 +1,7 @@
 import DivineArea from "../../ProjectDivine/DivineArea";
 import DivineArea2 from "../../ProjectDivine/DivineArea2";
 import DivineArea3 from "../../ProjectDivine/DivineArea3";
+import DivineArea4 from "../../ProjectDivine/DivineArea4";
 import DivineArea5 from "../../ProjectDivine/DivineArea5";
 import DivineBanner from "../../ProjectDivine/DivineBanner";
 import DivineBannerImg from "../../ProjectDivine/DivineBannerImg";
