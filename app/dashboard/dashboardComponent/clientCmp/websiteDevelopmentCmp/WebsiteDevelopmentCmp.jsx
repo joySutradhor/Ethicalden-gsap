@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 
 export default function WebsiteDevelopmentCmp () {
+  const [files, setFiles] = useState([])
   const [form, setForm] = useState({
     organizationName: '',
     contactPerson: '',
@@ -51,7 +52,7 @@ export default function WebsiteDevelopmentCmp () {
 
   const handleImageChange = e => {
     const files = Array.from(e.target.files)
-    setForm(prev => ({ ...prev, referanceFile: files }))
+    setFiles(files)
     console.log('Uploaded files:', files)
   }
 
@@ -62,10 +63,6 @@ export default function WebsiteDevelopmentCmp () {
 
   return (
     <div>
-      <h2 className='text-2xl font-bold text-[#a8ff57] mb-5'>
-        Website Project Brief
-      </h2>
-
       <form
         onSubmit={handleSubmit}
         className='text-white  grid grid-cols-2 gap-x-10 gap-y-5'

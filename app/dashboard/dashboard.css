@@ -24,10 +24,13 @@
 .form-label {
   @apply block text-sm font-medium mb-1 text-black/80 ;
 }
+.service-form-label {
+  @apply block text-sm font-medium mb-1 text-white/80 ;
+}
 
 .inputForm {
-  @apply mt-3 border border-white/10 rounded-md p-2 mb-4 outline-none w-full text-sm;
+  @apply  border border-white/10 rounded-md p-2 mb-4 outline-none w-full text-sm bg-white/10 text-white placeholder:text-white/40;
 }
 .textareaForm {
-  @apply w-full border border-white/10 rounded-md p-2 mb-4 h-24 mt-3 outline-none text-sm;
+  @apply w-full border border-white/10 rounded-md p-2 mb-4 h-24  outline-none text-sm bg-white/10 text-white placeholder:text-white/40;
 }

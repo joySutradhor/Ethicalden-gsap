@@ -1,5 +1,3 @@
-
-
 'use client'
 import React, { useState } from 'react'
 import Topbar from '../../topbar'
@@ -26,7 +24,7 @@ export default function LogoDesingCmp () {
     budget: '',
     deadline: '',
     fileTypes: [],
-    fileTypesData: "",
+    fileTypesData: '',
     needGuideline: '',
     otherNotes: ''
   })
@@ -69,11 +67,14 @@ export default function LogoDesingCmp () {
         />
       </div>
       <form onSubmit={handleSubmit} className='space-y-5 text-white'>
-        <h2 className='text-2xl font-semibold mb-4'>Logo Design Brief</h2>
+
 
         <div className='grid lg:grid-cols-2 gap-x-5'>
           <div>
-            <label htmlFor='businessName' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='businessName'
+              className='block  text-sm font-medium mb-1'
+            >
               Business or Brand Name
             </label>
             <input
@@ -85,7 +86,10 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label htmlFor='tagline' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='tagline'
+              className='block  text-sm font-medium mb-1'
+            >
               Tagline or Slogan
             </label>
             <input
@@ -99,7 +103,10 @@ export default function LogoDesingCmp () {
 
         <div className='grid lg:grid-cols-2 gap-x-5'>
           <div>
-            <label htmlFor='industry' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='industry'
+              className='block  text-sm font-medium mb-1'
+            >
               Industry
             </label>
             <input
@@ -110,7 +117,10 @@ export default function LogoDesingCmp () {
             />
           </div>
           <div>
-            <label htmlFor='targetAudience' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='targetAudience'
+              className='block  text-sm font-medium mb-1'
+            >
               Target Audience
             </label>
 
@@ -124,7 +134,7 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label htmlFor='services' className='block  mb-1 text-xl font-semibold'>
+          <label htmlFor='services' className='block  text-sm font-medium mb-1'>
             What products or services do you offer?
           </label>
           <textarea
@@ -136,7 +146,10 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label htmlFor='brandValues' className='block  mb-1 text-xl font-semibold'>
+          <label
+            htmlFor='brandValues'
+            className='block  text-sm font-medium mb-1'
+          >
             Brand Values or Mission
           </label>
           <textarea
@@ -148,7 +161,10 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label htmlFor='brandWords' className='block  mb-1 text-xl font-semibold'>
+          <label
+            htmlFor='brandWords'
+            className='block  text-sm font-medium mb-1'
+          >
             Describe your brand in 3–5 words
           </label>
           <input
@@ -160,7 +176,10 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label htmlFor='logoMessage' className='block  mb-1 text-xl font-semibold'>
+          <label
+            htmlFor='logoMessage'
+            className='block  text-sm font-medium mb-1'
+          >
             What feeling or message should your logo convey?
           </label>
           <textarea
@@ -173,7 +192,7 @@ export default function LogoDesingCmp () {
 
         <div className='grid  '>
           <div>
-            <label className='block  mb-1 text-xl font-semibold'>
+            <label className='block  text-sm font-medium mb-1'>
               What style fits your brand?
             </label>
             {[
@@ -205,7 +224,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label className='block  mb-1 text-xl font-semibold'>
+            <label className='block  text-sm font-medium mb-1'>
               Where will the logo be used?
             </label>
             {[
@@ -235,7 +254,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label className='block  mb-1 text-xl font-semibold'>
+            <label className='block  text-sm font-medium mb-1'>
               Do you need different versions?
             </label>
             {[
@@ -263,7 +282,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label className='block  mb-1 text-xl font-semibold'>
+            <label className='block  text-sm font-medium mb-1'>
               Logo file types needed:
             </label>
             {['PNG', 'JPEG', 'SVG', 'AI', 'PDF', 'EPS'].map(type => (
@@ -288,7 +307,10 @@ export default function LogoDesingCmp () {
 
         <div className='grid lg:grid-cols-2 gap-x-5 '>
           <div>
-            <label htmlFor='brandColors' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='brandColors'
+              className='block  text-sm font-medium mb-1'
+            >
               Preferred Brand Colors
             </label>
             <input
@@ -300,7 +322,10 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label htmlFor='avoidColors' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='avoidColors'
+              className='block  text-sm font-medium mb-1'
+            >
               Colors to Avoid
             </label>
             <input
@@ -314,7 +339,10 @@ export default function LogoDesingCmp () {
 
         <div className='grid lg:grid-cols-2 gap-5'>
           <div>
-            <label htmlFor='typography' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='typography'
+              className='block  text-sm font-medium mb-1'
+            >
               Preferred fonts or typography styles
             </label>
 
@@ -327,7 +355,7 @@ export default function LogoDesingCmp () {
           </div>
 
           {/* <div>
-          <label htmlFor='existingLogo' className='block  mb-1 text-xl font-semibold'>
+          <label htmlFor='existingLogo' className='block  text-sm font-medium mb-1'>
             Do you already have a logo?
           </label>
           <select
@@ -349,7 +377,7 @@ export default function LogoDesingCmp () {
         </div> */}
 
           <div>
-            <label htmlFor='budget' className='block  mb-1 text-xl font-semibold'>
+            <label htmlFor='budget' className='block  text-sm font-medium mb-1'>
               What is your budget?
             </label>
             <input
@@ -361,7 +389,10 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label htmlFor='deadline' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='deadline'
+              className='block  text-sm font-medium mb-1'
+            >
               What is your desired timeline or deadline?
             </label>
             <input
@@ -374,7 +405,10 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label htmlFor='needGuideline' className='block  mb-1 text-xl font-semibold'>
+            <label
+              htmlFor='needGuideline'
+              className='block  text-sm font-medium mb-1'
+            >
               Do you need a brand guideline or usage manual?
             </label>
             <select
@@ -400,7 +434,10 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label htmlFor='otherNotes' className='block  mb-1 text-xl font-semibold'>
+          <label
+            htmlFor='otherNotes'
+            className='block  text-sm font-medium mb-1'
+          >
             Anything else you'd like us to know?
           </label>
           <textarea
@@ -412,7 +449,10 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label htmlFor='referanceFile' className='block  mb-1 text-xl font-semibold'>
+          <label
+            htmlFor='referanceFile'
+            className='block  text-sm font-medium mb-1'
+          >
             Upload your Files here ?
           </label>
           <input
