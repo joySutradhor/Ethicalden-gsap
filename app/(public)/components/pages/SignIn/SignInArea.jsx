@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 const SignInArea = () => {
   // const [activeTab, setActiveTab] = useState('signin');
@@ -108,6 +109,15 @@ const SignInArea = () => {
             >
               Sign In
             </button>
+
+            <p className='text-center text-white/70 text-sm mt-4'>
+              Don't already account ?{' '}
+              <Link href='/make-request'>
+                <span className='underline underline-offset-4 text-medium font-base'>
+                  Sign Up
+                </span>
+              </Link>
+            </p>
           </motion.form>
         </AnimatePresence>
       </div>

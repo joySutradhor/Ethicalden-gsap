@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
+import Link from 'next/link'
 
 const servicesList = [
   'Branding',
@@ -139,8 +140,8 @@ const MakeARequestArea = () => {
             Submit Request
           </button>
 
-          <p className='text-center text-gray-500 text-sm mt-4'>
-            We respect your privacy. Your information will never be shared.
+          <p className='text-center text-white/70 text-sm mt-4'>
+           Already sign up <Link href="/sign-in"><span className='underline underline-offset-4 text-medium font-base'>Sign In</span></Link>
           </p>
         </motion.form>
       </AnimatePresence>
