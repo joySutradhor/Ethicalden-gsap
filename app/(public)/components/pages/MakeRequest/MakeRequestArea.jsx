@@ -6,20 +6,20 @@ import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import Link from 'next/link'
 
-const servicesList = [
-  'Branding',
-  'AI Services',
-  'Web Development',
-  'UI/UX Design',
-  'Software Development',
-  'App Development',
-  'Cyber Security',
-  'Digital Marketing',
-  'Photo and Video Editing',
-  'SEO Optimization',
-  'Maintenance & Support',
-  'Others'
-]
+// const servicesList = [
+//   'Branding',
+//   'AI Services',
+//   'Web Development',
+//   'UI/UX Design',
+//   'Software Development',
+//   'App Development',
+//   'Cyber Security',
+//   'Digital Marketing',
+//   'Photo and Video Editing',
+//   'SEO Optimization',
+//   'Maintenance & Support',
+//   'Others'
+// ]
 
 const MakeARequestArea = () => {
   const router = useRouter()
@@ -97,7 +97,7 @@ const MakeARequestArea = () => {
               />
             </div>
 
-            <div className='relative'>
+            {/* <div className='relative'>
               <select
                 className='peer w-full p-4 rounded-lg bg-[#2a2a2a]/70 border border-gray-700 focus:border-[#a8ff57] focus:ring-1 focus:ring-[#09e5e5]/70 text-white appearance-none outline-none'
                 value={formData.service}
@@ -130,7 +130,7 @@ const MakeARequestArea = () => {
                   />
                 </svg>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <button

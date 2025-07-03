@@ -10,6 +10,7 @@ import { MdDoneAll } from 'react-icons/md'
 import { MdNotificationsActive } from 'react-icons/md'
 import { GrServices } from "react-icons/gr";
 import { GrBusinessService } from "react-icons/gr";
+import { MdPassword } from "react-icons/md";
 
 
 
@@ -31,59 +32,49 @@ const navLinks = [
     icon: <MdNotificationsActive size={18} />,
     user: 'SuperAdmin'
   },
-  {
-    name: 'Service Request',
-    href: '/dashboard/admin/service-requests',
-    icon: <GrServices size={18} />,
-    user: 'SuperAdmin'
-  },
+  // {
+  //   name: 'Service Request',
+  //   href: '/dashboard/admin/service-requests',
+  //   icon: <GrServices size={18} />,
+  //   user: 'SuperAdmin'
+  // },
   {
     name: 'Service Offer Requests',
     href: '/dashboard/admin/service-offer-requests',
     icon: <GrServices size={18} />,
     user: 'SuperAdmin'
   },
-  {
-    name: 'Accepted Request',
-    href: '/dashboard/accepted',
-    icon: <MdDoneAll size={18} />,
-    user: 'SuperAdmin'
-  },
-  {
-    name: 'Accepted Request',
-    href: '/dashboard/accepted',
-    icon: <MdDoneAll size={18} />,
-    user: 'SuperAdmin'
-  },
-  {
-    name: 'Accepted Request',
-    href: '/dashboard/accepted',
-    icon: <MdDoneAll size={18} />,
-    user: 'SuperAdmin'
-  },
+
   {
     name: 'My Dashboard',
     href: '/dashboard/client/client-dashboard',
     icon: <IoHomeOutline size={18} />,
     user: 'Client'
   },
-  {
-    name: 'Manage Service Offer',
-    href: '/dashboard/client/manage-service-offer',
-    icon: <GrServices size={18} />,
-    user: 'Client'
-  },
+  
+  // {
+  //   name: 'Manage Service Offer',
+  //   href: '/dashboard/client/manage-service-offer',
+  //   icon: <GrServices size={18} />,
+  //   user: 'Client'
+  // },
 
-  {
-    name: 'Create Service Offer',
-    href: '/dashboard/client/create-service-offer',
-    icon: <FaPlus size={18} />,
-    user: 'Client'
-  },
+  // {
+  //   name: 'Create Service Offer',
+  //   href: '/dashboard/client/create-service-offer',
+  //   icon: <FaPlus size={18} />,
+  //   user: 'Client'
+  // },
   {
     name: 'All Services',
     href: '/dashboard/client/all-services',
     icon: <GrBusinessService size={18} />,
+    user: 'Client'
+  },
+  {
+    name: 'Change Password',
+    href: '/dashboard/client/client-change-password',
+    icon: <MdPassword size={18} />,
     user: 'Client'
   }
 

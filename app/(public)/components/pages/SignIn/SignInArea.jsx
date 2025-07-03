@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import useAuthInfo from '@/app/dashboard/dashboardComponent/hooks/useAuthInfo'
 
 const SignInArea = () => {
   // const [activeTab, setActiveTab] = useState('signin');
+   const { token } = useAuthInfo()
   const router = useRouter()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -20,7 +22,7 @@ const SignInArea = () => {
     try {
       const sendRequest = await axios.post(
         'https://api.clientservice.mrshakil.com/api/login/',
-        formData
+        formData 
       )
 
       console.log(sendRequest)
