@@ -26,7 +26,7 @@ const navLinks = [
     user: 'SuperAdmin'
   },
   {
-    name: 'Manage Requests',
+    name: 'Manage Acc Requests',
     href: '/dashboard/admin/manage-requests',
     icon: <MdNotificationsActive size={18} />,
     user: 'SuperAdmin'
@@ -35,6 +35,24 @@ const navLinks = [
     name: 'Service Request',
     href: '/dashboard/admin/service-requests',
     icon: <GrServices size={18} />,
+    user: 'SuperAdmin'
+  },
+  {
+    name: 'Service Offer Requests',
+    href: '/dashboard/admin/service-offer-requests',
+    icon: <GrServices size={18} />,
+    user: 'SuperAdmin'
+  },
+  {
+    name: 'Accepted Request',
+    href: '/dashboard/accepted',
+    icon: <MdDoneAll size={18} />,
+    user: 'SuperAdmin'
+  },
+  {
+    name: 'Accepted Request',
+    href: '/dashboard/accepted',
+    icon: <MdDoneAll size={18} />,
     user: 'SuperAdmin'
   },
   {

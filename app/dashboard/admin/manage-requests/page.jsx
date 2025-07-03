@@ -14,7 +14,7 @@ export default function Page () {
     const fetchRequests = async () => {
       try {
         const res = await axios.get(
-          'https://api.clientservice.mrshakil.com/api/service-request/'
+          'https://api.clientservice.mrshakil.com/api/client-request/'
         )
         setServiceRequests(res.data)
         console.log(res.data)
@@ -42,7 +42,7 @@ export default function Page () {
     if (result.isConfirmed) {
       try {
         await axios.delete(
-          `https://api.clientservice.mrshakil.com/api/service-delete/${id}/`,
+          `https://api.clientservice.mrshakil.com/api/client-delete/${id}/`,
           {
             headers: {
               Authorization: `Token ${token}`
@@ -62,6 +62,8 @@ export default function Page () {
       }
     }
   }
+
+  // accepted
   const handleUpdate = async id => {
     const result = await Swal.fire({
       title: 'Are you sure?',
@@ -76,7 +78,7 @@ export default function Page () {
     if (result.isConfirmed) {
       try {
         await axios.patch(
-          `https://api.clientservice.mrshakil.com/api/service-accept/${id}/`,
+          `https://api.clientservice.mrshakil.com/api/client-accept/${id}/`,
           {},
           {
             headers: {
@@ -114,7 +116,7 @@ export default function Page () {
     if (result.isConfirmed) {
       try {
         await axios.patch(
-          `https://api.clientservice.mrshakil.com/api/service-reject/${id}/`,
+          `https://api.clientservice.mrshakil.com/api/client-reject//${id}/`,
           {},
           {
             headers: {

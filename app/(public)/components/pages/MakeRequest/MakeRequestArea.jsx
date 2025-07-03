@@ -37,7 +37,7 @@ const MakeARequestArea = () => {
 
     try {
       const sendRequest = await axios.post(
-        'https://api.clientservice.mrshakil.com/api/service-request/',
+        'https://api.clientservice.mrshakil.com/api/client-request/',
         formData
       )
 
