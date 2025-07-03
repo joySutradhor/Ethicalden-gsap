@@ -1,8 +1,12 @@
 'use client'
 import React, { useState } from 'react'
+import useAuthInfo from '../../hooks/useAuthInfo'
+import Swal from 'sweetalert2'
+import axios from 'axios'
 
 export default function WebsiteDevelopmentCmp () {
   const [files, setFiles] = useState([])
+  const { token } = useAuthInfo()
   const [form, setForm] = useState({
     organizationName: '',
     contactPerson: '',
@@ -56,9 +60,48 @@ export default function WebsiteDevelopmentCmp () {
     console.log('Uploaded files:', files)
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    console.log('📦 Website Brief:', form)
+
+    const submitData = new FormData()
+    submitData.append('service', 'Web Development')
+    submitData.append('question_set', JSON.stringify(form))
+
+    files.forEach(file => {
+      submitData.append('project_assets', file)
+    })
+
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit this form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit it!',
+      cancelButtonText: 'Cancel'
+    })
+
+    if (result.isConfirmed) {
+      try {
+        const response = await axios.post(
+          'https://api.clientservice.mrshakil.com/api/client_service_questionaries/',
+          submitData,
+          {
+            headers: {
+              Authorization: `Token ${token}`
+          
+            }
+          }
+        )
+
+        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        console.log(response.data)
+      } catch (error) {
+        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        console.error(error?.response?.data || error.message)
+      }
+    } else {
+      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+    }
   }
 
   return (

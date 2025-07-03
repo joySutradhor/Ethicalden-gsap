@@ -1,18 +1,59 @@
 'use client'
+import axios from 'axios'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import Swal from 'sweetalert2'
+import useAuthInfo from '../../hooks/useAuthInfo'
 
 export default function PhotoAndVideoEditng () {
   const { register, handleSubmit, watch } = useForm()
   const [files, setFiles] = useState([])
+  const { token } = useAuthInfo()
 
   const handleImageChange = async e => {
     const files = Array.from(e.target.files)
     setFiles(files)
   }
-  const onSubmit = data => {
-    console.log('Form Data:', data)
-    console.log('Form Data:', files)
+  const onSubmit = async data => {
+    // Construct FormData
+    const formData = new FormData()
+    formData.append('service', 'Photo and Video Editing')
+    formData.append('question_set', JSON.stringify(data))
+
+    files.forEach(file => {
+      formData.append('project_assets', file)
+    })
+
+    // Show SweetAlert confirmation
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit this form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit it!',
+      cancelButtonText: 'Cancel'
+    })
+
+    if (result.isConfirmed) {
+      try {
+        const response = await axios.post(
+          'https://api.clientservice.mrshakil.com/api/client_service_questionaries/',
+          formData,
+          {
+            headers: {
+              Authorization: `Token ${token}`
+            }
+          }
+        )
+        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        console.log(response.data)
+      } catch (error) {
+        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        console.error(error)
+      }
+    } else {
+      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+    }
   }
 
   const photoEditing = watch('photoEditing')
@@ -406,22 +447,7 @@ export default function PhotoAndVideoEditng () {
         Email (if under size limit)
       </label>
 
-      <div>
-        <label
-          htmlFor='referanceFile'
-          className='block  mb-1 text-sm font-medium mt-5'
-        >
-          Upload your Files here ?
-        </label>
-        <input
-          id='referanceFile'
-          type='file'
-          multiple
-          name='referanceFile'
-          onChange={handleImageChange}
-          className='inputForm text-white'
-        />
-      </div>
+     
 
       <div>
         <label

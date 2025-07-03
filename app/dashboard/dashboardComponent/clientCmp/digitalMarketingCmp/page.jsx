@@ -1,6 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
+import useAuthInfo from '../../hooks/useAuthInfo'
+import Swal from 'sweetalert2'
+import axios from 'axios'
 
 const questions = [
   {
@@ -195,6 +198,7 @@ const initialState = {
 export default function DigitalMarketingCmp () {
   const [formData, setFormData] = useState(initialState)
   const [files, setFiles] = useState([])
+  const { token } = useAuthInfo()
 
   // Handle text and textarea input changes
   const handleInputChange = e => {
@@ -227,10 +231,48 @@ export default function DigitalMarketingCmp () {
     })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    console.log('📊 Digital Marketing Questionnaire Data:', formData)
-    console.log('📊 Digital Marketing Questionnaire Data:', files)
+ 
+    const submitData = new FormData()
+    submitData.append('service', 'Digital Marketing')
+    submitData.append('question_set', JSON.stringify(formData))
+
+    files.forEach(file => {
+      submitData.append('project_assets', file)
+    })
+
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit this form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit it!',
+      cancelButtonText: 'Cancel'
+    })
+
+    if (result.isConfirmed) {
+      try {
+        const response = await axios.post(
+          'https://api.clientservice.mrshakil.com/api/client_service_questionaries/',
+          submitData,
+          {
+            headers: {
+              Authorization: `Token ${token}`
+              // DO NOT manually set Content-Type; Axios will handle it
+            }
+          }
+        )
+
+        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        console.log(response.data)
+      } catch (error) {
+        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        console.error(error?.response?.data || error.message)
+      }
+    } else {
+      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+    }
   }
 
   return (

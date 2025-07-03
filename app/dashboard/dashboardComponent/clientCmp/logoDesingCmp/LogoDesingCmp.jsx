@@ -1,9 +1,13 @@
 'use client'
 import React, { useState } from 'react'
 import Topbar from '../../topbar'
+import axios from 'axios'
+import Swal from 'sweetalert2'
+import useAuthInfo from '../../hooks/useAuthInfo'
 
 export default function LogoDesingCmp () {
   const [files, setFiles] = useState([])
+  const { token } = useAuthInfo()
   const [formData, setFormData] = useState({
     businessName: '',
     tagline: '',
@@ -53,16 +57,55 @@ export default function LogoDesingCmp () {
     console.log('Uploaded files:', files)
   }
 
-  const handleSubmit = e => {
+   const handleSubmit = async e => {
     e.preventDefault()
-    console.log(' Submitted Logo Brief:', formData)
+
+    const submitData = new FormData()
+    submitData.append('service', 'Logo Design')
+    submitData.append('question_set', JSON.stringify(formData))
+
+    files.forEach(file => {
+      submitData.append('project_assets', file)
+    })
+
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit this form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit it!',
+      cancelButtonText: 'Cancel'
+    })
+
+    if (result.isConfirmed) {
+      try {
+        const response = await axios.post(
+          'https://api.clientservice.mrshakil.com/api/client_service_questionaries/',
+          submitData,
+          {
+            headers: {
+              Authorization: `Token ${token}`
+          
+            }
+          }
+        )
+
+        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        console.log(response.data)
+      } catch (error) {
+        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        console.error(error?.response?.data || error.message)
+      }
+    } else {
+      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+    }
   }
 
   return (
     <div className='section_space'>
       <div>
         <Topbar
-          title='Branding Service'
+          title='Logo Design'
           des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
         />
       </div>

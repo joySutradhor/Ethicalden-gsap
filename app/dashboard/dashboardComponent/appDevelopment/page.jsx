@@ -1,6 +1,9 @@
 'use client'
 
+import axios from 'axios'
 import React, { useState } from 'react'
+import Swal from 'sweetalert2'
+import useAuthInfo from '../hooks/useAuthInfo'
 
 const questions = [
   {
@@ -157,7 +160,8 @@ const initialState = questions.reduce((acc, q) => {
 
 export default function AppDevelopmentCmp () {
   const [formData, setFormData] = useState(initialState)
-  const [files , setFiles] = useState([])
+  const [files, setFiles] = useState([])
+  const { token } = useAuthInfo()
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -169,10 +173,47 @@ export default function AppDevelopmentCmp () {
     setFiles(files)
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    console.log('📝 App Development Form Data:', formData)
-    console.log('📝 App Development Form Data:', files)
+
+    const submitData = new FormData()
+    submitData.append('service', 'App Development')
+    submitData.append('question_set', JSON.stringify(formData))
+
+    files.forEach(file => {
+      submitData.append('project_assets', file)
+    })
+
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit this form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit it!',
+      cancelButtonText: 'Cancel'
+    })
+
+    if (result.isConfirmed) {
+      try {
+        const response = await axios.post(
+          'https://api.clientservice.mrshakil.com/api/client_service_questionaries/',
+          submitData,
+          {
+            headers: {
+              Authorization: `Token ${token}`
+            }
+          }
+        )
+
+        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        console.log(response.data)
+      } catch (error) {
+        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        console.error(error?.response?.data || error.message)
+      }
+    } else {
+      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+    }
   }
 
   return (

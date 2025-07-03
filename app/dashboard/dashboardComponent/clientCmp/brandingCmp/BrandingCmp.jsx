@@ -1,19 +1,61 @@
 'use client'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import useAuthInfo from '../../hooks/useAuthInfo'
+import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default function BrandingCmp () {
   const { register, handleSubmit } = useForm()
   const [files, setFiles] = useState([])
+  const { token } = useAuthInfo()
 
   const handleImageChange = async e => {
     const files = Array.from(e.target.files)
     setFiles(files)
   }
 
-  const onSubmit = data => {
-    console.log('Branding Questionnaire:', data)
-    console.log('Branding Questionnaire:', files)
+  const onSubmit = async data => {
+    
+    // Construct FormData
+    const formData = new FormData()
+    formData.append('service', 'Website Design')
+    formData.append('question_set', JSON.stringify(data)) 
+
+    files.forEach(file => {
+      formData.append('project_assets', file)
+    })
+
+    // Show SweetAlert confirmation
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit this form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit it!',
+      cancelButtonText: 'Cancel'
+    })
+
+    if (result.isConfirmed) {
+      try {
+        const response = await axios.post(
+          'https://api.clientservice.mrshakil.com/api/client_service_questionaries/',
+          formData,
+          {
+            headers: {
+              Authorization: `Token ${token}`
+            }
+          }
+        )
+        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        console.log(response.data)
+      } catch (error) {
+        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        console.error(error)
+      }
+    } else {
+      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+    }
   }
 
   return (
