@@ -1,5 +1,5 @@
 'use client'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 // import { Menu, X, Home, FileText, CheckCircle , Plus  } from 'lucide-react'
 import { GrMenu } from 'react-icons/gr'
@@ -8,17 +8,18 @@ import { IoHomeOutline } from 'react-icons/io5'
 import { MdOutlineRemoveDone } from 'react-icons/md'
 import { MdDoneAll } from 'react-icons/md'
 import { MdNotificationsActive } from 'react-icons/md'
-import { GrServices } from "react-icons/gr";
-import { GrBusinessService } from "react-icons/gr";
-import { MdPassword } from "react-icons/md";
-
-
-
+import { GrServices } from 'react-icons/gr'
+import { GrBusinessService } from 'react-icons/gr'
+import { MdPassword } from 'react-icons/md'
+import { IoLogOutOutline } from 'react-icons/io5'
+import { LuMessageSquareMore } from 'react-icons/lu'
+import { BsClockHistory } from 'react-icons/bs'
 
 import { useState } from 'react'
 import Image from 'next/image'
 import logo from '../../assets/ethicalden.png'
 import { FaPlus } from 'react-icons/fa'
+import Swal from 'sweetalert2'
 const navLinks = [
   {
     name: 'Dashboard',
@@ -51,7 +52,7 @@ const navLinks = [
     icon: <IoHomeOutline size={18} />,
     user: 'Client'
   },
-  
+
   // {
   //   name: 'Manage Service Offer',
   //   href: '/dashboard/client/manage-service-offer',
@@ -76,18 +77,46 @@ const navLinks = [
     href: '/dashboard/client/client-change-password',
     icon: <MdPassword size={18} />,
     user: 'Client'
+  },
+  {
+    name: 'Send Message',
+    href: '/dashboard/client/client-send-message',
+    icon: <LuMessageSquareMore size={18} />,
+    user: 'Client'
+  },
+  {
+    name: 'Message History',
+    href: '/dashboard/client/client-message-history',
+    icon: <BsClockHistory size={18} />,
+    user: 'Client'
   }
-
-  
 ]
 
 export default function Sidebar ({ token, userType }) {
   console.log(token, userType)
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
 
   const isActive = path => pathname === path
 
+  const handleLogOut = () => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will be logged out!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#111',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, log me out'
+    }).then(result => {
+      if (result.isConfirmed) {
+        localStorage.clear()
+        router.push('/sign-in')
+        Swal.fire('Logged out!', 'You have been logged out.', 'success')
+      }
+    })
+  }
   return (
     <>
       {/* Mobile toggle */}
@@ -99,7 +128,7 @@ export default function Sidebar ({ token, userType }) {
       </div>
 
       {/* Sidebar */}
-      <div 
+      <div
         className={`${
           open ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0 fixed md:static z-40 top-0 left-0 h-full  bg-[#2222]  shadow-md p-5 transition-transform duration-300 ease-in-out`}
@@ -135,6 +164,17 @@ export default function Sidebar ({ token, userType }) {
                   {link.name}
                 </Link>
               ))}
+
+            {/* log out  */}
+            <button
+              className='bg-[#111] hover:bg-black hover:text-white transition text-white/80 font-medium py-3 pl-4 rounded-md mt-14 w-full text-left flex gap-x-1.5 items-center cursor-pointer'
+              onClick={handleLogOut}
+            >
+              <spna className='inline-block'>
+                <IoLogOutOutline />
+              </spna>{' '}
+              Log out
+            </button>
           </nav>
         </nav>
       </div>

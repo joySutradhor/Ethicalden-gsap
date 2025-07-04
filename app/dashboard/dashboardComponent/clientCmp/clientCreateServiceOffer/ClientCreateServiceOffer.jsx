@@ -141,7 +141,7 @@ const ClientCreateServiceOffer = () => {
         }
       )
 
-      console.log('✅ Server Response:', response.data)
+      console.log(' Server Response:', response.data)
 
       Swal.fire(
         'Success!',
