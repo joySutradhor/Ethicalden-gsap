@@ -7,8 +7,9 @@ export default function page () {
     <div className='section_space'>
       <Topbar
         title='Maintenance Support'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Track and manage maintenance support requests to ensure systems run smoothly. Respond promptly, schedule updates, and maintain operational efficiency.'
       />
+
       <MaintainceAndServiceCmp />
     </div>
   )

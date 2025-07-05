@@ -146,7 +146,7 @@ const SignInArea = () => {
                 if (userType === 'SuperAdmin') {
                   router.push('/dashboard')
                 } else if (userType === 'Client') {
-                  router.push('dashboard/client/client-dashboard')
+                  router.push('dashboard/client/all-services')
                 } else {
                   router.push('/') // fallback for unknown user type
                 }

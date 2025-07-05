@@ -6,8 +6,8 @@ export default function page () {
   return (
     <div className='section_space'>
       <Topbar
-        title='Photo And Video Editing '
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        title='Photo and Video Editing'
+        des='Manage editing requests with precision and creativity. Review client submissions, apply visual enhancements, and deliver polished photo and video content on time.'
       />
 
       {/* photo and video editing format */}

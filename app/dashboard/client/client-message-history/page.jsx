@@ -7,7 +7,7 @@ export default function page () {
     <div className='section_space'>
       <Topbar
         title='Message History'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Access and review your past conversations to keep track of communications. Stay organized and respond promptly to maintain strong client relationships.'
       />
 
       {/* client message history */}

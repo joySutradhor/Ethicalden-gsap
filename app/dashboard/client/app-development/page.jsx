@@ -7,8 +7,9 @@ export default function page () {
     <div className='section_space'>
       <Topbar
         title='App Development'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Manage app development projects from start to finish. Coordinate updates, address client feedback, and ensure timely delivery of high-quality applications.'
       />
+
       <AppDevelopmentCmp />
     </div>
   )

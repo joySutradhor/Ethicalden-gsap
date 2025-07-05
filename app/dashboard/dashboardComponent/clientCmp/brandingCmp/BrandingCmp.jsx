@@ -191,7 +191,7 @@ export default function BrandingCmp () {
       <div>
         <button
           type='submit'
-          className='mt-4 px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block '
+          className='mt-4 px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block cursor-pointer'
         >
           Submit
         </button>

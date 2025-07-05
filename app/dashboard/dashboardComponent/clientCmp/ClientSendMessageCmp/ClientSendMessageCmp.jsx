@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import useAuthInfo from '../../hooks/useAuthInfo'
-
+import { useRouter } from 'next/navigation'
 
 export default function ClientSendMessageCmp () {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     service_name: '',
     messages: ''
@@ -40,34 +41,80 @@ export default function ClientSendMessageCmp () {
     const { service_name, messages } = formData
 
     if (!service_name || !messages) {
-      Swal.fire('Warning', 'All fields are required!', 'warning')
+      // Swal.fire('Warning', 'All fields are required!', 'warning')
+      Swal.fire({
+        title: 'Warning!',
+        text: 'All fields are required!',
+        icon: 'info',
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#ff4d4f',
+        customClass: {
+          confirmButton: 'swal-error-btn'
+        }
+      })
+
       return
     }
 
-    try {
-      const res = await axios.post(
-        'https://api.clientservice.mrshakil.com/api/send-client-message/',
-        { service_name, messages } , {
-            headers : {
-                Authorization : `Token ${token}`
-            }
-        }
-      )
+    // Ask for confirmation before submitting
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit this form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit it!',
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
+    })
 
-      Swal.fire('Success', 'Message sent successfully!', 'success')
-      setFormData({ service_name: '', messages: '' })
-    } catch (error) {
-      Swal.fire(
-        'Error',
-        error.response?.data?.message || 'Something went wrong!',
-        'error'
-      )
+    if (result.isConfirmed) {
+      try {
+        const res = await axios.post(
+          'https://api.clientservice.mrshakil.com/api/send-client-message/',
+          { service_name, messages },
+          {
+            headers: {
+              Authorization: `Token ${token}`
+            }
+          }
+        )
+
+        Swal.fire({
+          title: 'Success!',
+          text: 'Form submitted successfully.',
+          icon: 'success',
+          confirmButtonText: 'Okay, got it!',
+          confirmButtonColor: '#a8ff57',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
+        })
+        setFormData({ service_name: '', messages: '' })
+        router.push("/dashboard/client/client-message-history")
+      } catch (error) {
+        Swal.fire({
+          title: 'Error!',
+          text: 'Something went wrong during submission.',
+          icon: 'error',
+          confirmButtonText: 'Try Again',
+          confirmButtonColor: '#ff4d4f',
+          customClass: {
+            confirmButton: 'swal-error-btn'
+          }
+        })
+      }
+    } else {
+      // Optionally handle cancel
+      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
     }
   }
 
   return (
     <section className='lg:flex justify-center items-center text-white/80 mt-10 md:mt-16 xl:mt-28 '>
-      <div className='w-full lg:w-[80%] xl:w-[50%] p-5 xl:p-10 bg-[#151515] rounded-xl shadow-md border border-white/10'>
+      <div className='w-full lg:w-[80%] xl:w-[70%] 2xl:w-[50%] p-5 xl:p-10 bg-[#151515] rounded-xl shadow-md border border-white/10'>
         <h2 className='text-2xl font-semibold mb-8'>Send Message</h2>
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div>

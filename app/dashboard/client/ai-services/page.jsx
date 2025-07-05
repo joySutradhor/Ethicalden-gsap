@@ -7,7 +7,7 @@ export default function page () {
     <div className='section_space'>
       <Topbar
         title='AI Service'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Manage and optimize AI service requests efficiently. Stay proactive in updating models, responding to feedback, and ensuring seamless AI-driven solutions.'
       />
       {/* ai serviecs */}
       <AiServiceCmp />

@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 export default function LogoDesingCmp () {
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
-  const router = useRouter();
+  const router = useRouter()
   const [formData, setFormData] = useState({
     businessName: '',
     tagline: '',
@@ -105,7 +105,7 @@ export default function LogoDesingCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
-        router.push("/dashboard/client/all-services")
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -139,7 +139,7 @@ export default function LogoDesingCmp () {
       <div>
         <Topbar
           title='Logo Design'
-          des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+          des='Manage and deliver custom logo design requests with precision. Ensure each design aligns with brand identity and meets client expectations.'
         />
       </div>
       <form onSubmit={handleSubmit} className='space-y-5 text-white'>

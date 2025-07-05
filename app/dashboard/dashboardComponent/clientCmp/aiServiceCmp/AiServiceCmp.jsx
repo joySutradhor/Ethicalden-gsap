@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 const AiServiceCmp = () => {
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
-  const router = useRouter();
+  const router = useRouter()
   const [formData, setFormData] = useState({
     companyName: '',
     businessDescription: '',
@@ -54,7 +54,11 @@ const AiServiceCmp = () => {
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'Cancel'
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (result.isConfirmed) {
@@ -80,7 +84,7 @@ const AiServiceCmp = () => {
           }
         })
 
-        router.push("/dashboard/client/all-services")
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({

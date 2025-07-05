@@ -7,8 +7,9 @@ export default function page () {
     <div className='section_space'>
       <Topbar
         title='Cyber Security'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Monitor and manage cybersecurity services to protect client data and digital assets. Respond to threats, update protocols, and ensure system integrity.'
       />
+
       <CyberSecurityCmp />
     </div>
   )

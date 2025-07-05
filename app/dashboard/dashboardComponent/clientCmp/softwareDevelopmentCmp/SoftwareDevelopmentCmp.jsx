@@ -4,6 +4,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import useAuthInfo from '../../hooks/useAuthInfo'
+import { useRouter } from 'next/navigation'
 
 const questions = [
   {
@@ -194,6 +195,7 @@ export default function SoftwareDevelopmentCmp () {
   const [formData, setFormData] = useState(initialState)
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
+  const router = useRouter()
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -222,7 +224,11 @@ export default function SoftwareDevelopmentCmp () {
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'Cancel'
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (result.isConfirmed) {
@@ -247,6 +253,7 @@ export default function SoftwareDevelopmentCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -254,7 +261,7 @@ export default function SoftwareDevelopmentCmp () {
           text: 'Something went wrong during submission.',
           icon: 'error',
           confirmButtonText: 'Try Again',
-          confirmButtonColor: '#ff4d4f', // red background
+          confirmButtonColor: '#ff4d4f', 
           customClass: {
             confirmButton: 'swal-error-btn'
           }

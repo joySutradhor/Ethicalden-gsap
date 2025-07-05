@@ -4,11 +4,13 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Swal from 'sweetalert2'
 import useAuthInfo from '../../hooks/useAuthInfo'
+import { useRouter } from 'next/navigation'
 
 export default function MaintainceAndServiceCmp () {
   const { register, handleSubmit } = useForm()
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
+  const router = useRouter()
 
   const handleImageChange = async e => {
     const files = Array.from(e.target.files)
@@ -32,7 +34,11 @@ export default function MaintainceAndServiceCmp () {
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'Cancel'
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (result.isConfirmed) {
@@ -56,6 +62,7 @@ export default function MaintainceAndServiceCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -63,7 +70,7 @@ export default function MaintainceAndServiceCmp () {
           text: 'Something went wrong during submission.',
           icon: 'error',
           confirmButtonText: 'Try Again',
-          confirmButtonColor: '#ff4d4f', // red background
+          confirmButtonColor: '#ff4d4f',
           customClass: {
             confirmButton: 'swal-error-btn'
           }
@@ -76,7 +83,7 @@ export default function MaintainceAndServiceCmp () {
         text: 'Form submission was cancelled.',
         icon: 'info',
         confirmButtonText: 'Try Again',
-        confirmButtonColor: '#ff4d4f', // red background
+        confirmButtonColor: '#ff4d4f',
         customClass: {
           confirmButton: 'swal-error-btn'
         }
@@ -372,7 +379,7 @@ export default function MaintainceAndServiceCmp () {
       <div>
         <button
           type='submit'
-          className='mt-4 px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block '
+          className='mt-4 px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block cursor-pointer '
         >
           Submit
         </button>

@@ -4,6 +4,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import useAuthInfo from '../hooks/useAuthInfo'
+import { useRouter } from 'next/navigation'
 
 const questions = [
   {
@@ -162,6 +163,7 @@ export default function AppDevelopmentCmp () {
   const [formData, setFormData] = useState(initialState)
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
+  const router = useRouter();
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -190,7 +192,11 @@ export default function AppDevelopmentCmp () {
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'Cancel'
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (result.isConfirmed) {
@@ -215,6 +221,7 @@ export default function AppDevelopmentCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
+         router.push("/dashboard/client/all-services")
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -245,14 +252,14 @@ export default function AppDevelopmentCmp () {
 
   return (
     <div className='text-white'>
-      <form onSubmit={handleSubmit} className='grid gap-6 md:grid-cols-2'>
+      <form onSubmit={handleSubmit} className='grid gap-6 xl:grid-cols-2'>
         {questions.map(({ label, name, placeholder, type }) => (
           <div key={name} className='flex flex-col'>
             <label htmlFor={name} className='service-form-label'>
               {label}
             </label>
             {type === 'textarea' ? (
-              <textarea
+              <input
                 id={name}
                 name={name}
                 placeholder={placeholder || 'Type your answer...'}
@@ -289,11 +296,12 @@ export default function AppDevelopmentCmp () {
             className='inputForm text-white'
           />
         </div>
+        <br />
 
         <div>
           <button
             type='submit'
-            className='mt-4 px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block '
+            className=' px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block cursor-pointer '
           >
             Submit
           </button>

@@ -6,9 +6,10 @@ export default function page () {
   return (
     <section className='section_space'>
       <Topbar
-        title='Change Your Passowrd'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        title='Change Your Password'
+        des='Update your account password to enhance security. Choose a strong, unique password to keep your information safe and protected.'
       />
+
       <ClientSendMessageCmp />
     </section>
   )

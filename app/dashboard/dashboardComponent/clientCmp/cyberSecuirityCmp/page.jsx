@@ -4,6 +4,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import useAuthInfo from '../../hooks/useAuthInfo'
+import { useRouter } from 'next/navigation'
 
 const questions = [
   {
@@ -197,6 +198,7 @@ export default function CyberSecurityCmp () {
   const [formData, setFormData] = useState(initialState)
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
+  const router = useRouter();
 
   // Handle text and date inputs
   const handleInputChange = e => {
@@ -238,7 +240,11 @@ export default function CyberSecurityCmp () {
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'Cancel'
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (result.isConfirmed) {
@@ -263,6 +269,7 @@ export default function CyberSecurityCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
+         router.push("/dashboard/client/all-services")
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -407,7 +414,7 @@ export default function CyberSecurityCmp () {
         <div>
           <button
             type='submit'
-            className='mt-4 px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block '
+            className='mt-4 px-6 py-2 bg-[#a8ff57] text-black rounded-md inline-block cursor-pointer'
           >
             Submit
           </button>

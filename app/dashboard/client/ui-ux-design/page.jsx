@@ -7,8 +7,8 @@ export default function page () {
     <div className='section_space'>
       {' '}
       <Topbar
-        title='Ui-Ux Design'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        title='UI/UX Design'
+        des='Manage design requests and iterations to create intuitive and engaging user experiences. Collaborate closely, update designs, and ensure seamless communication throughout the process.'
       />
       <UiuxCmp />
     </div>

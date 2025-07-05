@@ -25,7 +25,16 @@ export default function ClientChangePassword () {
     const { old_password, new_password, confirm_password } = formData
 
     if (!old_password || !new_password || !confirm_password) {
-      Swal.fire('Warning', 'All fields are required!', 'warning')
+      Swal.fire({
+        title: 'Warning!',
+        text: 'All fields are required!',
+        icon: 'Warning',
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#ff4d4f',
+        customClass: {
+          confirmButton: 'swal-error-btn'
+        }
+      })
       return
     }
 
@@ -40,9 +49,12 @@ export default function ClientChangePassword () {
       text: 'Do you want to change your password?',
       icon: 'question',
       showCancelButton: true,
-      confirmButtonColor: '#111',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, change it'
+      confirmButtonText: 'Yes, change it',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (!result.isConfirmed) {
@@ -65,20 +77,34 @@ export default function ClientChangePassword () {
         }
       )
 
-      Swal.fire('Success', 'Password changed successfully!', 'success')
+      Swal.fire({
+        title: 'Success!',
+        text: 'Change password successfully.',
+        icon: 'success',
+        confirmButtonText: 'Okay, got it!',
+        confirmButtonColor: '#a8ff57',
+        customClass: {
+          confirmButton: 'swal-confirm-btn'
+        }
+      })
       setFormData({ old_password: '', new_password: '', confirm_password: '' })
     } catch (error) {
-      Swal.fire(
-        'Error',
-        error.response?.data?.message || 'Something went wrong!',
-        'error'
-      )
+      Swal.fire({
+        title: 'Error!',
+        text: 'Something went wrong during submission.',
+        icon: 'error',
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#ff4d4f',
+        customClass: {
+          confirmButton: 'swal-error-btn'
+        }
+      })
     }
   }
 
   return (
     <section className='flex justify-center items-center mt-16 md:mt-20 xl:mt-28'>
-      <div className='xl:w-[40vw]  p-6 bg-[#151515] text-white/80 rounded-xl shadow-md'>
+      <div className='xl:w-[40vw] w-full md:w-[80vw]  p-6 bg-[#151515] text-white/80 rounded-xl shadow-md'>
         <h2 className='text-2xl font-semibold mb-4'>Change Password</h2>
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div>

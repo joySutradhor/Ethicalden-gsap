@@ -6,10 +6,11 @@ export default function page () {
   return (
     <div className='section_space'>
       <Topbar
-        title='Change Your Passowrd'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        title='Change Your Password'
+        des='Secure your account by updating your password regularly. Follow simple steps to create a strong, new password and keep your information safe.'
       />
-      <ClientChangePassword/>
+
+      <ClientChangePassword />
     </div>
   )
 }

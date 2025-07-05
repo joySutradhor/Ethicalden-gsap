@@ -50,12 +50,12 @@ const navLinks = [
     user: 'SuperAdmin'
   },
 
-  {
-    name: 'My Dashboard',
-    href: '/dashboard/client/client-dashboard',
-    icon: <IoHomeOutline size={18} />,
-    user: 'Client'
-  },
+  // {
+  //   name: 'My Dashboard',
+  //   href: '/dashboard/client/client-dashboard',
+  //   icon: <IoHomeOutline size={18} />,
+  //   user: 'Client'
+  // },
 
   // {
   //   name: 'Manage Service Offer',

@@ -6,8 +6,9 @@ export default function page () {
     <section className='section_space'>
       <Topbar
         title='Client Dashboard Overview'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Get a comprehensive snapshot of your client activities. Monitor requests, track progress, and stay organized to deliver exceptional service.'
       />
+
       <h2 className='d_heading mb-10 text-[#a8ff57]'>
         Manage Service Requests
       </h2>

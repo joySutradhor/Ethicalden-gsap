@@ -6,14 +6,13 @@ export default function page () {
   return (
     <section className='section_space'>
       <Topbar
-        title='Client service Overview'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        title='Client Service Overview'
+        des='View and manage all client service activities in one place. Monitor requests, track responses, and ensure consistent, high-quality support.'
       />
-     
 
       {/* Client Create Service Offer */}
       <div>
-        <ClientCreateServiceOffer/>
+        <ClientCreateServiceOffer />
       </div>
     </section>
   )

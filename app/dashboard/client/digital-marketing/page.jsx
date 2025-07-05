@@ -7,8 +7,9 @@ export default function page () {
     <div className='section_space'>
       <Topbar
         title='Digital Marketing'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Manage and track digital marketing campaigns effectively. Monitor client requests, optimize strategies, and ensure impactful online engagement.'
       />
+
       {/* digital marketing */}
       <DigitalMarketingCmp />
     </div>
