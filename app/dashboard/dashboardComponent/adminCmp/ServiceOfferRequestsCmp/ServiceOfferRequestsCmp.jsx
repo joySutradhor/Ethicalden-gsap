@@ -2,6 +2,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import useAuthInfo from '../../hooks/useAuthInfo'
+import Link from 'next/link'
 
 export default function ServiceOfferRequestsCmp () {
   const { token } = useAuthInfo()
@@ -32,23 +33,51 @@ export default function ServiceOfferRequestsCmp () {
 
   return (
     <section className='text-white'>
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 '>
-        {cardsData?.map((data, i) => (
-          <div key={i}>
-            <div className='border border-white/10  rounded-md '>
-              <div className='p-5'>
-                <div>
-                  <h3 className='text-xl font-semibold text-[#a8ff57] '>
-                    {data.full_name}
-                  </h3>
-                  <p className='text-sm mt-1'>Request Date {data.updated_at}</p>
-                </div>
-                <p className='text-2xl  font-semibold py-5 '>{data.service}</p>
-              </div>
-              <p className='border border-white/10 text-left text-lg pl-5 py-2.5 hover:bg-[#a8ff57] hover:text-black transition rounded-t-xl cursor-pointer '>View Details</p>
-            </div>
-          </div>
-        ))}
+      <div className='overflow-x-auto'>
+        <table className='min-w-full divide-y divide-white/10 border border-white/10'>
+          <thead className='bg-white/5'>
+            <tr>
+              <th className='px-6 py-3 text-left text-sm font-semibold text-[#a8ff57]'>
+                Request Date
+              </th>
+
+              <th className='px-6 py-3 text-left text-sm font-semibold text-[#a8ff57]'>
+                Full Name
+              </th>
+
+              <th className='px-6 py-3 text-left text-sm font-semibold text-[#a8ff57]'>
+                Service
+              </th>
+              <th className='px-6 py-3 text-left text-sm font-semibold text-[#a8ff57]'>
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody className='divide-y divide-white/10'>
+            {cardsData?.map((data, i) => (
+              <tr key={i} className='hover:bg-white/5 transition'>
+                <td className='px-6 py-4 whitespace-nowrap text-sm'>
+                  {data.updated_at}
+                </td>
+
+                <td className='px-6 py-4 whitespace-nowrap text-sm'>
+                  {data.full_name}
+                </td>
+
+                <td className='px-6 py-4 whitespace-nowrap text-sm'>
+                  {data.service}
+                </td>
+                <td className='px-6 py-4 whitespace-nowrap text-sm'>
+                  <Link href={`/dashboard/admin/service-offer-requests/${data.id}`}>
+                    <button className='border border-white/10 text-white px-4 py-1.5 rounded-md hover:bg-[#a8ff57] hover:text-black transition cursor-pointer'>
+                      View Details
+                    </button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   )
