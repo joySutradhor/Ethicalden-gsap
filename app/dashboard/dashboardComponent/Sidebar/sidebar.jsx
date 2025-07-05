@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { GrMenu } from 'react-icons/gr'
 import { RxCross1 } from 'react-icons/rx'
 import { IoHomeOutline } from 'react-icons/io5'
-import { MdOutlineRemoveDone } from 'react-icons/md'
-import { MdDoneAll } from 'react-icons/md'
 import { MdNotificationsActive } from 'react-icons/md'
 import { GrServices } from 'react-icons/gr'
 import { GrBusinessService } from 'react-icons/gr'
@@ -43,6 +41,12 @@ const navLinks = [
     name: 'Service Offer Requests',
     href: '/dashboard/admin/service-offer-requests',
     icon: <GrServices size={18} />,
+    user: 'SuperAdmin'
+  },
+  {
+    name: 'Message History',
+    href: '/dashboard/admin/admin-message-history',
+    icon: <BsClockHistory size={18} />,
     user: 'SuperAdmin'
   },
 
@@ -120,7 +124,7 @@ export default function Sidebar ({ token, userType }) {
   return (
     <>
       {/* Mobile toggle */}
-      <div className='md:hidden p-4 bg-red-500 shadow flex justify-between items-center'>
+      <div className='lg:hidden p-4 bg-[#111] shadow-2xl xl:shadow flex justify-between items-center text-white'>
         <h2 className='text-lg font-semibold'>Dashboard</h2>
         <button onClick={() => setOpen(!open)}>
           {open ? <RxCross1 size={22} /> : <GrMenu size={22} />}
@@ -131,8 +135,8 @@ export default function Sidebar ({ token, userType }) {
       <div
         className={`${
           open ? 'translate-x-0' : '-translate-x-full'
-        } md:translate-x-0 fixed md:static z-40 top-0 left-0 h-full  bg-[#2222]  shadow-md p-5 transition-transform duration-300 ease-in-out`}
-        j
+        } lg:translate-x-0 fixed lg:static z-40 top-0 left-0 h-full  bg-[#222] w-[80vw] md:w-[50vw]  lg:w-auto shadow-md p-5 transition-transform duration-300 ease-in-out`}
+        
       >
         <div className='flex  items-center mb-5 gap-x-2.5 border-b border-white/10 pb-5'>
           <Image
@@ -170,9 +174,9 @@ export default function Sidebar ({ token, userType }) {
               className='bg-[#111] hover:bg-black hover:text-white transition text-white/80 font-medium py-3 pl-4 rounded-md mt-14 w-full text-left flex gap-x-1.5 items-center cursor-pointer'
               onClick={handleLogOut}
             >
-              <spna className='inline-block'>
+              <span className='inline-block'>
                 <IoLogOutOutline />
-              </spna>{' '}
+              </span>{' '}
               Log out
             </button>
           </nav>

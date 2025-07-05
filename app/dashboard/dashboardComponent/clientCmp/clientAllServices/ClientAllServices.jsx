@@ -65,15 +65,14 @@ export default function ClientAllServices () {
       link: '/dashboard/client/maintenance-support'
     }
   ]
- 
 
   return (
     <div className='section_space px-4'>
       <Topbar
         title='All Services'
-        des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
+        des='Stay on top of every service in your workflow. Track statuses, make adjustments, and respond quickly to ensure seamless operations.'
       />
-      <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+      <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
         {serviceList.map((list, i) => (
           <div
             key={i}

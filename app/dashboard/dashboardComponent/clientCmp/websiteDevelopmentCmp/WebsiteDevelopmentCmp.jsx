@@ -88,19 +88,45 @@ export default function WebsiteDevelopmentCmp () {
           {
             headers: {
               Authorization: `Token ${token}`
-          
             }
           }
         )
 
-        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        Swal.fire({
+          title: 'Success!',
+          text: 'Form submitted successfully.',
+          icon: 'success',
+          confirmButtonText: 'Okay, got it!',
+          confirmButtonColor: '#a8ff57',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
+        })
         console.log(response.data)
       } catch (error) {
-        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        Swal.fire({
+          title: 'Error!',
+          text: 'Something went wrong during submission.',
+          icon: 'error',
+          confirmButtonText: 'Try Again',
+          confirmButtonColor: '#ff4d4f', // red background
+          customClass: {
+            confirmButton: 'swal-error-btn'
+          }
+        })
         console.error(error?.response?.data || error.message)
       }
     } else {
-      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+      Swal.fire({
+        title: 'Cancelled!',
+        text: 'Form submission was cancelled.',
+        icon: 'info',
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#ff4d4f', // red background
+        customClass: {
+          confirmButton: 'swal-error-btn'
+        }
+      })
     }
   }
 

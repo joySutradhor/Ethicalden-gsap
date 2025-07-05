@@ -4,10 +4,12 @@ import Topbar from '../../topbar'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import useAuthInfo from '../../hooks/useAuthInfo'
+import { useRouter } from 'next/navigation'
 
 export default function LogoDesingCmp () {
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
+  const router = useRouter();
   const [formData, setFormData] = useState({
     businessName: '',
     tagline: '',
@@ -57,7 +59,7 @@ export default function LogoDesingCmp () {
     console.log('Uploaded files:', files)
   }
 
-   const handleSubmit = async e => {
+  const handleSubmit = async e => {
     e.preventDefault()
 
     const submitData = new FormData()
@@ -74,7 +76,11 @@ export default function LogoDesingCmp () {
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'Cancel'
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (result.isConfirmed) {
@@ -85,19 +91,46 @@ export default function LogoDesingCmp () {
           {
             headers: {
               Authorization: `Token ${token}`
-          
             }
           }
         )
 
-        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        Swal.fire({
+          title: 'Success!',
+          text: 'Form submitted successfully.',
+          icon: 'success',
+          confirmButtonText: 'Okay, got it!',
+          confirmButtonColor: '#a8ff57',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
+        })
+        router.push("/dashboard/client/all-services")
         console.log(response.data)
       } catch (error) {
-        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        Swal.fire({
+          title: 'Error!',
+          text: 'Something went wrong during submission.',
+          icon: 'error',
+          confirmButtonText: 'Try Again',
+          confirmButtonColor: '#ff4d4f', // red background
+          customClass: {
+            confirmButton: 'swal-error-btn'
+          }
+        })
         console.error(error?.response?.data || error.message)
       }
     } else {
-      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+      Swal.fire({
+        title: 'Cancelled!',
+        text: 'Form submission was cancelled.',
+        icon: 'info',
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#ff4d4f', // red background
+        customClass: {
+          confirmButton: 'swal-error-btn'
+        }
+      })
     }
   }
 
@@ -110,8 +143,6 @@ export default function LogoDesingCmp () {
         />
       </div>
       <form onSubmit={handleSubmit} className='space-y-5 text-white'>
-
-
         <div className='grid lg:grid-cols-2 gap-x-5'>
           <div>
             <label

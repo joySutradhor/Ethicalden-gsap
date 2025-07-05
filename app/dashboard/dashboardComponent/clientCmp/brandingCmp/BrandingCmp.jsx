@@ -4,11 +4,13 @@ import { useForm } from 'react-hook-form'
 import useAuthInfo from '../../hooks/useAuthInfo'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { useRouter } from 'next/navigation'
 
 export default function BrandingCmp () {
   const { register, handleSubmit } = useForm()
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
+  const router = useRouter();
 
   const handleImageChange = async e => {
     const files = Array.from(e.target.files)
@@ -16,11 +18,10 @@ export default function BrandingCmp () {
   }
 
   const onSubmit = async data => {
-    
     // Construct FormData
     const formData = new FormData()
     formData.append('service', 'Website Design')
-    formData.append('question_set', JSON.stringify(data)) 
+    formData.append('question_set', JSON.stringify(data))
 
     files.forEach(file => {
       formData.append('project_assets', file)
@@ -33,7 +34,11 @@ export default function BrandingCmp () {
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'Cancel'
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#a8ff57',
+      customClass: {
+        confirmButton: 'swal-confirm-btn'
+      }
     })
 
     if (result.isConfirmed) {
@@ -47,14 +52,42 @@ export default function BrandingCmp () {
             }
           }
         )
-        Swal.fire('Success!', 'Form submitted successfully.', 'success')
+        Swal.fire({
+          title: 'Success!',
+          text: 'Form submitted successfully.',
+          icon: 'success',
+          confirmButtonText: 'Okay, got it!',
+          confirmButtonColor: '#a8ff57',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
+        })
+        router.push("/dashboard/client/all-services")
         console.log(response.data)
       } catch (error) {
-        Swal.fire('Error!', 'Something went wrong during submission.', 'error')
+        Swal.fire({
+          title: 'Error!',
+          text: 'Something went wrong during submission.',
+          icon: 'error',
+          confirmButtonText: 'Try Again',
+          confirmButtonColor: '#ff4d4f', // red background
+          customClass: {
+            confirmButton: 'swal-error-btn'
+          }
+        })
         console.error(error)
       }
     } else {
-      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+      Swal.fire({
+        title: 'Cancelled!',
+        text: 'Form submission was cancelled.',
+        icon: 'info',
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#ff4d4f', // red background
+        customClass: {
+          confirmButton: 'swal-error-btn'
+        }
+      })
     }
   }
 
@@ -75,12 +108,12 @@ export default function BrandingCmp () {
 
       <label className='service-form-label'>
         Briefly describe your business:
-        <textarea {...register('businessDescription')} className='inputForm' />
+        <input {...register('businessDescription')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
         What are your primary products or services?
-        <textarea {...register('productsServices')} className='inputForm' />
+        <input {...register('productsServices')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
@@ -95,12 +128,11 @@ export default function BrandingCmp () {
 
       <label className='service-form-label'>
         What makes your business unique?
-        <textarea {...register('uniqueSellingPoint')} className='inputForm' />
+        <input {...register('uniqueSellingPoint')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
-        What tone or personality should your brand convey? (e.g., fun,
-        professional, bold)
+        What tone or personality should your brand convey? 
         <input {...register('brandPersonality')} className='inputForm' />
       </label>
 
@@ -115,36 +147,34 @@ export default function BrandingCmp () {
       </label>
 
       <label className='service-form-label'>
-        Do you have an existing logo or brand material? (Y/N and link if
-        applicable)
+        Do you have an existing logo or brand material? 
         <input {...register('existingAssets')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
         Who are your competitors?
-        <textarea {...register('competitors')} className='inputForm' />
+        <input {...register('competitors')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
-        Are there brands you admire or want to emulate? (list and explain why)
-        <textarea {...register('inspirationBrands')} className='inputForm' />
+        Are there brands you admire or want to emulate? 
+        <input {...register('inspirationBrands')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
-        What branding materials do you need? (e.g., logo, business cards, social
-        media)
+        What branding materials do you need? 
         <input {...register('brandingNeeds')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
         Any additional notes or requests for your branding?
-        <textarea {...register('additionalNotes')} className='inputForm' />
+        <input {...register('additionalNotes')} className='inputForm' />
       </label>
 
       <div>
         <label
           htmlFor='referanceFile'
-          className='block  mb-1 text-sm font-medium mt-5'
+          className='block   text-lg  font-medium text-white/80'
         >
           Upload your Files here ?
         </label>
