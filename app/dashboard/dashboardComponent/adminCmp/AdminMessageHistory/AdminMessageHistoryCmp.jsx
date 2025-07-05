@@ -43,10 +43,10 @@ export default function AdminMessageHistoryCmp () {
       {messageData.map((user, index) => (
         <div
           key={index}
-          className='max-w-3xl  mb-10  rounded-xl bg-[#151515]  p-10'
+          className='max-w-3xl  mb-10  rounded-xl bg-[#151515]  lg:p-10'
         >
           <div className='mb-4 border-b border-white/10 pb-3'>
-            <h2 className='text-xl font-semibold text-white '>
+            <h2 className='text-xl font-semibold text-white/80 '>
               {user.username}
             </h2>
             <p className='text-sm text-white '>{user.email}</p>
@@ -58,8 +58,8 @@ export default function AdminMessageHistoryCmp () {
                 key={msg.id}
                 className='bg-[#111] text-white/80 rounded-lg p-3 '
               >
-                <h2 className='text-xl font-semibold text-white mb-4 '>
-                  {user.service_name || "No Service Name Found"}
+                <h2 className='text-base lg:text-xl font-semibold text-white mb-4 '>
+                  {user.service_name || "Not Found"}
                 </h2>
                 <p className=''>{msg.messages}</p>
                 <p className='text-xs  mt-1 text-right'>

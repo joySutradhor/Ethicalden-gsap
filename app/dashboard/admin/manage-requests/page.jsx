@@ -140,14 +140,12 @@ export default function Page () {
   }
 
   return (
-    <section className='section_space'>
+    <section className='section_space '>
       <Topbar
         title='Manage Service Requests'
         des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
       />
-      <h2 className='d_heading mb-10 text-[#a8ff57]'>
-        Manage Service Requests
-      </h2>
+
 
       {loading ? (
         <p className='text-white font-semibold'>Loading...</p>
@@ -172,13 +170,13 @@ export default function Page () {
                     {request.request_status}
                   </p>
                 </div>
-                <ul className=' text-base font-medium py-5 flex gap-x-1.5 items-center'>
+                {/* <ul className=' text-base font-medium py-5 flex gap-x-1.5 items-center'>
                   <span>{i + 1}.</span>
                   <li>{request.service}</li>
-                </ul>
+                </ul> */}
               </div>
               <div className='flex justify-between items-center'>
-                <div className='flex gap-5 py-5'>
+                <div className='flex gap-5 py-8'>
                   <button
                     onClick={() => handleUpdate(request.id)}
                     className='  text-green-600 cursor-pointer'

@@ -144,7 +144,7 @@ const SignInArea = () => {
                 const userType = localStorage.getItem('user_type')
 
                 if (userType === 'SuperAdmin') {
-                  router.push('/dashboard')
+                  router.push('/dashboard/admin/service-offer-requests')
                 } else if (userType === 'Client') {
                   router.push('dashboard/client/all-services')
                 } else {

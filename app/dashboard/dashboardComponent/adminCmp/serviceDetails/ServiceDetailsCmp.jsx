@@ -62,10 +62,12 @@ export default function ServiceDetailsCmp () {
                 </div>
               </div>
               <div className='flex flex-col gap-5'>
-                <button className='border border-white/10 py-1.5 px-8 rounded-full'>
-                  {service}
-                </button>
-                <button className='border text-black border-white/10 py-1.5 px-8 rounded-full bg-amber-200'>
+                <div>
+                  <button className='border border-white/10 py-1.5 px-8 text-sm rounded-full'>
+                    {service}
+                  </button>
+                </div>
+                <button className='border text-black border-white/10 py-1.5 px-8 text-sm rounded-full bg-amber-200'>
                   {service_status}
                 </button>
               </div>
@@ -73,7 +75,7 @@ export default function ServiceDetailsCmp () {
           </div>
         </div>
 
-        <div className='grid grid-cols-[70%_30%] gap-x-10 '>
+        <div className='grid lg:grid-cols-[70%_30%] lg:gap-x-10 '>
           <div>
             {/* Question Set */}
             <h2 className='text-2xl font-semibold mt-10 mb-4 text-[#a8ff57]'>

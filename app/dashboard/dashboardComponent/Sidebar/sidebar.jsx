@@ -19,12 +19,12 @@ import logo from '../../assets/ethicalden.png'
 import { FaPlus } from 'react-icons/fa'
 import Swal from 'sweetalert2'
 const navLinks = [
-  {
-    name: 'Dashboard',
-    href: '/dashboard',
-    icon: <IoHomeOutline size={18} />,
-    user: 'SuperAdmin'
-  },
+  // {
+  //   name: 'Dashboard',
+  //   href: '/dashboard',
+  //   icon: <IoHomeOutline size={18} />,
+  //   user: 'SuperAdmin'
+  // },
   {
     name: 'Manage Acc Requests',
     href: '/dashboard/admin/manage-requests',
@@ -116,15 +116,25 @@ export default function Sidebar ({ token, userType }) {
     }).then(result => {
       if (result.isConfirmed) {
         localStorage.clear()
+
+        Swal.fire({
+          title: 'Success!',
+          text: 'You have been logged out.',
+          icon: 'success',
+          confirmButtonText: 'Okay, got it!',
+          confirmButtonColor: '#a8ff57',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
+        })
         router.push('/sign-in')
-        Swal.fire('Logged out!', 'You have been logged out.', 'success')
       }
     })
   }
   return (
     <>
       {/* Mobile toggle */}
-      <div className='lg:hidden p-4 bg-[#111] shadow-2xl xl:shadow flex justify-between items-center text-white'>
+      <div className='lg:hidden p-4 bg-[#111] shadow-2xl xl:shadow flex justify-between items-center text-white '>
         <h2 className='text-lg font-semibold'>Dashboard</h2>
         <button onClick={() => setOpen(!open)}>
           {open ? <RxCross1 size={22} /> : <GrMenu size={22} />}
@@ -136,7 +146,6 @@ export default function Sidebar ({ token, userType }) {
         className={`${
           open ? 'translate-x-0' : '-translate-x-full'
         } lg:translate-x-0 fixed lg:static z-40 top-0 left-0 h-full  bg-[#222] w-[80vw] md:w-[50vw]  lg:w-auto shadow-md p-5 transition-transform duration-300 ease-in-out`}
-        
       >
         <div className='flex  items-center mb-5 gap-x-2.5 border-b border-white/10 pb-5'>
           <Image
@@ -149,7 +158,7 @@ export default function Sidebar ({ token, userType }) {
           <h3 className='text-xl font-semibold text-white'>Ethical Den</h3>
         </div>
 
-        <nav className='space-y-4'>
+        <nav className='space-y-4 h-screen'>
           <nav className='space-y-4'>
             {navLinks
               .filter(link => link.user === userType)
