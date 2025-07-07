@@ -12,6 +12,10 @@ import { MdPassword } from 'react-icons/md'
 import { IoLogOutOutline } from 'react-icons/io5'
 import { LuMessageSquareMore } from 'react-icons/lu'
 import { BsClockHistory } from 'react-icons/bs'
+import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
+import { MdError } from "react-icons/md";
+
+
 
 import { useState } from 'react'
 import Image from 'next/image'
@@ -26,7 +30,7 @@ const navLinks = [
   //   user: 'SuperAdmin'
   // },
   {
-    name: 'Manage Acc Requests',
+    name: 'Acc Approved Req',
     href: '/dashboard/admin/manage-requests',
     icon: <MdNotificationsActive size={18} />,
     user: 'SuperAdmin'
@@ -41,6 +45,18 @@ const navLinks = [
     name: 'Service Offer Requests',
     href: '/dashboard/admin/service-offer-requests',
     icon: <GrServices size={18} />,
+    user: 'SuperAdmin'
+  },
+  {
+    name: 'Accepted Services List',
+    href: '/dashboard/admin/admin-accepted-list',
+    icon: <IoCheckmarkDoneCircleSharp size={18} />,
+    user: 'SuperAdmin'
+  },
+  {
+    name: 'Rejected Services List',
+    href: '/dashboard/admin/admin-rejected-list',
+    icon: <MdError size={18} />,
     user: 'SuperAdmin'
   },
   // {
@@ -76,12 +92,7 @@ const navLinks = [
     icon: <GrBusinessService size={18} />,
     user: 'Client'
   },
-  {
-    name: 'Change Password',
-    href: '/dashboard/client/client-change-password',
-    icon: <MdPassword size={18} />,
-    user: 'Client'
-  },
+
   // {
   //   name: 'Send Message',
   //   href: '/dashboard/client/client-send-message',
@@ -92,6 +103,12 @@ const navLinks = [
     name: 'My Service List',
     href: '/dashboard/admin/service-offer-requests',
     icon: <BsClockHistory size={18} />,
+    user: 'Client'
+  },
+  {
+    name: 'Change Password',
+    href: '/dashboard/client/client-change-password',
+    icon: <MdPassword size={18} />,
     user: 'Client'
   }
 ]
@@ -134,7 +151,7 @@ export default function Sidebar ({ token, userType }) {
   return (
     <>
       {/* Mobile toggle */}
-      <div className='lg:hidden p-4 bg-[#111] shadow-2xl xl:shadow flex justify-between items-center text-white '>
+      <div className='lg:hidden p-4 shadow-2xl xl:shadow flex justify-between items-center text-white bg-[#1a1a1a] '>
         <h2 className='text-lg font-semibold'>Dashboard</h2>
         <button onClick={() => setOpen(!open)}>
           {open ? <RxCross1 size={22} /> : <GrMenu size={22} />}
@@ -145,7 +162,7 @@ export default function Sidebar ({ token, userType }) {
       <div
         className={`${
           open ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0 fixed lg:static z-40 top-0 left-0 h-full  bg-[#222] w-[80vw] md:w-[50vw]  lg:w-auto shadow-md p-5 transition-transform duration-300 ease-in-out`}
+        } lg:translate-x-0 fixed lg:static z-40 top-0 left-0    bg-[#222] w-[80vw] md:w-[50vw]  lg:w-auto shadow-md p-5 transition-transform duration-300 ease-in-out`}
       >
         <div className='flex  items-center mb-5 gap-x-2.5 border-b border-white/10 pb-5'>
           <Image

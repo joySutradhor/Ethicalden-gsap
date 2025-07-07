@@ -27,7 +27,7 @@ export default function ServiceDetailsCmp () {
         }
       )
       setData(res.data)
-      console.log(res.data , "main data")
+      console.log(res.data, 'main data')
     } catch (error) {
       console.error('Error fetching service details:', error)
     }
@@ -38,17 +38,15 @@ export default function ServiceDetailsCmp () {
     if (id && token) fetchServiceDetails()
   }, [id, token])
 
-
-
-
-  //  Fetch conversation list
+  // Fetch conversation list
   useEffect(() => {
-    if (!token) return
+    if (!token || !data?.service_id) return
 
     const fetchMessages = async () => {
       try {
+        console.log(data?.service_id, 'check service id')
         const res = await axios.get(
-          'https://api.clientservice.mrshakil.com/api/client_message_list/',
+          `https://api.clientservice.mrshakil.com/api/client_message_list/?service_id=${data.service_id}`,
           {
             headers: {
               Authorization: `Token ${token}`
@@ -56,14 +54,14 @@ export default function ServiceDetailsCmp () {
           }
         )
         setConversation(res.data)
-        console.log(res.data , "check wahat i get")
+        console.log(res, 'check what I get')
       } catch (error) {
         console.error('Fetch error:', error)
       }
     }
 
     fetchMessages()
-  }, [token])
+  }, [token, data?.service_id])
 
   //  Accept handler
   const handleUpdate = async id => {
@@ -202,7 +200,7 @@ export default function ServiceDetailsCmp () {
         const res = await axios.post(
           'https://api.clientservice.mrshakil.com/api/send-client-message/',
           {
-            id: id,
+            service: id,
             messages: message
           },
           {
@@ -222,7 +220,7 @@ export default function ServiceDetailsCmp () {
 
         // Refresh messages
         const msgRes = await axios.get(
-          'https://api.clientservice.mrshakil.com/api/client_message_list/',
+          `https://api.clientservice.mrshakil.com/api/client_message_list/?service_id=${data.service_id}`,
           {
             headers: {
               Authorization: `Token ${token}`
@@ -368,9 +366,7 @@ export default function ServiceDetailsCmp () {
                   </div>
                 </>
               ) : (
-                <p >
-                  No Conversation Found
-                </p>
+                <p>No Conversation Found</p>
               )}
             </div>
             <div className=''>
