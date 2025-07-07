@@ -12,10 +12,8 @@ import { MdPassword } from 'react-icons/md'
 import { IoLogOutOutline } from 'react-icons/io5'
 import { LuMessageSquareMore } from 'react-icons/lu'
 import { BsClockHistory } from 'react-icons/bs'
-import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
-import { MdError } from "react-icons/md";
-
-
+import { IoCheckmarkDoneCircleSharp } from 'react-icons/io5'
+import { MdError } from 'react-icons/md'
 
 import { useState } from 'react'
 import Image from 'next/image'
@@ -162,50 +160,47 @@ export default function Sidebar ({ token, userType }) {
       <div
         className={`${
           open ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0 fixed lg:static z-40 top-0 left-0    bg-[#222] w-[80vw] md:w-[50vw]  lg:w-auto shadow-md p-5 transition-transform duration-300 ease-in-out`}
+        } lg:translate-x-0 fixed lg:static z-40 top-0 left-0 bg-[#222] w-[80vw] md:w-[50vw] lg:w-auto shadow-md p-5 transition-transform duration-300 ease-in-out h-screen`}
       >
-        <div className='flex  items-center mb-5 gap-x-2.5 border-b border-white/10 pb-5'>
+        <div className='flex items-center mb-5 gap-x-2.5 border-b border-white/10 pb-5'>
           <Image
             src={logo}
             height={500}
             width={500}
-            alt='barcelona market card'
+            alt=''
             className='size-10'
-          ></Image>
+          />
           <h3 className='text-xl font-semibold text-white'>Ethical Den</h3>
         </div>
 
-        <nav className='space-y-4 h-screen'>
-          <nav className='space-y-4'>
-            {navLinks
-              .filter(link => link.user === userType)
-              .map(link => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(link.href)
-                      ? ' text-black font-semibold bg-white'
-                      : 'text-white/80 hover:bg-black/80 '
-                  }`}
-                  onClick={() => setOpen(false)}
-                >
-                  {link.icon}
-                  {link.name}
-                </Link>
-              ))}
+        <nav className='space-y-4'>
+          {navLinks
+            .filter(link => link.user === userType)
+            .map(link => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  isActive(link.href)
+                    ? 'text-black font-semibold bg-white'
+                    : 'text-white/80 hover:bg-black/80'
+                }`}
+                onClick={() => setOpen(false)}
+              >
+                {link.icon}
+                {link.name}
+              </Link>
+            ))}
 
-            {/* log out  */}
-            <button
-              className='bg-[#111] hover:bg-black hover:text-white transition text-white/80 font-medium py-3 pl-4 rounded-md mt-14 w-full text-left flex gap-x-1.5 items-center cursor-pointer'
-              onClick={handleLogOut}
-            >
-              <span className='inline-block'>
-                <IoLogOutOutline />
-              </span>{' '}
-              Log out
-            </button>
-          </nav>
+          <button
+            className='bg-[#111] hover:bg-black hover:text-white transition text-white/80 font-medium py-3 pl-4 rounded-md mt-14 w-full text-left flex gap-x-1.5 items-center cursor-pointer'
+            onClick={handleLogOut}
+          >
+            <span className='inline-block'>
+              <IoLogOutOutline />
+            </span>
+            Log out
+          </button>
         </nav>
       </div>
     </>

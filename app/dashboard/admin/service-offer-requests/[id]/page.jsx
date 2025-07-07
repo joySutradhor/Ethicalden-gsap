@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function page () {
   return (
-    <div className='section_space'>
+    <div className='section_space max-h-screen overflow-y-auto'>
       {' '}
       <Topbar
         title='Service Details Page'

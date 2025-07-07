@@ -243,9 +243,6 @@ export default function ServiceDetailsCmp () {
   return (
     <>
       <div className='text-white '>
-        <h1 className='text-3xl font-bold mb-6 text-[#a8ff57]'>
-          Service Details
-        </h1>
 
         <div className=''>
           <div>
