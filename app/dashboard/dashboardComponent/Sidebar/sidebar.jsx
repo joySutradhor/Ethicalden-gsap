@@ -43,12 +43,12 @@ const navLinks = [
     icon: <GrServices size={18} />,
     user: 'SuperAdmin'
   },
-  {
-    name: 'Message History',
-    href: '/dashboard/admin/admin-message-history',
-    icon: <BsClockHistory size={18} />,
-    user: 'SuperAdmin'
-  },
+  // {
+  //   name: 'Message History',
+  //   href: '/dashboard/admin/admin-message-history',
+  //   icon: <BsClockHistory size={18} />,
+  //   user: 'SuperAdmin'
+  // },
 
   // {
   //   name: 'My Dashboard',

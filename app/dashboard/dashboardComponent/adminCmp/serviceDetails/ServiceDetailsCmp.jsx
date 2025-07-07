@@ -27,6 +27,7 @@ export default function ServiceDetailsCmp () {
         }
       )
       setData(res.data)
+      console.log(res.data , "main data")
     } catch (error) {
       console.error('Error fetching service details:', error)
     }
@@ -36,6 +37,9 @@ export default function ServiceDetailsCmp () {
   useEffect(() => {
     if (id && token) fetchServiceDetails()
   }, [id, token])
+
+
+
 
   //  Fetch conversation list
   useEffect(() => {
@@ -52,6 +56,7 @@ export default function ServiceDetailsCmp () {
           }
         )
         setConversation(res.data)
+        console.log(res.data , "check wahat i get")
       } catch (error) {
         console.error('Fetch error:', error)
       }
@@ -172,9 +177,7 @@ export default function ServiceDetailsCmp () {
     client_project_assets
   } = data
 
-
-  console.log(conversation , "converstaion")
-
+  console.log(conversation, 'converstaion')
 
   const handleSendMessage = async () => {
     if (!message.trim()) {
@@ -341,12 +344,11 @@ export default function ServiceDetailsCmp () {
 
             <div className='mr-10'>
               {/* Conversation */}
+              <h2 className='text-2xl font-semibold mt-10 mb-4 text-[#a8ff57]'>
+                Conversation
+              </h2>
               {conversation?.length > 0 ? (
                 <>
-                  <h2 className='text-2xl font-semibold mt-10 mb-4 text-[#a8ff57]'>
-                    Conversation
-                  </h2>
-
                   <div className='grid gap-4'>
                     {conversation?.map((con, i) => (
                       <div key={i} className=' p-3 rounded  '>
@@ -366,7 +368,9 @@ export default function ServiceDetailsCmp () {
                   </div>
                 </>
               ) : (
-                'No Conversation Found'
+                <p >
+                  No Conversation Found
+                </p>
               )}
             </div>
             <div className=''>
@@ -396,7 +400,6 @@ export default function ServiceDetailsCmp () {
           </div>
         </div>
       </div>
-
 
       {/* Modal for Sending Message */}
       {modal && (
