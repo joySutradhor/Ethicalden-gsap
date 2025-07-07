@@ -23,7 +23,6 @@ export default function LogoDesingCmp () {
     logoUsage: [],
     logoUsageFeild: '',
     logoVersions: [],
-    referanceFile: files,
     brandColors: '',
     avoidColors: '',
     typography: '',
@@ -52,10 +51,6 @@ export default function LogoDesingCmp () {
   const handleImageChange = async e => {
     const files = Array.from(e.target.files)
     setFiles(files)
-    setFormData(prev => ({
-      ...prev,
-      referanceFile: files
-    }))
     console.log('Uploaded files:', files)
   }
 

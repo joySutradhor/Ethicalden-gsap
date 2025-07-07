@@ -82,15 +82,15 @@ const navLinks = [
     icon: <MdPassword size={18} />,
     user: 'Client'
   },
+  // {
+  //   name: 'Send Message',
+  //   href: '/dashboard/client/client-send-message',
+  //   icon: <LuMessageSquareMore size={18} />,
+  //   user: 'Client'
+  // },
   {
-    name: 'Send Message',
-    href: '/dashboard/client/client-send-message',
-    icon: <LuMessageSquareMore size={18} />,
-    user: 'Client'
-  },
-  {
-    name: 'Message History',
-    href: '/dashboard/client/client-message-history',
+    name: 'My Service List',
+    href: '/dashboard/admin/service-offer-requests',
     icon: <BsClockHistory size={18} />,
     user: 'Client'
   }

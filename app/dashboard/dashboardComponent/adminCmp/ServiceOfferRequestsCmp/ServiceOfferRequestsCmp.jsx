@@ -47,6 +47,9 @@ export default function ServiceOfferRequestsCmp () {
                 Service
               </th>
               <th className='px-6 py-3 text-left text-sm font-semibold text-[#a8ff57]'>
+                Status
+              </th>
+              <th className='px-6 py-3 text-left text-sm font-semibold text-[#a8ff57]'>
                 Actions
               </th>
             </tr>
@@ -57,11 +60,12 @@ export default function ServiceOfferRequestsCmp () {
                 <td className='px-6 py-4 text-sm'>{data.updated_at}</td>
                 <td className='px-6 py-4 text-sm'>{data.full_name}</td>
                 <td className='px-6 py-4 text-sm'>{data.service}</td>
+                <td className='px-6 py-4 text-sm'>{data.service_status}</td>
                 <td className='px-6 py-4 text-sm'>
                   <Link
                     href={`/dashboard/admin/service-offer-requests/${data.id}`}
                   >
-                    <button className='border border-white/10 text-white px-4 py-1.5 rounded-md hover:bg-[#a8ff57] hover:text-black transition'>
+                    <button className='border border-white/10 text-white px-4 py-1.5 rounded-md hover:bg-[#a8ff57] hover:text-black transition cursor-pointer'>
                       View Details
                     </button>
                   </Link>

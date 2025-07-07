@@ -116,7 +116,7 @@ export default function Page () {
     if (result.isConfirmed) {
       try {
         await axios.patch(
-          `https://api.clientservice.mrshakil.com/api/client-reject//${id}/`,
+          `https://api.clientservice.mrshakil.com/api/client-reject/${id}/`,
           {},
           {
             headers: {
