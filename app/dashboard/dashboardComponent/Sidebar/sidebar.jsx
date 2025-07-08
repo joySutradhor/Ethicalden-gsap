@@ -164,7 +164,7 @@ export default function Sidebar ({ token, userType }) {
       >
         <div className='flex items-center mb-5 gap-x-2.5 border-b border-white/10 pb-5'>
           <Image
-            src={logo}
+            src="https://ik.imagekit.io/ethicalden/logo/fav.png?updatedAt=1751979476770"
             height={500}
             width={500}
             alt=''
