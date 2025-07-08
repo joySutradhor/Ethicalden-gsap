@@ -301,7 +301,7 @@ export default function CyberSecurityCmp () {
   return (
     <div className='text-white'>
       {/* Render text inputs */}
-      <form onSubmit={handleSubmit} className='space-y-6'>
+      <form onSubmit={handleSubmit} className=''>
         {questions.slice(0, 6).map(({ label, name, placeholder }) => (
           <div key={name} className='flex flex-col'>
             <label className='service-form-label'>{label}</label>
@@ -347,7 +347,7 @@ export default function CyberSecurityCmp () {
                         onChange={() => handleCheckboxChange(name, option)}
                         className=' h-5 w-5 text-green-500'
                       />
-                      <span>{option}</span>
+                      <span className='text-sm'>{option}</span>
                     </label>
                   ))}
                 </div>
@@ -397,7 +397,7 @@ export default function CyberSecurityCmp () {
         <div>
           <label
             htmlFor='referanceFile'
-            className='block  mb-1 text-sm font-medium'
+            className='block  mb-1 text-lg font-medium'
           >
             Upload your Files here ?
           </label>

@@ -4,7 +4,7 @@ import CyberSecurityCmp from '../../dashboardComponent/clientCmp/cyberSecuirityC
 
 export default function page () {
   return (
-    <div className='section_space'>
+    <div className='section_space max-h-screen overflow-hidden overflow-y-auto'>
       <Topbar
         title='Cyber Security'
         des='Monitor and manage cybersecurity services to protect client data and digital assets. Respond to threats, update protocols, and ensure system integrity.'

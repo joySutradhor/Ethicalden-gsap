@@ -192,7 +192,7 @@ const AiServiceCmp = () => {
   return (
     <div className=' text-white'>
       <form onSubmit={handleSubmit} className='space-y-4'>
-        <div className='grid lg:grid-cols-2 gap-5'>
+        <div className=''>
           {questions.map(({ label, name, placeholder }) => (
             <div>
               <label>{label}</label>

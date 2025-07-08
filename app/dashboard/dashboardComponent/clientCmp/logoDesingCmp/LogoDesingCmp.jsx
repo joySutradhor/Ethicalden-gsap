@@ -138,7 +138,7 @@ export default function LogoDesingCmp () {
         />
       </div>
       <form onSubmit={handleSubmit} className='space-y-5 text-white'>
-        <div className='grid lg:grid-cols-2 gap-x-5'>
+        <div className=' gap-x-5'>
           <div>
             <label
               htmlFor='businessName'
@@ -170,7 +170,7 @@ export default function LogoDesingCmp () {
           </div>
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-x-5'>
+        <div className=' gap-x-5'>
           <div>
             <label
               htmlFor='industry'
@@ -374,7 +374,7 @@ export default function LogoDesingCmp () {
           </div>
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-x-5 '>
+        <div className=' gap-x-5 '>
           <div>
             <label
               htmlFor='brandColors'
@@ -406,7 +406,7 @@ export default function LogoDesingCmp () {
           </div>
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-5'>
+        <div className=''>
           <div>
             <label
               htmlFor='typography'

@@ -4,7 +4,7 @@ import AiServiceCmp from '../../dashboardComponent/clientCmp/aiServiceCmp/AiServ
 
 export default function page () {
   return (
-    <div className='section_space'>
+    <div className='section_space max-h-screen overflow-hidden overflow-y-auto'>
       <Topbar
         title='AI Service'
         des='Manage and optimize AI service requests efficiently. Stay proactive in updating models, responding to feedback, and ensuring seamless AI-driven solutions.'

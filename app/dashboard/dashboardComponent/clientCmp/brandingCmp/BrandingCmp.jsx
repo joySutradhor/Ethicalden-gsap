@@ -10,7 +10,7 @@ export default function BrandingCmp () {
   const { register, handleSubmit } = useForm()
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
-  const router = useRouter();
+  const router = useRouter()
 
   const handleImageChange = async e => {
     const files = Array.from(e.target.files)
@@ -62,7 +62,7 @@ export default function BrandingCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
-        router.push("/dashboard/client/all-services")
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -92,10 +92,7 @@ export default function BrandingCmp () {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className='text-white grid lg:grid-cols-2 gap-5'
-    >
+    <form onSubmit={handleSubmit(onSubmit)} className='text-white '>
       <label className='service-form-label'>
         What is your company name?
         <input {...register('companyName')} className='inputForm' />
@@ -132,7 +129,7 @@ export default function BrandingCmp () {
       </label>
 
       <label className='service-form-label'>
-        What tone or personality should your brand convey? 
+        What tone or personality should your brand convey?
         <input {...register('brandPersonality')} className='inputForm' />
       </label>
 
@@ -147,7 +144,7 @@ export default function BrandingCmp () {
       </label>
 
       <label className='service-form-label'>
-        Do you have an existing logo or brand material? 
+        Do you have an existing logo or brand material?
         <input {...register('existingAssets')} className='inputForm' />
       </label>
 
@@ -157,12 +154,12 @@ export default function BrandingCmp () {
       </label>
 
       <label className='service-form-label'>
-        Are there brands you admire or want to emulate? 
+        Are there brands you admire or want to emulate?
         <input {...register('inspirationBrands')} className='inputForm' />
       </label>
 
       <label className='service-form-label'>
-        What branding materials do you need? 
+        What branding materials do you need?
         <input {...register('brandingNeeds')} className='inputForm' />
       </label>
 

@@ -311,7 +311,7 @@ export default function DigitalMarketingCmp () {
 
   return (
     <div className=' text-white '>
-      <form onSubmit={handleSubmit} className='space-y-6'>
+      <form onSubmit={handleSubmit} className='space-y-4'>
         {/* Basic info inputs */}
         {questions.map(({ label, name, placeholder, type }) => (
           <div key={name} className='flex flex-col'>
@@ -356,7 +356,7 @@ export default function DigitalMarketingCmp () {
                       }
                       className='form-checkbox h-5 w-5 text-green-500'
                     />
-                    <span>{option}</span>
+                    <span className='text-sm'>{option}</span>
                   </label>
                 ))}
               </div>
@@ -403,7 +403,7 @@ export default function DigitalMarketingCmp () {
         <div>
           <label
             htmlFor='referanceFile'
-            className='block  mb-1 text-sm font-medium'
+            className='block  mb-1 text-lg font-medium'
           >
             Upload your Files here ?
           </label>

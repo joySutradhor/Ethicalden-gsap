@@ -3,7 +3,7 @@ import LogoDesingCmp from '../../dashboardComponent/clientCmp/logoDesingCmp/Logo
 
 export default function page () {
   return (
-    <div>
+    <div className='max-h-screen overflow-hidden overflow-y-auto'>
       <LogoDesingCmp />
     </div>
   )

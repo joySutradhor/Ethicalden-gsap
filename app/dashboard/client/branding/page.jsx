@@ -4,7 +4,7 @@ import Topbar from '../../dashboardComponent/topbar'
 
 export default function page () {
   return (
-    <div className='section_space'>
+    <div className='section_space max-h-screen overflow-hidden overflow-y-auto'>
       <Topbar
         title='Branding Service'
         des="Manage and refine your branding service requests. Provide timely feedback, ensure consistent brand communication, and maintain a strong visual identity for your clients."

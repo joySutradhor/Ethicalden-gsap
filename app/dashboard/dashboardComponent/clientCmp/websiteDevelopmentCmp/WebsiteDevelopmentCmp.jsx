@@ -141,7 +141,7 @@ export default function WebsiteDevelopmentCmp () {
     <div>
       <form
         onSubmit={handleSubmit}
-        className='text-white  grid lg:grid-cols-2 gap-x-10 gap-y-5'
+        className='text-white   gap-x-10 '
       >
         {/* Text Inputs */}
         <div>

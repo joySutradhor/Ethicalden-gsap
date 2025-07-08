@@ -252,7 +252,7 @@ export default function AppDevelopmentCmp () {
 
   return (
     <div className='text-white'>
-      <form onSubmit={handleSubmit} className='grid gap-6 xl:grid-cols-2'>
+      <form onSubmit={handleSubmit} className=''>
         {questions.map(({ label, name, placeholder, type }) => (
           <div key={name} className='flex flex-col'>
             <label htmlFor={name} className='service-form-label'>
@@ -283,7 +283,7 @@ export default function AppDevelopmentCmp () {
         <div>
           <label
             htmlFor='referanceFile'
-            className='block  mb-1 text-sm font-medium'
+            className='block  mb-1 text-lg font-medium'
           >
             Upload your Files here ?
           </label>

@@ -149,7 +149,7 @@ const fields = [
 export default function UiuxCmp () {
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
-  const router = useRouter();
+  const router = useRouter()
   const [formData, setFormData] = useState({
     companyName: '',
     contactPerson: '',
@@ -236,7 +236,7 @@ export default function UiuxCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
-         router.push("/dashboard/client/all-services")
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -267,10 +267,7 @@ export default function UiuxCmp () {
 
   return (
     <div>
-      <form
-        onSubmit={handleSubmit}
-        className='space-y-5 grid lg:grid-cols-2 gap-5 text-white'
-      >
+      <form onSubmit={handleSubmit} className='space-y-5  text-white'>
         {fields.map((field, index) => (
           <div key={index} className='flex flex-col'>
             <label className='text-sm font-medium mb-1'>{field.label}</label>

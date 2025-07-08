@@ -4,7 +4,7 @@ import SEOOptimization from '../../dashboardComponent/clientCmp/seoOptimization/
 
 export default function page () {
   return (
-    <div className='section_space'>
+    <div className='section_space max-h-screen overflow-hidden overflow-y-auto'>
       {' '}
       <Topbar
         title='SEO Optimization'

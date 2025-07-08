@@ -284,7 +284,7 @@ export default function SoftwareDevelopmentCmp () {
 
   return (
     <div className=''>
-      <form onSubmit={handleSubmit} className='grid lg:grid-cols-2 gap-6'>
+      <form onSubmit={handleSubmit} className=' gap-6'>
         {questions.map((q, i) => (
           <div key={i} className='flex flex-col'>
             <label className='service-form-label'>{q.label}</label>
