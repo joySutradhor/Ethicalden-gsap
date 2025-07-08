@@ -72,7 +72,7 @@ export default function MaintainceAndServiceCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f',
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error)
@@ -85,7 +85,7 @@ export default function MaintainceAndServiceCmp () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f',
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }

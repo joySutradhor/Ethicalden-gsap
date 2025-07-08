@@ -20,22 +20,26 @@ const fields = [
   {
     label: 'Brief description of your business or project',
     name: 'projectDescription',
-    placeholder: 'Short summary'
+    placeholder: 'Short summary',
+    type: 'textarea'
   },
   {
     label: 'What product or service do you offer?',
     name: 'productService',
-    placeholder: 'Describe briefly'
+    placeholder: 'Describe briefly',
+    type: 'textarea'
   },
   {
     label: 'What is the primary goal of this UI/UX design project?',
     name: 'primaryGoal',
-    placeholder: 'Redesign dashboard'
+    placeholder: 'Redesign dashboard',
+    type: 'textarea'
   },
   {
     label: 'What problem are you trying to solve with this design?',
     name: 'problemToSolve',
-    placeholder: 'Improve usability'
+    placeholder: 'Improve usability',
+    type: 'textarea'
   },
   {
     label: 'Who are your primary target users?',
@@ -51,7 +55,8 @@ const fields = [
     label:
       'Are there any specific business goals this design should help achieve?',
     name: 'businessGoals',
-    placeholder: 'Increase conversions'
+    placeholder: 'Increase conversions',
+    type: 'textarea'
   },
   {
     label: 'Do you currently have a product/interface or is this from scratch?',
@@ -62,7 +67,8 @@ const fields = [
     label:
       'If redesigning, what issues are you facing with the current design?',
     name: 'currentIssues',
-    placeholder: 'Outdated UI'
+    placeholder: 'Outdated UI',
+    type: 'textarea'
   },
   {
     label: 'Do you have existing brand guidelines (colors, fonts, logo)?',
@@ -87,12 +93,14 @@ const fields = [
   {
     label: 'Are there any design styles you like?',
     name: 'designStyle',
-    placeholder: 'Modern, Minimal'
+    placeholder: 'Modern, Minimal',
+    type: 'textarea'
   },
   {
     label: 'Apps/websites you like and why?',
     name: 'designExamples',
-    placeholder: 'List links or names'
+    placeholder: 'List links or names',
+    type: 'textarea'
   },
   {
     label: 'Are there any styles or colors you want to avoid?',
@@ -122,7 +130,8 @@ const fields = [
   {
     label: 'Must-have features?',
     name: 'mustHaveFeatures',
-    placeholder: 'Search, Login, Contact'
+    placeholder: 'Search, Login, Contact',
+    type: 'textarea'
   },
   {
     label: 'Any third-party integrations?',
@@ -246,7 +255,7 @@ export default function UiuxCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f', // red background
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error?.response?.data || error.message)
@@ -259,7 +268,7 @@ export default function UiuxCmp () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f', // red background
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -267,24 +276,35 @@ export default function UiuxCmp () {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className='space-y-5  text-white'>
+      <form onSubmit={handleSubmit} className='space-y-5 text-white'>
         {fields.map((field, index) => (
           <div key={index} className='flex flex-col'>
-            <label className='text-sm font-medium mb-1'>{field.label}</label>
-            <input
-              name={field.name}
-              value={formData[field.name]}
-              onChange={handleChange}
-              placeholder={field.placeholder}
-              className='p-2 border border-white/10 rounded text-sm bg-white/10 text-white placeholder:text-white/40'
-            />
+            <label className='service-form-label'>{field.label}</label>
+            {field.type === 'textarea' ? (
+              <textarea
+                rows={3}
+                name={field.name}
+                value={formData[field.name]}
+                onChange={handleChange}
+                placeholder={field.placeholder}
+                className='p-2 border border-white/10 rounded text-sm bg-white/10 text-white placeholder:text-white/40 outline-none '
+              />
+            ) : (
+              <input
+                name={field.name}
+                value={formData[field.name]}
+                onChange={handleChange}
+                placeholder={field.placeholder}
+                className='p-2 border border-white/10 rounded text-sm bg-white/10 text-white placeholder:text-white/40 outline-none'
+              />
+            )}
           </div>
         ))}
 
         <div>
           <label
             htmlFor='referanceFile'
-            className='block  mb-1 text-sm font-medium'
+            className='block mb-1 text-base font-medium'
           >
             Upload your Files here ?
           </label>

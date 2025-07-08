@@ -94,7 +94,7 @@ const AiServiceCmp = () => {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f', // red background
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error?.response?.data || error.message)
@@ -107,7 +107,7 @@ const AiServiceCmp = () => {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f', // red background
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -191,7 +191,7 @@ const AiServiceCmp = () => {
 
   return (
     <div className=' text-white'>
-      <form onSubmit={handleSubmit} className='space-y-4'>
+      <form onSubmit={handleSubmit} className='space-y-5'>
         <div className=''>
           {questions.map(({ label, name, placeholder }) => (
             <div>
@@ -211,7 +211,7 @@ const AiServiceCmp = () => {
         <div>
           <label
             htmlFor='referanceFile'
-            className='block  text-sm font-medium mb-1'
+            className='block  text-base font-medium mb-1'
           >
             Upload your Files here ?
           </label>

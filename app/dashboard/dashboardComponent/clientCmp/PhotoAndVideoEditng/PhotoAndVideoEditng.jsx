@@ -71,7 +71,7 @@ export default function PhotoAndVideoEditng () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f', // red background
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error)
@@ -84,7 +84,7 @@ export default function PhotoAndVideoEditng () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f', // red background
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -497,7 +497,7 @@ export default function PhotoAndVideoEditng () {
           className='inputForm text-white'
         />
       </div>
- 
+
       <div>
         <button
           type='submit'

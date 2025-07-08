@@ -6,7 +6,7 @@ import useAuthInfo from '../../hooks/useAuthInfo'
 import { useRouter } from 'next/navigation'
 
 export default function ClientSendMessageCmp () {
-  const router = useRouter();
+  const router = useRouter()
   const [formData, setFormData] = useState({
     service_name: '',
     messages: ''
@@ -49,7 +49,7 @@ export default function ClientSendMessageCmp () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f',
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
 
@@ -93,7 +93,7 @@ export default function ClientSendMessageCmp () {
           }
         })
         setFormData({ service_name: '', messages: '' })
-        router.push("/dashboard/client/client-message-history")
+        router.push('/dashboard/client/client-message-history')
       } catch (error) {
         Swal.fire({
           title: 'Error!',
@@ -102,7 +102,7 @@ export default function ClientSendMessageCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f',
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
       }

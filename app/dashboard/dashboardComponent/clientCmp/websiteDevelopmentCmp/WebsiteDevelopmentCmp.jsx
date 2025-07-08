@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 export default function WebsiteDevelopmentCmp () {
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
-  const router = useRouter();
+  const router = useRouter()
   const [form, setForm] = useState({
     organizationName: '',
     contactPerson: '',
@@ -108,7 +108,7 @@ export default function WebsiteDevelopmentCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
-         router.push("/dashboard/client/all-services")
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -118,7 +118,7 @@ export default function WebsiteDevelopmentCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f', // red background
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error?.response?.data || error.message)
@@ -131,7 +131,7 @@ export default function WebsiteDevelopmentCmp () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f', // red background
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -139,10 +139,7 @@ export default function WebsiteDevelopmentCmp () {
 
   return (
     <div>
-      <form
-        onSubmit={handleSubmit}
-        className='text-white   gap-x-10 '
-      >
+      <form onSubmit={handleSubmit} className='text-white   gap-x-10 '>
         {/* Text Inputs */}
         <div>
           <label className='block mb-1'>Your Name/Organization Name</label>
@@ -206,7 +203,8 @@ export default function WebsiteDevelopmentCmp () {
           <label className='block mb-1'>
             Please describe your business/organization
           </label>
-          <input
+          <textarea
+            rows={3}
             name='description'
             onChange={handleChange}
             className='textareaForm'
@@ -224,7 +222,8 @@ export default function WebsiteDevelopmentCmp () {
         </div>
         <div>
           <label className='block mb-1'>What makes your business unique?</label>
-          <input
+          <textarea
+            rows={3}
             name='uniqueness'
             onChange={handleChange}
             className='textareaForm'
@@ -232,13 +231,19 @@ export default function WebsiteDevelopmentCmp () {
         </div>
         <div>
           <label className='block mb-1'>Primary goal of the website?</label>
-          <input name='goal' onChange={handleChange} className='textareaForm' />
+          <textarea
+            rows={3}
+            name='goal'
+            onChange={handleChange}
+            className='textareaForm'
+          />
         </div>
         <div>
           <label className='block mb-1'>
             Short/long-term goals for this website?
           </label>
-          <input
+          <textarea
+            rows={3}
             name='objectives'
             onChange={handleChange}
             className='textareaForm'
@@ -407,7 +412,8 @@ export default function WebsiteDevelopmentCmp () {
         <div>
           <label className='block mb-1'>Other notes or requests</label>
 
-          <input
+          <textarea
+            rows={3}
             name='otherNotes'
             type='text'
             onChange={handleChange}

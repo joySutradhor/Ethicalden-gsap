@@ -110,7 +110,7 @@ export default function LogoDesingCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f', // red background
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error?.response?.data || error.message)
@@ -123,7 +123,7 @@ export default function LogoDesingCmp () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f', // red background
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -140,10 +140,7 @@ export default function LogoDesingCmp () {
       <form onSubmit={handleSubmit} className='space-y-5 text-white'>
         <div className=' gap-x-5'>
           <div>
-            <label
-              htmlFor='businessName'
-              className='block  text-sm font-medium mb-1'
-            >
+            <label htmlFor='businessName' className='block  service-form-label'>
               Business or Brand Name
             </label>
             <input
@@ -155,10 +152,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label
-              htmlFor='tagline'
-              className='block  text-sm font-medium mb-1'
-            >
+            <label htmlFor='tagline' className='block  service-form-label'>
               Tagline or Slogan
             </label>
             <input
@@ -172,10 +166,7 @@ export default function LogoDesingCmp () {
 
         <div className=' gap-x-5'>
           <div>
-            <label
-              htmlFor='industry'
-              className='block  text-sm font-medium mb-1'
-            >
+            <label htmlFor='industry' className='block  service-form-label'>
               Industry
             </label>
             <input
@@ -188,7 +179,7 @@ export default function LogoDesingCmp () {
           <div>
             <label
               htmlFor='targetAudience'
-              className='block  text-sm font-medium mb-1'
+              className='block  service-form-label'
             >
               Target Audience
             </label>
@@ -203,7 +194,7 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label htmlFor='services' className='block  text-sm font-medium mb-1'>
+          <label htmlFor='services' className='block  service-form-label'>
             What products or services do you offer?
           </label>
           <textarea
@@ -215,10 +206,7 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label
-            htmlFor='brandValues'
-            className='block  text-sm font-medium mb-1'
-          >
+          <label htmlFor='brandValues' className='block  service-form-label'>
             Brand Values or Mission
           </label>
           <textarea
@@ -230,10 +218,7 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label
-            htmlFor='brandWords'
-            className='block  text-sm font-medium mb-1'
-          >
+          <label htmlFor='brandWords' className='block  service-form-label'>
             Describe your brand in 3–5 words
           </label>
           <input
@@ -245,10 +230,7 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label
-            htmlFor='logoMessage'
-            className='block  text-sm font-medium mb-1'
-          >
+          <label htmlFor='logoMessage' className='block  service-form-label'>
             What feeling or message should your logo convey?
           </label>
           <textarea
@@ -261,7 +243,7 @@ export default function LogoDesingCmp () {
 
         <div className='grid  '>
           <div>
-            <label className='block  text-sm font-medium mb-1'>
+            <label className='block  service-form-label'>
               What style fits your brand?
             </label>
             {[
@@ -293,7 +275,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label className='block  text-sm font-medium mb-1'>
+            <label className='block  service-form-label'>
               Where will the logo be used?
             </label>
             {[
@@ -323,7 +305,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label className='block  text-sm font-medium mb-1'>
+            <label className='block  service-form-label'>
               Do you need different versions?
             </label>
             {[
@@ -351,7 +333,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label className='block  text-sm font-medium mb-1'>
+            <label className='block  service-form-label'>
               Logo file types needed:
             </label>
             {['PNG', 'JPEG', 'SVG', 'AI', 'PDF', 'EPS'].map(type => (
@@ -376,10 +358,7 @@ export default function LogoDesingCmp () {
 
         <div className=' gap-x-5 '>
           <div>
-            <label
-              htmlFor='brandColors'
-              className='block  text-sm font-medium mb-1'
-            >
+            <label htmlFor='brandColors' className='block  service-form-label'>
               Preferred Brand Colors
             </label>
             <input
@@ -391,10 +370,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label
-              htmlFor='avoidColors'
-              className='block  text-sm font-medium mb-1'
-            >
+            <label htmlFor='avoidColors' className='block  service-form-label'>
               Colors to Avoid
             </label>
             <input
@@ -408,10 +384,7 @@ export default function LogoDesingCmp () {
 
         <div className=''>
           <div>
-            <label
-              htmlFor='typography'
-              className='block  text-sm font-medium mb-1'
-            >
+            <label htmlFor='typography' className='block  service-form-label'>
               Preferred fonts or typography styles
             </label>
 
@@ -424,7 +397,7 @@ export default function LogoDesingCmp () {
           </div>
 
           {/* <div>
-          <label htmlFor='existingLogo' className='block  text-sm font-medium mb-1'>
+          <label htmlFor='existingLogo' className='block  service-form-label'>
             Do you already have a logo?
           </label>
           <select
@@ -446,7 +419,7 @@ export default function LogoDesingCmp () {
         </div> */}
 
           <div>
-            <label htmlFor='budget' className='block  text-sm font-medium mb-1'>
+            <label htmlFor='budget' className='block  service-form-label'>
               What is your budget?
             </label>
             <input
@@ -458,10 +431,7 @@ export default function LogoDesingCmp () {
           </div>
 
           <div>
-            <label
-              htmlFor='deadline'
-              className='block  text-sm font-medium mb-1'
-            >
+            <label htmlFor='deadline' className='block  service-form-label'>
               What is your desired timeline or deadline?
             </label>
             <input
@@ -476,7 +446,7 @@ export default function LogoDesingCmp () {
           <div>
             <label
               htmlFor='needGuideline'
-              className='block  text-sm font-medium mb-1'
+              className='block  service-form-label'
             >
               Do you need a brand guideline or usage manual?
             </label>
@@ -503,10 +473,7 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label
-            htmlFor='otherNotes'
-            className='block  text-sm font-medium mb-1'
-          >
+          <label htmlFor='otherNotes' className='block  service-form-label'>
             Anything else you'd like us to know?
           </label>
           <textarea
@@ -518,10 +485,7 @@ export default function LogoDesingCmp () {
         </div>
 
         <div>
-          <label
-            htmlFor='referanceFile'
-            className='block  text-sm font-medium mb-1'
-          >
+          <label htmlFor='referanceFile' className='block  service-form-label'>
             Upload your Files here ?
           </label>
           <input

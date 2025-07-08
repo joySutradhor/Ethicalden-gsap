@@ -32,7 +32,7 @@ export default function ClientChangePassword () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f',
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
       return
@@ -96,7 +96,7 @@ export default function ClientChangePassword () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f',
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }

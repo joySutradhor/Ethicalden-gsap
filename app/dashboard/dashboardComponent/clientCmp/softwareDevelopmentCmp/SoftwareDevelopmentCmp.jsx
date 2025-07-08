@@ -261,9 +261,9 @@ export default function SoftwareDevelopmentCmp () {
           text: 'Something went wrong during submission.',
           icon: 'error',
           confirmButtonText: 'Try Again',
-          confirmButtonColor: '#ff4d4f', 
+          confirmButtonColor: '#ff4d4f',
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error?.response?.data || error.message)
@@ -276,7 +276,7 @@ export default function SoftwareDevelopmentCmp () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f', // red background
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -290,11 +290,12 @@ export default function SoftwareDevelopmentCmp () {
             <label className='service-form-label'>{q.label}</label>
             {q.type === 'textarea' ? (
               <textarea
+                rows={3}
                 name={q.name}
                 value={formData[q.name]}
                 onChange={handleChange}
                 placeholder={q.placeholder || 'Type your answer...'}
-                className='inputForm'
+                className='textareaForm'
               />
             ) : (
               <input

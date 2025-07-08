@@ -17,7 +17,7 @@ import { MdError } from 'react-icons/md'
 
 import { useState } from 'react'
 import Image from 'next/image'
-import logo from '../../assets/ethicalden.png'
+import logo from '@/app/dashboard/assets/ethicalden.png'
 import { FaPlus } from 'react-icons/fa'
 import Swal from 'sweetalert2'
 const navLinks = [

@@ -35,7 +35,7 @@ export default function Page () {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
+      cancelButtonColor: '#ff4d4f',
       confirmButtonText: 'Yes, delete it!'
     })
 
@@ -71,7 +71,7 @@ export default function Page () {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#151515',
-      cancelButtonColor: '#3085d6',
+      cancelButtonColor: '#ff4d4f',
       confirmButtonText: 'Yes, Accept it!'
     })
 
@@ -109,7 +109,7 @@ export default function Page () {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#151515',
-      cancelButtonColor: '#3085d6',
+      cancelButtonColor: '#ff4d4f',
       confirmButtonText: 'Yes, Reject it!'
     })
 
@@ -145,7 +145,6 @@ export default function Page () {
         title='Manage Service Requests'
         des='Review, update, or respond to incoming service requests. Ensure timely communication and keep your workflow organized.'
       />
-
 
       {loading ? (
         <p className='text-white font-semibold'>Loading...</p>

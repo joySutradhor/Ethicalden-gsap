@@ -10,7 +10,7 @@ export default function SEOOptimization () {
   const { register, handleSubmit } = useForm()
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
-  const router = useRouter();
+  const router = useRouter()
 
   const handleImageChange = async e => {
     const files = Array.from(e.target.files)
@@ -62,7 +62,7 @@ export default function SEOOptimization () {
             confirmButton: 'swal-confirm-btn'
           }
         })
-         router.push("/dashboard/client/all-services")
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -70,9 +70,9 @@ export default function SEOOptimization () {
           text: 'Something went wrong during submission.',
           icon: 'error',
           confirmButtonText: 'Try Again',
-          confirmButtonColor: '#ff4d4f', 
+          confirmButtonColor: '#ff4d4f',
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error)
@@ -83,9 +83,9 @@ export default function SEOOptimization () {
         text: 'Form submission was cancelled.',
         icon: 'info',
         confirmButtonText: 'Try Again',
-        confirmButtonColor: '#ff4d4f', 
+        confirmButtonColor: '#ff4d4f',
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -135,6 +135,7 @@ export default function SEOOptimization () {
         <textarea
           {...register('businessDescription')}
           className='inputForm mt-1.5'
+          rows={3}
         />
       </label>
 

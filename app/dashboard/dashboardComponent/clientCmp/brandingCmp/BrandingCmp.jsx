@@ -72,7 +72,7 @@ export default function BrandingCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f', // red background
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error)
@@ -83,9 +83,9 @@ export default function BrandingCmp () {
         text: 'Form submission was cancelled.',
         icon: 'info',
         confirmButtonText: 'Try Again',
-        confirmButtonColor: '#ff4d4f', // red background
+        confirmButtonColor: '#ff4d4f',
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -105,7 +105,11 @@ export default function BrandingCmp () {
 
       <label className='service-form-label'>
         Briefly describe your business:
-        <input {...register('businessDescription')} className='inputForm' />
+        <textarea
+          rows={3}
+          {...register('businessDescription')}
+          className='inputForm'
+        />
       </label>
 
       <label className='service-form-label'>

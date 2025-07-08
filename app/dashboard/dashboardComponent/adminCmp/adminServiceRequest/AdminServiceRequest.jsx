@@ -37,7 +37,7 @@ const AdminServiceRequest = () => {
     }
 
     fetchProjects()
-  }, [token , projects])
+  }, [token, projects])
 
   const handleDelete = async id => {
     const result = await Swal.fire({
@@ -46,7 +46,7 @@ const AdminServiceRequest = () => {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
+      cancelButtonColor: '#ff4d4f',
       confirmButtonText: 'Yes, delete it!'
     })
 

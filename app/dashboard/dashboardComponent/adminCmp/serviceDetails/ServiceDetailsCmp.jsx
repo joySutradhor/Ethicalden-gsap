@@ -70,7 +70,7 @@ export default function ServiceDetailsCmp () {
       text: 'You won’t be able to revert this!',
       icon: 'warning',
       showCancelButton: true,
-      cancelButtonColor: '#3085d6',
+      cancelButtonColor: '#ff4d4f',
       confirmButtonText: 'Yes, Accept it!',
       confirmButtonColor: '#a8ff57',
       customClass: {
@@ -113,7 +113,7 @@ export default function ServiceDetailsCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f',
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
       }
@@ -127,7 +127,7 @@ export default function ServiceDetailsCmp () {
       text: 'You won’t be able to revert this!',
       icon: 'warning',
       showCancelButton: true,
-      cancelButtonColor: '#3085d6',
+      cancelButtonColor: '#ff4d4f',
       confirmButtonText: 'Yes, Reject it!',
       confirmButtonColor: '#a8ff57',
       customClass: {
@@ -147,11 +147,22 @@ export default function ServiceDetailsCmp () {
           }
         )
 
-        Swal.fire(
-          'Rejected!',
-          'The service request has been rejected.',
-          'success'
-        )
+        // Swal.fire(
+        //   'Rejected!',
+        //   'The service request has been rejected.',
+        //   'success'
+        // )
+
+        Swal.fire({
+          title: 'success!',
+          text: 'The service request has been rejected. now',
+          icon: 'success',
+          confirmButtonText: 'Okay',
+          confirmButtonColor: '#a8ff57',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
+        })
 
         //  Refresh updated data
         fetchServiceDetails()
@@ -215,7 +226,10 @@ export default function ServiceDetailsCmp () {
           text: 'Message sent successfully.',
           icon: 'success',
           confirmButtonText: 'Okay',
-          confirmButtonColor: '#a8ff57'
+          confirmButtonColor: '#a8ff57',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
         })
 
         // Refresh messages
@@ -232,18 +246,34 @@ export default function ServiceDetailsCmp () {
         setMessage('')
         setModal(false)
       } catch (error) {
-        console.error('Send message error:', error)
-        Swal.fire('Error', 'Failed to send message.', 'error')
+        Swal.fire({
+          title: 'Error!',
+          text: 'Failed to send message',
+          icon: 'error',
+          confirmButtonText: 'Try Again',
+          confirmButtonColor: '#ff4d4f',
+          customClass: {
+            confirmButton: 'swal-confirm-btn'
+          }
+        })
       }
     } else {
-      Swal.fire('Cancelled', 'Form submission was cancelled.', 'info')
+      Swal.fire({
+        title: 'Cancelled!',
+        text: 'Form submission was cancelled.',
+        icon: 'info',
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#ff4d4f',
+        customClass: {
+          confirmButton: 'swal-confirm-btn'
+        }
+      })
     }
   }
 
   return (
     <>
       <div className='text-white '>
-
         <div className=''>
           <div>
             {/* Basic Info */}

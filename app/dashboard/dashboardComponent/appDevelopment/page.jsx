@@ -163,7 +163,7 @@ export default function AppDevelopmentCmp () {
   const [formData, setFormData] = useState(initialState)
   const [files, setFiles] = useState([])
   const { token } = useAuthInfo()
-  const router = useRouter();
+  const router = useRouter()
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -221,7 +221,7 @@ export default function AppDevelopmentCmp () {
             confirmButton: 'swal-confirm-btn'
           }
         })
-         router.push("/dashboard/client/all-services")
+        router.push('/dashboard/client/all-services')
         console.log(response.data)
       } catch (error) {
         Swal.fire({
@@ -231,7 +231,7 @@ export default function AppDevelopmentCmp () {
           confirmButtonText: 'Try Again',
           confirmButtonColor: '#ff4d4f', // red background
           customClass: {
-            confirmButton: 'swal-error-btn'
+            confirmButton: 'swal-confirm-btn'
           }
         })
         console.error(error?.response?.data || error.message)
@@ -244,7 +244,7 @@ export default function AppDevelopmentCmp () {
         confirmButtonText: 'Try Again',
         confirmButtonColor: '#ff4d4f', // red background
         customClass: {
-          confirmButton: 'swal-error-btn'
+          confirmButton: 'swal-confirm-btn'
         }
       })
     }
@@ -259,7 +259,8 @@ export default function AppDevelopmentCmp () {
               {label}
             </label>
             {type === 'textarea' ? (
-              <input
+              <textarea
+                rows={3}
                 id={name}
                 name={name}
                 placeholder={placeholder || 'Type your answer...'}
