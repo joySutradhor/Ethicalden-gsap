@@ -206,7 +206,7 @@ const OurProducts = () => {
       title: 'Branding',
       tags: ['UI/UX Design', 'Baranding'],
       image:
-        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/1.jpg?updatedAt=1749635818905',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/branding.webp?updatedAt=1752088850345',
       isNew: true
     },
     {
@@ -214,7 +214,7 @@ const OurProducts = () => {
       title: 'UI/UX Design',
       tags: ['UI/UX Design', 'Development'],
       image:
-        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/ui-ux.jpg?updatedAt=1749635838433',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/ui-ux.webp?updatedAt=1752088850462',
       isNew: true
     },
     {
@@ -222,7 +222,7 @@ const OurProducts = () => {
       title: 'Web Development',
       tags: ['UI/UX Design', 'E-commerce'],
       image:
-        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/web-development.jpg?updatedAt=1749635855170',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/web-development.webp?updatedAt=1752088850580',
       isNew: true
     },
     {
@@ -230,7 +230,7 @@ const OurProducts = () => {
       title: 'App Development',
       tags: ['UI/UX Design', 'E-commerce'],
       image:
-        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/app-development.jpg?updatedAt=1749635868632',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/app-development.webp?updatedAt=1752088850315',
       isNew: true
     },
 
@@ -239,7 +239,7 @@ const OurProducts = () => {
       title: 'SEO',
       tags: ['UI/UX Design', 'Property Portal'],
       image:
-        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/3.jpg?updatedAt=1749635883607',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/seo.webp?updatedAt=1752088850425',
       isNew: true
     },
     {
@@ -247,7 +247,7 @@ const OurProducts = () => {
       title: 'Digital Marketing',
       tags: ['UI/UX Design', 'E-Commerce'],
       image:
-        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/2.jpg?updatedAt=1749635891328',
+        'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/digital-marketing.webp?updatedAt=1752088850258',
       isNew: true
     },
 
