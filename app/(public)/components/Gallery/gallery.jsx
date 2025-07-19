@@ -399,24 +399,17 @@ const GalleryMain = () => {
               >
                 {leftImages.map((src, index) => (
                   <React.Fragment key={index}>
-                    {/* Loading spinner overlay - only shows when image hasn't loaded */}
-                    {!loadedImages[index] && (
-                      <div className="absolute inset-0 flex items-center justify-center z-90">
-                        <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                      </div>
-                    )}
 
                     {/* Image with blur placeholder */}
                     <Image
                       src={src}
                       alt={`Gallery image ${index + 1}`}
                       fill
-                      className={`object-cover rounded-2xl ${!loadedImages[index] ? 'blur-md' : 'blur-0'}`}
+                      className='object-cover rounded-2xl '
                       placeholder="blur"
                       priority
                       loading="eager"
                       blurDataURL={blurPlaceholder}
-                      onLoadingComplete={() => handleImageLoad(index)}
                     />
                   </React.Fragment>
                 ))}
@@ -526,24 +519,17 @@ const GalleryMain = () => {
               >
                 {RightImages.map((src, index) => (
                   <React.Fragment key={index}>
-                    {/* Loading spinner overlay - only shows when image hasn't loaded */}
-                    {!loadedImages[index] && (
-                      <div className="absolute inset-0 flex items-center justify-center z-90">
-                        <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                      </div>
-                    )}
 
                     {/* Image with blur placeholder */}
                     <Image
                       src={src}
                       alt={`Gallery image ${index + 1}`}
                       fill
-                      className={`object-cover rounded-2xl ${!loadedImages[index] ? 'blur-md' : 'blur-0'}`}
+                      className='object-cover rounded-2xl'
                       priority
                       loading="eager"
                       placeholder="blur"
                       blurDataURL={blurPlaceholder}
-                      onLoadingComplete={() => handleImageLoad(index)}
                     />
                   </React.Fragment>
                 ))}

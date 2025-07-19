@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import Link from "next/link"; // remove if not using Next.js
+import Link from "next/link"; 
 
 const OurWorksArea3 = () => {
     const projects = [
