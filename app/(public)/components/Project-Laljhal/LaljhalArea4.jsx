@@ -12,7 +12,6 @@ const LaljhalArea4 = () => {
 
     const imageRef = useRef(null);
     const paragraphRefs = useRef([]);
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     useEffect(() => {
         // Animate image
@@ -65,14 +64,6 @@ const LaljhalArea4 = () => {
         <div className=' mb-10 px-5 md:px-10 xl:px-20 2xl:max-w-screen-2xl 2xl:mx-auto'>
             <div className=''>
                 <div className='lg:mr-10 relative'>
-
-                    {/* Spinner on top */}
-                    {!isImageLoaded && (
-                        <div className="absolute inset-0 flex items-center justify-center z-20">
-                            <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                    )}
-
                     <Image
                         ref={imageRef}
                         src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/laljhal/ph-2.jpg?updatedAt=1750069202073"
@@ -81,7 +72,6 @@ const LaljhalArea4 = () => {
                         height={630}
                         placeholder='blur'
                         blurDataURL={blurPlaceholder}
-                        onLoadingComplete={() => setIsImageLoaded(true)}
                         priority
                         loading="eager"
                         className="w-full shadow-md mb-6"

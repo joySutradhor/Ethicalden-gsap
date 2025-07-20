@@ -11,7 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutUsArea = () => {
   const titleRef = useRef(null);
   const charRefs = useRef([]);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
 
   useEffect(() => {
@@ -300,20 +299,12 @@ const AboutUsArea = () => {
           {/* 1st image */}
           <div className='md:mt-14 -mt-32 flex justify-end relative'>
 
-            {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
-
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/1.jpg?updatedAt=1750495874844'
               height={1000}
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              onLoadingComplete={() => setIsImageLoaded(true)}
               className='w-[40vw] h-[20vh] Md:w-[40vw] md:h-[65vh] object-cover'
               priority
               loading="eager"
@@ -324,12 +315,6 @@ const AboutUsArea = () => {
           {/* 2nd image */}
           <div className='-mt-10 md:mt-2 lg:mt-5 xl:-mt-2 2xl:mt-2 relative w-[40vw] h-[20vh] md:w-[30vh] md:h-[30vh]'>
 
-            {/* Spinner centered over image */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
 
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/Artboard-2.jpg?updatedAt=1750501894872'
@@ -337,7 +322,6 @@ const AboutUsArea = () => {
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover w-full h-full'
               priority
               loading="eager"

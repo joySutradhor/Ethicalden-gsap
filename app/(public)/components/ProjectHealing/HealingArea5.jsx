@@ -12,7 +12,7 @@ const HealingArea5 = () => {
 
     const imageRef = useRef(null);
     const paragraphRefs = useRef([]);
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
+
 
     useEffect(() => {
         // Animate image
@@ -66,12 +66,6 @@ const HealingArea5 = () => {
             <div className=''>
                 <div className='lg:mr-10 relative'>
 
-                    {/* Spinner on top */}
-            {!isImageLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-            )}
 
                     <Image
                         ref={imageRef}
@@ -81,7 +75,6 @@ const HealingArea5 = () => {
                         height={630}
                         placeholder='blur'
                         blurDataURL={blurPlaceholder}
-                        onLoadingComplete={() => setIsImageLoaded(true)}
                         className="w-full shadow-md mb-6"
                         style={{ marginLeft: 'auto', marginRight: '0' }}
                         priority

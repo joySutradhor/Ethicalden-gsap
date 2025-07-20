@@ -10,7 +10,7 @@ const ELajFooter = () => {
     const sectionRef = useRef(null);
     const hasNavigated = useRef(false);
     const router = useRouter();
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
+
 
     const handleNavigation = () => {
         if (hasNavigated.current) return;
@@ -72,12 +72,6 @@ const ELajFooter = () => {
             className="relative w-full xl:min-h-screen transition-opacity duration-500"
         >
 
-            {/* Spinner on top */}
-            {!isImageLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-            )}
 
             {/* Background Image */}
             <Image
@@ -88,7 +82,6 @@ const ELajFooter = () => {
                 className="w-full h-auto"
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
-                onLoadingComplete={() => setIsImageLoaded(true)}
                 priority
                 loading="eager"
             />

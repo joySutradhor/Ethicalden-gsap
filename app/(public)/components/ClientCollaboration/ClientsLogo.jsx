@@ -67,17 +67,7 @@ function ClientsLogo() {
     },
   ];
 
-  const [loadingStates, setLoadingStates] = useState(
-    Array(items.length).fill(true)
-  );
 
-  const handleImageLoad = (index) => {
-    setLoadingStates((prev) => {
-      const updated = [...prev];
-      updated[index] = false;
-      return updated;
-    });
-  };
 
   return (
     <div className='px-5 xl:px-20 2xl:px-50'>
@@ -88,13 +78,6 @@ function ClientsLogo() {
             className='flex items-center justify-center rounded bg-white p-2 h-[180px]'
           >
             <div className='relative w-full flex items-center justify-center'>
-
-              {/* Spinner overlay */}
-              {loadingStates[index] && (
-                <div className="absolute inset-0 flex items-center justify-center z-90 bg-white/40 backdrop-blur-sm rounded">
-                  <div className="w-10 h-10 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-              )}
 
               {/* Image */}
               <Image
@@ -107,7 +90,6 @@ function ClientsLogo() {
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
                 className='object-contain w-full h-[120px] md:h-[180px]'
-                onLoad={() => handleImageLoad(index)}
               />
             </div>
 

@@ -13,7 +13,6 @@ const ServiceGallery = () => {
     const col3Ref = useRef(null);
     const col4Ref = useRef(null);
     const col5Ref = useRef(null);
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     useEffect(() => {
         if (window.innerWidth > 1200) {
@@ -110,19 +109,11 @@ const ServiceGallery = () => {
                         </div>
                         <div className='relative w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh]'>
 
-                            {/* Spinner on top */}
-                            {!isImageLoaded && (
-                                <div className="absolute inset-0 flex items-center justify-center z-20">
-                                    <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                                </div>
-                            )}
-
                             <Image
                                 width={500}
                                 height={500}
                                 placeholder='blur'
                                 blurDataURL={blurPlaceholder}
-                                onLoadingComplete={() => setIsImageLoaded(true)}
                                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-1.webp?updatedAt=1749638774064"
                                 priority
                                 loading="eager"
@@ -134,19 +125,11 @@ const ServiceGallery = () => {
                     {/* Second Column */}
                     <div ref={col2Ref} className="space-y-6 flex gap-4 md:gap-6 lg:gap-8  flex-row xl:block 2xl:block xl:mt-8 relative">
 
-                        {/* Spinner on top */}
-                        {!isImageLoaded && (
-                            <div className="absolute inset-0 flex items-center justify-center z-20">
-                                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                            </div>
-                        )}
-
                         <Image
                             width={500}
                             height={500}
                             placeholder='blur'
                             blurDataURL={blurPlaceholder}
-                            onLoadingComplete={() => setIsImageLoaded(true)}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-2.webp?updatedAt=1749638783500"
                             priority
                             loading="eager"
@@ -179,19 +162,11 @@ const ServiceGallery = () => {
                         </div>
                         <div className='relative w-[19vh] h-[35vh] md:w-auto md:h-[40vh] lg:h-[45vh]'>
 
-                            {/* Spinner on top */}
-                            {!isImageLoaded && (
-                                <div className="absolute inset-0 flex items-center justify-center z-20">
-                                    <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                                </div>
-                            )}
-
                             <Image
                                 width={500}
                                 height={500}
                                 placeholder='blur'
                                 blurDataURL={blurPlaceholder}
-                                onLoadingComplete={() => setIsImageLoaded(true)}
                                 src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-3.webp?updatedAt=1749638789268"
                                 priority
                                 loading="eager"
@@ -205,19 +180,11 @@ const ServiceGallery = () => {
                     {/* Fifth Column */}
                     <div className="space-y-6 flex gap-4 md:gap-6 lg:gap-8 flex-row xl:block 2xl:block relative">
 
-                        {/* Spinner on top */}
-                        {!isImageLoaded && (
-                            <div className="absolute inset-0 flex items-center justify-center z-20">
-                                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                            </div>
-                        )}
-
                         <Image
                             width={500}
                             height={500}
                             placeholder='blur'
                             blurDataURL={blurPlaceholder}
-                            onLoadingComplete={() => setIsImageLoaded(true)}
                             src="https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/services-card-4.webp?updatedAt=1749638795103"
                             priority
                             loading="eager"

@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TechStack = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [imageLoaded, setImageLoaded] = useState({});
 
   const techs = [
     { id: 1, name: 'Adobe', profession: 'Creative', imageUrl: 'https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/service%20page/service-item-acc.svg?updatedAt=1749639120923' },
@@ -103,7 +102,6 @@ const TechStack = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {techs.map((tech) => {
           const isActive = shouldShowtech(tech);
-          const isLoaded = imageLoaded[tech.id];
 
           return (
             <div
@@ -112,12 +110,6 @@ const TechStack = () => {
                 }`}
             >
               <div className="relative aspect-square w-full flex items-center justify-center bg-gray-100 rounded-xl p-8">
-                {/* Spinner */}
-                {!isLoaded && (
-                  <div className="absolute inset-0 flex items-center justify-center z-90">
-                    <div className="w-10 h-10 border-4 border-gray-300 border-t-transparent rounded-full animate-spin" />
-                  </div>
-                )}
 
                 <Image
                   src={tech.imageUrl}
@@ -129,9 +121,6 @@ const TechStack = () => {
                   priority
                   loading="eager"
                   className="h-[80%] w-[80%] object-contain md:h-[85%] md:w-[85%] 2xl:h-[95%] 2xl:w-[95%] z-20"
-                  onLoad={() =>
-                    setImageLoaded((prev) => ({ ...prev, [tech.id]: true }))
-                  }
                 />
 
                 {/* Label */}

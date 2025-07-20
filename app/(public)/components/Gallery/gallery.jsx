@@ -398,7 +398,7 @@ const GalleryMain = () => {
                 className="relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden"
               >
                 {leftImages.map((src, index) => (
-                  <React.Fragment key={index}>
+                  <div key={index}>
 
                     {/* Image with blur placeholder */}
                     <Image
@@ -411,7 +411,7 @@ const GalleryMain = () => {
                       loading="eager"
                       blurDataURL={blurPlaceholder}
                     />
-                  </React.Fragment>
+                  </div>
                 ))}
               </div>
 
@@ -518,7 +518,7 @@ const GalleryMain = () => {
                 className='relative rounded-2xl min-h-[35vh] md:h-[50vh] lg:h-[38vh] xl:h-[44vh] w-full overflow-hidden '
               >
                 {RightImages.map((src, index) => (
-                  <React.Fragment key={index}>
+                  <div key={index}>
 
                     {/* Image with blur placeholder */}
                     <Image
@@ -531,7 +531,7 @@ const GalleryMain = () => {
                       placeholder="blur"
                       blurDataURL={blurPlaceholder}
                     />
-                  </React.Fragment>
+                  </div>
                 ))}
               </div>
 

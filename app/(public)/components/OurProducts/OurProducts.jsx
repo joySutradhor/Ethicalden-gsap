@@ -254,18 +254,6 @@ const OurProducts = () => {
 
   ]
 
-  // image loading spinner
-  const [loadingStates, setLoadingStates] = useState(
-    Array(projects.length).fill(true)
-  );
-
-  const handleImageLoad = (index) => {
-    setLoadingStates((prev) => {
-      const updated = [...prev];
-      updated[index] = false;
-      return updated;
-    });
-  };
 
   return (
     <section
@@ -327,12 +315,6 @@ const OurProducts = () => {
                 className="relative bg-black rounded-2xl overflow-hidden 
                      w-full h-[300px] md:h-[350px]"
               >
-                {/* Spinner */}
-                {loadingStates[index] && (
-                  <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/20 backdrop-blur-sm">
-                    <div className="w-10 h-10 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                )}
 
                 {/* Image */}
                 <Image
@@ -345,7 +327,6 @@ const OurProducts = () => {
                   className="z-10"
                   priority
                   loading="eager"
-                  onLoad={() => handleImageLoad(index)}
                 />
 
                 {/* Content */}
@@ -454,13 +435,7 @@ const OurProducts = () => {
                 className="relative bg-black rounded-2xl overflow-hidden 
                      w-[700px] h-[450px] flex items-end justify-start p-6"
               >
-                {/* Spinner overlay */}
-                {loadingStates[index] && (
-                  <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/30 backdrop-blur-sm">
-                    <div className="w-10 h-10 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                )}
-
+                
                 {/* Project Image */}
                 <Image
                   src={project.image}
@@ -470,7 +445,6 @@ const OurProducts = () => {
                   blurDataURL={blurPlaceholder}
                   objectFit="cover"
                   className="z-10"
-                  onLoad={() => handleImageLoad(index)}
                   priority
                   loading="eager"
                 />

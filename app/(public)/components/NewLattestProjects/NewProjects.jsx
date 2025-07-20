@@ -101,8 +101,6 @@ function NewProjects() {
     );
   }, []);
 
-  // image loading spinner
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
 
   return (
@@ -165,13 +163,6 @@ function NewProjects() {
           {/* first row */}
           <div className='mt-[10vh] md:mt-[25vh] mb-[5vh] md:mb-0 md:w-[70%] h-[30%] md:h-[40%] relative'>
 
-            {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
-
             {/* Image with blur placeholder and fade-in effect */}
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/mr-cafe.webp?updatedAt=1749702821699'
@@ -179,7 +170,6 @@ function NewProjects() {
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              onLoadingComplete={() => setIsImageLoaded(true)}
               priority
               loading="eager"
               className='object-cover w-full h-full'
@@ -203,7 +193,7 @@ function NewProjects() {
         <div className='h-[23vh] mt-5 md:mt-[0vh] lg:mt-0 md:h-[50vh] lg:h-[60h] xl:h-[70vh]'>
           <video
             src='https://res.cloudinary.com/dztzjmedo/video/upload/v1749708111/marzii_ixl75r.webm'
-            loading='lazy'
+            loading='eager'
             muted
             autoPlay
             loop
@@ -225,20 +215,12 @@ function NewProjects() {
         <div className='mt-[10vh] md:mt-[15vh] lg:mt-[25vh] '>
           <div className='relative h-[23vh] md:h-[50vh] lg:h-[75vh]'>
 
-            {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
-
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/e-laj.webp?updatedAt=1749702842765'
               width={1000}
               height={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover w-full h-full'
               priority
               loading="eager"
@@ -281,19 +263,11 @@ function NewProjects() {
 
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] md:mt-0 -mt-[5vh] relative'>
 
-              {/* Spinner on top */}
-              {!isImageLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-              )}
-
               <Image
                 width={500}
                 height={100}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
-                onLoadingComplete={() => setIsImageLoaded(true)}
                 alt='Agarwal Tibrewal Co'
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/3.jpg?updatedAt=1750496283381'
                 priority
@@ -317,20 +291,12 @@ function NewProjects() {
         {/* third row start */}
         <div className='-mt-[8vh] md:mt-[30vh] lg:mt-[60vh] '>
           <div className='h-[25vh] md:w-[60%] xl:w-[50%] relative'>
-
-            {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/project-details/mak-community/emopract-h-project.jpg?updatedAt=1750834244371'
               height={100}
               width={500}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              onLoadingComplete={() => setIsImageLoaded(true)}
               alt='Emopract'
               priority
               loading="eager"
@@ -375,20 +341,12 @@ function NewProjects() {
         <div className='md:mt-[25vh] -mt-[24vh] lg:mt-[40vh] xl:mt-[50vh]'>
           <div className='relative h-[23vh] md:h-[50vh] lg:h-[70vh]'>
 
-            {/* Spinner on top */}
-            {!isImageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            )}
-
             <Image
               src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/2.jpg?updatedAt=1750495904013'
               height={1000}
               width={1000}
               placeholder='blur'
               blurDataURL={blurPlaceholder}
-              onLoadingComplete={() => setIsImageLoaded(true)}
               className='object-cover h-full w-full'
               priority
               loading="eager"
@@ -432,19 +390,11 @@ function NewProjects() {
             </div> */}
             <div className='h-[23vh] md:h-[20vh] lg:h-[30vh] relative'>
 
-              {/* Spinner on top */}
-              {!isImageLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <div className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-              )}
-
               <Image
                 height={1000}
                 width={1000}
                 placeholder='blur'
                 blurDataURL={blurPlaceholder}
-                onLoadingComplete={() => setIsImageLoaded(true)}
                 priority
                 loading="eager"
                 src='https://ik.imagekit.io/ckncpdy03/Ethical%20den%20-%20gsap/Home%20Page/massart.png?updatedAt=1749702878941'

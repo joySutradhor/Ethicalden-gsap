@@ -23,7 +23,6 @@ function Footer() {
   const footerRef = useRef(null)
   const [darkBackground, setDarkBackground] = useState(false)
   const [isReady, setIsReady] = useState(false)
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   // Wait for layout paint to complete
   useEffect(() => {
@@ -424,19 +423,11 @@ function Footer() {
                       className='relative w-full h-14 md:h-10 xl:h-12 bg-white rounded-md p-2 flex items-center justify-center '
                     >
 
-                      {/* Spinner on top */}
-                      {!isImageLoaded && (
-                        <div className="absolute inset-0 flex items-center justify-center z-20">
-                          <div className="w-6 h-6 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                      )}
-
                       <Image
                         src={item.src}
                         alt={item.alt}
                         placeholder='blur'
                         blurDataURL={blurPlaceholder}
-                        onLoadingComplete={() => setIsImageLoaded(true)}
                         className='object-contain rounded-md'
                         priority
                         loading="eager"
